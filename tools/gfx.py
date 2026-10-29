@@ -338,7 +338,7 @@ STONES = ("Garnet", "Amethyst", "Aquamarine", "Diamond", "Emerald", "Moonstone",
           "Topaz", "Lapis Lazuli")
 element("birthstones", "OPTION1.BIN", 0x204B8,
         *[op for i, s in enumerate(STONES) for op in (
-            ("clear", 129, 16 * i + 1, 94, 14, "mode"),
+            ("clear", 129, 16 * i, 94, 15, "mode"),  # row 0 too: kana tops (ガ, ネ, ズ's dakuten) poke into it
             ("text", 128, 16 * i + 2, 96, 13, s, dict(ink=WHITE, outline=(64, 48, 0))))])
 # 6 loading chalkboard: "Now loading..." in chalk; the date's 月 becomes "/", 日 goes (smudged numbers are art)
 CHALK = (216, 232, 216)

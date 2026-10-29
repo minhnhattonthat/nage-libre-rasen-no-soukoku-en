@@ -33,7 +33,7 @@ def check_row(r, box=None, fixed=False):
     en, err, warn = r.get("en", ""), [], []
     if not en:
         return err, warn
-    bad = sorted({c for c in font.CTRL.sub("", en) if c != "\n" and not (" " <= c <= "~") or c == "\\"})
+    bad = sorted({c for c in font.CTRL.sub("", en) if c != "\n" and not (" " <= c <= "~") or c in "\\`"})  # ` = digit pad
     if r["id"] == "MEMCARD":   # drawn by the BIOS card manager: full-width Shift-JIS, bytes checked below
         full = all(len(c.encode("cp932")) == 2 for c in en)
         bad = [] if full and len(en) * 2 == r["max"] else [f"want {r['max'] // 2} full-width characters"]

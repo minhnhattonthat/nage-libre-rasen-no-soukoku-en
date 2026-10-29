@@ -24,6 +24,11 @@ SPACE_ADV = 4
 ROWS = 13
 # trimmed ink widths that look too tight/loose with a plain 1-px gap: extra advance in px
 EXTRA = {}
+# Numbers redraw in place (club-select stats) without clearing: digits share one advance (ink centred) and the
+# number printer pads with FIGURE ('`', a blank glyph that wide; tools/asm/vwf.asm), so a new value lands exactly
+# on the old one's cells. '`' is never English text (lint).
+DIGITS = range(ord("0") - 0x21, ord("9") - 0x21 + 1)
+FIGURE = ord("`") - 0x21
 
 
 def ascii_index(ch):
@@ -63,6 +68,11 @@ def glyphs(exe):
         lo, hi = cols[0], cols[-1]
         rows = [r[lo:hi + 1] for r in px]
         out.append((rows, hi - lo + 2 + EXTRA.get(g, 0)))
+    adv = max(out[g][1] for g in DIGITS)
+    for g in DIGITS:
+        rows, a = out[g]
+        out[g] = ([[0] * ((adv - a) // 2) + r for r in rows], adv)
+    out[FIGURE] = ([[0] for _ in range(ROWS)], adv)
     return out
 
 

@@ -24,6 +24,11 @@ EPILOGUE  equ (0x8003C930)
 .org 0x8003B680
   subu  v1, v1, v0
 
+; number printer 0x8003B7A0, half-width right-aligned mode: pad with '`' (a blank glyph as wide as a digit,
+; tools/font.py FIGURE) instead of a 4-px space, so a redrawn value covers the old one's cells exactly
+.org 0x8003B7F8
+  ori   t5, zero, 0x60
+
 ; half-width branch of the draw: s0 = x, s1 = y, a2 = colour, a0 = glyph (< 500); frame of 0x28 saves s0-s2, ra
 .org 0x8003C868
   j     VwfHalf
