@@ -98,9 +98,15 @@ Updated at the end of every session. Keep it to what the next session needs; his
     (0x8003B7A0, mode 2) pads with '`', a blank digit-wide glyph (font.FIGURE; lint bans '`'). Birthstone plates
     clear their top row. Round 4 (build 109093b): 116/116 ok bar one orphan page (MAP08/189/022C, fixed 5fde8eb).
     Round 4 also showed the tour probe pressed circle mid-typing and skipped pages unshot (wm08 lost ~6); tourshot.lua
-    now presses only once the text is stable. Round 5 = full re-tour (EN + JP) + review with the fixed probe; gate
-    state in work/qa/manifest.tsv + verdicts/ (round 4 kept in work/qa/round4/). Town signs seen in the map01 tour.
-    Open note: wm42 replays wm17 with slightly different wording (consistency, not a bug).
+    now presses only once the text is stable. Consistency pass b900 (cc16e4a): system-message templates and replayed
+    scenes (docs/style-reference.md). Round 5 (126 sheets): clock tag こしょう中 in the MAP81 classroom art (survey
+    #29, now "Broken"), MAP81/186/09A4 page split, two final periods, MAP42 wording; reviewers found tour.py's
+    `sheet.py --changed 0.02` hid page swaps (<2% of pixels), so sheets now hold every shot. Round 6 = full EN
+    re-tour on e22433f + review; JP sheets re-sheeted from round-5 frames (150). The first round-6 EN tour was
+    stopped by the host for low memory (partial work/qa/tour/): rerun `rm -rf work/qa/tour && python -X utf8
+    tools/debug/tour.py --jobs 4`, then `qa_gate.py init` on a fresh manifest, `todo --size 32`, one visual-qa
+    agent per chunk. Gate state in work/qa/manifest.tsv +
+    verdicts/ (earlier rounds in work/qa/round4/, round5/).
   - Memory-card title is English full-width (BIOS manager); Japanese-version saves load in the English build.
   - Release: `tools/release.py VERSION` (check, build, smoke, jp_left on NAGE.EXE/SYSDATA, qa_gate, xdelta3,
     re-apply, README from docs/README.template.txt, zip). Never `gh release create` (D9).
@@ -116,7 +122,7 @@ Updated at the end of every session. Keep it to what the next session needs; his
     errors) get checked in phase 8 QA; adjust FIELDS if a shot disagrees.
   - Birthday screen: the full name now starts 8 px left of the portrait frame (cosmetic; needed for "Makoto
     Matsunaga" 98 px).
-  - Current build/ = English build (sha1 f452e917…, 5fde8eb; regen 83/83 ok on the round-4 build); `build.py --markers` restores the marker
+  - Current build/ = English build (sha1 c7c88f58…, e22433f; regen 83/83 ok on cc16e4a); `build.py --markers` restores the marker
     build.
 - **Debug-tool limits (grow when needed):** map scenes play each map's first event with new-game story flags; the
   later events of a map (other script slots 186-216, flag-dependent branches) are not forced yet. For phase 8,
