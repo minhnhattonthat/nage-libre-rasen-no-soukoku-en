@@ -78,14 +78,17 @@ Updated at the end of every session. Keep it to what the next session needs; his
   of script/). `tools/gfx.py` redraws TIM text (ops: clear by row-copy / row mode / colour with `keep` classes, text in
   the game font (`game`, bold/outline/shadow/scale) or Tiny5 (`tiny`)); `insert.build_files` writes every
   byte-identical copy. Done (graphics.md #): 6 loading board, 7 birthday, 8 birthstones, 9/10 load/save, 11 save
-  titles (Tiny5: 128-px strips), 12 menu, 14 area cards (seen in game: wm06/13/31), 20 news ticker, 28 poster.
-  `python -X utf8 tools/gfx.py [--only NAME]` writes original|English previews to work/qa/gfx/out/.
+  titles (Tiny5: 128-px strips), 12 menu, 14 area cards (seen in game: wm06/13/31), 20 news ticker, 28 poster,
+  1 title subtitle "Spiral Conflict", 15 "The End" (16bpp), 18/19 boss-intro 参上 "Here!" + name (rotated Tiny5,
+  80 copies), 26 blackboard, 27 shrine board. Seen in game (work/qa/p8b): title, birthday, load, poster, battle.
+  `python -X utf8 tools/gfx.py [--only NAME]` writes original|English previews to work/qa/gfx/out/; clear modes
+  None (row copy from x-1), "mode", "lerp" (horizontal blend), int index, RGB; `keep` classes in gfx.KEEP.
 - **Next (phase 8, QA in the emulator):**
-  - Graphics text left: #1 title subtitle, #15 おわり (16bpp), #18/#19 参上 sheets (34/46 copies), #21-24 town
-    signs, #25 desk plate, #26 blackboard, #27 shrine board; packed #2-5 (OP_TMP2 #11-14), #13 dress-up names
-    (OPTION2 #1-4), #16 cast plates, #17 credit sign: try a raw TIM in the same table slot first (files.md), else a
-    compressor. Then see each one in a zoomed cold-boot shot. The poster's pink 南 seal is left as art.
-  - Area card "Dunes of the Battleship" is clipped at the screen's left edge (wm13): shorten it ("Battleship Dunes").
+  - Graphics text left: #21-24 town signs (MAP01R/MAP03R MAPFIRST), #25 desk plate 会長 = MAP81/MAPFIRST 0x78
+    (x 3..22, y 41..51, not MAP80 as graphics.md said; ~20x10 px: "President" in Tiny5 is 32 px, needs a wider
+    plate or two rows); packed #2-5 (OP_TMP2 #11-14), #13 dress-up names (OPTION2 #1-4), #16 cast plates, #17 credit
+    sign: try a raw TIM in the same table slot first (files.md), else a compressor. Then see each in a zoomed
+    cold-boot shot. The poster's pink 南 seal is left as art. Then the visual-QA tour + qa_gate (not started).
   - Not seen in game yet: save/load list "Stage <n>" (StageNum; the emulator's save screen says the card isn't
     formatted and mashing Yes returned to the menu: set up a memory card in emu.py/PCSX first), the in-battle VS
     pair (0x8004C56C; the battle-start pair 0x80059B74 was seen), field status box name order (0x80056B94,
@@ -132,5 +135,7 @@ Updated at the end of every session. Keep it to what the next session needs; his
   window rect (VS boxes widened fine) or be fixed art (battle bar: widening put text over the cap): compare a shot
   before trusting a wider create. PS1 engines that count 8-px cells (`s3` return of a print) for layout decisions
   break under VWF: grep the callers' use of the return value.
-- **Waiting on the user:** GUI keyboard input in `tools/pcsx/` is not proven (synthetic keystrokes did not reach the
+- **Waiting on the user:** The MAP01R boss-intro art names the boss レイプマン (a parody of the manga title); drawn
+  literally as "Rapeman" (tools/gfx.py `sanjo_map`). Say if you'd rather have another name. Non-blocking.
+  GUI keyboard input in `tools/pcsx/` is not proven (synthetic keystrokes did not reach the
   pad); owner asked for headless-only runs, so left; check by hand when playtesting. Non-blocking.
