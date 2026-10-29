@@ -7,7 +7,8 @@
 -- loader, so the game loads the scene the way a map change does. When the scene is ready it waits `settle`
 -- frames, shoots <SCENE>.png, checks the scene (map byte; MAPDAT in RAM = the expected file), saves STATE_OUT
 -- and quits: exit 0 ok, 2 check failed (message in log.txt and on stderr). --frames is only a cap.
--- GOD=1 pins every player unit's HP to its max every frame. STAY=1 keeps running after the check (to --frames).
+-- GOD=1 pins every player unit's HP to its max every frame. STAY=1 keeps running after the check (to --frames);
+-- STAY=N runs N frames after it, then quits (tools/debug/tour.py).
 local ffi = require("ffi")
 local mem = PCSX.getMemPtr()
 local function rd8(a) return mem[a % 0x200000] end
@@ -53,17 +54,20 @@ local function check()
   return true
 end
 
-local warped, ready_at = false, nil
+local warped, ready_at, stay_until = false, nil, nil
 local function finish(n)
   L.shot(SCENE .. ".png")
   local ok = check()
   if ok ~= true then L.fail("CHECK FAIL " .. SCENE .. ": " .. tostring(ok)); return end
   L.log(string.format("f%d CHECK ok %s", n, SCENE))
+  WARP_DONE = n   -- for probes that start once the scene is reached (tourshot.lua)
   if STATE_OUT then L.save_state(STATE_OUT) end
   if STAY then ready_at = math.huge else L.finish(0) end   -- STAY=1: keep running (mash, probes) to --frames
+  if STAY and STAY > 1 then stay_until = n + STAY end      -- STAY=N: N more frames, then quit
 end
 
 L.on_frame(function(n)
+  if stay_until and n >= stay_until then L.finish(0); return end
   if GOD and warped then
     for i = 0, 6 do
       local u = UNITS + i * UNIT_SIZE

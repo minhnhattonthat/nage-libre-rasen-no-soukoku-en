@@ -324,7 +324,7 @@ element("signs_town", _F, 0x2063C,
         ("text", 200, 175, 50, 9, "Nanju Shops", dict(font="tiny", ink=(224, 200, 80))))
 # 21 parking sign 駐車場, 22 fish shop 魚政 (two plates: FI|SH), 24 MAP03R ride sign, 25 MAP81 desk plate 会長
 element("sign_parking", _F, 0x1FC,
-        ("clear", 93, 226, 20, 6, (176, 176, 176)), ("text", 92, 224, 22, 9, "PARK", dict(font="tiny", ink=(72, 72, 72))))
+        ("clear", 93, 226, 20, 6, (176, 176, 176)), ("text", 92, 224, 22, 9, "P", dict(font="tiny", ink=(72, 72, 72))))
 element("sign_fish", _F, 0x1041C,
         ("clear", 50, 211, 11, 10, (200, 200, 200)), ("text", 50, 211, 11, 9, "FI", dict(font="tiny", ink=(48, 112, 168))),
         ("clear", 74, 211, 11, 10, (200, 200, 200)), ("text", 74, 211, 11, 9, "SH", dict(font="tiny", ink=(48, 112, 168))))
@@ -332,7 +332,7 @@ element("sign_kobiro", "MAP01_06/MAP03R/MAPFIRST.BIN", 0x2046C,
         ("clear", 1, 237, 61, 11, (80, 32, 136), "gold"),
         ("text", 3, 236, 58, 9, "Kobiro Race", dict(font="tiny", ink=(208, 200, 232))))
 element("desk_plate", "MAP01_06/MAP81/MAPFIRST.BIN", 0x78,
-        ("clear", 5, 43, 20, 9, "lerp"), ("text", 4, 42, 22, 9, "Pres.", dict(font="tiny", ink=(32, 32, 32))))
+        ("clear", 5, 43, 20, 9, "lerp"), ("text", 4, 42, 22, 9, "Chair", dict(font="tiny", ink=(32, 32, 32))))
 # 8 birthstone plates: 12 gold plates of 16 rows at x 128..223, white text with a dark outline
 STONES = ("Garnet", "Amethyst", "Aquamarine", "Diamond", "Emerald", "Moonstone", "Ruby", "Agate", "Sapphire", "Opal",
           "Topaz", "Lapis Lazuli")

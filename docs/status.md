@@ -93,9 +93,10 @@ Updated at the end of every session. Keep it to what the next session needs; his
 - **Next (phase 8, QA in the emulator):**
   - Town signs are off-screen at the map01r/map03r warp spawn (checked in gfx previews only): see them when the
     tour walks the town. Then the visual-QA tour + qa_gate (not started).
-  - Not seen in game yet: save/load list "Stage <n>" (StageNum; the emulator's save screen says the card isn't
-    formatted and mashing Yes returned to the menu: set up a memory card in emu.py/PCSX first), the in-battle VS
-    pair (0x8004C56C; the battle-start pair 0x80059B74 was seen), field status box name order (0x80056B94,
+  - Seen: save to a blank formatted card and the load list "File 1 Stage 2 000:00" (work/qa/card; card images
+    `work/saves/blank.mcd` = formatted empty (`python tools/debug/mkcard.py OUT.mcd`), `saved1.mcd` = one save; with a save on the card the title boots to
+    LOAD, so warp.lua's New Game path doesn't fire: use them with plain routes, not warps).
+  - Not seen in game yet: the in-battle VS pair (0x8004C56C; the battle-start pair 0x80059B74 was seen), field status box name order (0x80056B94,
     0x80057DFC), battle status box (0x80051804).
   - Check in game: choice rows translators laid out by hand (MAP14/193/0026 route choice, MAP21/199,
     MAP23/215/0002 Yes/No, MAP81/189/01BE..01E8), the composed item-use / club-change / level-up fragments
