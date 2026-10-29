@@ -2,7 +2,8 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 2 (debug tool) done 2026-10-30. Next: phase 3 (identity build). No build yet.
+- **Phase:** 3 (identity build) done 2026-10-30. Next: phase 4 (extract). Build = untouched repack (sha1 7ccae6f0…,
+  same as the dump), smoke ok.
 - **Done:**
   - Step 0: dump pinned (`rom.sha1`), tools in `tools/`, headless smoke on the original, pre-commit check, guard hook.
   - Phase 1 (notes in `docs/re/`): Shift-JIS text; own font in SYSDATA.BIN (1,386 cells, 16x13, charset list);
@@ -16,9 +17,15 @@ Updated at the end of every session. Keep it to what the next session needs; his
     loader). Scenes: title, birthday entry, load, between-stage menu, club select, dress-up, save (menu and mode 6),
     cutscene after MAP24, ending + credits, battle, game over (Ann at 1 HP), 25 world-map area cards, all 46 MAPnn
     folders (MAPDAT in RAM checked against the file). `GOD=1` pins party HP.
-- **Next (phase 3, identity build):** `dumpsxiso`/`mkpsxiso` layout in `work/disc/layout.xml`; `tools/build.py`
-  repacks with no edits and a test proves the .bin is byte-identical (check `rom.sha1` first). Then phase 4 needs an
-  opcode length table from the 80 handlers (0x8005E49C..0x80060854) to re-encode scripts.
+  - Phase 3: `tools/build.py` (check_rom, `unpack()` = dumpsxiso into `work/disc/` on first run, `pack()` = mkpsxiso
+    `work/disc/layout.xml` -> `build/nage_libre_en.bin/.cue`). `tests/test_identity.py` unpacks into a temp dir and
+    repacks: sha1 equals `rom.sha1` (~2 s, runs in the pre-commit check). mkpsxiso 2.30 rebuilds EDC/ECC and the
+    150-sector trailing dummy exactly; no layout tweaks needed.
+- **Next (phase 4, extract):** opcode length table from the 80 handlers (0x8005E49C..0x80060854) to re-encode
+  scripts; extract dialogue (MAPDAT 186-216), NAGE.EXE system text and item/magic records, SYSDATA #7 names to
+  `script/`; roundtrip + coverage tests. build.py has no edit step yet: edited files must not be written into
+  `work/disc/tree` (pristine; the identity test and debug checks read it). Plan: build into a patched copy or give
+  mkpsxiso a layout copy whose `<file source=...>` points at the edited files.
 - **Debug-tool limits (grow when needed):** map scenes play each map's first event with new-game story flags; the
   later events of a map (other script slots 186-216, flag-dependent branches) are not forced yet. For phase 8,
   add per-script warps: set the script base `$gp`+0x52C / PC `$gp`+0x2A2 (docs/re/text.md) or the story flags at

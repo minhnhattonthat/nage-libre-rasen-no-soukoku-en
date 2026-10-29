@@ -3,7 +3,7 @@
 Skill: translate-retro-game (Claude Code: plugin, enabled in .claude/settings.json; other agents: its SKILL.md). `python tools/skill.py` prints its folder; `"$(python tools/skill.py)"` works in bash and PowerShell; never paste a `plugins/cache/<hash>` path. Read SKILL.md before ROM, text or QA work.
 
 ## Commands (run from repo root)
-- Build:    `python -X utf8 tools/build.py` -> build/nage_libre_en.bin + .cue (checks the dump against `rom.sha1` first; written in phase 3)
+- Build:    `python -X utf8 tools/build.py` -> build/nage_libre_en.bin + .cue (checks the dump against `rom.sha1` first; unpacks to `work/disc/` on first run)
 - Check:    `python -X utf8 tools/check.py` (tests + lint; the pre-commit hook runs this)
 - Smoke:    `python -X utf8 "$(python tools/skill.py)/scripts/emu.py" build/nage_libre_en.cue --out work/qa/smoke --route tools/routes/boot.txt --smoke` (original: `"rom/Nage Libre - Rasen no Soukoku (Japan).cue"`)
 - Warp:     `python -X utf8 "$(python tools/skill.py)/scripts/emu.py" build/nage_libre_en.cue --out work/qa/warp --script tools/debug/warp.lua --var "SCENE='<name>'" --frames 30000` (scenes: `tools/debug/scenes.lua`; ends itself on the scene with `<name>.png`; `--state-out` saves it; never ask the user to play to a scene)
