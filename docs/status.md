@@ -2,9 +2,9 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 6 done 2026-10-30 (all 22 batches check 0 errors, reviewed, Critical/Important fixed, merged into
-  `script/`; glossary updated). Next: phase 7 (insert, fit, check). `build.py --markers` = marker build; plain
-  `build.py` = VWF engine + `en` rows.
+- **Phase:** 7 done 2026-10-30 (lint 0 errors, no `long` rows, every row English or in `script/keep_jp.txt`,
+  romdiff + write log clean, no Japanese left in EXE text/records). Next: phase 8 (QA in the emulator).
+  `build.py --markers` = marker build; plain `build.py` = VWF engine + names.asm + `en` rows.
 - **Done:**
   - Step 0: dump pinned (`rom.sha1`), tools in `tools/`, headless smoke on the original, pre-commit check, guard hook.
   - Phase 1 (notes in `docs/re/`): Shift-JIS text; own font in SYSDATA.BIN (1,386 cells, 16x13, charset list);
@@ -61,26 +61,35 @@ Updated at the end of every session. Keep it to what the next session needs; his
     sentences, per-girl voices, term drift grimoire/spellbook etc.). All 3,357 dialogue rows, 177 EXE, 145
     records, 695 names translated. Minor review notes not applied (polish pass later; reports were returned in
     session, only Important ones kept in work/review/fixes_*.md, gitignored).
-- **Next (phase 7, insert, fit, check):**
-  - 65 field rows carry `long` (full English wider than its FIELDS budget; `en` empty so the build keeps
-    Japanese; `lint --warn` lists them): 49+9 NAME rows over 48 px (Matsunaga 56, Kurosawa 50, Monster A-I 54 ..
-    Kazamatsuri 64), EXE/013E0 Student Council President (136 px in 96), 013F8 Super Go-Home Club, 01BB4/01C50
-    Randoma Card + birthstone bonus (128 px), 024E0 Makoto Matsunaga (98 in 96). Engine first (D4): the 48-px
-    NAME budget is per part for composed lines (two names in 224 px); the VS box has 96 px for surname + given
-    name, so a measured per-use budget, a smaller font or a wider field likely fixes most. Then move `long` to `en`.
-  - EXE strings over their in-place room (`lint --warn` "bytes, room"): insert keeps Japanese (build prints the
-    count, `insert.SKIPPED`); relocate them through their `refs` (lui/addiu, $gp, words).
-  - EXE/80BCC 面 = "St" follows a number on the save list ("3St"): needs the number/label order changed or a
-    wider label ("Stage 3"). EXE/80BD0/80BD4 月/日 -> "/" and "." (birthday "3/15.") likewise.
-  - Names: VS/status box line 1 prints surname then given name (NAME rows); Western order (D1) needs a code swap
-    or the slots' text swapped.
-  - Check in game (phase 8): choice rows translators laid out by hand (MAP14/193/0026 route choice, MAP21/199,
+  - Phase 7 (insert, fit, check; docs/re/vwf.md §Names, §EXE strings over their room): `tools/asm/names.asm`
+    (Western name order + space via `NameSp` at all 7 two-part name prints, VS/status boxes 96 -> 112 px at x 8 /
+    136, unconditional status newline, birthday name pen x 16 -> 8, save list `StageNum` = "Stage <n>");
+    `insert.place_strings` relocates EXE strings over their room (49 rows; same lui half: tails, own slots,
+    STRPOOL 0x8008A500..); every text write logged (`insert.WRITES`); `font.balanced_wrap` for dialogue (211 one-word
+    last lines gone; lint fails a stub); `batches.py refit` moved all 65 `long` rows to `en` after the budgets
+    changed (VS_PX 112, NAME rows 64, per-use battle-bar budgets); keep list `script/keep_jp.txt` (4 rows, lint
+    fails any other jp row with no en); `tools/romdiff.py` + tests/test_build.py (romdiff with write log + asm
+    .org sites, every English row written, refs land on the English, no kana/kanji in EXE text regions/records;
+    record names zero the old string's tail). D11: "Council President", "'s Randoma Card, birthstone bonus!".
+    Seen in game: VS boxes "Ann Akagi" (work/qa/vs), 105-px QA pair (work/qa/vs2), battle bar messages
+    (work/qa/go2), birthday "Ann Akagi" + "3/15" (work/qa/p7/bz.png).
+- **Next (phase 8, QA in the emulator):**
+  - Graphics text (docs/re/graphics.md, 28 elements, D5 = all English): none done yet; phase 8's done-when needs
+    each in a zoomed cold-boot shot (chapter/area cards, game over, credits plates). Packed ones need
+    tools/decomp.py output re-imported (try raw TIM in the same slot first, files.md).
+  - Not seen in game yet: save/load list "Stage <n>" (StageNum; the emulator's save screen says the card isn't
+    formatted and mashing Yes returned to the menu: set up a memory card in emu.py/PCSX first), the in-battle VS
+    pair (0x8004C56C; the battle-start pair 0x80059B74 was seen), field status box name order (0x80056B94,
+    0x80057DFC), battle status box (0x80051804).
+  - Check in game: choice rows translators laid out by hand (MAP14/193/0026 route choice, MAP21/199,
     MAP23/215/0002 Yes/No, MAP81/189/01BE..01E8), the composed item-use / club-change / level-up fragments
     (b020), description tag columns (/1 /All /Front /Back /Phys /Mind), 14 dialogue lines that page (lint --warn).
   - Budgets marked "window"/"guess" (item/magic lists, item use, club change, level up, field save, memory-card
     errors) get checked in phase 8 QA; adjust FIELDS if a shot disagrees.
-  - Current build/ = English build from script/ (sha1 2c1610f2…, smoke ok; 44 EXE strings and the `long` rows
-    still Japanese); `build.py --markers` restores the marker build (sha1 102a2225…, regen 83/83 ok).
+  - Birthday screen: the full name now starts 8 px left of the portrait frame (cosmetic; needed for "Makoto
+    Matsunaga" 98 px).
+  - Current build/ = English build (sha1 758a09b5…, smoke ok, regen 83/83 ok, states in work/states/ match it); `build.py --markers` restores the marker
+    build.
 - **Debug-tool limits (grow when needed):** map scenes play each map's first event with new-game story flags; the
   later events of a map (other script slots 186-216, flag-dependent branches) are not forced yet. For phase 8,
   add per-script warps: set the script base `$gp`+0x52C / PC `$gp`+0x2A2 (docs/re/text.md) or the story flags at
@@ -107,5 +116,12 @@ Updated at the end of every session. Keep it to what the next session needs; his
   keep-original value (`=JP`). Field rows wider than a guessed budget need a "deferred" state (here `long`) so the
   check can reach 0 errors without abbreviating (D4). Glossary checks must skip a kanji term inside a longer
   compound (魔物 in 邪魔物) and accept the honorific after the full name (Kaoru Kanzaki-san).
+  Phase 7 (platform-ps1.md): armips `li`/`la` with a 32-bit value is lui + ori; in a branch/jal delay slot only
+  the lui runs before the call (a1 = 0x80090000 printed garbage): load first, nop in the slot. Relocating MIPS
+  strings without touching the lui: keep the new home in the same high half (`(addr + 0x8000) >> 16`) and rewrite
+  only the addiu low half; a shared lui then stays right for every other use. Window frames may be drawn from the
+  window rect (VS boxes widened fine) or be fixed art (battle bar: widening put text over the cap): compare a shot
+  before trusting a wider create. PS1 engines that count 8-px cells (`s3` return of a print) for layout decisions
+  break under VWF: grep the callers' use of the return value.
 - **Waiting on the user:** GUI keyboard input in `tools/pcsx/` is not proven (synthetic keystrokes did not reach the
   pad); owner asked for headless-only runs, so left; check by hand when playtesting. Non-blocking.

@@ -45,7 +45,9 @@ Addresses are RAM (NAGE.EXE file offset = addr - 0x80010000 + 0x800).
 | plain | 224 px (W 28) at x 16 | 4 | after op 17 (open box, no face) | winlog, MAP14R/187/01DA |
 
 The rule (last op 16/17 before the line in script order) matched every line the tour showed
-(`boxes.py --check work/qa/boxes_seen.json`). build/insert wraps every dialogue line to `width - MARGIN` px.
+(`boxes.py --check work/qa/boxes_seen.json`). build/insert wraps every dialogue line to `width - MARGIN` px with
+`font.balanced_wrap` (greedy line count, narrowest width that keeps it: no one-word last lines; lint fails a last
+line under 6 characters).
 Tour: `tools/debug/regen.py --cue build/nage_libre_en.cue --no-states --out work/qa/wintour --extra "--script
 tools/debug/winlog.lua --var SETTLE=3000 --mash 40 --mash-key circle"`, then `tools/debug/winscan.py --json
 work/qa/boxes_seen.json` (maps each logged pointer back to its row id).
@@ -70,9 +72,36 @@ Every EXE / record / name row has a budget (px per line, lines) in `boxes.FIELDS
   prints in a window). English items get a trailing `\n` from `insert.fit_field` (a `\n` right after an
   auto-wrap is skipped, so a 40-px item is safe too).
 - Composed lines (battle messages, result box, item use, level up): the code prints a name (0x8003B9EC) then the
-  row on the same line; their px leave `boxes.NAME_PX` (48) per name. VS / status box line 1 is surname + given
-  name printed in that order (NAME rows), 96 px for both: Western order (D1) needs the given name in the first
-  print or a code swap (phase 7).
+  row on the same line; their px leave `boxes.NAME_PX` (48) per name. Battle messages print the given name only
+  (`$gp`+0xBF4 / +0xA38); a few one-name rows have their own budget (`BAR_NAME` 56, or 39 for heroine-only cards).
+  The battle bar (224x16 at 16,27) can't widen: its frame is fixed art (tried at x 8 / 240: text ran over the
+  left cap, work/qa/go2/bar1.png).
+
+## Names (tools/asm/names.asm, phase 7)
+
+- Unit records 0x800B3778 + 0x50*n: +4 given name, +6 surname (NAME row indices; 0 = none, prints nothing).
+  Seven places print both, surname first with no space: VS boxes (0x8004C5AC / C620), status pair (0x80059BB8 /
+  9C44), battle status box (0x80051804), field status pair (0x80056B94), field status box (0x80057DFC, already
+  prints `" "` between). names.asm swaps each pair's loads (given name first, D1) and sends the second print
+  through `NameSp` (0x8008A314): a space (0x80090344, EXE_DATA) when there is a name and the pen isn't at x 0.
+  **verified**: work/qa/vs/zoom.png "Ann Akagi", work/qa/vs2 (QA names Tsukiko + Kazamatsuri, 105 px, fits).
+- VS / status boxes (two 96x48 at 16,168 / 144,168, frames drawn from the window rect) are 112 px at x 8 / 136
+  (`boxes.VS_PX`). The status pair's "newline only if both names < 12 cells" (s3 of 0x8003B288 = 8-px cells, wrong
+  with VWF) is an unconditional newline. Pairs in list order (surname, given) measure up to 105 px.
+- Birthday screen: the heroine's full name starts one cell left (pen x 3 -> 2 at 0x800689F4, x 8): 104 px to the
+  stone plate. **verified** work/qa/p7/bz.png.
+- Save/load list: `<n>面` became `Stage <n>`: the number call (0x8003B7A0) goes through `StageNum`, which prints
+  "Stage " first; the 面 print is a nop (EXE/80BCC is " ", unused). Not seen in game yet (needs a formatted card).
+
+## EXE strings over their room (insert.place_strings, phase 7)
+
+English longer than a string's in-place room is moved: into the zeroed tails shorter rows leave, the moved rows'
+own slots (touching spans join) and `insert.STRPOOL` (0x8008A500-0x8008A97C, unused kana glyph rows, after the asm
+code). Every ref is a lui + addiu/load pair: only the low half changes, so the new home must share the lui's high
+half (0x8001 for the 0x1xxx regions, 0x8009 for the $gp area and the pool). Largest first into the smallest span
+that holds it; 49 rows moved. tests/test_build.py: romdiff over NAGE.EXE with every write logged
+(`insert.WRITES`, original bytes checked) + asm .org sites, every English row written, refs land on the English,
+no kana/kanji left in the EXE text regions or record tables except script/keep_jp.txt rows.
 - Multi-line windows that a row starts (field box, dress-up, save/load) are word-wrapped by `insert.fit_field`.
 - Not reached in a tour yet (budgets from the window only, marked "window"/"guess" in FIELDS): item/magic lists,
   item use, club change, level up, field save messages, memory-card errors. Phase 8 QA reaches them.
@@ -84,7 +113,8 @@ Every EXE / record / name row has a budget (px per line, lines) in `boxes.FIELDS
   (+3.6 KB) hung New Game on its loading screen. insert.py and lint.py enforce it. Phase 6/7: keep names short, or
   move the list (its reader 0x8003B9EC copies up to 31 bytes of one name; lookup by counting CR LF lines).
 - **NAGE.EXE strings in place**: `max` = own bytes + word-alignment zeros (extract.exe_room); in the $gp area exactly
-  the original length. Filling the longer zero runs (old `max`) overwrote variables. Longer English: relocate.
+  the original length. Filling the longer zero runs (old `max`) overwrote variables. Longer English: relocated
+  (§EXE strings over their room).
 - **MAPDAT**: grown to 502 KB (MAP24 markers) and played; ceiling 589 KB still a guess past that.
 
 ## Paging

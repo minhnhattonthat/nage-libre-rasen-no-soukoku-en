@@ -47,8 +47,7 @@
  {
   "id": "NAME/009",
   "jp": "松永",
-  "en": "",
-  "long": "Matsunaga"
+  "en": "Matsunaga"
  },
  {
   "id": "NAME/010",
@@ -133,8 +132,7 @@
  {
   "id": "NAME/026",
   "jp": "古川",
-  "en": "",
-  "long": "Furukawa"
+  "en": "Furukawa"
  },
  {
   "id": "NAME/027",
@@ -229,56 +227,47 @@
  {
   "id": "NAME/045",
   "jp": "モンスターA",
-  "en": "",
-  "long": "Monster A"
+  "en": "Monster A"
  },
  {
   "id": "NAME/046",
   "jp": "モンスターB",
-  "en": "",
-  "long": "Monster B"
+  "en": "Monster B"
  },
  {
   "id": "NAME/047",
   "jp": "モンスターC",
-  "en": "",
-  "long": "Monster C"
+  "en": "Monster C"
  },
  {
   "id": "NAME/048",
   "jp": "モンスターD",
-  "en": "",
-  "long": "Monster D"
+  "en": "Monster D"
  },
  {
   "id": "NAME/049",
   "jp": "モンスターE",
-  "en": "",
-  "long": "Monster E"
+  "en": "Monster E"
  },
  {
   "id": "NAME/050",
   "jp": "モンスターF",
-  "en": "",
-  "long": "Monster F"
+  "en": "Monster F"
  },
  {
   "id": "NAME/051",
   "jp": "モンスターG",
-  "en": "",
-  "long": "Monster G"
+  "en": "Monster G"
  },
  {
   "id": "NAME/052",
   "jp": "モンスターH",
-  "en": "",
-  "long": "Monster H"
+  "en": "Monster H"
  },
  {
   "id": "NAME/053",
   "jp": "モンスターI",
-  "en": "",
-  "long": "Monster I"
+  "en": "Monster I"
  },
  {
   "id": "NAME/054",
@@ -453,8 +442,7 @@
  {
   "id": "NAME/088",
   "jp": "桜沢",
-  "en": "",
-  "long": "Sakurazawa"
+  "en": "Sakurazawa"
  },
  {
   "id": "NAME/089",
@@ -474,8 +462,7 @@
  {
   "id": "NAME/092",
   "jp": "山川",
-  "en": "",
-  "long": "Yamakawa"
+  "en": "Yamakawa"
  },
  {
   "id": "NAME/093",
@@ -485,8 +472,7 @@
  {
   "id": "NAME/094",
   "jp": "姫川",
-  "en": "",
-  "long": "Himekawa"
+  "en": "Himekawa"
  },
  {
   "id": "NAME/095",
@@ -516,8 +502,7 @@
  {
   "id": "NAME/100",
   "jp": "唐沢",
-  "en": "",
-  "long": "Karasawa"
+  "en": "Karasawa"
  },
  {
   "id": "NAME/101",
@@ -527,8 +512,7 @@
  {
   "id": "NAME/102",
   "jp": "高橋",
-  "en": "",
-  "long": "Takahashi"
+  "en": "Takahashi"
  },
  {
   "id": "NAME/103",
@@ -568,8 +552,7 @@
  {
   "id": "NAME/110",
   "jp": "中川",
-  "en": "",
-  "long": "Nakagawa"
+  "en": "Nakagawa"
  },
  {
   "id": "NAME/111",
@@ -589,8 +572,7 @@
  {
   "id": "NAME/114",
   "jp": "島本",
-  "en": "",
-  "long": "Shimamoto"
+  "en": "Shimamoto"
  },
  {
   "id": "NAME/115",
@@ -615,8 +597,7 @@
  {
   "id": "NAME/119",
   "jp": "山本",
-  "en": "",
-  "long": "Yamamoto"
+  "en": "Yamamoto"
  },
  {
   "id": "NAME/120",
@@ -636,8 +617,7 @@
  {
   "id": "NAME/123",
   "jp": "宝塚",
-  "en": "",
-  "long": "Takarazuka"
+  "en": "Takarazuka"
  },
  {
   "id": "NAME/124",
@@ -857,8 +837,7 @@
  {
   "id": "NAME/167",
   "jp": "高見沢",
-  "en": "",
-  "long": "Takamizawa"
+  "en": "Takamizawa"
  },
  {
   "id": "NAME/168",
@@ -898,8 +877,7 @@
  {
   "id": "NAME/175",
   "jp": "風祭",
-  "en": "",
-  "long": "Kazamatsuri"
+  "en": "Kazamatsuri"
  },
  {
   "id": "NAME/176",
@@ -964,8 +942,7 @@
  {
   "id": "NAME/188",
   "jp": "長嶋",
-  "en": "",
-  "long": "Nagashima"
+  "en": "Nagashima"
  },
  {
   "id": "NAME/189",
@@ -1025,8 +1002,7 @@
  {
   "id": "NAME/200",
   "jp": "松本",
-  "en": "",
-  "long": "Matsumoto"
+  "en": "Matsumoto"
  },
  {
   "id": "NAME/201",
@@ -1046,8 +1022,7 @@
  {
   "id": "NAME/204",
   "jp": "勝俣",
-  "en": "",
-  "long": "Katsumata"
+  "en": "Katsumata"
  },
  {
   "id": "NAME/205",
@@ -1087,8 +1062,7 @@
  {
   "id": "NAME/212",
   "jp": "川島",
-  "en": "",
-  "long": "Kawashima"
+  "en": "Kawashima"
  },
  {
   "id": "NAME/213",
@@ -1123,8 +1097,7 @@
  {
   "id": "NAME/219",
   "jp": "川上",
-  "en": "",
-  "long": "Kawakami"
+  "en": "Kawakami"
  },
  {
   "id": "NAME/220",
@@ -1159,8 +1132,7 @@
  {
   "id": "NAME/226",
   "jp": "鶴岡",
-  "en": "",
-  "long": "Tsuruoka"
+  "en": "Tsuruoka"
  },
  {
   "id": "NAME/227",
@@ -1180,8 +1152,7 @@
  {
   "id": "NAME/230",
   "jp": "渡辺",
-  "en": "",
-  "long": "Watanabe"
+  "en": "Watanabe"
  },
  {
   "id": "NAME/231",
@@ -1191,8 +1162,7 @@
  {
   "id": "NAME/232",
   "jp": "小林",
-  "en": "",
-  "long": "Kobayashi"
+  "en": "Kobayashi"
  },
  {
   "id": "NAME/233",
@@ -1222,8 +1192,7 @@
  {
   "id": "NAME/238",
   "jp": "片山",
-  "en": "",
-  "long": "Katayama"
+  "en": "Katayama"
  },
  {
   "id": "NAME/239",
@@ -1253,8 +1222,7 @@
  {
   "id": "NAME/244",
   "jp": "中村",
-  "en": "",
-  "long": "Nakamura"
+  "en": "Nakamura"
  },
  {
   "id": "NAME/245",
@@ -1434,8 +1402,7 @@
  {
   "id": "NAME/280",
   "jp": "中本",
-  "en": "",
-  "long": "Nakamoto"
+  "en": "Nakamoto"
  },
  {
   "id": "NAME/281",
@@ -1465,8 +1432,7 @@
  {
   "id": "NAME/286",
   "jp": "永山",
-  "en": "",
-  "long": "Nagayama"
+  "en": "Nagayama"
  },
  {
   "id": "NAME/287",
@@ -1551,8 +1517,7 @@
  {
   "id": "NAME/303",
   "jp": "細川",
-  "en": "",
-  "long": "Hosokawa"
+  "en": "Hosokawa"
  },
  {
   "id": "NAME/304",
@@ -1627,8 +1592,7 @@
  {
   "id": "NAME/318",
   "jp": "立花",
-  "en": "",
-  "long": "Tachibana"
+  "en": "Tachibana"
  },
  {
   "id": "NAME/319",
@@ -1803,8 +1767,7 @@
  {
   "id": "NAME/353",
   "jp": "小笠原",
-  "en": "",
-  "long": "Ogasawara"
+  "en": "Ogasawara"
  },
  {
   "id": "NAME/354",
@@ -1929,8 +1892,7 @@
  {
   "id": "NAME/378",
   "jp": "福山",
-  "en": "",
-  "long": "Fukuyama"
+  "en": "Fukuyama"
  },
  {
   "id": "NAME/379",
@@ -1960,8 +1922,7 @@
  {
   "id": "NAME/384",
   "jp": "橋本",
-  "en": "",
-  "long": "Hashimoto"
+  "en": "Hashimoto"
  },
  {
   "id": "NAME/385",
@@ -2041,8 +2002,7 @@
  {
   "id": "NAME/400",
   "jp": "ともさか",
-  "en": "",
-  "long": "Tomosaka"
+  "en": "Tomosaka"
  },
  {
   "id": "NAME/401",
@@ -2072,8 +2032,7 @@
  {
   "id": "NAME/406",
   "jp": "長谷川",
-  "en": "",
-  "long": "Hasegawa"
+  "en": "Hasegawa"
  },
  {
   "id": "NAME/407",
@@ -2173,8 +2132,7 @@
  {
   "id": "NAME/426",
   "jp": "熊川",
-  "en": "",
-  "long": "Kumakawa"
+  "en": "Kumakawa"
  },
  {
   "id": "NAME/427",
@@ -2184,8 +2142,7 @@
  {
   "id": "NAME/428",
   "jp": "山中",
-  "en": "",
-  "long": "Yamanaka"
+  "en": "Yamanaka"
  },
  {
   "id": "NAME/429",
@@ -2210,8 +2167,7 @@
  {
   "id": "NAME/433",
   "jp": "高水木",
-  "en": "",
-  "long": "Takamizuki"
+  "en": "Takamizuki"
  },
  {
   "id": "NAME/434",
@@ -2221,8 +2177,7 @@
  {
   "id": "NAME/435",
   "jp": "松平",
-  "en": "",
-  "long": "Matsudaira"
+  "en": "Matsudaira"
  },
  {
   "id": "NAME/436",
@@ -2272,8 +2227,7 @@
  {
   "id": "NAME/445",
   "jp": "山口",
-  "en": "",
-  "long": "Yamaguchi"
+  "en": "Yamaguchi"
  },
  {
   "id": "NAME/446",
@@ -2288,8 +2242,7 @@
  {
   "id": "NAME/448",
   "jp": "吉竹",
-  "en": "",
-  "long": "Yoshitake"
+  "en": "Yoshitake"
  },
  {
   "id": "NAME/449",
@@ -2434,8 +2387,7 @@
  {
   "id": "NAME/477",
   "jp": "林田",
-  "en": "",
-  "long": "Hayashida"
+  "en": "Hayashida"
  },
  {
   "id": "NAME/478",
@@ -2520,8 +2472,7 @@
  {
   "id": "NAME/494",
   "jp": "林原",
-  "en": "",
-  "long": "Hayashibara"
+  "en": "Hayashibara"
  },
  {
   "id": "NAME/495",
@@ -2566,8 +2517,7 @@
  {
   "id": "NAME/503",
   "jp": "村山",
-  "en": "",
-  "long": "Murayama"
+  "en": "Murayama"
  },
  {
   "id": "NAME/504",
@@ -2582,8 +2532,7 @@
  {
   "id": "NAME/506",
   "jp": "高沢",
-  "en": "",
-  "long": "Takazawa"
+  "en": "Takazawa"
  },
  {
   "id": "NAME/507",
@@ -2743,8 +2692,7 @@
  {
   "id": "NAME/538",
   "jp": "黒沢",
-  "en": "",
-  "long": "Kurosawa"
+  "en": "Kurosawa"
  },
  {
   "id": "NAME/539",
@@ -3029,8 +2977,7 @@
  {
   "id": "NAME/595",
   "jp": "桂木",
-  "en": "",
-  "long": "Katsuragi"
+  "en": "Katsuragi"
  },
  {
   "id": "NAME/596",
@@ -3070,8 +3017,7 @@
  {
   "id": "NAME/603",
   "jp": "河ノ内",
-  "en": "",
-  "long": "Kawanouchi"
+  "en": "Kawanouchi"
  },
  {
   "id": "NAME/604",
@@ -3131,8 +3077,7 @@
  {
   "id": "NAME/615",
   "jp": "神楽坂",
-  "en": "",
-  "long": "Kagurazaka"
+  "en": "Kagurazaka"
  },
  {
   "id": "NAME/616",
@@ -3187,8 +3132,7 @@
  {
   "id": "NAME/626",
   "jp": "東雲",
-  "en": "",
-  "long": "Shinonome"
+  "en": "Shinonome"
  },
  {
   "id": "NAME/627",
@@ -3383,8 +3327,7 @@
  {
   "id": "NAME/665",
   "jp": "春日野",
-  "en": "",
-  "long": "Kasugano"
+  "en": "Kasugano"
  },
  {
   "id": "NAME/666",
@@ -3484,8 +3427,7 @@
  {
   "id": "NAME/685",
   "jp": "立川",
-  "en": "",
-  "long": "Tachikawa"
+  "en": "Tachikawa"
  },
  {
   "id": "NAME/686",

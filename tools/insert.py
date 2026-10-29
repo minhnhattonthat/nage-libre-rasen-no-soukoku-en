@@ -25,7 +25,13 @@ from sweep_packed import table  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "script"
 ARMIPS = ROOT / "tools/armips/armips.exe"
-ASM = [ROOT / "tools/asm/vwf.asm"]
+ASM = [ROOT / "tools/asm/vwf.asm", ROOT / "tools/asm/names.asm"]
+# Unused half-width kana glyph rows after the asm code (names.asm stops before it), up to the data at 0x8008A97C:
+# home for $gp-area strings over their room (same lui half 0x8009 as the $gp area)
+STRPOOL = (0x8008A500, 0x8008A97C)
+RAM = 0x80010000 - 0x800  # NAGE.EXE file offset = RAM - this
+WRITES = []  # (file, offset, original bytes, new bytes, writer) for every text write: romdiff --writes
+RELOCATED = {}  # EXE row id -> new RAM address (place_strings)
 MAPDAT_MAX = 0x801FFF00 - 0x80170000  # loaded at 0x80170000, stack below 0x801FFF00 (docs/re/files.md)
 # SYSDATA's buffer: memory-area table at 0x80089798 = {0x80130000, 0xC000}; the original file is 47,289 bytes, so the
 # whole names block may grow by ~1.8 KB. Over it, New Game hangs on its loading screen (10-byte name markers did).
@@ -57,7 +63,6 @@ def encode(s):
 
 
 QA = {}  # id -> text overriding marker/en for one build (build.py --qa ID=text): stress lines, torture line
-SKIPPED = []  # EXE rows whose English is over the in-place room: Japanese kept (build.py prints them)
 
 
 def row_text(row, markers, room=None, box=None):
@@ -73,7 +78,7 @@ def row_text(row, markers, room=None, box=None):
     else:
         return None
     if box:
-        s = paginate(font.wrap(s, box[0]), box[1])
+        s = paginate(font.balanced_wrap(s, box[0]), box[1])
     return encode(s)
 
 
@@ -129,11 +134,57 @@ def build_maps(tree, markers):
     return out
 
 
-def put(buf, o, raw, room, rid):
-    """Write raw + NUL at o, zero-filling the rest of a `room`-byte field (room excludes the NUL)."""
-    if len(raw) > room:
-        raise ValueError(f"{rid}: {len(raw)} bytes, field holds {room}")
-    buf[o:o + room + 1] = raw + bytes(room + 1 - len(raw))
+def write(buf, o, data, by, orig=None, name="NAGE.EXE"):
+    """Every text and pointer write goes through here: logged against the clean original for romdiff --writes."""
+    WRITES.append((name, o, bytes((orig or buf)[o:o + len(data)]), bytes(data), by))
+    buf[o:o + len(data)] = data
+
+
+def place_strings(exe, orig, rows):
+    """Write [(row, bytes)] EXE strings: in place when they fit their room, else relocated into free bytes the same
+    lui half reaches: the tails shorter English leaves, the moved rows' own slots and STRPOOL. A moved row's refs
+    (`lui:ADDR` = the addiu/load after the lui) get the new low half; the lui stays, so the new address must share
+    its high half. Unused free bytes are zeroed. Returns {row id: new RAM address} for the moved rows."""
+    hi = lambda o: (o + RAM + 0x8000) >> 16  # noqa: E731  (file offset -> lui half)
+    free, moved, out = {}, [], {}
+    for r, t in rows:
+        o = int(r["id"].split("/")[1], 16)
+        if len(t) <= r["max"]:
+            write(exe, o, t + b"\0", r["id"], orig)
+            free.setdefault(hi(o), []).append([o + len(t) + 1, o + r["max"] + 1])
+        else:
+            moved.append((r, t))
+            free.setdefault(hi(o), []).append([o, o + r["max"] + 1])
+    for h, spans in free.items():  # join touching spans (a moved row's slot + the next row's tail)
+        joined = []
+        for s in sorted(spans):
+            if joined and s[0] == joined[-1][1]:
+                joined[-1][1] = s[1]
+            else:
+                joined.append(s)
+        free[h] = joined
+    pool = [STRPOOL[0] - RAM, STRPOOL[1] - RAM]
+    free.setdefault(hi(pool[0]), []).append(pool)
+    for r, t in sorted(moved, key=lambda x: -len(x[1])):  # largest first, into the smallest span that holds it
+        old = int(r["id"].split("/")[1], 16)
+        span = min((s for s in free.get(hi(old), []) if s[1] - s[0] >= len(t) + 1), key=lambda s: s[1] - s[0],
+                   default=None)
+        if span is None:
+            raise ValueError(f"{r['id']}: no free span of {len(t) + 1} bytes in the {hi(old):04X} lui half")
+        new = span[0] + RAM
+        write(exe, span[0], t + b"\0", r["id"], orig)
+        span[0] += len(t) + 1
+        for ref in r["refs"]:
+            kind, site = ref.split(":")
+            so = int(site, 16) - RAM
+            ins = int.from_bytes(orig[so:so + 4], "little")
+            if kind != "lui" or ins & 0xFFFF != (old + RAM) & 0xFFFF:
+                raise ValueError(f"{r['id']}: ref {ref} is not the low half of {old + RAM:08X}")
+            write(exe, so, ((ins & 0xFFFF0000) | (new & 0xFFFF)).to_bytes(4, "little"), r["id"] + " ref", orig)
+        out[r["id"]] = new
+    for span in (s for spans in free.values() for s in spans if s is not pool and s[1] > s[0]):
+        write(exe, span[0], bytes(span[1] - span[0]), "free", orig)  # no stale Japanese after a moved/shorter row
+    return out
 
 
 def patch_exe(exe):
@@ -151,12 +202,9 @@ def build_exe(tree, markers):
     exe = bytearray(Path(tree, "NAGE.EXE").read_bytes())
     orig = bytes(exe)
     patch_exe(exe)
-    for r in load_rows("exe.json"):
-        t = row_text(r, markers, r["max"])
-        if t is not None and len(t) > r["max"]:  # shortcut: kept Japanese until phase 7 relocates long strings
-            SKIPPED.append(r["id"])
-        elif t is not None:
-            put(exe, int(r["id"].split("/")[1], 16), t, r["max"], r["id"])
+    strings = [(r, t) for r in load_rows("exe.json") if (t := row_text(r, markers, r["max"])) is not None]
+    RELOCATED.clear()
+    RELOCATED.update(place_strings(exe, orig, strings))
     tables = {name: (base, size, {f: off for f, off, _ in fields}) for name, base, size, _, fields in extract.TABLES}
     for r in load_rows("records.json"):
         t = row_text(r, markers, r["max"])
@@ -164,15 +212,15 @@ def build_exe(tree, markers):
             continue
         if r["id"] == "MEMCARD":
             o, n = extract.MEMCARD
-            exe[o:o + n] = t.ljust(n, b"\0")[:n]
+            write(exe, o, t.ljust(n, b"\0")[:n], r["id"], orig)
             continue
         name, i, field = r["id"].split("/")
         base, size, offs = tables[name]
-        # only the string and its NUL: the bytes after it in the field may be flags (docs/re/text.md)
+        # the string, its NUL and zeros over the rest of the old string only: bytes after the old NUL may be flags
         o = base + int(i) * size + offs[field]
         if len(t) > r["max"]:
             raise ValueError(f"{r['id']}: {len(t)} bytes, field holds {r['max']}")
-        exe[o:o + len(t) + 1] = t + b"\0"
+        write(exe, o, t.ljust(orig.index(b"\0", o) - o, b"\0") + b"\0", r["id"], orig)
     return {"NAGE.EXE": bytes(exe)} if exe != orig else {}
 
 
@@ -205,7 +253,8 @@ def build_files(tree, out, markers=False, qa=None):
     """Write every changed file under out; returns {disc path: written path}."""
     QA.clear()
     QA.update(qa or {})
-    files = {**build_maps(tree, markers), **build_exe(tree, markers), **build_names(tree, markers)}
+    WRITES.clear()
+    files ={**build_maps(tree, markers), **build_exe(tree, markers), **build_names(tree, markers)}
     written = {}
     for rel, data in files.items():
         p = Path(out, rel)

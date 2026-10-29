@@ -17,8 +17,11 @@ Each file is a JSON list (`indent=1`, UTF-8, not ASCII-escaped) of rows:
 - `dead`: in script code no path reaches (cut content); translate for completeness, low priority;
 - `refs`: code sites that point at an EXE string (`lui:ADDR` = the addiu/load of a lui pair, `gp:`, `word:`);
 - `long`: the full English of a field row wider than its `boxes.FIELDS` budget (`tools/batches.py merge`); `en`
-  stays empty (Japanese in the build) until phase 7 widens the field or changes the engine, then it moves to `en`;
+  stays empty (Japanese in the build) until phase 7 widens the field or changes the engine, then
+  `tools/batches.py refit` moves it to `en` (none left after phase 7);
 - `notes`, `status`: free for translators and reviewers.
+
+A row with `jp` and no `en` (and no `same`) fails the lint unless `script/keep_jp.txt` lists its id with a reason.
 
 Codec (`tools/text.py`): Shift-JIS as text, newline as `\n`, control codes as their ASCII (`%h` `%z` `%cNN` `%tNN`
 `%p` `%k`, docs/re/text.md), any byte that would not roundtrip as `[XX]`. Leading/trailing spaces (`　`) are part of

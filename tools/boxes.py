@@ -46,18 +46,27 @@ def budget(box):
 # "guess" = window and layout both inferred. px is for the row's own text; "shared" rows sit on a line after a
 # name or another row, so their px already leaves room for it (NAME_PX for a one-part name).
 NAME_PX = 48  # room kept for a one-part name (NAME/*) in front of a composed battle/field message
+VS_PX = 112  # VS / status boxes, widened from 96 by tools/asm/names.asm
+BAR_PX = 224  # battle message bar 224x16 at 16,27 (0x8004B898); its frame is fixed art, so it can't widen
+BAR_NAME = 56  # one name in front of a battle message: given names, "Monster A" 54 px
 FIELDS = [
     (("EXE", 0xBE8, 0xC34), 40, 1, "measured: field command menu, window 40x80 at 24,48 (0x8002E8B0), one item "
      "per line by auto-wrap: insert ends each item with \\n (work/qa/ft/cmd/stateat.png)"),
     (("EXE", 0xC40, 0xC5C), 40, 1, "measured: field その他 sub-menu, window 40x80 at 56,72 (0x8002EAA8), one item "
      "per line (work/qa/ft/y0)"),
     (("EXE", 0xC68, 0xC68), 40, 2, "measured: last sub-menu item, two lines in the original (ステータス/セーブ)"),
-    (("EXE", 0x13A0, 0x1448), 96, 1, "measured: VS box line (96x48 at 16,168 / 144,168, 0x8004C588) and status box "
-     "(144x64): school / club on its own line"),
-    (("EXE", 0x809FC, 0x80A4C), 96, 1, "measured: club part of the VS / status club line (E013C0-style lines)"),
-    (("EXE", 0x1B6C, 0x1CD8), 224 - 2 * NAME_PX, 1, "measured: battle message line, window 224x16 at 16,27 "
-     "(0x8004B898), shared: actor name + text (+ a target or magic name): px leaves 2 names (gameover log)"),
-    (("EXE", 0x80A90, 0x80AA4), 224 - 2 * NAME_PX, 1, "measured: battle message pieces, same line as above"),
+    (("EXE", 0x13A0, 0x1448), VS_PX, 1, "measured: VS box line (96x48 at 16,168 / 144,168, 0x8004C588; 112 px "
+     "wide since names.asm) and status box (144x64): school / club on its own line"),
+    (("EXE", 0x809FC, 0x80A4C), VS_PX, 1, "measured: club part of the VS / status club line (E013C0-style lines)"),
+    (("EXE", 0x1B6C, 0x1B6C), BAR_PX - BAR_NAME, 1, "battle bar: actor's attack + birthstone, one name "
+     "(0x8004BA30)"),
+    (("EXE", 0x1BB4, 0x1BB4), BAR_PX - 39, 1, "battle bar: Randoma Card + birthstone is a player card, so the "
+     "actor is a heroine (given names up to 39 px, Shinobu)"),
+    (("EXE", 0x1C10, 0x1CB8), BAR_PX, 1, "battle bar, no-name variants: the switch at 0x8004BC38 (flag "
+     "0x80090104 clear) prints the row alone"),
+    (("EXE", 0x1B6C, 0x1CD8), BAR_PX - 2 * NAME_PX, 1, "measured: battle bar, shared: actor name + text (+ a "
+     "target or magic name): px leaves 2 names (gameover log)"),
+    (("EXE", 0x80A90, 0x80AA4), BAR_PX - 2 * NAME_PX, 1, "measured: battle message pieces, same line as above"),
     (("EXE", 0x1CEC, 0x1D1C), 144 - NAME_PX, 4, "measured: battle result box 144x64 at 96,152 (0x8004C134), "
      "shared: name + text (gameover)"),
     (("EXE", 0x80AAC, 0x80AAC), 144 - NAME_PX, 4, "window: spacer printed into the battle result box (0x8004C1E4)"),
@@ -69,8 +78,8 @@ FIELDS = [
      "face-box width 144x64 (0x8002ECF4) as the narrower field box"),
     (("EXE", 0x2440, 0x2440), 224, 1, "debug message (not faund no.), never shown in play"),
     (("EXE", 0x2458, 0x24B8), 224 - NAME_PX, 4, "window: level-up box 224x64 (0x8005F528), shared with a name"),
-    (("EXE", 0x24C8, 0x24F8), 96, 1, "measured: birthday screen name, x 16 up to the stone plate at x 112 "
-     "(work/qa/ft/z_birthday.png)"),
+    (("EXE", 0x24C8, 0x24F8), 104, 1, "measured: birthday screen name up to the stone plate at x 112 "
+     "(work/qa/ft/z_birthday.png); starts at x 8 since names.asm (was 16)"),
     (("EXE", 0x2510, 0x2718), 224, 4, "window: dress-up message box 224x64 at 16,152 (0x8006947C); insert wraps"),
     (("EXE", 0x295C, 0x295C), 96, 1, "measured: save/load file label, the file number follows, date/なし at x 112 "
      "(work/qa/ft/z_load.png)"),
@@ -96,7 +105,9 @@ FIELDS = [
      "empty); the longest Japanese name is 128 px"),
     (r"ITEM/\d\d/desc|MAGIC/\d\d/desc", 224, 1, "measured: description line, window 224x16 (gameover log: MAGIC "
      "desc in 224x16 at 16,27)"),
-    (r"NAME/\d{3}", NAME_PX, 1, "measured: VS / status box line 1 = surname + given name, 96 px for both"),
+    (r"NAME/\d{3}", 64, 1, "VS / status box line 1 = given name, space, surname (names.asm) in VS_PX: surnames up "
+     "to 64 px, pairs (list order surname, given) up to 105 px; battle messages print the given name only "
+     "(NAME_PX each)"),
     (r"MEMCARD", 0, 0, "BIOS memory-card manager title: full-width Shift-JIS, bytes only (insert keeps Japanese)"),
 ]
 NEWLINE = [("EXE", 0xBE8, 0xC5C)]

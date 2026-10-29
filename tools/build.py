@@ -82,6 +82,6 @@ if __name__ == "__main__":
     shutil.rmtree(files, ignore_errors=True)
     edits = insert.build_files(DISC / "tree", files, a.markers, dict(q.split("=", 1) for q in a.qa))
     sha1 = pack(OUT, edited_layout(edits))
-    if insert.SKIPPED:
-        print(f"{len(insert.SKIPPED)} EXE strings over their in-place room kept Japanese (phase 7 relocation)")
+    if insert.RELOCATED:
+        print(f"{len(insert.RELOCATED)} EXE strings relocated")
     print(f"{len(edits)} files changed; {OUT.relative_to(ROOT)} sha1 {sha1}")

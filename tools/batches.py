@@ -5,6 +5,7 @@ work/tl/bNNN.out.tsv, merge checked batches into script/.
     python -X utf8 tools/batches.py check b001 [b002 ..]    exit 1 on any error; prints OK per clean batch
     python -X utf8 tools/batches.py merge b001 [b002 ..]    check, then write `en` into script/*.json
     python -X utf8 tools/batches.py pairs OUT b001 [..]     reviewer pairs file (>> id | JP / EN, +-2 context)
+    python -X utf8 tools/batches.py refit                   move `long` rows that fit their field now into `en`
 
 Input TSV: id, speaker, form, limit, jp (JP newlines shown as ` / `). Output TSV: id, English (`\\n` = a forced
 break). Story order: MAP86 + MAP85 (New Game intro) first, then the maps by number, then exe, records, names.
@@ -272,6 +273,27 @@ def merge(bs):
     return 0
 
 
+def refit():
+    """Phase 7: move each `long` row whose English now passes lint (engine work widened its field) into `en`."""
+    left = 0
+    for name in files():
+        rows, moved = load(name), 0
+        for r in rows:
+            if r.get("long"):
+                if not name.startswith("maps/"):
+                    lint.FIELD_ROWS.add(r["id"])
+                if lint.check_row(dict(r, en=r["long"]), fixed=name == "records.json")[0]:
+                    left += 1
+                    continue
+                r["en"] = r.pop("long")
+                moved += 1
+        if moved:
+            (SCRIPT / name).write_text(extract.dump(rows), encoding="utf-8", newline="\n")
+            print(f"{name}: {moved} rows fitted")
+    print(f"{left} rows still long")
+    return 0
+
+
 def pairs(out, bs):
     allrows, spk = rows_by_id(), speakers()
     seq = {}  # file -> ordered ids
@@ -293,7 +315,7 @@ def pairs(out, bs):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["split", "check", "merge", "pairs"])
+    ap.add_argument("cmd", choices=["split", "check", "merge", "pairs", "refit"])
     ap.add_argument("args", nargs="*")
     ap.add_argument("--chars", type=int, default=3500)
     a = ap.parse_args()
@@ -303,6 +325,8 @@ def main():
         return merge(a.args)
     if a.cmd == "pairs":
         return pairs(a.args[0], a.args[1:])
+    if a.cmd == "refit":
+        return refit()
     allrows, box_of, gl, bad = rows_by_id(), boxes.all_rows(), glossary(), 0
     for b in a.args:
         errs = check(b, allrows, box_of, gl)

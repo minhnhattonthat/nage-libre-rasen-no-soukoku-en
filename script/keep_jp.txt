@@ -1,0 +1,5 @@
+# Rows whose Japanese stays in the build on purpose (lint fails any other row with jp and no en). id  reason
+EXE/01E90  blanking string: newlines + full-width spaces that clear a box (no visible text)
+EXE/02440  debug printf "not faund no. = %d", never shown in play
+EXE/80AAC  one full-width space: spacer in the battle result box (no visible text)
+MEMCARD  BIOS memory-card manager title: full-width Shift-JIS drawn by the BIOS, not the game font

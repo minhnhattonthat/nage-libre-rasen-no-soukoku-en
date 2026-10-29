@@ -139,12 +139,11 @@
  {
   "id": "EXE/013E0",
   "jp": "生徒会長",
-  "en": "",
+  "en": "Council President",
   "max": 11,
   "refs": [
    "lui:8003BC48"
-  ],
-  "long": "Student Council President"
+  ]
  },
  {
   "id": "EXE/013EC",
@@ -158,12 +157,11 @@
  {
   "id": "EXE/013F8",
   "jp": "%hスーパー%z帰宅部",
-  "en": "",
+  "en": "Super Go-Home Club",
   "max": 19,
   "refs": [
    "lui:8003BCAC"
-  ],
-  "long": "Super Go-Home Club"
+  ]
  },
  {
   "id": "EXE/0140C",
@@ -222,12 +220,11 @@
  {
   "id": "EXE/01B6C",
   "jp": "の攻撃　誕生石効果",
-  "en": "",
+  "en": "'s attack + birthstone bonus!",
   "max": 19,
   "refs": [
    "lui:8004BA44"
-  ],
-  "long": "'s attack + birthstone bonus!"
+  ]
  },
  {
   "id": "EXE/01B80",
@@ -259,12 +256,11 @@
  {
   "id": "EXE/01BB4",
   "jp": "　%hランダマカード%z　誕生石効果",
-  "en": "",
+  "en": "'s Randoma Card, birthstone bonus!",
   "max": 35,
   "refs": [
    "lui:8004BB70"
-  ],
-  "long": "'s Randoma Card + birthstone bonus!"
+  ]
  },
  {
   "id": "EXE/01BD8",
@@ -314,12 +310,11 @@
  {
   "id": "EXE/01C1C",
   "jp": "攻撃　誕生石効果",
-  "en": "",
+  "en": "Attack + birthstone bonus!",
   "max": 19,
   "refs": [
    "lui:8004BC80"
-  ],
-  "long": "Attack + birthstone bonus!"
+  ]
  },
  {
   "id": "EXE/01C30",
@@ -342,12 +337,11 @@
  {
   "id": "EXE/01C50",
   "jp": "%hランダマカード%z　誕生石効果",
-  "en": "",
+  "en": "Randoma Card + birthstone bonus!",
   "max": 31,
   "refs": [
    "lui:8004BD5C"
-  ],
-  "long": "Randoma Card + birthstone bonus!"
+  ]
  },
  {
   "id": "EXE/01C70",
@@ -865,12 +859,11 @@
  {
   "id": "EXE/024E0",
   "jp": " 松永  真",
-  "en": "",
+  "en": "Makoto Matsunaga",
   "max": 11,
   "refs": [
    "lui:80068A5C"
-  ],
-  "long": "Makoto Matsunaga"
+  ]
  },
  {
   "id": "EXE/024EC",
@@ -1606,7 +1599,7 @@
  {
   "id": "EXE/80BCC",
   "jp": "面",
-  "en": "St",
+  "en": " ",
   "max": 2,
   "refs": [
    "lui:8006B618",
@@ -1626,7 +1619,7 @@
  {
   "id": "EXE/80BD4",
   "jp": "日",
-  "en": ".",
+  "en": " ",
   "max": 2,
   "refs": [
    "lui:80068BB4",

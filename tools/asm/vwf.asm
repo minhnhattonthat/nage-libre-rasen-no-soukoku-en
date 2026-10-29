@@ -181,8 +181,8 @@ VwfHalf:
 @@ret:
   j     EPILOGUE
   subu  v0, zero, s2
-.if . > 0x8008A97C
-  .error "VWF code runs into the data at 0x8008A97C"
+.if . > 0x8008A314
+  .error "VWF code runs into names.asm (0x8008A314)"
 .endif
 
 .close

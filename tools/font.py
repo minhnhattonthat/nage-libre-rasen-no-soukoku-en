@@ -96,6 +96,19 @@ def wrap(text, width):
     return out
 
 
+def balanced_wrap(text, width):
+    """wrap() per paragraph at the narrowest width that keeps its line count, so the last line isn't a one-word
+    widow ("...get them back for" / "you.")."""
+    out = []
+    for para in text.split("\n"):
+        n, lo, hi = len(wrap(para, width)), 1, width
+        while lo < hi:  # smallest width with the same number of lines
+            mid = (lo + hi) // 2
+            lo, hi = (lo, mid) if len(wrap(para, mid)) <= n else (mid + 1, hi)
+        out += wrap(para, lo)
+    return out
+
+
 def encode(exe):
     """(font bytes for slots 0-95, width bytes): rows LSB = leftmost pixel."""
     font, width = bytearray(), bytearray()

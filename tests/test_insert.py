@@ -30,6 +30,16 @@ def test_advance():
     assert font.advance("%c02ii%k%p") == 4  # control codes take no width
 
 
+@needs_disc
+def test_balanced_wrap_keeps_lines_and_avoids_widows():
+    s = "Ma'am! We got your daikon back!"  # greedy at 143 px: "...daikon" / "back!"
+    greedy, bal = font.wrap(s, 143), font.balanced_wrap(s, 143)
+    assert len(bal) == len(greedy) and " ".join(bal) == s
+    assert all(font.advance(l) <= 143 for l in bal)
+    assert font.advance(bal[-1]) > font.advance(greedy[-1])
+    assert font.balanced_wrap("a\n\nb", 143) == ["a", "", "b"]
+
+
 def test_paginate():
     assert insert.paginate(list("abcde"), 2) == "a\nb%k%pc\nd%k%pe"
     assert insert.paginate(["x"], 4) == "x"

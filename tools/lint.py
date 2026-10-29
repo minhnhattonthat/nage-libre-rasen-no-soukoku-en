@@ -3,9 +3,11 @@
     python -X utf8 tools/lint.py [--warn]
 
 Errors: a character with no glyph (non-ASCII, `\\`), a fixed field over its bytes (records), a colour code `%cNN`
-of the Japanese missing, a word wider than its box. Warnings (--warn lists them): a dialogue line that needs more
-than one box page (it still works: insert.py pages it with %k%p), an EXE string over its in-place room (phase 7
-relocates it). Also: all English names together over SYSDATA's 0xC000-byte buffer.
+of the Japanese missing, a word wider than its box, a field row over its px/lines (boxes.FIELDS), a row with
+Japanese and no English that script/keep_jp.txt doesn't list. Warnings (--warn lists them): a dialogue line that
+needs more than one box page (it still works: insert.py pages it with %k%p). EXE strings over their in-place room
+are relocated by insert.place_strings (tests/test_build.py). Also: all English names together over SYSDATA's
+0xC000-byte buffer.
 """
 import argparse
 import glob
@@ -40,8 +42,8 @@ def check_row(r, box=None, fixed=False):
         err.append(f"colour codes {COLOUR.findall(r['jp'])} not kept")
     if box is None and r["id"] in FIELD_ROWS:
         en = insert.fit_field(r["id"], en)
-    if "max" in r and len(en.encode("ascii", "replace")) > r["max"]:
-        (err if fixed else warn).append(f"{len(en)} bytes, room {r['max']}")
+    if fixed and len(en.encode("ascii", "replace")) > r["max"]:  # EXE strings over their room are relocated
+        err.append(f"{len(en)} bytes, room {r['max']}")
     f = boxes.field(r["id"]) if box is None and r["id"] in FIELD_ROWS else None
     if f and f[0] and not bad:
         px, lines, _ = f
@@ -60,6 +62,10 @@ def check_row(r, box=None, fixed=False):
             err.append(f"word wider than the {box} box ({width} px): {wide[0]!r}")
         elif len(wrapped) > lines:
             warn.append(f"{len(wrapped)} lines in a {lines}-line {box} box: pages")
+        for seg in en.split("\n"):  # insert wraps with balanced_wrap: a short last line means one long word
+            ls = font.balanced_wrap(seg, width)
+            if len(ls) > 1 and 0 < len(font.CTRL.sub("", ls[-1]).strip()) < 6:
+                err.append(f"stub last line {ls[-1]!r}")
     return err, warn
 
 
@@ -68,6 +74,8 @@ def main():
     ap.add_argument("--warn", action="store_true")
     a = ap.parse_args()
     box_of = boxes.all_rows()
+    keep = {line.split()[0] for line in (ROOT / "script/keep_jp.txt").read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.startswith("#")}
     errors = warnings = 0
     files = sorted(glob.glob(str(ROOT / "script/maps/*.json"))) + [str(ROOT / f"script/{n}.json") for n in
                                                                    ("exe", "records", "names")]
@@ -79,6 +87,8 @@ def main():
                     print(f"warn  {r['id']}: no measured budget (add it to boxes.FIELDS)")
                     warnings += 1
             err, warn = check_row(r, box_of.get(r["id"]), fixed=path.endswith("records.json"))
+            if r["jp"] and not r.get("en") and not r.get("same") and r["id"] not in keep:
+                err.append("no English (add it, or the id + reason to script/keep_jp.txt)")
             if r.get("long"):  # batches.py merge: full English wider than its field, waiting for the phase-7 fit
                 warn.append(f"LONG (not inserted yet): {r['long']!r}")
             for e in err:
