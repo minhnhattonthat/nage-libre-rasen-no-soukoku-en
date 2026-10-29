@@ -62,18 +62,29 @@ QA = {}  # id -> text overriding marker/en for one build (build.py --qa ID=text)
 def row_text(row, markers, room=None, box=None):
     """New bytes for a row, or None to keep the original. box = (width px, lines): wrap to that width."""
     if row["id"] in QA:
-        s = QA[row["id"]]
+        s = fit_field(row["id"], QA[row["id"]])
     elif markers:
         if row["id"] == "MEMCARD":
             return None  # BIOS card manager: full-width SJIS only
         s = marker(row["id"], room, box)
     elif row.get("en"):
-        s = row["en"]
+        s = fit_field(row["id"], row["en"])
     else:
         return None
     if box:
         s = paginate(font.wrap(s, box[0]), box[1])
     return encode(s)
+
+
+def fit_field(rid, s):
+    """English for a menu/label row laid out for its field (boxes.FIELDS): a trailing \\n for menu items that ended
+    by auto-wrap, word wrap for multi-line windows."""
+    how, f = boxes.fit(rid), boxes.field(rid)
+    if how == "nl" and not s.endswith("\n"):
+        return s + "\n"
+    if how == "wrap" and f and f[1] > 1:
+        return "\n".join(font.wrap(s, f[0] - boxes.MARGIN))
+    return s
 
 
 def paginate(lines, per_page):

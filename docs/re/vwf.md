@@ -50,6 +50,33 @@ Tour: `tools/debug/regen.py --cue build/nage_libre_en.cue --no-states --out work
 tools/debug/winlog.lua --var SETTLE=3000 --mash 40 --mash-key circle"`, then `tools/debug/winscan.py --json
 work/qa/boxes_seen.json` (maps each logged pointer back to its row id).
 
+## Fields (menus, labels, system messages: tools/boxes.py FIELDS)
+
+Every EXE / record / name row has a budget (px per line, lines) in `boxes.FIELDS`; lint checks `en` against it
+(error over px or lines, warning for a row with none; `tests/test_insert.py` asserts every row has one). How:
+
+- Windows: `tools/wincreate.py` lists the 38 create calls 0x8003DB60(x, y, w, h). Shapes: command menu 40x80 at
+  24,48 and sub-menu 40x80 at 56,72 (W 5, one item per line); field message box 224x64 at 16,152, header 224x16 at
+  16,24, label 80x16 at 152,24, face box 144x64 at 96,152; battle message line 224x16 at 16,27, result box 144x64,
+  VS boxes 96x48 at 16,168 / 144,168, status 224x64 at 16,154; level-up 224x64 / 256x48; dress-up 224x64; save/load
+  224x160 at 16,56 + header 224x16; club-select stats 104x80 at 128,18; menu 224x64 at 16,96. **verified** for the
+  ones the tour reached (fieldlog geometry = create args).
+- Tour: `tools/debug/fieldlog.lua` (emu.py `--debugger`) logs every instant print 0x8003B288(window, string) and
+  typewriter run with window geometry + pen; `tools/debug/fieldscan.py` maps them to rows (pointer, or marker text
+  in composed buffers) and prints each row's start x and room to the next placed field / wrap edge. Runs:
+  work/qa/ft (marker build, 11 scenes + command menus from `tools/debug/stateat.lua` state work/states/mk_cmd),
+  work/qa/fo (original), work/qa/fq (QA build with English in the measured fields).
+- Menus end items by auto-wrap: the Japanese pads each item to exactly 40 px (the `%h` half flag persists across
+  prints in a window). English items get a trailing `\n` from `insert.fit_field` (a `\n` right after an
+  auto-wrap is skipped, so a 40-px item is safe too).
+- Composed lines (battle messages, result box, item use, level up): the code prints a name (0x8003B9EC) then the
+  row on the same line; their px leave `boxes.NAME_PX` (48) per name. VS / status box line 1 is surname + given
+  name printed in that order (NAME rows), 96 px for both: Western order (D1) needs the given name in the first
+  print or a code swap (phase 7).
+- Multi-line windows that a row starts (field box, dress-up, save/load) are word-wrapped by `insert.fit_field`.
+- Not reached in a tour yet (budgets from the window only, marked "window"/"guess" in FIELDS): item/magic lists,
+  item use, club change, level up, field save messages, memory-card errors. Phase 8 QA reaches them.
+
 ## Size limits found
 
 - **SYSDATA.BIN**: buffer 0x80130000 size 0xC000 (memory-area table of {addr, size} words: 0x8008979C = {0x80130000,

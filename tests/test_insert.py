@@ -51,3 +51,21 @@ def test_marker_build(tmp_path):
             for b in scripts.values():
                 assert sc.check_script(b) == []
                 assert all(t.isascii() for t, _, _ in sc.strings_of(b).values())
+
+
+def test_every_field_row_has_a_budget():
+    import json
+    for name in ("exe", "records", "names"):
+        for r in json.loads((ROOT / f"script/{name}.json").read_text(encoding="utf-8")):
+            assert boxes.field(r["id"]) is not None, r["id"]
+    assert boxes.field("EXE/0295C")[0] == 96  # the specific entry wins over the save-window range after it
+
+
+@needs_disc
+def test_fit_field():
+    assert insert.fit_field("EXE/00BE8", "Wait") == "Wait\n"  # menu item: ends its line itself
+    assert insert.fit_field("EXE/00BE8", "Wait\n") == "Wait\n"
+    long = "If you save here, you will start from your last status next time."
+    lines = insert.fit_field("EXE/02968", long).split("\n")
+    assert len(lines) > 1 and all(font.advance(l) < 224 for l in lines)
+    assert insert.fit_field("EXE/013A0", long) == long  # one-line field: lint reports it, insert leaves it

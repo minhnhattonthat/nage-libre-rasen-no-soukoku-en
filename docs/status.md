@@ -2,9 +2,9 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 5 (engine spike + marker build) in progress 2026-10-30: VWF, insert pipeline, dialogue boxes
-  measured, paging, marker build all done; menu/list field widths left (see Next). `build.py --markers` = marker
-  build; plain `build.py` = VWF engine + any `en` rows.
+- **Phase:** 5 done 2026-10-30 (width gate met: dialogue boxes + every menu/label/system row has a budget in
+  `boxes.FIELDS`, lint enforces it). Next: phase 6 (translate). `build.py --markers` = marker build; plain
+  `build.py` = VWF engine + any `en` rows.
 - **Done:**
   - Step 0: dump pinned (`rom.sha1`), tools in `tools/`, headless smoke on the original, pre-commit check, guard hook.
   - Phase 1 (notes in `docs/re/`): Shift-JIS text; own font in SYSDATA.BIN (1,386 cells, 16x13, charset list);
@@ -45,20 +45,25 @@ Updated at the end of every session. Keep it to what the next session needs; his
     Lengthened scripts play and grown MAPDATs load (MAP24 502 KB). Marker build = `[map.slot.off]` + filler
     filling each box to its last line; fixed fields `E00BE8MMM` / `I03nameMMM` (wide M to the field's bytes);
     names `N000MM`.
-- **Next (phase 5, to meet its done-when = the width gate for menus/labels):**
-  - Measure every non-dialogue text place from marker shots and record budgets (px, and lines) beside
-    `boxes.BOXES` (add a `FIELDS` table: row-id pattern -> px, measured/guess + shot): battle command menu
-    (EXE/00BE8-00C68), battle VS box (name / club / school lines, ~96 px: work/qa/menutour/vs.png, measure exactly),
-    battle messages (EXE/01B6C-01D1C, composed `name + string`), item / magic names and descriptions (ITEM/MAGIC
-    records: dressup, item use), club names (CLUB, EXE/013A0-01448, 809FC-80A4C), status labels (EXE/80AC0-80BB8,
-    02B38), memory-card / save texts (EXE/01E6C-02B24: save, load, save_after_m80 scenes), dressup lines
-    (EXE/02510-0255C), level-up texts (EXE/02458-024B8). Shots so far: work/qa/menutour/<scene>/ (battle, dressup,
-    club_select, save, load, gameover, birthday, credits, menu); `--qa ID=TEXT` for a long line in one field.
-    Then make lint.py check those rows against their budgets (warn "no measured budget" for any row without one).
-  - Marker build (sha1 102a2225…, 2026-10-30): smoke ok, cold-boot regen 83/83 scenes ok
-    (`regen.py --cue build/nage_libre_en.cue --no-states --out work/qa/marker`). Rerun after engine changes.
-  - Then phase 6 (translate): translators get box budgets from boxes.py (face 143 px x 4, face3 x 3, plain 223 x 4;
-    pages beyond are automatic but soft-limited), plain ASCII only, no `\` or bare `%`.
+  - Phase 5 fields (docs/re/vwf.md §Fields): `boxes.FIELDS` = px/lines per EXE/record/name row range, each
+    marked measured / window / guess with its evidence; `boxes.fit()` + `insert.fit_field()` add the trailing `\n`
+    menu items need (items end by auto-wrap at 40 px) and word-wrap multi-line windows; lint errors on px/lines
+    over, warns on a row with no budget; tests/test_insert.py (every row has a budget, fit_field). Tools:
+    `tools/wincreate.py` (all 38 window creates), `tools/debug/fieldlog.lua` + `fieldscan.py` (print log -> rows,
+    start x, room), `tools/debug/stateat.lua` (state at a string's first print: menu routes), warp.lua `STAY=1`.
+    Verified in-game with English (`--qa`, work/qa/fq): command menu + sub-menu, birthday name/date, save/load list,
+    yes/no.
+- **Next (phase 6, translate):**
+  - Translators get budgets from boxes.py: dialogue boxes (face 143 px x 4, face3 x 3, plain 223 x 4; pages beyond
+    are automatic but soft-limited) and `boxes.field(id)` for exe/records/names (hard: lint error). Plain ASCII
+    only, no `\` or bare `%`. Command-menu items: no trailing `\n` needed (insert adds it). Yes/No rows: pad so
+    "No" starts 64 px in. EXE strings are also byte-limited (`max`; phase 7 relocates longer ones: lint warns).
+  - Names: VS/status box line 1 prints surname then given name (NAME rows, 96 px for both); Western order (D1)
+    needs a code swap or the slots' text swapped: decide in phase 7, keep each name part <= 48 px.
+  - Budgets marked "window"/"guess" (item/magic lists, item use, club change, level up, field save, memory-card
+    errors) get checked in phase 8 QA; adjust FIELDS if a shot disagrees.
+  - Current build/ = QA build (markers + English in the measured fields, sha1 153a99d7…); `build.py --markers`
+    restores the marker build (sha1 102a2225…, regen 83/83 ok).
 - **Debug-tool limits (grow when needed):** map scenes play each map's first event with new-game story flags; the
   later events of a map (other script slots 186-216, flag-dependent branches) are not forced yet. For phase 8,
   add per-script warps: set the script base `$gp`+0x52C / PC `$gp`+0x2A2 (docs/re/text.md) or the story flags at
@@ -75,5 +80,9 @@ Updated at the end of every session. Keep it to what the next session needs; his
   tighter than the gap to the next known load address (SYSDATA: 0xC000, not 0x18000); grep the EXE for the load
   address as a 32-bit word before growing a file. Zero runs after strings in a $gp data area are variables, not
   free room. armips warns on a load-delay hazard (`lw t9` then `bne t9`): R3000 needs the nop.
+  Phase 5 fields: Git Bash rewrites an argument that is or starts with `/` into a Windows path (`--qa ID=/` became
+  `C:/Program Files/Git/`): `export MSYS_NO_PATHCONV=1` first. Menus that end items by auto-wrap (Japanese padded
+  to the window width) need a `\n` per English item. PCSX-Redux exec hooks read args as
+  `PCSX.getRegisters().GPR.n.a0`.
 - **Waiting on the user:** GUI keyboard input in `tools/pcsx/` is not proven (synthetic keystrokes did not reach the
   pad); owner asked for headless-only runs, so left; check by hand when playtesting. Non-blocking.

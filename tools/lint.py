@@ -18,8 +18,10 @@ from pathlib import Path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import boxes  # noqa: E402
 import font  # noqa: E402
+import insert  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
+FIELD_ROWS = set()  # non-dialogue row ids (exe, records, names): checked against boxes.FIELDS
 COLOUR = re.compile(r"%c\d\d")
 NAMES_SLACK = 0xC000 - 47289  # SYSDATA buffer minus the original file (insert.SYSDATA_MAX)
 
@@ -36,8 +38,20 @@ def check_row(r, box=None, fixed=False):
         err.append("bare '%' (the renderer reads it as a control code and never draws it)")
     if sorted(COLOUR.findall(en)) != sorted(COLOUR.findall(r["jp"])):
         err.append(f"colour codes {COLOUR.findall(r['jp'])} not kept")
+    if box is None and r["id"] in FIELD_ROWS:
+        en = insert.fit_field(r["id"], en)
     if "max" in r and len(en.encode("ascii", "replace")) > r["max"]:
         (err if fixed else warn).append(f"{len(en)} bytes, room {r['max']}")
+    f = boxes.field(r["id"]) if box is None and r["id"] in FIELD_ROWS else None
+    if f and f[0] and not bad:
+        px, lines, _ = f
+        for page in en.removesuffix("\n").split("%p"):
+            ls = page.split("\n")
+            wide = [s for s in ls if font.advance(s) > px]
+            if wide:
+                err.append(f"{font.advance(wide[0])} px in a {px}-px field: {wide[0]!r}")
+            if len(ls) > lines:
+                err.append(f"{len(ls)} lines in a {lines}-line field")
     if box and not bad:
         width, lines = boxes.budget(box)
         wrapped = font.wrap(en, width)
@@ -59,6 +73,11 @@ def main():
                                                                    ("exe", "records", "names")]
     for path in files:
         for r in json.loads(Path(path).read_text(encoding="utf-8")):
+            if "maps" not in Path(path).parts:
+                FIELD_ROWS.add(r["id"])
+                if boxes.field(r["id"]) is None:
+                    print(f"warn  {r['id']}: no measured budget (add it to boxes.FIELDS)")
+                    warnings += 1
             err, warn = check_row(r, box_of.get(r["id"]), fixed=path.endswith("records.json"))
             for e in err:
                 print(f"ERROR {r['id']}: {e}")

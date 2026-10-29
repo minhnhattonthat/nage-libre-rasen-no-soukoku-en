@@ -7,7 +7,7 @@
 -- loader, so the game loads the scene the way a map change does. When the scene is ready it waits `settle`
 -- frames, shoots <SCENE>.png, checks the scene (map byte; MAPDAT in RAM = the expected file), saves STATE_OUT
 -- and quits: exit 0 ok, 2 check failed (message in log.txt and on stderr). --frames is only a cap.
--- GOD=1 pins every player unit's HP to its max every frame.
+-- GOD=1 pins every player unit's HP to its max every frame. STAY=1 keeps running after the check (to --frames).
 local ffi = require("ffi")
 local mem = PCSX.getMemPtr()
 local function rd8(a) return mem[a % 0x200000] end
@@ -60,7 +60,7 @@ local function finish(n)
   if ok ~= true then L.fail("CHECK FAIL " .. SCENE .. ": " .. tostring(ok)); return end
   L.log(string.format("f%d CHECK ok %s", n, SCENE))
   if STATE_OUT then L.save_state(STATE_OUT) end
-  L.finish(0)
+  if STAY then ready_at = math.huge else L.finish(0) end   -- STAY=1: keep running (mash, probes) to --frames
 end
 
 L.on_frame(function(n)
