@@ -8,6 +8,7 @@ Skill: translate-retro-game (Claude Code: plugin, enabled in .claude/settings.js
 - Smoke:    `python -X utf8 "$(python tools/skill.py)/scripts/emu.py" build/nage_libre_en.cue --out work/qa/smoke --route tools/routes/boot.txt --smoke` (original: `"rom/Nage Libre - Rasen no Soukoku (Japan).cue"`)
 - Warp:     `python -X utf8 "$(python tools/skill.py)/scripts/emu.py" build/nage_libre_en.cue --out work/qa/warp --script tools/debug/warp.lua --var "SCENE='<name>'" --frames 30000` (scenes: `tools/debug/scenes.lua`; ends itself on the scene with `<name>.png`; `--state-out` saves it; never ask the user to play to a scene)
 - All scenes: `python -X utf8 tools/debug/regen.py [--cue build/nage_libre_en.cue --tree <build tree>]` (83 cold-boot warps, checks, `work/states/*.sstate`, sheet `work/qa/warp/all.png`; rerun after code/font/graphics changes)
+- Extract:  `python -X utf8 tools/extract.py [--force]` -> `script/*.json` (never overwrites; `--force` refreshes jp, keeps en)
 - Release:  `python -X utf8 tools/release.py` (xdelta3 against the .bin + verify, phase 9; never publish without the user)
 - Clean:    `python -X utf8 tools/clean.py` (published projects: lists rebuildable/downloadable files; `--yes` deletes)
 
@@ -15,7 +16,7 @@ Skill: translate-retro-game (Claude Code: plugin, enabled in .claude/settings.js
 - Original disc: `rom/Nage Libre - Rasen no Soukoku (Japan).bin/.cue` (gitignored; bin SHA-1 in `rom.sha1`, checked by `tools/check_rom.py`).
 - Emulator: PCSX-Redux nightly 29942.20261029.6 x64 in `tools/pcsx/` (`fetch_emu.py pcsx`, distrib.app dev-win-x64 channel; gitignored; settings copy in `tools/emu-config/pcsx.json`). Always run it headless through `emu.py` (no GUI windows). BIOS: `tools/bios/scph5500.bin` (`fetch_emu.py psx-bios`, picked up automatically). Savestates: `work/states/`.
 - Disc tools: `tools/mkpsxiso/mkpsxiso-2.30-win64/{dumpsxiso,mkpsxiso}.exe` (v2.30, github.com/Lameguy64/mkpsxiso), `tools/armips/armips.exe` (v0.11.0, github.com/Kingcom/armips), xdelta3 on PATH. All gitignored; re-download from those releases.
-- Text: `script/` (format set in phase 4). Tables: `tbl/`. Glossary: `glossary.md`. RE notes index: `docs/re/README.md`. Fonts and their licences: `docs/fonts.md`.
+- Text: `script/` (format: `docs/text-format.md`; codec `tools/text.py`, event-script re-encoder `tools/script.py`). No `tbl/`: the game uses Shift-JIS. Glossary: `glossary.md`. RE notes index: `docs/re/README.md`. Fonts and their licences: `docs/fonts.md`.
 
 ## Rulings
 - Edit source files (.py .lua .asm .tbl .json) only with the file-edit tool; scripts here read and analyse, never `.replace()` and write back.

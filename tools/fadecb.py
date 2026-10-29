@@ -8,7 +8,7 @@ import struct
 SETTERS = (0x80043CD4, 0x80043CE8)
 
 
-def load(path="work/disc/tree/NAGE.EXE"):  # same as tools/re.py (not importable: the name shadows stdlib re)
+def load(path="work/disc/tree/NAGE.EXE"):  # same as tools/mips.py load()
     d = open(path, "rb").read()
     return d[0x800:], struct.unpack_from("<I", d, 0x18)[0]
 

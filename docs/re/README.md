@@ -18,6 +18,7 @@ Addresses are for the dump in `rom.sha1` unless a note says otherwise.
 | [graphics.md](graphics.md) | graphics-text survey: 28 Japanese image elements with sources and copy counts | static sweep done; tour half in phase 5 |
 
 Recon tools (in `tools/`): `textscan.py` (charset-filtered text finder), `tim.py` (TIM scan/render), `decomp.py`
-(runs the game's decompressor in unicorn), `sweep_packed.py` (decompress + render every packed TIM), `re.py`
-(capstone disassembly, lui/addiu xref), `vram.py` (render a VRAM dump), `fadecb.py` (every queued fade callback),
+(runs the game's decompressor in unicorn), `sweep_packed.py` (decompress + render every packed TIM), `mips.py`
+(capstone disassembly, lui/addiu xref, `refs()` = every lui pair / $gp / word reference into a range), `script.py`
+(MAPDAT event-script parser and re-encoder), `vram.py` (render a VRAM dump), `fadecb.py` (every queued fade callback),
 `debug/varlog.lua` (emu.py probe: logs map/entry/mode/callback changes with a shot).
