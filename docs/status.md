@@ -73,10 +73,19 @@ Updated at the end of every session. Keep it to what the next session needs; his
     record names zero the old string's tail). D11: "Council President", "'s Randoma Card, birthstone bonus!".
     Seen in game: VS boxes "Ann Akagi" (work/qa/vs), 105-px QA pair (work/qa/vs2), battle bar messages
     (work/qa/go2), birthday "Ann Akagi" + "3/15" (work/qa/p7/bz.png).
+- **Phase 8 in progress (2026-10-30):** codex phase-6 review fixed (honorifics on nouns Pig-kun/Pig-san/Snowman-san,
+  conquest/uniform gag, Great Tree route, glossary voice; `tests/test_terms.py` runs the term/honorific checks over all
+  of script/). `tools/gfx.py` redraws TIM text (ops: clear by row-copy / row mode / colour with `keep` classes, text in
+  the game font (`game`, bold/outline/shadow/scale) or Tiny5 (`tiny`)); `insert.build_files` writes every
+  byte-identical copy. Done (graphics.md #): 6 loading board, 7 birthday, 8 birthstones, 9/10 load/save, 11 save
+  titles (Tiny5: 128-px strips), 12 menu, 14 area cards (seen in game: wm06/13/31), 20 news ticker, 28 poster.
+  `python -X utf8 tools/gfx.py [--only NAME]` writes original|English previews to work/qa/gfx/out/.
 - **Next (phase 8, QA in the emulator):**
-  - Graphics text (docs/re/graphics.md, 28 elements, D5 = all English): none done yet; phase 8's done-when needs
-    each in a zoomed cold-boot shot (chapter/area cards, game over, credits plates). Packed ones need
-    tools/decomp.py output re-imported (try raw TIM in the same slot first, files.md).
+  - Graphics text left: #1 title subtitle, #15 おわり (16bpp), #18/#19 参上 sheets (34/46 copies), #21-24 town
+    signs, #25 desk plate, #26 blackboard, #27 shrine board; packed #2-5 (OP_TMP2 #11-14), #13 dress-up names
+    (OPTION2 #1-4), #16 cast plates, #17 credit sign: try a raw TIM in the same table slot first (files.md), else a
+    compressor. Then see each one in a zoomed cold-boot shot. The poster's pink 南 seal is left as art.
+  - Area card "Dunes of the Battleship" is clipped at the screen's left edge (wm13): shorten it ("Battleship Dunes").
   - Not seen in game yet: save/load list "Stage <n>" (StageNum; the emulator's save screen says the card isn't
     formatted and mashing Yes returned to the menu: set up a memory card in emu.py/PCSX first), the in-battle VS
     pair (0x8004C56C; the battle-start pair 0x80059B74 was seen), field status box name order (0x80056B94,

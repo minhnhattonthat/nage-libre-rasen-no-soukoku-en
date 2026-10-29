@@ -28,6 +28,8 @@ SKIP = ("3MIN.BIN", ".STR", ".XA", "MAPDAT.BIN", "NAGE.EXE", "SYSDATA.BIN")
 
 WHITE, BLACK, NAVY = (248, 248, 248), (0, 0, 0), (0, 0, 64)
 BAR = dict(font="game", ink=WHITE, shadow=(16, 16, 96), bold=True)  # white on the blue header bars, dark drop shadow
+KEEP = {"gold": lambda c: c[0] - c[2] > 40 and c[1] - c[2] > 20,  # the statue on the MAP86 poster
+        "red": lambda c: c[0] > 150}  # its pink seal (clears only the blue signature ink)
 
 
 # ---- masks -------------------------------------------------------------------------------------------------
@@ -105,9 +107,10 @@ class Img:
         # never index 0 (transparent black on PS1)
         return min(range(1, len(self.pal)), key=lambda i: sum((a - b) ** 2 for a, b in zip(self.pal[i], rgb)))
 
-    def clear(self, x, y, w, h, fill=None):
+    def clear(self, x, y, w, h, fill=None, keep=None):
         """fill: None = copy each row's pixel left of the rect; "mode" = each row's commonest pixel inside the rect
-        (a gradient plate under text); int = raw index (0 = transparent); else RGB."""
+        (a gradient plate under text); int = raw index (0 = transparent); else RGB. keep: a KEEP name; pixels of
+        that colour class (art overlapping the text rect) stay."""
         for yy in range(y, y + h):
             if fill == "mode":
                 row = [self.get(xx, yy) for xx in range(x, x + w)]
@@ -115,12 +118,15 @@ class Img:
             else:
                 v = self.get(x - 1, yy) if fill is None else fill if isinstance(fill, int) else self.colour(fill)
             for xx in range(x, x + w):
-                self.put(xx, yy, v)
+                if not (keep and KEEP[keep](self.pal[self.get(xx, yy)])):
+                    self.put(xx, yy, v)
 
-    def text(self, x, y, w, h, s, font="game", ink=WHITE, shadow=None, outline=None, align="c", gap=0, bold=False):
+    def text(self, x, y, w, h, s, font="game", ink=WHITE, shadow=None, outline=None, align="c", gap=0, bold=False,
+             scale=1):
         lines = s.split("\n")
-        masks = [mask(ln, font, 1 if bold else 0) for ln in lines]
-        lh = line_height(font) + gap
+        masks = [[[b for b in row for _ in range(scale)] for row in mask(ln, font, 1 if bold else 0)
+                  for _ in range(scale)] for ln in lines]
+        lh = line_height(font) * scale + gap
         top = y + (h - (lh * len(lines) - gap)) // 2
         ink_v = self.colour(ink)
         for i, m in enumerate(masks):
@@ -206,6 +212,22 @@ element("news", "MAP01_06/MAP01R/MAPTIM.BIN", 0x10244,
         *[op for i, s in enumerate(NEWS) for op in (
             ("clear", 4, 16 * i, 252, 11, "mode"),
             ("text", 6, 16 * i - 1, 248, 13, s, dict(ink=(224, 200, 80))))])
+# 28 recruitment poster (MAP86 intro, full screen): red heading, black body left of the statue, blue signature
+INK = (16, 16, 16)
+POSTER = (("The Nage Statue has been\nstolen from Nanju Shrine!\nMonsters freed from their\nseal plague our shops.", 62),
+          ("Let's get the Statue back\nfor Nanju Town's peace!", 115),
+          ("Volunteers, meet in the\ncouncil room after school.", 144),
+          ("Shops will reward you with\ngift certificates!!", 173))
+element("poster", "MAP01_06/MAP86/MAPFIRST.BIN", 0xF8,
+        ("clear", 140, 50, 36, 14, (240, 240, 240), "gold"),  # the "これ" note pointing at the statue
+        ("clear", 30, 21, 198, 38, (240, 240, 240)),
+        ("text", 30, 22, 198, 13, "Nage Statue Search Team", dict(ink=(240, 8, 0), bold=True)),
+        ("text", 30, 34, 198, 26, "MEMBERS WANTED!", dict(ink=(240, 8, 0), scale=2)),
+        ("clear", 24, 60, 150, 140, (240, 240, 240), "gold"),
+        ("clear", 174, 180, 14, 18, (240, 240, 240), "gold"),
+        *[("text", 28, y, 142, 12 * s.count("\n") + 12, s, dict(ink=INK, align="l", gap=-1)) for s, y in POSTER],
+        ("clear", 100, 198, 112, 14, (240, 240, 240)), ("clear", 212, 198, 10, 14, (240, 240, 240), "red"),
+        ("text", 40, 199, 164, 13, "Nanju High Student Council", dict(ink=(16, 0, 208), align="r")))
 # 9, 10 load / save headers
 element("load", "OPTION3.BIN", 0x10298,
         ("clear", 24, 24, 208, 16), ("text", 24, 25, 208, 13, "Which file do you want to play?", BAR))
