@@ -55,6 +55,9 @@ def run():
     return draw, vram, calls, bytes(orig)
 
 
+INK = 1  # vwf.asm draws each glyph 1 px right of the pen (left bearing)
+
+
 def pixel(vram, x, y):
     return vram.get((0x280 + x // 4, 0x100 + y), 0) >> (x % 4 * 4) & 0xF
 
@@ -71,11 +74,11 @@ def test_string_pixels(run, x0):
         for r, row in enumerate(rows):
             for c, bit in enumerate(row):
                 if bit:
-                    want[(x + c, r)] = colour
+                    want[(x + INK + c, r)] = colour
         g = 277 if ch == " " else font.ascii_index(ch)
         assert draw(g, x, y, colour) == -adv
         x += adv
-    got = {(px, r): pixel(vram, px, y + r) for px in range(x0, x + 4) for r in range(13)}
+    got = {(px, r): pixel(vram, px, y + r) for px in range(x0, x + INK + 4) for r in range(13)}
     assert {k: v for k, v in got.items() if v} == want
     assert all(w <= 3 and h == 13 for _, _, w, h in calls)
 
@@ -90,5 +93,5 @@ def test_carry_not_across_rows(run):
     vram.clear()
     draw(font.ascii_index("M"), 1, 60, 3)
     draw(font.ascii_index("i"), 0, 60, 3)  # new message on the same row, at/left of the last glyph: no stale merge
-    assert not any(pixel(vram, px, 60 + r) for px in range(1, 4) for r in range(13))  # 'i' inks column 0 only
-    assert any(pixel(vram, 0, 60 + r) for r in range(13))
+    assert not any(pixel(vram, px, 60 + r) for px in range(1 + INK, 4) for r in range(13))  # unit 0: 'i' only
+    assert any(pixel(vram, INK, 60 + r) for r in range(13))

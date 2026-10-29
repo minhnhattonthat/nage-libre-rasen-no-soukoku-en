@@ -32,6 +32,9 @@ Standing non-bugs, `ok` (the controller adds the game's own below):
 - the PS1 BIOS memory-card screen title is Japanese (BIOS font, not the game's); the Nage Libre logo is Latin art;
 - pictures kept as art: the pink 南 seal on the recruitment poster, the half-hidden 会室 / 八 in two credits
   illustrations;
+- a battle that ends the sheet on an empty top bar over a one-card box with a hand cursor and a ◇ scroll mark: the
+  mash opened the card view (cross leaves it); the game prints nothing in the bar there (checked with the text
+  log), and the original tour just never landed on it;
 - honorifics are kept on purpose (Ann-chan, Kaoru-sama, Pig-kun); names are given name first;
 - the boss intro art reads "Rapeman" (a parody name from the original art; flagged to the owner, not a bug here).
 

@@ -414,7 +414,7 @@ AREAS = [("Jungle", 24), ("Southern Sea", 24), ("Island of Ruins", 24), ("Underg
          ("Fortress Interior", 0), ("Fortress Headquarters", 0), ("Forked Cape", 0),
          ("Battleship Dunes", 0),  # wider was clipped at the screen edge (wm13)
          ("Fog-Shrouded Forest", 0), ("Cascade Falls", 0),
-         ("Ancient Ruins", 0), ("Lava Cave", 24), ("Autumn Leaf Valley", 24), ("In the Flying Battleship", 24),
+         ("Ancient Ruins", 0), ("Lava Cave", 24), ("Autumn Leaf Valley", 24), ("Flying Battleship", 24),  # "In the ..." ran off the left edge (wm19)
          ("Flying Battleship Dock", 0), ("Oka High Control Tower", 0), ("Altar of Nage", 0),
          ("Control Tower Roof", 24), ("Frozen Mountain", 0), ("Hot Spring Village", 24), ("Castle Walls", 0),
          ("Forest of Giant Trees", 0), ("Mt. Issun", 0), ("Volcano Cave", 24), ("Connecting Bridge", 0)]

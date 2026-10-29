@@ -27,7 +27,9 @@ EPILOGUE  equ (0x8003C930)
 ; half-width branch of the draw: s0 = x, s1 = y, a2 = colour, a0 = glyph (< 500); frame of 0x28 saves s0-s2, ra
 .org 0x8003C868
   j     VwfHalf
-  nop
+  addiu s0, s0, 1               ; ink 1 px right of the pen: the trimmed glyphs have no left bearing, so a line's
+                                ; first letter touched the window frame (wrap leaves 1 px at the right, so lines
+                                ; still fit). EPILOGUE restores s0.
 
 .org 0x8008A0F4
 VwfHalf:
