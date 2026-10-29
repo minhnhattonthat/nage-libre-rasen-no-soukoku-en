@@ -92,6 +92,10 @@ class Img:
             return self.pix[y * self.w + x]
         return struct.unpack_from("<H", self.pix, (y * self.w + x) * 2)[0]
 
+    def rgb(self, x, y):
+        v = self.get(x, y)
+        return self.pal[v] if self.bpp == 8 else tim.rgb(v)[:3]
+
     def put(self, x, y, v):
         if not (0 <= x < self.w and 0 <= y < self.h):
             return
@@ -112,13 +116,19 @@ class Img:
         (a gradient plate under text); int = raw index (0 = transparent); else RGB. keep: a KEEP name; pixels of
         that colour class (art overlapping the text rect) stay."""
         for yy in range(y, y + h):
+            if fill == "lerp":  # each row blends from the pixel left of the rect to the one right of it
+                a, b = self.rgb(x - 1, yy), self.rgb(x + w, yy)
+                for i, xx in enumerate(range(x, x + w)):
+                    t = (i + 1) / (w + 1)
+                    self.put(xx, yy, self.colour(tuple(round(p + (q - p) * t) for p, q in zip(a, b))))
+                continue
             if fill == "mode":
                 row = [self.get(xx, yy) for xx in range(x, x + w)]
                 v = max(set(row), key=row.count)
             else:
                 v = self.get(x - 1, yy) if fill is None else fill if isinstance(fill, int) else self.colour(fill)
             for xx in range(x, x + w):
-                if not (keep and KEEP[keep](self.pal[self.get(xx, yy)])):
+                if not (keep and KEEP[keep](self.rgb(xx, yy))):
                     self.put(xx, yy, v)
 
     def text(self, x, y, w, h, s, font="game", ink=WHITE, shadow=None, outline=None, align="c", gap=0, bold=False,
@@ -169,6 +179,14 @@ def element(name, rel, off, *ops):
 element("birthday", "OPTION1.BIN", 0x10298,
         ("clear", 24, 84, 208, 16), ("text", 24, 85, 208, 13, "Choose your birthday!", BAR),
         ("clear", 24, 108, 208, 16), ("text", 24, 109, 208, 13, "Is this OK?", BAR))
+# 1 title screen subtitle 螺旋の相剋 on the red ribbon under the Latin logo (ribbon x 136..220, y 74..85)
+element("subtitle", "OP_TMP2.BIN", 0x7034C,
+        ("clear", 142, 69, 74, 5, "mode"), ("clear", 142, 74, 74, 12, "lerp"),
+        ("text", 136, 74, 84, 13, "Spiral Conflict", dict(ink=(224, 232, 232), shadow=(72, 0, 0))))
+# 15 ending picture (16bpp): おわり in yellow with a blue shadow over the sky
+element("theend", "OPTION6.BIN", 0x329C8,
+        ("clear", 150, 15, 95, 35, "lerp"),
+        ("text", 150, 18, 95, 26, "The End", dict(ink=(248, 240, 72), shadow=(48, 120, 216), scale=2, bold=True)))
 # 8 birthstone plates: 12 gold plates of 16 rows at x 128..223, white text with a dark outline
 STONES = ("Garnet", "Amethyst", "Aquamarine", "Diamond", "Emerald", "Moonstone", "Ruby", "Agate", "Sapphire", "Opal",
           "Topaz", "Lapis Lazuli")
