@@ -50,6 +50,16 @@ Tour: `tools/debug/regen.py --cue build/nage_libre_en.cue --no-states --out work
 tools/debug/winlog.lua --var SETTLE=3000 --mash 40 --mash-key circle"`, then `tools/debug/winscan.py --json
 work/qa/boxes_seen.json` (maps each logged pointer back to its row id).
 
+## Size limits found
+
+- **SYSDATA.BIN**: buffer 0x80130000 size 0xC000 (memory-area table of {addr, size} words: 0x8008979C = {0x80130000,
+  0xC000}, next area 0x8013C000). Original file 47,289 bytes: the names list (#7) may grow by 1,863 bytes in all. 10-byte name markers
+  (+3.6 KB) hung New Game on its loading screen. insert.py and lint.py enforce it. Phase 6/7: keep names short, or
+  move the list (its reader 0x8003B9EC copies up to 31 bytes of one name; lookup by counting CR LF lines).
+- **NAGE.EXE strings in place**: `max` = own bytes + word-alignment zeros (extract.exe_room); in the $gp area exactly
+  the original length. Filling the longer zero runs (old `max`) overwrote variables. Longer English: relocate.
+- **MAPDAT**: grown to 502 KB (MAP24 markers) and played; ceiling 589 KB still a guess past that.
+
 ## Paging
 
 `%k` (0x8003E39C) sets the wait flag $gp+0xAB0 and places the blinking arrow; the typewriter stops until the button

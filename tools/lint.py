@@ -5,7 +5,7 @@
 Errors: a character with no glyph (non-ASCII, `\\`), a fixed field over its bytes (records), a colour code `%cNN`
 of the Japanese missing, a word wider than its box. Warnings (--warn lists them): a dialogue line that needs more
 than one box page (it still works: insert.py pages it with %k%p), an EXE string over its in-place room (phase 7
-relocates it).
+relocates it). Also: all English names together over SYSDATA's 0xC000-byte buffer.
 """
 import argparse
 import glob
@@ -21,6 +21,7 @@ import font  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 COLOUR = re.compile(r"%c\d\d")
+NAMES_SLACK = 0xC000 - 47289  # SYSDATA buffer minus the original file (insert.SYSDATA_MAX)
 
 
 def check_row(r, box=None, fixed=False):
@@ -31,6 +32,8 @@ def check_row(r, box=None, fixed=False):
     bad = sorted({c for c in font.CTRL.sub("", en) if c != "\n" and not (" " <= c <= "~") or c == "\\"})
     if bad:
         err.append(f"no glyph for {''.join(bad)!r}")
+    if re.search(r"%(?![hzpk]|[ct]\d\d)", en):
+        err.append("bare '%' (the renderer reads it as a control code and never draws it)")
     if sorted(COLOUR.findall(en)) != sorted(COLOUR.findall(r["jp"])):
         err.append(f"colour codes {COLOUR.findall(r['jp'])} not kept")
     if "max" in r and len(en.encode("ascii", "replace")) > r["max"]:
@@ -64,6 +67,11 @@ def main():
                     print(f"warn  {r['id']}: {w}")
             errors += len(err)
             warnings += len(warn)
+    names = json.loads((ROOT / "script/names.json").read_text(encoding="utf-8"))
+    grow = sum(len(r["en"]) - len(r["jp"].encode("cp932")) for r in names if r.get("en"))
+    if grow > NAMES_SLACK:
+        print(f"ERROR names: English names add {grow} bytes to SYSDATA, room {NAMES_SLACK} (docs/re/vwf.md)")
+        errors += 1
     print(f"lint: {errors} errors, {warnings} warnings")
     return 1 if errors else 0
 

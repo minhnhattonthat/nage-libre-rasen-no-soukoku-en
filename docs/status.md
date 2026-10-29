@@ -2,8 +2,9 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 4 (extract) done 2026-10-30. Next: phase 5 (engine spike + marker build). Build = untouched repack
-  (sha1 7ccae6f0…, same as the dump), smoke ok.
+- **Phase:** 5 (engine spike + marker build) in progress 2026-10-30: VWF, insert pipeline, dialogue boxes
+  measured, paging, marker build all done; menu/list field widths left (see Next). `build.py --markers` = marker
+  build; plain `build.py` = VWF engine + any `en` rows.
 - **Done:**
   - Step 0: dump pinned (`rom.sha1`), tools in `tools/`, headless smoke on the original, pre-commit check, guard hook.
   - Phase 1 (notes in `docs/re/`): Shift-JIS text; own font in SYSDATA.BIN (1,386 cells, 16x13, charset list);
@@ -30,17 +31,34 @@ Updated at the end of every session. Keep it to what the next session needs; his
     fresh extraction, every MAPDAT rebuilt byte-exact from jp, all 802 scripts parse/cover/stretch-rebuild, textscan
     finds no MAPDAT text outside lines, EXE regions = strings + reviewed `EXE_DATA`, no other font text in NAGE.EXE,
     records and names roundtrip. `tools/re.py` renamed `tools/mips.py` (shadowed stdlib `re`; adds `refs()`).
-- **Next (phase 5, engine spike + marker build):**
-  - build.py edit step: write edited files into a copy (never `work/disc/tree`, which tests read) and give mkpsxiso a
-    layout copy pointing at them; an insert step that takes `script/` en (or markers) through `text.py`/`script.py`.
-  - Font decision: 1,386-cell 16x13 SJIS font in SYSDATA #3; English needs narrow Latin glyphs or a VWF in the
-    renderer (0x8003BFF4..; `%h` half-width mode already draws at half advance: test it with ASCII first).
-    Auto line wrap by box width (face box 9 full-width chars x 3 lines).
-  - Marker build: every line `[id]` text; prove a lengthened script plays (offset remap, no outside pointer into
-    scripts) and that a grown MAPDAT loads (RAM ceiling ~589 KB, docs/re/files.md). EXE strings grow only by
-    relocation through their `refs` (lui pairs / words; `gp:` refs can't move). Records have fixed fields (`max`).
-  - Then a text lint in `tools/check.py` (control codes kept, `max` bytes, leading/trailing blanks) once the English
-    encoder exists.
+  - Phase 5 (docs/re/vwf.md): `tools/insert.py` (script/ en or `[id]` markers -> MAPDAT/EXE/records/SYSDATA names
+    under work/build/files; never writes work/disc/tree), `build.py` points a layout copy (work/build/layout.xml)
+    at them, `--qa ID=TEXT` overrides one row. VWF: `tools/asm/vwf.asm` (armips, code in the unused half-width kana
+    glyphs at 0x8008A0F4) + `tools/font.py` (game's own ASCII glyphs trimmed, advances; English = plain ASCII);
+    tests/test_vwf.py runs it in unicorn. Boxes (`tools/boxes.py`): face 144 px x 4 lines, face3 144 x 3 (MAP85,
+    MAP86), plain 224 x 4 (after op 17); rule = last op 16/17, matched 484/484 lines seen in a tour
+    (`debug/winlog.lua` + `debug/winscan.py`). Wrap to width-1 px, pages joined by `%k%p` (button wait + clear;
+    verified 4 pages in-game). Lines of exactly 143/223 px fully visible (work/qa/mk/edge.png, plain.png).
+    `tools/lint.py` in check.py (no glyph, colour codes, field bytes, word wider than box; --warn: pages).
+    Limits found: SYSDATA buffer 0xC000 (names may grow 1,863 bytes in all; 10-byte name markers hung New Game),
+    EXE in-place room = own bytes + alignment only (`extract.exe_room`; filling $gp-area zeros hung the load).
+    Lengthened scripts play and grown MAPDATs load (MAP24 502 KB). Marker build = `[map.slot.off]` + filler
+    filling each box to its last line; fixed fields `E00BE8MMM` / `I03nameMMM` (wide M to the field's bytes);
+    names `N000MM`.
+- **Next (phase 5, to meet its done-when = the width gate for menus/labels):**
+  - Measure every non-dialogue text place from marker shots and record budgets (px, and lines) beside
+    `boxes.BOXES` (add a `FIELDS` table: row-id pattern -> px, measured/guess + shot): battle command menu
+    (EXE/00BE8-00C68), battle VS box (name / club / school lines, ~96 px: work/qa/menutour/vs.png, measure exactly),
+    battle messages (EXE/01B6C-01D1C, composed `name + string`), item / magic names and descriptions (ITEM/MAGIC
+    records: dressup, item use), club names (CLUB, EXE/013A0-01448, 809FC-80A4C), status labels (EXE/80AC0-80BB8,
+    02B38), memory-card / save texts (EXE/01E6C-02B24: save, load, save_after_m80 scenes), dressup lines
+    (EXE/02510-0255C), level-up texts (EXE/02458-024B8). Shots so far: work/qa/menutour/<scene>/ (battle, dressup,
+    club_select, save, load, gameover, birthday, credits, menu); `--qa ID=TEXT` for a long line in one field.
+    Then make lint.py check those rows against their budgets (warn "no measured budget" for any row without one).
+  - Marker build (sha1 102a2225…, 2026-10-30): smoke ok, cold-boot regen 83/83 scenes ok
+    (`regen.py --cue build/nage_libre_en.cue --no-states --out work/qa/marker`). Rerun after engine changes.
+  - Then phase 6 (translate): translators get box budgets from boxes.py (face 143 px x 4, face3 x 3, plain 223 x 4;
+    pages beyond are automatic but soft-limited), plain ASCII only, no `\` or bare `%`.
 - **Debug-tool limits (grow when needed):** map scenes play each map's first event with new-game story flags; the
   later events of a map (other script slots 186-216, flag-dependent branches) are not forced yet. For phase 8,
   add per-script warps: set the script base `$gp`+0x52C / PC `$gp`+0x2A2 (docs/re/text.md) or the story flags at
@@ -53,5 +71,9 @@ Updated at the end of every session. Keep it to what the next session needs; his
   stock `io.open` (read disc files from a warp script); `L.finish()` from a script ends the run before emu.py's
   own final shot, so emu.py reports `final NO` (harmless). A repo helper named `tools/re.py` shadows stdlib `re`
   for any script run from `tools/` (renamed `mips.py`): template/skill helper names should avoid stdlib names.
+  Phase 5 (platform-ps1.md): a file's RAM budget can come from a {addr, size} memory-area table in the EXE, far
+  tighter than the gap to the next known load address (SYSDATA: 0xC000, not 0x18000); grep the EXE for the load
+  address as a 32-bit word before growing a file. Zero runs after strings in a $gp data area are variables, not
+  free room. armips warns on a load-delay hazard (`lw t9` then `bne t9`): R3000 needs the nop.
 - **Waiting on the user:** GUI keyboard input in `tools/pcsx/` is not proven (synthetic keystrokes did not reach the
   pad); owner asked for headless-only runs, so left; check by hand when playtesting. Non-blocking.

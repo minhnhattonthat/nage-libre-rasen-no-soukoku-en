@@ -27,15 +27,18 @@ SCRIPT = ROOT / "script"
 ARMIPS = ROOT / "tools/armips/armips.exe"
 ASM = [ROOT / "tools/asm/vwf.asm"]
 MAPDAT_MAX = 0x801FFF00 - 0x80170000  # loaded at 0x80170000, stack below 0x801FFF00 (docs/re/files.md)
-SYSDATA_MAX = 0x80148000 - 0x80130000  # SYSDATA at 0x80130000, FACE.BIN loads at 0x80148000
-FILLER = "The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs."
+# SYSDATA's buffer: memory-area table at 0x80089798 = {0x80130000, 0xC000}; the original file is 47,289 bytes, so the
+# whole names block may grow by ~1.8 KB. Over it, New Game hangs on its loading screen (10-byte name markers did).
+SYSDATA_MAX = 0xC000
+NAME_ROOM = 6  # marker length for SYSDATA names: 696 names x 8 bytes stays inside SYSDATA_MAX
+FILLER ="The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs."
 
 
 def marker(rid, room=None, box=None):
     """Marker text for a row: its short id plus filler, cut to `room` bytes for fixed fields, or filling a dialogue
     box = (width px, lines) to its last line."""
-    if room is not None:  # E00BE8, I03desc, N123
-        return (rid[0] + rid.split("/", 1)[-1].replace("/", ""))[:room]
+    if room is not None:  # E00BE8MMM, I03descMMM, N123: id, then wide glyphs to the field's bytes (shows clipping)
+        return (rid[0] + rid.split("/", 1)[-1].replace("/", "")).ljust(room, "M")[:room]
     s = f"[{rid.replace('MAP', '').replace('/', '.')}]"
     if box is None:
         return f"{s} {FILLER}"[:56]
@@ -166,7 +169,7 @@ def build_names(tree, markers):
     end = block.index(b"\xff\xff\xff\xff")
     lines = block[:end].split(b"\r\n")
     rows = load_rows("names.json")
-    new = [row_text(r, markers, 4) or lines[i] for i, r in enumerate(rows)]
+    new = [row_text(r, markers, NAME_ROOM) or lines[i] for i, r in enumerate(rows)]
     if new == lines:
         return {}
     block = b"\r\n".join(new) + block[end:]

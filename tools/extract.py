@@ -28,6 +28,7 @@ EXE_BASE = 0x80010000 - 0x800  # RAM = file offset + EXE_BASE
 # NAGE.EXE file ranges that hold free-standing strings (found by tools/textscan.py and a kanji-only scan of the
 # whole EXE; no other run of font characters exists outside these and the tables below)
 EXE_REGIONS = [(0xBE8, 0xC80), (0x13A0, 0x1458), (0x1B6C, 0x2B58), (0x809E8, 0x80C10)]
+GP_AREA = 0x809E8  # file offset where the $gp data area starts: strings there sit between variables
 # Non-text runs inside those ranges, by file offset (reviewed by eye; the coverage test fails if the classifier's
 # data runs ever differ from this list)
 EXE_DATA = {
@@ -108,10 +109,13 @@ def exe_pieces(exe):
 
 
 def exe_room(exe, s, raw):
-    """Bytes a string may use in place: its own, its NUL, and the zero padding up to the next non-zero byte."""
-    e = s + len(raw)
-    while e < len(exe) and exe[e] == 0:
-        e += 1
+    """Bytes a string may use in place: its own, its NUL and, outside the $gp area, the zeros up to the next word
+    boundary (alignment). Longer zero runs are not free: in the $gp area they are variables (filling them hung the
+    game on its loading screen), so longer English is relocated (phase 7)."""
+    e = s + len(raw) + 1
+    if s < GP_AREA:
+        while e % 4 and e < len(exe) and exe[e] == 0:
+            e += 1
     return e - s
 
 

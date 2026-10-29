@@ -5,7 +5,7 @@
 
 Rule (from op 17's handler 0x8005F4AC and the tour): op 16 (speaker + face) opens the face box, whose text area
 is 144 px; op 17 opens a box with no face, 224 px. A line takes the box of the last 16/17 before it in script
-order. MAP86 (New Game intro) runs in mode 3, where the box has 3 lines instead of 4.
+order. MAP85 and MAP86 (New Game intro) run in mode 3 ($80090C58), where the box has 3 lines instead of 4.
 """
 import argparse
 import json
@@ -20,10 +20,10 @@ import script as sc  # noqa: E402
 # name: (text width px, lines, how measured)
 BOXES = {
     "face": (144, 4, "measured: winlog W=18 lines=4, work/qa/wintour (MAP02/186/0024 ...)"),
-    "face3": (144, 3, "measured: winlog W=18 lines=3, MAP86 intro (MAP86/186/0016)"),
+    "face3": (144, 3, "measured: winlog W=18 lines=3, MAP85 + MAP86 intro (MAP86/186/0016)"),
     "plain": (224, 4, "measured: winlog W=28 lines=4, MAP14R/187/01DA"),
 }
-THREE_LINE_MAPS = {"MAP86"}
+THREE_LINE_MAPS = {"MAP85", "MAP86"}  # seen 3-line in the tour; every other map seen was 4-line
 # the engine wraps by itself once the pen reaches the box width (x >= 8*W after a glyph), so a line must end short
 # of it: wrapped lines take at most width - MARGIN px of advance
 MARGIN = 1
