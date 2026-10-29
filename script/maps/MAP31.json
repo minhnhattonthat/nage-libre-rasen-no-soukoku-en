@@ -717,12 +717,12 @@
  {
   "id": "MAP31/195/006C",
   "jp": "えーん、みんなが　いぢめるよー。",
-  "en": "Waaah, everybody's being mean to Makoto~."
+  "en": "Waaah, everybody's picking on meee."
  },
  {
   "id": "MAP31/195/009C",
   "jp": "チッ、オレとしたことが・・・不覚。",
-  "en": "Tch, how could I let this happen... Careless."
+  "en": "Tch, how could I let this happen..."
  },
  {
   "id": "MAP31/195/00CE",
@@ -732,7 +732,7 @@
  {
   "id": "MAP31/196/0022",
   "jp": "”ダブルのジャケット”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Double-Breasted Jacket\". (dress-up item)"
+  "en": "Got the \"Double-Breasted Jacket\".\n(Dress-up item)"
  },
  {
   "id": "MAP31/196/0068",
@@ -742,7 +742,7 @@
  {
   "id": "MAP31/197/0022",
   "jp": "”ビキニのパンツ”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Bikini Bottoms\". (dress-up item)"
+  "en": "Got the \"Bikini Bottoms\".\n(Dress-up item)"
  },
  {
   "id": "MAP31/197/0064",
@@ -847,7 +847,7 @@
  {
   "id": "MAP31/202/000E",
   "jp": "”ローファー”を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Loafers\". (dress-up item)"
+  "en": "Got the \"Loafers\".\n(Dress-up item)"
  },
  {
   "id": "MAP31/203/0002",
@@ -1022,7 +1022,7 @@
  {
   "id": "MAP31/216/0004",
   "jp": "残念ながら、\n全滅してしまいましたね。",
-  "en": "Too bad. The whole party has fallen."
+  "en": "Unfortunately, the whole party has fallen."
  },
  {
   "id": "MAP31/216/0032",

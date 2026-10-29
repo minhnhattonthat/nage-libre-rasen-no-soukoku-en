@@ -127,12 +127,12 @@
  {
   "id": "MAP41/192/006C",
   "jp": "えーん、みんなが　いぢめるよー。",
-  "en": "Waaah, everybody's being mean to Makoto~."
+  "en": "Waaah, everybody's picking on meee."
  },
  {
   "id": "MAP41/192/009C",
   "jp": "チッ、オレとしたことが・・・不覚。",
-  "en": "Tch, how could I let this happen... Careless."
+  "en": "Tch, how could I let this happen..."
  },
  {
   "id": "MAP41/192/00CE",
@@ -142,7 +142,7 @@
  {
   "id": "MAP41/193/0022",
   "jp": "”ローファー”を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Loafers\". (dress-up item)"
+  "en": "Got the \"Loafers\".\n(Dress-up item)"
  },
  {
   "id": "MAP41/193/005C",
@@ -152,7 +152,7 @@
  {
   "id": "MAP41/194/0022",
   "jp": "”高級なバッグ”を手に入れた（着せかえ用アイテム）",
-  "en": "Got the \"Designer Bag\". (dress-up item)"
+  "en": "Got the \"Designer Bag\".\n(Dress-up item)"
  },
  {
   "id": "MAP41/194/005E",
@@ -162,17 +162,17 @@
  {
   "id": "MAP41/195/000E",
   "jp": "”麻のジャケット”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Linen Jacket\". (dress-up item)"
+  "en": "Got the \"Linen Jacket\".\n(Dress-up item)"
  },
  {
   "id": "MAP41/196/000E",
   "jp": "”モヘアニットセーター”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Mohair Knit Sweater\". (dress-up item)"
+  "en": "Got the \"Mohair Knit Sweater\".\n(Dress-up item)"
  },
  {
   "id": "MAP41/197/000E",
   "jp": "”麻のフレアーパンツ”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Linen Flared Pants\". (dress-up item)"
+  "en": "Got the \"Linen Flared Pants\".\n(Dress-up item)"
  },
  {
   "id": "MAP41/198/000C",
@@ -222,7 +222,7 @@
  {
   "id": "MAP41/216/0004",
   "jp": "残念ながら、\n全滅してしまいましたね。",
-  "en": "Too bad. The whole party has fallen."
+  "en": "Unfortunately, the whole party has fallen."
  },
  {
   "id": "MAP41/216/0032",

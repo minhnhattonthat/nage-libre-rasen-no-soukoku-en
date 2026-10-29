@@ -96,8 +96,11 @@ Updated at the end of every session. Keep it to what the next session needs; his
     bearing (for text flush at plate frames) was reverted in round 2. Round 3 found stale digit pixels on the
     club-select stats (numbers redraw in place; VWF moved them): digits are tabular (7 px) and the number printer
     (0x8003B7A0, mode 2) pads with '`', a blank digit-wide glyph (font.FIGURE; lint bans '`'). Birthstone plates
-    clear their top row. Round 4 (build 109093b) in progress: gate state in work/qa/manifest.tsv + verdicts/.
-    Town signs seen in the map01 tour.
+    clear their top row. Round 4 (build 109093b): 116/116 ok bar one orphan page (MAP08/189/022C, fixed 5fde8eb).
+    Round 4 also showed the tour probe pressed circle mid-typing and skipped pages unshot (wm08 lost ~6); tourshot.lua
+    now presses only once the text is stable. Round 5 = full re-tour (EN + JP) + review with the fixed probe; gate
+    state in work/qa/manifest.tsv + verdicts/ (round 4 kept in work/qa/round4/). Town signs seen in the map01 tour.
+    Open note: wm42 replays wm17 with slightly different wording (consistency, not a bug).
   - Memory-card title is English full-width (BIOS manager); Japanese-version saves load in the English build.
   - Release: `tools/release.py VERSION` (check, build, smoke, jp_left on NAGE.EXE/SYSDATA, qa_gate, xdelta3,
     re-apply, README from docs/README.template.txt, zip). Never `gh release create` (D9).
@@ -113,7 +116,7 @@ Updated at the end of every session. Keep it to what the next session needs; his
     errors) get checked in phase 8 QA; adjust FIELDS if a shot disagrees.
   - Birthday screen: the full name now starts 8 px left of the portrait frame (cosmetic; needed for "Makoto
     Matsunaga" 98 px).
-  - Current build/ = English build (sha1 758a09b5…, smoke ok, regen 83/83 ok, states in work/states/ match it); `build.py --markers` restores the marker
+  - Current build/ = English build (sha1 f452e917…, 5fde8eb; regen 83/83 ok on the round-4 build); `build.py --markers` restores the marker
     build.
 - **Debug-tool limits (grow when needed):** map scenes play each map's first event with new-game story flags; the
   later events of a map (other script slots 186-216, flag-dependent branches) are not forced yet. For phase 8,

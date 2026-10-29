@@ -107,12 +107,12 @@
  {
   "id": "MAP15/189/010C",
   "jp": "オレたちの邪魔をしようってのか？　　いい度胸だ。",
-  "en": "You plan to get in our way? You've got guts."
+  "en": "You think you can get in our way? You've got guts."
  },
  {
   "id": "MAP15/189/014C",
   "jp": "戦わなければ先に進めないようですね。",
-  "en": "It seems we cannot go on without a fight."
+  "en": "It seems we cannot go on without fighting."
  },
  {
   "id": "MAP15/190/000C",
@@ -147,7 +147,7 @@
  {
   "id": "MAP15/192/0022",
   "jp": "”タンクトップ”を手に入れた（着せかえ用アイテム）",
-  "en": "Got the \"Tank Top\". (dress-up item)"
+  "en": "Got the \"Tank Top\".\n(Dress-up item)"
  },
  {
   "id": "MAP15/192/005E",
@@ -157,7 +157,7 @@
  {
   "id": "MAP15/193/0022",
   "jp": "”デニムショートパンツ”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Denim Shorts\". (dress-up item)"
+  "en": "Got the \"Denim Shorts\".\n(Dress-up item)"
  },
  {
   "id": "MAP15/193/006A",
@@ -287,17 +287,17 @@
  {
   "id": "MAP15/202/000E",
   "jp": "”ジーパン”を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Jeans\". (dress-up item)"
+  "en": "Got the \"Jeans\".\n(Dress-up item)"
  },
  {
   "id": "MAP15/203/000E",
   "jp": "”サンダル”を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Sandals\". (dress-up item)"
+  "en": "Got the \"Sandals\".\n(Dress-up item)"
  },
  {
   "id": "MAP15/204/000E",
   "jp": "”ステンレスチェーン”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Stainless Chain\". (dress-up item)"
+  "en": "Got the \"Stainless Chain\".\n(Dress-up item)"
  },
  {
   "id": "MAP15/205/000C",

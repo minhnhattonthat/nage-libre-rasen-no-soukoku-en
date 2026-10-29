@@ -237,22 +237,22 @@
  {
   "id": "MAP81/186/0B7A",
   "jp": "ピコハンの魔法を使えるようになった。",
-  "en": "You can now use the Squeaky Hammer magic."
+  "en": "You can now use Squeaky Hammer magic."
  },
  {
   "id": "MAP81/186/0BB2",
   "jp": "マッタの魔法を使えるようになった。",
-  "en": "You can now use the Time Out magic."
+  "en": "You can now use Time Out magic."
  },
  {
   "id": "MAP81/186/0BE8",
   "jp": "ヒエヒエの魔法を使えるようになった。",
-  "en": "You can now use the Chill Chill magic."
+  "en": "You can now use Chill Chill magic."
  },
  {
   "id": "MAP81/186/0C20",
   "jp": "ピカゴロの魔法を使えるようになった。",
-  "en": "You can now use the Flash Boom magic."
+  "en": "You can now use Flash Boom magic."
  },
  {
   "id": "MAP81/186/0C56",
@@ -277,12 +277,12 @@
  {
   "id": "MAP81/187/0024",
   "jp": "やはり梅林%h（ばいりん）%z学園ですか・・・",
-  "en": "So it is Bairin Academy after all..."
+  "en": "So it was Bairin Academy after all..."
  },
  {
   "id": "MAP81/187/0056",
   "jp": "我が校の諜報部によれば、",
-  "en": "According to our school's intelligence department,"
+  "en": "According to our school's intelligence bureau,"
  },
  {
   "id": "MAP81/187/0076",
@@ -292,32 +292,32 @@
  {
   "id": "MAP81/187/00CA",
   "jp": "ねー、ちょーほーぶって、なーにー？",
-  "en": "Hey~, what's an in-tel-li-gence de-part-ment~?"
+  "en": "Heyyy, what's an in-tel-li-gence byoo-roh~?"
  },
  {
   "id": "MAP81/187/0100",
   "jp": "どうせ新聞部のことだろ。",
-  "en": "Probably just the newspaper club."
+  "en": "Probably just means the newspaper club."
  },
  {
   "id": "MAP81/187/0132",
   "jp": "ナージュ像はその城塞に隠されてるってわけだ。",
-  "en": "So the Nage Statue's hidden in that fortress, then."
+  "en": "So the Nage Statue's hidden in that fortress."
  },
  {
   "id": "MAP81/187/016C",
   "jp": "警備も厳重そうですね。",
-  "en": "It seems it will be heavily guarded, too."
+  "en": "It seems heavily guarded, too."
  },
  {
   "id": "MAP81/187/0190",
   "jp": "魔物による被害から商店街を救えるのはナージュ像だけです",
-  "en": "Only the Nage Statue can save the shopping street from the monsters."
+  "en": "Only the Nage Statue can save the shopping street from the damage the monsters are doing."
  },
  {
   "id": "MAP81/187/01CE",
   "jp": "一刻も早くナージュ像を持ち帰ってください。",
-  "en": "Please bring the Nage Statue back as soon as you can."
+  "en": "Please bring the Nage Statue back as soon as you possibly can."
  },
  {
   "id": "MAP81/187/0206",
@@ -347,7 +347,7 @@
  {
   "id": "MAP81/188/0038",
   "jp": "心配したんだよ。",
-  "en": "We were worried, you know."
+  "en": "We were worried about you!"
  },
  {
   "id": "MAP81/188/005C",
@@ -377,7 +377,7 @@
  {
   "id": "MAP81/188/012C",
   "jp": "うんうん。",
-  "en": "Uh-huh, uh-huh."
+  "en": "Mm-hm, mm-hm."
  },
  {
   "id": "MAP81/188/014A",
@@ -392,12 +392,12 @@
  {
   "id": "MAP81/189/0058",
   "jp": "さっそくですが、　ナージュ像の続報が入ったのでお知らせしましょう。",
-  "en": "Without further ado, we have new information on the Nage Statue."
+  "en": "Straight to business: we have new information on the Nage Statue to share with you."
  },
  {
   "id": "MAP81/189/00A2",
   "jp": "ナージュ像を持ち去った怪鳥は火山の洞窟の巣に棲んでいるそうです。",
-  "en": "The giant bird that took the Nage Statue apparently lives in a nest in a volcano cave."
+  "en": "The giant bird that carried off the Nage Statue is said to live in a nest in a volcanic cave."
  },
  {
   "id": "MAP81/189/00EA",
@@ -407,12 +407,12 @@
  {
   "id": "MAP81/189/0128",
   "jp": "それから、怪鳥の棲む火山へは、２つのルートでしか行けないそうです。",
-  "en": "Also, it seems there are only two routes to the giant bird's volcano."
+  "en": "Also, it seems the volcano where the giant bird lives can only be reached by two routes."
  },
  {
   "id": "MAP81/189/0172",
   "jp": "まず「滝」を経由するルート、　そして「大木」を経由するルートです。",
-  "en": "First, the route by way of the \"Waterfall\", and then the route by way of the \"Great Tree\"."
+  "en": "First, the route by way of the \"Waterfall\", and second, the route by way of the \"Great Tree\"."
  },
  {
   "id": "MAP81/189/01BE",
@@ -522,7 +522,7 @@
  {
   "id": "MAP81/191/008A",
   "jp": "あやしげな術で、桜花高校の、生徒はおろか教師すら操っているという噂です。",
-  "en": "Rumor has it he uses some shady art to control not just Oka High's students, but even its teachers."
+  "en": "Rumor has it he uses some strange art to control not only Oka High's students, but even its teachers."
  },
  {
   "id": "MAP81/191/00E0",
@@ -542,7 +542,7 @@
  {
   "id": "MAP81/191/0198",
   "jp": "ナージュ像を悪用するにきまっていますからね。",
-  "en": "He is certain to misuse the Nage Statue, after all."
+  "en": "He's certain to misuse the Nage Statue."
  },
  {
   "id": "MAP81/191/01D2",
@@ -552,7 +552,7 @@
  {
   "id": "MAP81/191/01FE",
   "jp": "ナージュ像には魔力を増幅する効力があるようです。",
-  "en": "It seems the Nage Statue has the power to amplify magic."
+  "en": "It seems the Nage Statue has the power to amplify magic power."
  },
  {
   "id": "MAP81/191/0236",
@@ -582,7 +582,7 @@
  {
   "id": "MAP81/191/0324",
   "jp": "なるほど、だからみんながナージュ像を追っていたんですね",
-  "en": "I see, so that is why everyone was after the Nage Statue."
+  "en": "I see. So that is why everyone was after the Nage Statue."
  },
  {
   "id": "MAP81/191/0368",

@@ -192,12 +192,12 @@
  {
   "id": "MAP40/190/006C",
   "jp": "えーん、みんなが　いぢめるよー。",
-  "en": "Waaah, everybody's being mean to Makoto~."
+  "en": "Waaah, everybody's picking on meee."
  },
  {
   "id": "MAP40/190/009C",
   "jp": "チッ、オレとしたことが・・・不覚。",
-  "en": "Tch, how could I let this happen... Careless."
+  "en": "Tch, how could I let this happen..."
  },
  {
   "id": "MAP40/190/00CE",
@@ -207,7 +207,7 @@
  {
   "id": "MAP40/191/0022",
   "jp": "”タンクトップ”を手に入れた（着せかえ用アイテム）",
-  "en": "Got the \"Tank Top\". (dress-up item)"
+  "en": "Got the \"Tank Top\".\n(Dress-up item)"
  },
  {
   "id": "MAP40/191/005E",
@@ -217,7 +217,7 @@
  {
   "id": "MAP40/192/0022",
   "jp": "”デニムショートパンツ”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Denim Shorts\". (dress-up item)"
+  "en": "Got the \"Denim Shorts\".\n(Dress-up item)"
  },
  {
   "id": "MAP40/192/006A",
@@ -227,17 +227,17 @@
  {
   "id": "MAP40/193/000E",
   "jp": "”ジーパン”を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Jeans\". (dress-up item)"
+  "en": "Got the \"Jeans\".\n(Dress-up item)"
  },
  {
   "id": "MAP40/194/000E",
   "jp": "”サンダル”を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Sandals\". (dress-up item)"
+  "en": "Got the \"Sandals\".\n(Dress-up item)"
  },
  {
   "id": "MAP40/195/000E",
   "jp": "”ステンレスチェーン”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Stainless Chain\". (dress-up item)"
+  "en": "Got the \"Stainless Chain\".\n(Dress-up item)"
  },
  {
   "id": "MAP40/196/0006",
@@ -402,7 +402,7 @@
  {
   "id": "MAP40/216/0004",
   "jp": "残念ながら、\n全滅してしまいましたね。",
-  "en": "Too bad. The whole party has fallen."
+  "en": "Unfortunately, the whole party has fallen."
  },
  {
   "id": "MAP40/216/0032",

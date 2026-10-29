@@ -117,7 +117,7 @@
  {
   "id": "MAP19/190/0022",
   "jp": "”ダブルのジャケット”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Double-Breasted Jacket\". (dress-up item)"
+  "en": "Got the \"Double-Breasted Jacket\".\n(Dress-up item)"
  },
  {
   "id": "MAP19/190/0068",
@@ -127,7 +127,7 @@
  {
   "id": "MAP19/191/0022",
   "jp": "”デニムスカート”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Denim Skirt\". (dress-up item)"
+  "en": "Got the \"Denim Skirt\".\n(Dress-up item)"
  },
  {
   "id": "MAP19/191/0064",
@@ -242,12 +242,12 @@
  {
   "id": "MAP19/200/000E",
   "jp": "”キャンバススニーカー”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Canvas Sneakers\". (dress-up item)"
+  "en": "Got the \"Canvas Sneakers\".\n(Dress-up item)"
  },
  {
   "id": "MAP19/201/000E",
   "jp": "”腕時計”を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Wristwatch\". (dress-up item)"
+  "en": "Got the \"Wristwatch\".\n(Dress-up item)"
  },
  {
   "id": "MAP19/202/000C",
@@ -282,27 +282,27 @@
  {
   "id": "MAP19/204/0028",
   "jp": "こんな物、ホントに修理できるの？",
-  "en": "Can a thing like this really be repaired?"
+  "en": "Can this thing really be repaired?"
  },
  {
   "id": "MAP19/204/0056",
   "jp": "見たところ、それほど大きな損傷もありませんし・・・",
-  "en": "From what I can see, there is no major damage, so..."
+  "en": "From what I can see, there does not seem to be any major damage..."
  },
  {
   "id": "MAP19/204/0096",
   "jp": "だいたいどうやって中に入るかもわかんねーじゃねーか。",
-  "en": "We don't even know how to get inside in the first place!"
+  "en": "We don't even know how to get inside it in the first place."
  },
  {
   "id": "MAP19/204/00D8",
   "jp": "開け～・・・ゴマっ・・・なんちって。",
-  "en": "Open... sesame... Just kidding."
+  "en": "Open~... sesame... just kidding."
  },
  {
   "id": "MAP19/204/010A",
   "jp": "・・・・なんなのよコレッ！！",
-  "en": "....What the heck is THIS?!"
+  "en": "....What IS this thing?!!"
  },
  {
   "id": "MAP19/213/0006",

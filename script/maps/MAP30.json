@@ -142,12 +142,12 @@
  {
   "id": "MAP30/189/006C",
   "jp": "えーん、みんなが　いぢめるよー。",
-  "en": "Waaah, everybody's being mean to Makoto~."
+  "en": "Waaah, everybody's picking on meee."
  },
  {
   "id": "MAP30/189/009C",
   "jp": "チッ、オレとしたことが・・・不覚。",
-  "en": "Tch, how could I let this happen... Careless."
+  "en": "Tch, how could I let this happen..."
  },
  {
   "id": "MAP30/189/00CE",
@@ -157,7 +157,7 @@
  {
   "id": "MAP30/190/0022",
   "jp": "”ロングブーツ”を手に入れた（着せかえ用アイテム）",
-  "en": "Got the \"Long Boots\". (dress-up item)"
+  "en": "Got the \"Long Boots\".\n(Dress-up item)"
  },
  {
   "id": "MAP30/190/005E",
@@ -167,7 +167,7 @@
  {
   "id": "MAP30/191/0022",
   "jp": "”腕時計”を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Wristwatch\". (dress-up item)"
+  "en": "Got the \"Wristwatch\".\n(Dress-up item)"
  },
  {
   "id": "MAP30/191/0058",
@@ -473,12 +473,12 @@
  {
   "id": "MAP30/200/000E",
   "jp": "”チェーン”を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Chain\". (dress-up item)"
+  "en": "Got the \"Chain\".\n(Dress-up item)"
  },
  {
   "id": "MAP30/201/000E",
   "jp": "”２年生のブルマー”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"2nd-Year Bloomers\". (dress-up item)"
+  "en": "Got the \"2nd-Year Bloomers\".\n(Dress-up item)"
  },
  {
   "id": "MAP30/201/0066",
@@ -538,7 +538,7 @@
  {
   "id": "MAP30/216/0004",
   "jp": "残念ながら、\n全滅してしまいましたね。",
-  "en": "Too bad. The whole party has fallen."
+  "en": "Unfortunately, the whole party has fallen."
  },
  {
   "id": "MAP30/216/0032",

@@ -82,7 +82,7 @@
  {
   "id": "MAP17/188/01D0",
   "jp": "サモンフレイムの魔法\nを手に入れた",
-  "en": "Obtained the Summon Flame magic."
+  "en": "Got the Summon Flame magic."
  },
  {
   "id": "MAP17/188/0236",
@@ -123,7 +123,7 @@
  {
   "id": "MAP17/188/039C",
   "jp": "サモンフレイムの魔法\nを手に入れた",
-  "en": "Obtained the Summon Flame magic.",
+  "en": "Got the Summon Flame magic.",
   "dead": true
  },
  {
@@ -159,7 +159,7 @@
  {
   "id": "MAP17/189/0176",
   "jp": "早く追わないと・・",
-  "en": "We must hurry after her..."
+  "en": "We must chase her, quickly..."
  },
  {
   "id": "MAP17/189/0196",
@@ -304,37 +304,37 @@
  {
   "id": "MAP17/191/0060",
   "jp": "どうすりゃいいんだ",
-  "en": "What are we supposed to do now?"
+  "en": "What the heck do we do now?"
  },
  {
   "id": "MAP17/191/0086",
   "jp": "あれを修理すれば、彼らを追えるかも。",
-  "en": "If we repair that, we may be able to follow them."
+  "en": "If we repair that, we might be able to follow them."
  },
  {
   "id": "MAP17/191/00B2",
   "jp": "崖から落ちて、みんなとはぐれたとき、",
-  "en": "When I fell from the cliff and got separated from everyone,"
+  "en": "When I fell off the cliff and got separated from everyone,"
  },
  {
   "id": "MAP17/191/00DE",
   "jp": "あの船と同じ物を、見つけたんです。",
-  "en": "I found one just like that ship."
+  "en": "I found a ship just like that one."
  },
  {
   "id": "MAP17/191/0114",
   "jp": "修理って言ったって・・・異世界の船よできるの？",
-  "en": "Repair it, you say... It's a ship from another world. Can we even do that?"
+  "en": "Repair it, you say... it's a ship from another world, can you even do that?"
  },
  {
   "id": "MAP17/191/0156",
   "jp": "わからない、でも、やってみる価値はありますわ。",
-  "en": "I do not know, but it is worth a try."
+  "en": "I do not know. But it is certainly worth trying."
  },
  {
   "id": "MAP17/191/018C",
   "jp": "さあ、修理道具を取りに帰りましょう。",
-  "en": "Now, let us go back and fetch some repair tools."
+  "en": "Now then, let us go home and fetch some repair tools."
  },
  {
   "id": "MAP17/192/000A",
@@ -454,7 +454,7 @@
  {
   "id": "MAP17/197/0022",
   "jp": "”チビＴ”を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Baby Tee\". (dress-up item)"
+  "en": "Got the \"Baby Tee\".\n(Dress-up item)"
  },
  {
   "id": "MAP17/197/0058",
@@ -464,7 +464,7 @@
  {
   "id": "MAP17/198/0022",
   "jp": "”ジャンパースカート”\n　を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Jumper Skirt\". (dress-up item)"
+  "en": "Got the \"Jumper Skirt\".\n(Dress-up item)"
  },
  {
   "id": "MAP17/198/0068",
@@ -489,17 +489,17 @@
  {
   "id": "MAP17/200/000E",
   "jp": "”ロングブーツ”を手に入れた（着せかえ用アイテム）",
-  "en": "Got the \"Long Boots\". (dress-up item)"
+  "en": "Got the \"Long Boots\".\n(Dress-up item)"
  },
  {
   "id": "MAP17/201/000E",
   "jp": "”リストバンド”を手に入れた（着せかえ用アイテム）",
-  "en": "Got the \"Wristband\". (dress-up item)"
+  "en": "Got the \"Wristband\".\n(Dress-up item)"
  },
  {
   "id": "MAP17/202/000E",
   "jp": "”スカーフ”を手に入れた\n（着せかえ用アイテム）",
-  "en": "Got the \"Scarf\". (dress-up item)"
+  "en": "Got the \"Scarf\".\n(Dress-up item)"
  },
  {
   "id": "MAP17/203/000C",

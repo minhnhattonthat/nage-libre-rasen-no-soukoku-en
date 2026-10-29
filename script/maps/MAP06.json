@@ -102,7 +102,7 @@
  {
   "id": "MAP06/188/00C8",
   "jp": "調理部になれば、調理部の能力を使えるようになります",
-  "en": "Join the Cooking Club and you can use the Cooking Club's abilities."
+  "en": "Join the Cooking Club, and you can use the Cooking Club's abilities."
  },
  {
   "id": "MAP06/188/017A",
@@ -266,7 +266,7 @@
  {
   "id": "MAP06/196/0044",
   "jp": "調理部になれば、調理部の能力を使えるようになります",
-  "en": "Join the Cooking Club and you can use the Cooking Club's abilities."
+  "en": "Join the Cooking Club, and you can use the Cooking Club's abilities."
  },
  {
   "id": "MAP06/197/0016",
@@ -461,7 +461,7 @@
  {
   "id": "MAP06/206/0026",
   "jp": "ゴツピカの魔法\nを使えるようになった",
-  "en": "Learned the Big Flash spell."
+  "en": "You can now use Big Flash magic."
  },
  {
   "id": "MAP06/207/0020",
@@ -728,7 +728,7 @@
  {
   "id": "MAP06/215/0026",
   "jp": "ザバザバの魔法\nを使えるようになった",
-  "en": "Learned the Splish Splash spell."
+  "en": "You can now use Splish Splash magic."
  },
  {
   "id": "MAP06/216/0004",

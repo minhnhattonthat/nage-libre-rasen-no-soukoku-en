@@ -14,6 +14,11 @@ From the pilot (b001: MAP86, MAP85, MAP01, MAP01R), checked in-game. Match these
 | Monsters | ぶひ/きー + （meaning） | "Oink oink! (Not a chance!)", "Kee-kee-kee." Keep the noise, then the meaning in () |
 | System/narration | 手に入れた, ～できます | "Got the "Baby Tee".", "Received some medicine." Plain, short |
 
+System-message templates (one form game-wide, unified in phase 8): `Got the "X".\n(Dress-up item)`;
+X の魔法を使えるようになった = `You can now use X magic.`; X の魔法を手に入れた = `Got the X magic.`;
+`Join the X Club, and you can use the X Club's abilities.` A JP line repeated in another map (replayed scenes:
+MAP17/42/85, MAP05/81, MAP14/81, MAP20/84, MAP13R/19) keeps the English of its first appearance.
+
 ## Example pairs
 - 真%h（まこと）　%zも行くー。 -> Makoto's going too~!
 - これで司%h（つかさ）　%zクンのハートは私のモノよーっ！！ -> With this, Tsukasa-kun's heart will be miiine!!
