@@ -10,7 +10,7 @@ line gives their furigana or an honorific), and an Avoid spelling fails.
   known), else Hepburn without macrons (Kiryu, Ryo, Daido). Exception: 杏 = Ann (あん; "An" reads as the article).
 - Credits: English.
 - Register / flavour: light comedy RPG about five high-school girls; casual, bubbly teen speech among the girls,
-  rougher talk from delinquents and monsters, polite speech where the JP is polite (Itsuki). Natural modern
+  rougher talk from delinquents and monsters, polite speech where the JP is polite (Mio). Natural modern
   English, contractions, no archaic or stiff textbook phrasing. Sound effects: English onomatopoeia (にゃ～ ->
   "Meow~"), keep the JP's length and repetition.
 - Abbreviations: full names and terms everywhere, prefer engine changes over shortening. Stat names stay the
@@ -49,6 +49,8 @@ line gives their furigana or an honorific), and an Avoid spelling fails.
 | 薫 | Kaoru | | | |
 | 相田 | Aida | | Tsukasa Aida (相田 司), Nanju High council president | |
 | 黒沢様 | Kurosawa-sama | | his followers; Lord Kurosawa also passes the check | |
+| ブタくん | Pig-kun | | the pig monster's name label; ブタさん = Pig-san (honorifics on nouns used as names are kept) | Mr. Pig, Mister Pig |
+| 雪だるまさん | Snowman-san | | MAP30, addressed by the girls | Mister Snowman |
 
 ## Places
 | JP | EN | max | notes | Avoid |
@@ -63,6 +65,7 @@ line gives their furigana or an honorific), and an Avoid spelling fails.
 | 南寿町 | Nanju Town | | | |
 | 浮遊大陸 | Floating Continent | | | |
 | 飛行戦艦 | flying battleship | | also 飛空戦艦 | |
+| 大木 | Great Tree | | MAP14/MAP81 route name, Title Case with 滝 = Waterfall ("Great Tree" route); NAME/467 大木 is the surname Oki | Big Tree, big tree |
 
 ## Items / skills / terms
 | JP | EN | max | notes | Avoid |

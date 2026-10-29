@@ -225,26 +225,36 @@ def check(b, allrows, box_of, gl):
             lint.FIELD_ROWS.add(rid)
         e, _ = lint.check_row(row, box_of.get(rid), fixed=name == "records.json")
         errs += [f"{rid}: {x}" for x in e]
-        jp = _bare(r["jp"])
-        for j, e_, avoid in gl:
-            if j not in jp and j not in r["jp"]:
-                continue
-            if has_term(r["jp"], j) and e_ and e_.lower() not in en.lower():
-                errs.append(f"{rid}: glossary {j} = {e_!r} missing")
-            for a in avoid:
-                if re.search(rf"\b{re.escape(a)}\b", en):
-                    errs.append(f"{rid}: {a!r} is on the glossary's Avoid list for {j}")
-            for hj, he in HONORIFIC.items():
-                # the suffix may follow the full name (Kaoru Kanzaki-san); 様 may be Lord/Lady X
-                ok = he in en.lower() or (he == "-sama" and re.search(r"\b(Lord|Lady)\b", en))
-                if e_ and re.search(re.escape(j) + r"\s*" + hj, jp) and not ok:
-                    errs.append(f"{rid}: {j}{hj} -> {e_}{he} (honorifics are kept)")
-    new = {rid: en for rid, en in got if rid.startswith("NAME/")}
+        errs += [f"{rid}: {x}" for x in terms(r["jp"], en, gl)]
+    new ={rid: en for rid, en in got if rid.startswith("NAME/")}
     if new:  # all names share SYSDATA's buffer (lint.NAMES_SLACK)
         grow = sum(len(new.get(r["id"], r.get("en", ""))) - len(r["jp"].encode("cp932"))
                    for r in load("names.json") if r["id"] in new or r.get("en"))
         if grow > lint.NAMES_SLACK:
             errs.append(f"{b}: English names add {grow} bytes to SYSDATA, room {lint.NAMES_SLACK}: report it (LONG), never abbreviate")
+    return errs
+
+
+def terms(jp_raw, en, gl):
+    """Glossary terms, Avoid spellings and kept honorifics for one row (tests/test_terms.py runs it on script/)."""
+    errs, jp = [], _bare(jp_raw)
+    for j, e_, avoid in gl:
+        if j not in jp and j not in jp_raw:
+            continue
+        if has_term(jp_raw, j) and e_ and e_.lower() not in en.lower():
+            errs.append(f"glossary {j} = {e_!r} missing")
+        for a in avoid:
+            if re.search(rf"\b{re.escape(a)}\b", en):
+                errs.append(f"{a!r} is on the glossary's Avoid list for {j}")
+        for hj, he in HONORIFIC.items():
+            # the suffix may follow the full name (Kaoru Kanzaki-san); 様 may be Lord/Lady X
+            ok = he in en.lower() or (he == "-sama" and re.search(r"\b(Lord|Lady)\b", en))
+            if e_ and re.search(re.escape(j) + r"\s*" + hj, jp) and not ok:
+                errs.append(f"{j}{hj} -> {e_}{he} (honorifics are kept)")
+    # an honorific on a katakana name or noun (ブタさん) is kept too; lexical words (みなさん, 鳥さん) are not katakana
+    for m in re.finditer(r"[゠-ヺ][゠-ヿ]*(" + "|".join(HONORIFIC) + ")", jp):  # not ー alone (ねーちゃん)
+        if HONORIFIC[m.group(1)] not in en.lower():
+            errs.append(f"{m.group(0)}: keep the honorific ({HONORIFIC[m.group(1)]})")
     return errs
 
 
