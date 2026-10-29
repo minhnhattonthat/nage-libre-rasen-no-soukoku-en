@@ -1,6 +1,7 @@
 -- Warp from a cold boot to a scene in tools/debug/scenes.lua (RAM map: docs/re/state.md).
 --   emu.py CUE --out work/qa/warp --script tools/debug/warp.lua --var "SCENE='map13r'" --frames 20000 --sheet
 --   [--state-out work/states/map13r.sstate] [--var GOD=1] [--var "DISC_TREE=[[H:/.../tree]]"]
+--   [--var "EDIT_TREE=[[H:/.../work/build/files]]"] (a build: its changed files, checked before DISC_TREE)
 -- No debugger needed: it polls RAM once a frame. It boots, picks NEW GAME, and when New Game queues its fade-out
 -- callback (the next-map function) it sets the map / entry / mode bytes and swaps the callback for the scene's
 -- loader, so the game loads the scene the way a map change does. When the scene is ready it waits `settle`
@@ -41,7 +42,9 @@ local function check()
   if sc.title then return (rd8(MAP) == 86 and rd8(MODE) == 0) or "map/mode bytes are not the title's (86, 0)" end
   if sc.map_check ~= false and rd8(MAP) ~= sc.map then return string.format("map byte %d, want %d", rd8(MAP), sc.map) end
   if sc.dir then
-    local f = io.open(TREE .. "/MAP01_06/" .. sc.dir .. "/MAPDAT.BIN", "rb")
+    -- a build's edited files (EDIT_TREE, work/build/files) shadow the unpacked tree
+    local f = EDIT_TREE and io.open(EDIT_TREE .. "/MAP01_06/" .. sc.dir .. "/MAPDAT.BIN", "rb")
+    f = f or io.open(TREE .. "/MAP01_06/" .. sc.dir .. "/MAPDAT.BIN", "rb")
     if not f then return "cannot open " .. TREE .. "/MAP01_06/" .. sc.dir .. "/MAPDAT.BIN" end
     local want = f:read(0x800); f:close()
     if ffi.string(mem + MAPDAT_RAM % 0x200000, #want) ~= want then return "MAPDAT in RAM is not " .. sc.dir end

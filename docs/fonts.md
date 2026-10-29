@@ -5,5 +5,4 @@ per file; a font with no known licence doesn't go into a release.
 
 | File | Source (URL, version) | Licence | Redistributable in a patch | Used for | Changes made |
 |---|---|---|---|---|---|
-| <fonts/vwf_8px.png> | <drawn for this project> | <MIT, same as repo> | yes | <dialogue VWF> | <-> |
-| <fonts/Title.ttf> | <url, v1.2> | <OFL 1.1> | <yes, as rendered glyphs> | <typeset.py title cards> | <-> |
+| (none: NAGE.EXE 0x80089B5C) | the game's own half-width ASCII glyphs, read from the user's disc at build time | the game's | the patch carries the re-encoded bitmaps (as any fan translation patching a game font) | dialogue and menu VWF (tools/font.py) | trimmed to ink, rows bit-reversed, advances added; slot 95 a drawn box glyph |
