@@ -228,6 +228,13 @@ element("poster", "MAP01_06/MAP86/MAPFIRST.BIN", 0xF8,
         *[("text", 28, y, 142, 12 * s.count("\n") + 12, s, dict(ink=INK, align="l", gap=-1)) for s, y in POSTER],
         ("clear", 100, 198, 112, 14, (240, 240, 240)), ("clear", 212, 198, 10, 14, (240, 240, 240), "red"),
         ("text", 40, 199, 164, 13, "Nanju High Student Council", dict(ink=(16, 0, 208), align="r")))
+# 26 MAP81 classroom blackboard: "This month's goal / Aim for town peace!" (x 88 = board edge, 87 = frame)
+element("blackboard", "MAP01_06/MAP81/MAPFIRST.BIN", 0x10298,
+        ("clear", 94, 54, 38, 10), ("text", 92, 53, 50, 9, "Monthly goal:", dict(font="tiny", ink=CHALK)),
+        ("clear", 89, 64, 79, 12), ("text", 88, 63, 76, 13, "Town peace!", dict(ink=CHALK)))
+# 27 MAP82 shrine notice board header 南寿神社のゆらい (the body is drawn as grey lines, not text)
+element("shrineboard", "MAP01_06/MAP82/MAPFIRST.BIN", 0xC8,
+        ("clear", 107, 14, 43, 8, "mode"), ("text", 107, 13, 43, 9, "Shrine Lore", dict(font="tiny", ink=(40, 40, 40))))
 # 9, 10 load / save headers
 element("load", "OPTION3.BIN", 0x10298,
         ("clear", 24, 24, 208, 16), ("text", 24, 25, 208, 13, "Which file do you want to play?", BAR))
@@ -241,7 +248,8 @@ element("menu", "OPTION4.BIN", 0x10298,
 # 14 world-map area cards: 25 TIMs 0x1620 apart, box at the top (y 0) or under the party sprites (y 24)
 AREAS = [("Jungle", 24), ("Southern Sea", 24), ("Island of Ruins", 24), ("Underground Cave", 0),
          ("Fortress Interior", 0), ("Fortress Headquarters", 0), ("Forked Cape", 0),
-         ("Dunes of the Battleship", 0), ("Fog-Shrouded Forest", 0), ("Cascade Falls", 0),
+         ("Battleship Dunes", 0),  # wider was clipped at the screen edge (wm13)
+         ("Fog-Shrouded Forest", 0), ("Cascade Falls", 0),
          ("Ancient Ruins", 0), ("Lava Cave", 24), ("Autumn Leaf Valley", 24), ("In the Flying Battleship", 24),
          ("Flying Battleship Dock", 0), ("Oka High Control Tower", 0), ("Altar of Nage", 0),
          ("Control Tower Roof", 24), ("Frozen Mountain", 0), ("Hot Spring Village", 24), ("Castle Walls", 0),
