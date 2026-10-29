@@ -6,7 +6,8 @@ Skill: translate-retro-game (Claude Code: plugin, enabled in .claude/settings.js
 - Build:    `python -X utf8 tools/build.py` -> build/nage_libre_en.bin + .cue (checks the dump against `rom.sha1` first; written in phase 3)
 - Check:    `python -X utf8 tools/check.py` (tests + lint; the pre-commit hook runs this)
 - Smoke:    `python -X utf8 "$(python tools/skill.py)/scripts/emu.py" build/nage_libre_en.cue --out work/qa/smoke --route tools/routes/boot.txt --smoke` (original: `"rom/Nage Libre - Rasen no Soukoku (Japan).cue"`)
-- Warp:     `python -X utf8 "$(python tools/skill.py)/scripts/emu.py" build/nage_libre_en.cue --out work/qa/warp --script tools/debug/warp.lua --var "SCENE='<name>'" --frames 900 --sheet` (scenes: `tools/debug/scenes.lua`, phase 2; never ask the user to play to a scene)
+- Warp:     `python -X utf8 "$(python tools/skill.py)/scripts/emu.py" build/nage_libre_en.cue --out work/qa/warp --script tools/debug/warp.lua --var "SCENE='<name>'" --frames 30000` (scenes: `tools/debug/scenes.lua`; ends itself on the scene with `<name>.png`; `--state-out` saves it; never ask the user to play to a scene)
+- All scenes: `python -X utf8 tools/debug/regen.py [--cue build/nage_libre_en.cue --tree <build tree>]` (83 cold-boot warps, checks, `work/states/*.sstate`, sheet `work/qa/warp/all.png`; rerun after code/font/graphics changes)
 - Release:  `python -X utf8 tools/release.py` (xdelta3 against the .bin + verify, phase 9; never publish without the user)
 - Clean:    `python -X utf8 tools/clean.py` (published projects: lists rebuildable/downloadable files; `--yes` deletes)
 
