@@ -47,6 +47,8 @@ line gives their furigana or an honorific), and an Avoid spelling fails.
 | 亮 | Ryo | | | Ryou |
 | 神崎 | Kanzaki | | Kaoru Kanzaki (神崎 薫) | |
 | 薫 | Kaoru | | | |
+| 相田 | Aida | | Tsukasa Aida (相田 司), Nanju High council president | |
+| 黒沢様 | Kurosawa-sama | | his followers; Lord Kurosawa also passes the check | |
 
 ## Places
 | JP | EN | max | notes | Avoid |
@@ -58,6 +60,9 @@ line gives their furigana or an honorific), and an Avoid spelling fails.
 | 大堂高校 | Daido High | | | Daidou |
 | 英光学園 | Eiko Academy | | | Eikou |
 | 商店街 | shopping street | | | |
+| 南寿町 | Nanju Town | | | |
+| 浮遊大陸 | Floating Continent | | | |
+| 飛行戦艦 | flying battleship | | also 飛空戦艦 | |
 
 ## Items / skills / terms
 | JP | EN | max | notes | Avoid |
@@ -132,7 +137,53 @@ line gives their furigana or an honorific), and an Avoid spelling fails.
 | ビキニのブラ | Bikini Top | | | |
 | リストバンド | Wristband | | | |
 | 雪だるまのしおり | Snowman Bookmark | | | |
-| ブルマー | bloomers | | gym bloomers | |
+| ブルマー | bloomers | | gym bloomers; in item names Title Case: 2nd-Year Bloomers | |
+| 魔導書 | spellbook | | "Got a spellbook." | grimoire |
+| 怪鳥 | giant bird | | | monstrous bird |
+| 着せかえ用アイテム | (dress-up item) | | after the get line: Got the "X". (dress-up item) | Item for dress-up |
+| スーパー生徒 | Super Student | | | |
+| 創造神 | Creator God | | 創造神ナージュ = the Creator God Nage | |
+| 神崎グループ | Kanzaki Group | | | |
+| 水泳部 | Swim Club | | club = 部; symbol line: Got the Swim Club symbol. | |
+| 空手部 | Karate Club | | | |
+| 弓道部 | Archery Club | | | |
+| バレー部 | Volleyball Club | | also バレーボール部 | |
+| 陸上部 | Track Club | | | |
+| 調理部 | Cooking Club | | | |
+| 手芸部 | Handicraft Club | | | Handicrafts |
+| 軽音楽部 | Light Music Club | | | |
+| 腕時計 | Wristwatch | | clothing / accessories, Title Case | |
+| ステンレスチェーン | Stainless Chain | | | |
+| 水色のジャケット | Light Blue Jacket | | | |
+| 高級なバッグ | Designer Bag | | | Luxury Bag |
+| 麻のジャケット | Linen Jacket | | | |
+| 麻のフレアーパンツ | Linen Flared Pants | | | Flare Pants |
+| ライダーズジャケット | Biker Jacket | | | Rider's Jacket |
+| ジージャン | Denim Jacket | | | |
+| 体操服 | Gym Uniform | | 一年生の体操服 = 1st-Year Gym Uniform | Gym Clothes |
+| デニムスカート | Denim Skirt | | | |
+| デニムベスト | Denim Vest | | | |
+| ダウンベスト | Down Vest | | | |
+| オーバーオール | Overalls | | | |
+| ミニスカート | Miniskirt | | | |
+| サングラス | Sunglasses | | | |
+| タートルネックセーター | Turtleneck Sweater | | | |
+| デッキシューズ | Deck Shoes | | | |
+| レザーパンツ | Leather Pants | | | |
+| ハイテクスニーカー | High-Tech Sneakers | | | |
+| キャンバススニーカー | Canvas Sneakers | | | |
+| トレッキングシューズ | Trekking Shoes | | | |
+| エンジニアブーツ | Engineer Boots | | | |
+| サンダル | Sandals | | | |
 
 ## Decisions from earlier batches
 - (pilot) MAP86/MAP85 intro and MAP01 by the controller: docs/style-reference.md.
+- b020 battle menu: たいき Wait, こうげき Attack, コビーロ Kobiro, おやつ Snack, とくしゅ Special, アイテム Item,
+  そのた Other, ねむる Sleep, でんわ Phone, きがえ Dress. 特殊技 Special Skill, スペシャル攻撃 Special Attack, 通常攻撃
+  Normal attack, 詰め合わせ Pack ("M Chips Pack"). Classes: 一般生徒 Regular Student, ドラゴン Dragon, ブタ Pig,
+  ハネ Bat, 半魚人 Fishman. Club records (CLUB/nn) drop "Club": Swim, Karate, Archery, ...
+- b021 description tags: ／単 /1, ／全 /All, ／前 /Front, ／後 /Back, ／体 /Phys, ／文 /Mind (guess: may be the
+  athletic/culture club types; check in phase 8).
+- b022 names: Hepburn per kanji reading guess (no furigana); モンスターA-I = Monster A-I.
+- 黒沢様 = Kurosawa-sama, 神崎様 = Kanzaki-sama, 薫様 = Kaoru-sama (followers); 会長 alone = the president.
+- ・・ with two dots = "..." in English unless the JP pause is mid-word.

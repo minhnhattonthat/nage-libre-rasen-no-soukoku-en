@@ -57,6 +57,7 @@ def encode(s):
 
 
 QA = {}  # id -> text overriding marker/en for one build (build.py --qa ID=text): stress lines, torture line
+SKIPPED = []  # EXE rows whose English is over the in-place room: Japanese kept (build.py prints them)
 
 
 def row_text(row, markers, room=None, box=None):
@@ -152,7 +153,9 @@ def build_exe(tree, markers):
     patch_exe(exe)
     for r in load_rows("exe.json"):
         t = row_text(r, markers, r["max"])
-        if t is not None:
+        if t is not None and len(t) > r["max"]:  # shortcut: kept Japanese until phase 7 relocates long strings
+            SKIPPED.append(r["id"])
+        elif t is not None:
             put(exe, int(r["id"].split("/")[1], 16), t, r["max"], r["id"])
     tables = {name: (base, size, {f: off for f, off, _ in fields}) for name, base, size, _, fields in extract.TABLES}
     for r in load_rows("records.json"):

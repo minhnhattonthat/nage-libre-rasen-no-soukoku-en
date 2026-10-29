@@ -2,871 +2,871 @@
  {
   "id": "CLUB/01/name",
   "jp": "%hスーパー生徒%z　",
-  "en": "",
+  "en": "Super Student",
   "max": 31
  },
  {
   "id": "CLUB/02/name",
   "jp": "一般　　　　　　　　　　",
-  "en": "",
+  "en": "Regular",
   "max": 31
  },
  {
   "id": "CLUB/03/name",
   "jp": "水泳　　　　　　　　　　",
-  "en": "",
+  "en": "Swim",
   "max": 31
  },
  {
   "id": "CLUB/04/name",
   "jp": "空手　　　　　　　　　　",
-  "en": "",
+  "en": "Karate",
   "max": 31
  },
  {
   "id": "CLUB/05/name",
   "jp": "弓道　　　　　　　　　　",
-  "en": "",
+  "en": "Archery",
   "max": 31
  },
  {
   "id": "CLUB/06/name",
   "jp": "%hバレーボール%z　　　　　",
-  "en": "",
+  "en": "Volleyball",
   "max": 31
  },
  {
   "id": "CLUB/07/name",
   "jp": "陸上　　　　　　　　　　",
-  "en": "",
+  "en": "Track",
   "max": 31
  },
  {
   "id": "CLUB/08/name",
   "jp": "調理　　　　　　　　　　",
-  "en": "",
+  "en": "Cooking",
   "max": 31
  },
  {
   "id": "CLUB/09/name",
   "jp": "手芸　　　　　　　　　　",
-  "en": "",
+  "en": "Handicraft",
   "max": 31
  },
  {
   "id": "CLUB/10/name",
   "jp": "軽音楽　　　　　　　　　",
-  "en": "",
+  "en": "Light Music",
   "max": 31
  },
  {
   "id": "ITEM/01/name",
   "jp": "コバク",
-  "en": "",
+  "en": "Small Cracker",
   "max": 19
  },
  {
   "id": "ITEM/01/desc",
   "jp": "爆竹を投げる　　　　　　／単",
-  "en": "",
+  "en": "Throws a firecracker                       /1",
   "max": 47
  },
  {
   "id": "ITEM/02/name",
   "jp": "チューバク",
-  "en": "",
+  "en": "Medium Cracker",
   "max": 19
  },
  {
   "id": "ITEM/02/desc",
   "jp": "爆竹を投げる　　　　　　／単",
-  "en": "",
+  "en": "Throws a firecracker                       /1",
   "max": 47
  },
  {
   "id": "ITEM/03/name",
   "jp": "ダイバク",
-  "en": "",
+  "en": "Big Cracker",
   "max": 19
  },
  {
   "id": "ITEM/03/desc",
   "jp": "爆竹を投げる　　　　　　／単",
-  "en": "",
+  "en": "Throws a firecracker                       /1",
   "max": 47
  },
  {
   "id": "ITEM/04/name",
   "jp": "コボム",
-  "en": "",
+  "en": "Small Bomb",
   "max": 19
  },
  {
   "id": "ITEM/04/desc",
   "jp": "爆弾を投げる　　　　　　／全",
-  "en": "",
+  "en": "Throws a bomb                              /All",
   "max": 47
  },
  {
   "id": "ITEM/05/name",
   "jp": "チューボム",
-  "en": "",
+  "en": "Medium Bomb",
   "max": 19
  },
  {
   "id": "ITEM/05/desc",
   "jp": "爆弾を投げる　　　　　　／全",
-  "en": "",
+  "en": "Throws a bomb                              /All",
   "max": 47
  },
  {
   "id": "ITEM/06/name",
   "jp": "ダイボム",
-  "en": "",
+  "en": "Big Bomb",
   "max": 19
  },
  {
   "id": "ITEM/06/desc",
   "jp": "爆弾を投げる　　　　　　／全",
-  "en": "",
+  "en": "Throws a bomb                              /All",
   "max": 47
  },
  {
   "id": "ITEM/07/name",
   "jp": "Ｓあめだま",
-  "en": "",
+  "en": "S Candy",
   "max": 19
  },
  {
   "id": "ITEM/07/desc",
   "jp": "体力を回復　＋２４　　　／単",
-  "en": "",
+  "en": "Restores HP +24                            /1",
   "max": 47
  },
  {
   "id": "ITEM/08/name",
   "jp": "Ｍあめだま",
-  "en": "",
+  "en": "M Candy",
   "max": 19
  },
  {
   "id": "ITEM/08/desc",
   "jp": "体力を回復　＋４８　　　／単",
-  "en": "",
+  "en": "Restores HP +48                            /1",
   "max": 47
  },
  {
   "id": "ITEM/09/name",
   "jp": "Ｌあめだま",
-  "en": "",
+  "en": "L Candy",
   "max": 19
  },
  {
   "id": "ITEM/09/desc",
   "jp": "体力を回復　＋９６　　　／単",
-  "en": "",
+  "en": "Restores HP +96                            /1",
   "max": 47
  },
  {
   "id": "ITEM/10/name",
   "jp": "Ｓポテチ",
-  "en": "",
+  "en": "S Chips",
   "max": 19
  },
  {
   "id": "ITEM/10/desc",
   "jp": "体力を回復　＋１６　　　／全",
-  "en": "",
+  "en": "Restores HP +16                           /All",
   "max": 47
  },
  {
   "id": "ITEM/11/name",
   "jp": "Ｍポテチ",
-  "en": "",
+  "en": "M Chips",
   "max": 19
  },
  {
   "id": "ITEM/11/desc",
   "jp": "体力を回復　＋３２　　　／全",
-  "en": "",
+  "en": "Restores HP +32                           /All",
   "max": 47
  },
  {
   "id": "ITEM/12/name",
   "jp": "Ｌポテチ",
-  "en": "",
+  "en": "L Chips",
   "max": 19
  },
  {
   "id": "ITEM/12/desc",
   "jp": "体力を回復　＋６４　　　／全",
-  "en": "",
+  "en": "Restores HP +64                          /All",
   "max": 47
  },
  {
   "id": "ITEM/13/name",
   "jp": "ビタミンＡＴ．Ｓ",
-  "en": "",
+  "en": "Vitamin AT-S",
   "max": 19
  },
  {
   "id": "ITEM/13/desc",
   "jp": "ＡＴを＋２　　　　　　　／単",
-  "en": "",
+  "en": "Raises AT by 2                               /1",
   "max": 47
  },
  {
   "id": "ITEM/14/name",
   "jp": "ビタミンＡＴ．Ｌ",
-  "en": "",
+  "en": "Vitamin AT-L",
   "max": 19
  },
  {
   "id": "ITEM/14/desc",
   "jp": "ＡＴを＋６　　　　　　　／単",
-  "en": "",
+  "en": "Raises AT by 6                               /1",
   "max": 47
  },
  {
   "id": "ITEM/15/name",
   "jp": "ビタミンＭＴ．Ｓ",
-  "en": "",
+  "en": "Vitamin MT-S",
   "max": 19
  },
  {
   "id": "ITEM/15/desc",
   "jp": "ＭＴを＋２　　　　　　　／単",
-  "en": "",
+  "en": "Raises MT by 2                               /1",
   "max": 47
  },
  {
   "id": "ITEM/16/name",
   "jp": "ビタミンＭＴ．Ｌ",
-  "en": "",
+  "en": "Vitamin MT-L",
   "max": 19
  },
  {
   "id": "ITEM/16/desc",
   "jp": "ＭＴを＋６　　　　　　　／単",
-  "en": "",
+  "en": "Raises MT by 6                               /1",
   "max": 47
  },
  {
   "id": "ITEM/17/name",
   "jp": "ビタミンＤＦ．Ｓ",
-  "en": "",
+  "en": "Vitamin DF-S",
   "max": 19
  },
  {
   "id": "ITEM/17/desc",
   "jp": "ＤＦを＋１　　　　　　　／単",
-  "en": "",
+  "en": "Raises DF by 1                               /1",
   "max": 47
  },
  {
   "id": "ITEM/18/name",
   "jp": "ビタミンＤＦ．Ｌ",
-  "en": "",
+  "en": "Vitamin DF-L",
   "max": 19
  },
  {
   "id": "ITEM/18/desc",
   "jp": "ＤＦを＋３　　　　　　　／単",
-  "en": "",
+  "en": "Raises DF by 3                               /1",
   "max": 47
  },
  {
   "id": "ITEM/19/name",
   "jp": "ビタミンＡＧ．Ｓ",
-  "en": "",
+  "en": "Vitamin AG-S",
   "max": 19
  },
  {
   "id": "ITEM/19/desc",
   "jp": "ＡＧを＋１　　　　　　　／単",
-  "en": "",
+  "en": "Raises AG by 1                               /1",
   "max": 47
  },
  {
   "id": "ITEM/20/name",
   "jp": "ビタミンＡＧ．Ｌ",
-  "en": "",
+  "en": "Vitamin AG-L",
   "max": 19
  },
  {
   "id": "ITEM/20/desc",
   "jp": "ＡＧを＋３　　　　　　　／単",
-  "en": "",
+  "en": "Raises AG by 3                               /1",
   "max": 47
  },
  {
   "id": "ITEM/21/name",
   "jp": "すごいビタミン",
-  "en": "",
+  "en": "Super Vitamin",
   "max": 19
  },
  {
   "id": "ITEM/21/desc",
   "jp": "全てのステータスを＋２　／単",
-  "en": "",
+  "en": "Raises all stats by 2                        /1",
   "max": 47
  },
  {
   "id": "ITEM/22/name",
   "jp": "スッキリン",
-  "en": "",
+  "en": "Refreshin",
   "max": 19
  },
  {
   "id": "ITEM/22/desc",
   "jp": "ステータス異常を直す　　／単",
-  "en": "",
+  "en": "Cures status ailments                      /1",
   "max": 47
  },
  {
   "id": "MAGIC/01/name",
   "jp": "ピコハン",
-  "en": "",
+  "en": "Squeaky Hammer",
   "max": 19
  },
  {
   "id": "MAGIC/01/desc",
   "jp": "ピコ２ハンマーでなぐる　／単",
-  "en": "",
+  "en": "Bonks with a squeaky hammer            /1",
   "max": 48
  },
  {
   "id": "MAGIC/02/name",
   "jp": "アイアンタッブ",
-  "en": "",
+  "en": "Iron Tub",
   "max": 19
  },
  {
   "id": "MAGIC/02/desc",
   "jp": "鉄のたらいを落とす　　　／単",
-  "en": "",
+  "en": "Drops an iron washtub                      /1",
   "max": 48
  },
  {
   "id": "MAGIC/03/name",
   "jp": "ペチャペチャ",
-  "en": "",
+  "en": "Pie Splat",
   "max": 19
  },
  {
   "id": "MAGIC/03/desc",
   "jp": "パイを投げる　　　　／文／前",
-  "en": "",
+  "en": "Throws a pie                    /Mind/Front",
   "max": 48
  },
  {
   "id": "MAGIC/04/name",
   "jp": "バケビショ",
-  "en": "",
+  "en": "Bucket Soak",
   "max": 19
  },
  {
   "id": "MAGIC/04/desc",
   "jp": "バケツの水をかける　　　／後",
-  "en": "",
+  "en": "Splashes a bucket of water         /Back",
   "max": 48
  },
  {
   "id": "MAGIC/05/name",
   "jp": "パフパフ",
-  "en": "",
+  "en": "Puff Puff",
   "max": 19
  },
  {
   "id": "MAGIC/05/desc",
   "jp": "黒板消しを落とす　　／体／前",
-  "en": "",
+  "en": "Drops a blackboard eraser  /Phys/Front",
   "max": 48
  },
  {
   "id": "MAGIC/06/name",
   "jp": "クラックダウン",
-  "en": "",
+  "en": "Crackdown",
   "max": 19
  },
  {
   "id": "MAGIC/06/desc",
   "jp": "金づちでなぐる　　　　　／単",
-  "en": "",
+  "en": "Whacks with a hammer                      /1",
   "max": 48
  },
  {
   "id": "MAGIC/07/name",
   "jp": "ナイトメア",
-  "en": "",
+  "en": "Nightmare",
   "max": 19
  },
  {
   "id": "MAGIC/07/desc",
   "jp": "体重計でショック死？　　／単",
-  "en": "",
+  "en": "Shocked to death by the scale?         /1",
   "max": 48
  },
  {
   "id": "MAGIC/08/name",
   "jp": "バブリン",
-  "en": "",
+  "en": "Bubblin",
   "max": 19
  },
  {
   "id": "MAGIC/08/desc",
   "jp": "泡で相手を包み込む　／体／単",
-  "en": "",
+  "en": "Wraps the foe in bubbles          /Phys/1",
   "max": 48
  },
  {
   "id": "MAGIC/09/name",
   "jp": "メテメテ",
-  "en": "",
+  "en": "Meteo Meteo",
   "max": 19
  },
  {
   "id": "MAGIC/09/desc",
   "jp": "岩を降らせる　　　　　　／単",
-  "en": "",
+  "en": "Rains down rocks                            /1",
   "max": 48
  },
  {
   "id": "MAGIC/10/name",
   "jp": "ザバザバ",
-  "en": "",
+  "en": "Splish Splash",
   "max": 19
  },
  {
   "id": "MAGIC/10/desc",
   "jp": "津波を発生　　　　　　　／全",
-  "en": "",
+  "en": "Makes a tidal wave                         /All",
   "max": 48
  },
  {
   "id": "MAGIC/11/name",
   "jp": "レイレイ",
-  "en": "",
+  "en": "Ray Ray",
   "max": 19
  },
  {
   "id": "MAGIC/11/desc",
   "jp": "レーザーで焼きつくす　　／後",
-  "en": "",
+  "en": "Scorches with a laser                  /Back",
   "max": 48
  },
  {
   "id": "MAGIC/12/name",
   "jp": "グラグラ",
-  "en": "",
+  "en": "Rumble Rumble",
   "max": 19
  },
  {
   "id": "MAGIC/12/desc",
   "jp": "地震を発生させる　　　　／全",
-  "en": "",
+  "en": "Causes an earthquake                    /All",
   "max": 48
  },
  {
   "id": "MAGIC/13/name",
   "jp": "ヒエヒエ",
-  "en": "",
+  "en": "Chill Chill",
   "max": 19
  },
  {
   "id": "MAGIC/13/desc",
   "jp": "氷のつららを飛ばす　／体／単",
-  "en": "",
+  "en": "Shoots icicles                         /Phys/1",
   "max": 48
  },
  {
   "id": "MAGIC/14/name",
   "jp": "ゴツヒエ",
-  "en": "",
+  "en": "Big Chill",
   "max": 19
  },
  {
   "id": "MAGIC/14/desc",
   "jp": "氷のつららを落とす　／体／後",
-  "en": "",
+  "en": "Drops icicles                      /Phys/Back",
   "max": 48
  },
  {
   "id": "MAGIC/15/name",
   "jp": "チョヒエ",
-  "en": "",
+  "en": "Mega Chill",
   "max": 19
  },
  {
   "id": "MAGIC/15/desc",
   "jp": "氷の塊を落とす　　　　体／全",
-  "en": "",
+  "en": "Drops a block of ice               /Phys/All",
   "max": 48
  },
  {
   "id": "MAGIC/16/name",
   "jp": "ピカゴロ",
-  "en": "",
+  "en": "Flash Boom",
   "max": 19
  },
  {
   "id": "MAGIC/16/desc",
   "jp": "雷を発生　　　　　　／文／単",
-  "en": "",
+  "en": "Calls down lightning                   /Mind/1",
   "max": 48
  },
  {
   "id": "MAGIC/17/name",
   "jp": "ゴツピカ",
-  "en": "",
+  "en": "Big Flash",
   "max": 19
  },
  {
   "id": "MAGIC/17/desc",
   "jp": "雷を発生　　　　　　／文／後",
-  "en": "",
+  "en": "Calls down lightning              /Mind/Back",
   "max": 48
  },
  {
   "id": "MAGIC/18/name",
   "jp": "チョピカ",
-  "en": "",
+  "en": "Mega Flash",
   "max": 19
  },
  {
   "id": "MAGIC/18/desc",
   "jp": "雷を発生　　　　　　／文／全",
-  "en": "",
+  "en": "Calls down lightning                 /Mind/All",
   "max": 48
  },
  {
   "id": "MAGIC/19/name",
   "jp": "グルグル",
-  "en": "",
+  "en": "Whirl Whirl",
   "max": 19
  },
  {
   "id": "MAGIC/19/desc",
   "jp": "竜巻を発生　　　　　　　／前",
-  "en": "",
+  "en": "Makes a tornado                       /Front",
   "max": 48
  },
  {
   "id": "MAGIC/20/name",
   "jp": "チョグル",
-  "en": "",
+  "en": "Mega Whirl",
   "max": 19
  },
  {
   "id": "MAGIC/20/desc",
   "jp": "竜巻を発生　　　　　　　／全",
-  "en": "",
+  "en": "Makes a tornado                            /All",
   "max": 48
  },
  {
   "id": "MAGIC/21/name",
   "jp": "マッタ",
-  "en": "",
+  "en": "Time Out",
   "max": 19
  },
  {
   "id": "MAGIC/21/desc",
   "jp": "時間を止める　　　　　　／単",
-  "en": "",
+  "en": "Stops time                                    /1",
   "max": 48
  },
  {
   "id": "MAGIC/22/name",
   "jp": "チョマタ",
-  "en": "",
+  "en": "Mega Time Out",
   "max": 19
  },
  {
   "id": "MAGIC/22/desc",
   "jp": "時間を止める　　　　　　／全",
-  "en": "",
+  "en": "Stops time                                  /All",
   "max": 48
  },
  {
   "id": "MAGIC/23/name",
   "jp": "サモンスター",
-  "en": "",
+  "en": "Summon Star",
   "max": 19
  },
  {
   "id": "MAGIC/23/desc",
   "jp": "スターを召喚　　　　　　／全",
-  "en": "",
+  "en": "Summons stars                             /All",
   "max": 48
  },
  {
   "id": "MAGIC/24/name",
   "jp": "サモンホイホイ",
-  "en": "",
+  "en": "Summon Shoo",
   "max": 19
  },
  {
   "id": "MAGIC/24/desc",
   "jp": "相手が逃げ出す　　　　　／単",
-  "en": "",
+  "en": "Makes the foe run away                   /1",
   "max": 48
  },
  {
   "id": "MAGIC/25/name",
   "jp": "サモンオヤヂ",
-  "en": "",
+  "en": "Summon Geezer",
   "max": 19
  },
  {
   "id": "MAGIC/25/desc",
   "jp": "相手が逃げ出す＋ダメージ／単",
-  "en": "",
+  "en": "Foe runs away + damage                   /1",
   "max": 48
  },
  {
   "id": "MAGIC/26/name",
   "jp": "サモンフレイム",
-  "en": "",
+  "en": "Summon Flame",
   "max": 19
  },
  {
   "id": "MAGIC/26/desc",
   "jp": "火の鳥召喚　　　　　　　／全",
-  "en": "",
+  "en": "Summons a firebird                        /All",
   "max": 48
  },
  {
   "id": "MAGIC/27/name",
   "jp": "アタプラ",
-  "en": "",
+  "en": "AT Plus",
   "max": 19
  },
  {
   "id": "MAGIC/27/desc",
   "jp": "一定時間ＡＴを上げる　　／単",
-  "en": "",
+  "en": "Raises AT for a while                       /1",
   "max": 48
  },
  {
   "id": "MAGIC/28/name",
   "jp": "アタマイ",
-  "en": "",
+  "en": "AT Minus",
   "max": 19
  },
  {
   "id": "MAGIC/28/desc",
   "jp": "一定時間ＡＴを下げる　　／単",
-  "en": "",
+  "en": "Lowers AT for a while                      /1",
   "max": 48
  },
  {
   "id": "MAGIC/29/name",
   "jp": "マイプラ",
-  "en": "",
+  "en": "MT Plus",
   "max": 19
  },
  {
   "id": "MAGIC/29/desc",
   "jp": "一定時間ＭＴを上げる　　／単",
-  "en": "",
+  "en": "Raises MT for a while                       /1",
   "max": 48
  },
  {
   "id": "MAGIC/30/name",
   "jp": "マイマイ",
-  "en": "",
+  "en": "MT Minus",
   "max": 19
  },
  {
   "id": "MAGIC/30/desc",
   "jp": "一定時間ＭＴを下げる　　／単",
-  "en": "",
+  "en": "Lowers MT for a while                      /1",
   "max": 48
  },
  {
   "id": "MAGIC/31/name",
   "jp": "ディフェプラ",
-  "en": "",
+  "en": "DF Plus",
   "max": 19
  },
  {
   "id": "MAGIC/31/desc",
   "jp": "一定時間ＤＦを上げる　　／単",
-  "en": "",
+  "en": "Raises DF for a while                        /1",
   "max": 48
  },
  {
   "id": "MAGIC/32/name",
   "jp": "ディフェマイ",
-  "en": "",
+  "en": "DF Minus",
   "max": 19
  },
  {
   "id": "MAGIC/32/desc",
   "jp": "一定時間ＤＦを下げる　　／単",
-  "en": "",
+  "en": "Lowers DF for a while                       /1",
   "max": 48
  },
  {
   "id": "MAGIC/33/name",
   "jp": "スピプラ",
-  "en": "",
+  "en": "AG Plus",
   "max": 19
  },
  {
   "id": "MAGIC/33/desc",
   "jp": "一定時間ＡＦを上げる　　／単",
-  "en": "",
+  "en": "Raises AG for a while                        /1",
   "max": 48
  },
  {
   "id": "MAGIC/34/name",
   "jp": "スピマイ",
-  "en": "",
+  "en": "AG Minus",
   "max": 19
  },
  {
   "id": "MAGIC/34/desc",
   "jp": "一定時間ＡＧを下げる　　／単",
-  "en": "",
+  "en": "Lowers AG for a while                      /1",
   "max": 48
  },
  {
   "id": "MAGIC/35/name",
   "jp": "プワゾ",
-  "en": "",
+  "en": "Poizon",
   "max": 19
  },
  {
   "id": "MAGIC/35/desc",
   "jp": "一定時間毒を与える　　　／単",
-  "en": "",
+  "en": "Poisons for a while                          /1",
   "max": 48
  },
  {
   "id": "MAGIC/37/name",
   "jp": "ギュギューン",
-  "en": "",
+  "en": "Bzzzt",
   "max": 19
  },
  {
   "id": "MAGIC/37/desc",
   "jp": "一定時間麻痺させる　　　／単",
-  "en": "",
+  "en": "Paralyzes for a while                        /1",
   "max": 48
  },
  {
   "id": "MAGIC/38/desc",
   "jp": "ランダマ召喚",
-  "en": "",
+  "en": "Summons Randoma",
   "max": 48
  },
  {
   "id": "MAGIC/39/desc",
   "jp": "ランダマ召喚",
-  "en": "",
+  "en": "Summons Randoma",
   "max": 48
  },
  {
   "id": "MAGIC/40/desc",
   "jp": "超ランダマ召喚",
-  "en": "",
+  "en": "Summons Super Randoma",
   "max": 48
  },
  {
   "id": "MAGIC/41/desc",
   "jp": "超ランダマ召喚",
-  "en": "",
+  "en": "Summons Super Randoma",
   "max": 48
  },
  {
   "id": "MAGIC/42/desc",
   "jp": "%h\"コバク\"%zを使った",
-  "en": "",
+  "en": "Used \"Small Cracker\".",
   "max": 48
  },
  {
   "id": "MAGIC/43/desc",
   "jp": "%h\"チューバク\"%zを使った",
-  "en": "",
+  "en": "Used \"Medium Cracker\".",
   "max": 48
  },
  {
   "id": "MAGIC/44/desc",
   "jp": "%h\"ダイバク\"%zを使った",
-  "en": "",
+  "en": "Used \"Big Cracker\".",
   "max": 48
  },
  {
   "id": "MAGIC/45/desc",
   "jp": "%h\"コボム\"%zを使った",
-  "en": "",
+  "en": "Used \"Small Bomb\".",
   "max": 48
  },
  {
   "id": "MAGIC/46/desc",
   "jp": "%h\"チューボム\"%zを使った",
-  "en": "",
+  "en": "Used \"Medium Bomb\".",
   "max": 48
  },
  {
   "id": "MAGIC/47/desc",
   "jp": "%h\"ダイボム\"%zを使った",
-  "en": "",
+  "en": "Used \"Big Bomb\".",
   "max": 48
  },
  {
   "id": "MAGIC/48/desc",
   "jp": "体力を回復",
-  "en": "",
+  "en": "Restores HP",
   "max": 48
  },
  {
   "id": "MAGIC/49/name",
   "jp": "ナイトメア",
-  "en": "",
+  "en": "Nightmare",
   "max": 19
  },
  {
   "id": "MAGIC/49/desc",
   "jp": "体重計でショック死　　　／単",
-  "en": "",
+  "en": "Shocked to death by the scale           /1",
   "max": 48
  },
  {
   "id": "MAGIC/50/desc",
   "jp": "体力を回復",
-  "en": "",
+  "en": "Restores HP",
   "max": 48
  },
  {
   "id": "MAGIC/51/desc",
   "jp": "体力を回復",
-  "en": "",
+  "en": "Restores HP",
   "max": 48
  },
  {
   "id": "MAGIC/52/desc",
   "jp": "体力を回復",
-  "en": "",
+  "en": "Restores HP",
   "max": 48
  },
  {
   "id": "MAGIC/53/desc",
   "jp": "体力を回復",
-  "en": "",
+  "en": "Restores HP",
   "max": 48
  },
  {
   "id": "MAGIC/54/desc",
   "jp": "体力を回復",
-  "en": "",
+  "en": "Restores HP",
   "max": 48
  },
  {
   "id": "MAGIC/55/desc",
   "jp": "ステータス異常を回復",
-  "en": "",
+  "en": "Cures status ailments",
   "max": 48
  },
  {

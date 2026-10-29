@@ -15,3 +15,4 @@ decision replaces one, mark the old one "replaced by D<n>" instead of deleting i
 | D7 | 2026-10-29 | Existing saves / memory cards | user supplies, none | None provided; build the debug tool (phase 2) as usual. |
 | D8 | 2026-10-29 | Emulator runs | GUI, headless | Run PCSX-Redux headless only (owner, mid-session): no GUI windows during agent work. |
 | D9 | 2026-10-29 | Release scope | publish, build only | Never `gh release create`, never change repo visibility; the run ends at a built and verified release zip. |
+| D10 | 2026-10-30 | Register, sound effects, 杏 spelling (controller defaults under D6, pre-approved run) | literal/adapted register; keep JP onomatopoeia or English; An / Ann | Casual natural English per character voice (docs/style-reference.md); English onomatopoeia, monster noise + meaning in (); 杏 = Ann (Hepburn "An" reads as the article). Owner can overrule. |

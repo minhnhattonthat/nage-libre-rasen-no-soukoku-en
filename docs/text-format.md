@@ -16,6 +16,8 @@ Each file is a JSON list (`indent=1`, UTF-8, not ASCII-escaped) of rows:
 - `same`: this line in a revisit map (`MAPnnR`) equals the line `same` names: translate that one, copy here;
 - `dead`: in script code no path reaches (cut content); translate for completeness, low priority;
 - `refs`: code sites that point at an EXE string (`lui:ADDR` = the addiu/load of a lui pair, `gp:`, `word:`);
+- `long`: the full English of a field row wider than its `boxes.FIELDS` budget (`tools/batches.py merge`); `en`
+  stays empty (Japanese in the build) until phase 7 widens the field or changes the engine, then it moves to `en`;
 - `notes`, `status`: free for translators and reviewers.
 
 Codec (`tools/text.py`): Shift-JIS as text, newline as `\n`, control codes as their ASCII (`%h` `%z` `%cNN` `%tNN`

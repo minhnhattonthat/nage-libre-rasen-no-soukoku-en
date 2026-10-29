@@ -79,6 +79,8 @@ def main():
                     print(f"warn  {r['id']}: no measured budget (add it to boxes.FIELDS)")
                     warnings += 1
             err, warn = check_row(r, box_of.get(r["id"]), fixed=path.endswith("records.json"))
+            if r.get("long"):  # batches.py merge: full English wider than its field, waiting for the phase-7 fit
+                warn.append(f"LONG (not inserted yet): {r['long']!r}")
             for e in err:
                 print(f"ERROR {r['id']}: {e}")
             if a.warn:

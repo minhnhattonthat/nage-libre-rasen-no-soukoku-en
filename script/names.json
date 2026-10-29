@@ -2,3477 +2,3535 @@
  {
   "id": "NAME/000",
   "jp": "杏",
-  "en": ""
+  "en": "Ann"
  },
  {
   "id": "NAME/001",
   "jp": "樹",
-  "en": ""
+  "en": "Itsuki"
  },
  {
   "id": "NAME/002",
   "jp": "真",
-  "en": ""
+  "en": "Makoto"
  },
  {
   "id": "NAME/003",
   "jp": "忍",
-  "en": ""
+  "en": "Shinobu"
  },
  {
   "id": "NAME/004",
   "jp": "澪",
-  "en": ""
+  "en": "Mio"
  },
  {
   "id": "NAME/005",
   "jp": "迅",
-  "en": ""
+  "en": "Jin"
  },
  {
   "id": "NAME/006",
   "jp": "大",
-  "en": ""
+  "en": "Dai"
  },
  {
   "id": "NAME/007",
   "jp": "赤城",
-  "en": ""
+  "en": "Akagi"
  },
  {
   "id": "NAME/008",
   "jp": "森野",
-  "en": ""
+  "en": "Morino"
  },
  {
   "id": "NAME/009",
   "jp": "松永",
-  "en": ""
+  "en": "",
+  "long": "Matsunaga"
  },
  {
   "id": "NAME/010",
   "jp": "風間",
-  "en": ""
+  "en": "Kazama"
  },
  {
   "id": "NAME/011",
   "jp": "筑紫",
-  "en": ""
+  "en": "Tsukushi"
  },
  {
   "id": "NAME/012",
   "jp": "桐生",
-  "en": ""
+  "en": "Kiryu"
  },
  {
   "id": "NAME/013",
   "jp": "輪島",
-  "en": ""
+  "en": "Wajima"
  },
  {
   "id": "NAME/014",
   "jp": "ﾓﾝｽﾀｰ",
-  "en": ""
+  "en": "Monster"
  },
  {
   "id": "NAME/015",
   "jp": "華原",
-  "en": ""
+  "en": "Kahara"
  },
  {
   "id": "NAME/016",
   "jp": "木村",
-  "en": ""
+  "en": "Kimura"
  },
  {
   "id": "NAME/017",
   "jp": "海原",
-  "en": ""
+  "en": "Kaibara"
  },
  {
   "id": "NAME/018",
   "jp": "栗本",
-  "en": ""
+  "en": "Kurimoto"
  },
  {
   "id": "NAME/019",
   "jp": "村上",
-  "en": ""
+  "en": "Murakami"
  },
  {
   "id": "NAME/020",
   "jp": "曽根",
-  "en": ""
+  "en": "Sone"
  },
  {
   "id": "NAME/021",
   "jp": "水野",
-  "en": ""
+  "en": "Mizuno"
  },
  {
   "id": "NAME/022",
   "jp": "滝野",
-  "en": ""
+  "en": "Takino"
  },
  {
   "id": "NAME/023",
   "jp": "須藤",
-  "en": ""
+  "en": "Sudo"
  },
  {
   "id": "NAME/024",
   "jp": "瀬川",
-  "en": ""
+  "en": "Segawa"
  },
  {
   "id": "NAME/025",
   "jp": "武富",
-  "en": ""
+  "en": "Taketomi"
  },
  {
   "id": "NAME/026",
   "jp": "古川",
-  "en": ""
+  "en": "",
+  "long": "Furukawa"
  },
  {
   "id": "NAME/027",
   "jp": "大倉",
-  "en": ""
+  "en": "Okura"
  },
  {
   "id": "NAME/028",
   "jp": "西田",
-  "en": ""
+  "en": "Nishida"
  },
  {
   "id": "NAME/029",
   "jp": "前園",
-  "en": ""
+  "en": "Maezono"
  },
  {
   "id": "NAME/030",
   "jp": "智子",
-  "en": ""
+  "en": "Tomoko"
  },
  {
   "id": "NAME/031",
   "jp": "奈美",
-  "en": ""
+  "en": "Nami"
  },
  {
   "id": "NAME/032",
   "jp": "七瀬",
-  "en": ""
+  "en": "Nanase"
  },
  {
   "id": "NAME/033",
   "jp": "香穂",
-  "en": ""
+  "en": "Kaho"
  },
  {
   "id": "NAME/034",
   "jp": "春美",
-  "en": ""
+  "en": "Harumi"
  },
  {
   "id": "NAME/035",
   "jp": "悦子",
-  "en": ""
+  "en": "Etsuko"
  },
  {
   "id": "NAME/036",
   "jp": "育子",
-  "en": ""
+  "en": "Ikuko"
  },
  {
   "id": "NAME/037",
   "jp": "美枝",
-  "en": ""
+  "en": "Mie"
  },
  {
   "id": "NAME/038",
   "jp": "瑠璃",
-  "en": ""
+  "en": "Ruri"
  },
  {
   "id": "NAME/039",
   "jp": "里美",
-  "en": ""
+  "en": "Satomi"
  },
  {
   "id": "NAME/040",
   "jp": "純子",
-  "en": ""
+  "en": "Junko"
  },
  {
   "id": "NAME/041",
   "jp": "愛子",
-  "en": ""
+  "en": "Aiko"
  },
  {
   "id": "NAME/042",
   "jp": "照美",
-  "en": ""
+  "en": "Terumi"
  },
  {
   "id": "NAME/043",
   "jp": "百合",
-  "en": ""
+  "en": "Yuri"
  },
  {
   "id": "NAME/044",
   "jp": "美穂",
-  "en": ""
+  "en": "Miho"
  },
  {
   "id": "NAME/045",
   "jp": "モンスターA",
-  "en": ""
+  "en": "",
+  "long": "Monster A"
  },
  {
   "id": "NAME/046",
   "jp": "モンスターB",
-  "en": ""
+  "en": "",
+  "long": "Monster B"
  },
  {
   "id": "NAME/047",
   "jp": "モンスターC",
-  "en": ""
+  "en": "",
+  "long": "Monster C"
  },
  {
   "id": "NAME/048",
   "jp": "モンスターD",
-  "en": ""
+  "en": "",
+  "long": "Monster D"
  },
  {
   "id": "NAME/049",
   "jp": "モンスターE",
-  "en": ""
+  "en": "",
+  "long": "Monster E"
  },
  {
   "id": "NAME/050",
   "jp": "モンスターF",
-  "en": ""
+  "en": "",
+  "long": "Monster F"
  },
  {
   "id": "NAME/051",
   "jp": "モンスターG",
-  "en": ""
+  "en": "",
+  "long": "Monster G"
  },
  {
   "id": "NAME/052",
   "jp": "モンスターH",
-  "en": ""
+  "en": "",
+  "long": "Monster H"
  },
  {
   "id": "NAME/053",
   "jp": "モンスターI",
-  "en": ""
+  "en": "",
+  "long": "Monster I"
  },
  {
   "id": "NAME/054",
   "jp": "山崎",
-  "en": ""
+  "en": "Yamazaki"
  },
  {
   "id": "NAME/055",
   "jp": "慎二",
-  "en": ""
+  "en": "Shinji"
  },
  {
   "id": "NAME/056",
   "jp": "加藤",
-  "en": ""
+  "en": "Kato"
  },
  {
   "id": "NAME/057",
   "jp": "志吾郎",
-  "en": ""
+  "en": "Shigoro"
  },
  {
   "id": "NAME/058",
   "jp": "石垣",
-  "en": ""
+  "en": "Ishigaki"
  },
  {
   "id": "NAME/059",
   "jp": "ルミ",
-  "en": ""
+  "en": "Rumi"
  },
  {
   "id": "NAME/060",
   "jp": "溜貝",
-  "en": ""
+  "en": "Tamegai"
  },
  {
   "id": "NAME/061",
   "jp": "久美子",
-  "en": ""
+  "en": "Kumiko"
  },
  {
   "id": "NAME/062",
   "jp": "嶋田",
-  "en": ""
+  "en": "Shimada"
  },
  {
   "id": "NAME/063",
   "jp": "大作",
-  "en": ""
+  "en": "Daisaku"
  },
  {
   "id": "NAME/064",
   "jp": "野玉",
-  "en": ""
+  "en": "Nodama"
  },
  {
   "id": "NAME/065",
   "jp": "由美",
-  "en": ""
+  "en": "Yumi"
  },
  {
   "id": "NAME/066",
   "jp": "菊美",
-  "en": ""
+  "en": "Kikumi"
  },
  {
   "id": "NAME/067",
   "jp": "水越",
-  "en": ""
+  "en": "Mizukoshi"
  },
  {
   "id": "NAME/068",
   "jp": "優香",
-  "en": ""
+  "en": "Yuka"
  },
  {
   "id": "NAME/069",
   "jp": "高部",
-  "en": ""
+  "en": "Takabe"
  },
  {
   "id": "NAME/070",
   "jp": "静子",
-  "en": ""
+  "en": "Shizuko"
  },
  {
   "id": "NAME/071",
   "jp": "塩谷",
-  "en": ""
+  "en": "Shioya"
  },
  {
   "id": "NAME/072",
   "jp": "由紀",
-  "en": ""
+  "en": "Yuki"
  },
  {
   "id": "NAME/073",
   "jp": "ギョロ",
-  "en": ""
+  "en": "Peepers"
  },
  {
   "id": "NAME/074",
   "jp": "ブタロー",
-  "en": ""
+  "en": "Porky"
  },
  {
   "id": "NAME/075",
   "jp": "トンペー",
-  "en": ""
+  "en": "Oinker"
  },
  {
   "id": "NAME/076",
   "jp": "バタコ",
-  "en": ""
+  "en": "Batty"
  },
  {
   "id": "NAME/077",
   "jp": "クリオ",
-  "en": ""
+  "en": "Curio"
  },
  {
   "id": "NAME/078",
   "jp": "ブーマー",
-  "en": ""
+  "en": "Boomer"
  },
  {
   "id": "NAME/079",
   "jp": "トンキチ",
-  "en": ""
+  "en": "Hammy"
  },
  {
   "id": "NAME/080",
   "jp": "ブンブン",
-  "en": ""
+  "en": "Buzzy"
  },
  {
   "id": "NAME/081",
   "jp": "ハネキチ",
-  "en": ""
+  "en": "Flappy"
  },
  {
   "id": "NAME/082",
   "jp": "トンガー",
-  "en": ""
+  "en": "Hogzilla"
  },
  {
   "id": "NAME/083",
   "jp": "メダマン",
-  "en": ""
+  "en": "Eyeballer"
  },
  {
   "id": "NAME/084",
   "jp": "バサール",
-  "en": ""
+  "en": "Flapper"
  },
  {
   "id": "NAME/085",
   "jp": "ブースケ",
-  "en": ""
+  "en": "Oinkster"
  },
  {
   "id": "NAME/086",
   "jp": "トロスケ",
-  "en": ""
+  "en": "Slowpork"
  },
  {
   "id": "NAME/087",
   "jp": "ﾌﾞｯﾁｬﾝ",
-  "en": ""
+  "en": "Butch"
  },
  {
   "id": "NAME/088",
   "jp": "桜沢",
-  "en": ""
+  "en": "",
+  "long": "Sakurazawa"
  },
  {
   "id": "NAME/089",
   "jp": "美雪",
-  "en": ""
+  "en": "Miyuki"
  },
  {
   "id": "NAME/090",
   "jp": "鈴木",
-  "en": ""
+  "en": "Suzuki"
  },
  {
   "id": "NAME/091",
   "jp": "京子",
-  "en": ""
+  "en": "Kyoko"
  },
  {
   "id": "NAME/092",
   "jp": "山川",
-  "en": ""
+  "en": "",
+  "long": "Yamakawa"
  },
  {
   "id": "NAME/093",
   "jp": "由依",
-  "en": ""
+  "en": "Yui"
  },
  {
   "id": "NAME/094",
   "jp": "姫川",
-  "en": ""
+  "en": "",
+  "long": "Himekawa"
  },
  {
   "id": "NAME/095",
   "jp": "しおり",
-  "en": ""
+  "en": "Shiori"
  },
  {
   "id": "NAME/096",
   "jp": "井口",
-  "en": ""
+  "en": "Iguchi"
  },
  {
   "id": "NAME/097",
   "jp": "俊子",
-  "en": ""
+  "en": "Toshiko"
  },
  {
   "id": "NAME/098",
   "jp": "島田",
-  "en": ""
+  "en": "Shimada"
  },
  {
   "id": "NAME/099",
   "jp": "智代",
-  "en": ""
+  "en": "Tomoyo"
  },
  {
   "id": "NAME/100",
   "jp": "唐沢",
-  "en": ""
+  "en": "",
+  "long": "Karasawa"
  },
  {
   "id": "NAME/101",
   "jp": "富子",
-  "en": ""
+  "en": "Tomiko"
  },
  {
   "id": "NAME/102",
   "jp": "高橋",
-  "en": ""
+  "en": "",
+  "long": "Takahashi"
  },
  {
   "id": "NAME/103",
   "jp": "ゆうな",
-  "en": ""
+  "en": "Yuna"
  },
  {
   "id": "NAME/104",
   "jp": "小島",
-  "en": ""
+  "en": "Kojima"
  },
  {
   "id": "NAME/105",
   "jp": "夏美",
-  "en": ""
+  "en": "Natsumi"
  },
  {
   "id": "NAME/106",
   "jp": "西原",
-  "en": ""
+  "en": "Nishihara"
  },
  {
   "id": "NAME/107",
   "jp": "桂香",
-  "en": ""
+  "en": "Keika"
  },
  {
   "id": "NAME/108",
   "jp": "尾崎",
-  "en": ""
+  "en": "Ozaki"
  },
  {
   "id": "NAME/109",
   "jp": "江里",
-  "en": ""
+  "en": "Eri"
  },
  {
   "id": "NAME/110",
   "jp": "中川",
-  "en": ""
+  "en": "",
+  "long": "Nakagawa"
  },
  {
   "id": "NAME/111",
   "jp": "直美",
-  "en": ""
+  "en": "Naomi"
  },
  {
   "id": "NAME/112",
   "jp": "谷",
-  "en": ""
+  "en": "Tani"
  },
  {
   "id": "NAME/113",
   "jp": "啓子",
-  "en": ""
+  "en": "Keiko"
  },
  {
   "id": "NAME/114",
   "jp": "島本",
-  "en": ""
+  "en": "",
+  "long": "Shimamoto"
  },
  {
   "id": "NAME/115",
   "jp": "あきら",
-  "en": ""
+  "en": "Akira"
  },
  {
   "id": "NAME/116",
   "jp": "北野",
-  "en": ""
+  "en": "Kitano"
  },
  {
   "id": "NAME/117",
   "jp": "剛志",
-  "en": ""
+  "en": "Tsuyoshi"
  },
  {
   "id": "NAME/118",
   "jp": "公介",
-  "en": ""
+  "en": "Kosuke"
  },
  {
   "id": "NAME/119",
   "jp": "山本",
-  "en": ""
+  "en": "",
+  "long": "Yamamoto"
  },
  {
   "id": "NAME/120",
   "jp": "矢追",
-  "en": ""
+  "en": "Yaoi"
  },
  {
   "id": "NAME/121",
   "jp": "中谷",
-  "en": ""
+  "en": "Nakatani"
  },
  {
   "id": "NAME/122",
   "jp": "晶子",
-  "en": ""
+  "en": "Akiko"
  },
  {
   "id": "NAME/123",
   "jp": "宝塚",
-  "en": ""
+  "en": "",
+  "long": "Takarazuka"
  },
  {
   "id": "NAME/124",
   "jp": "月子",
-  "en": ""
+  "en": "Tsukiko"
  },
  {
   "id": "NAME/125",
   "jp": "寺尾",
-  "en": ""
+  "en": "Terao"
  },
  {
   "id": "NAME/126",
   "jp": "りょう",
-  "en": ""
+  "en": "Ryo"
  },
  {
   "id": "NAME/127",
   "jp": "宮内",
-  "en": ""
+  "en": "Miyauchi"
  },
  {
   "id": "NAME/128",
   "jp": "えりか",
-  "en": ""
+  "en": "Erika"
  },
  {
   "id": "NAME/129",
   "jp": "佐藤",
-  "en": ""
+  "en": "Sato"
  },
  {
   "id": "NAME/130",
   "jp": "つぐみ",
-  "en": ""
+  "en": "Tsugumi"
  },
  {
   "id": "NAME/131",
   "jp": "矢部",
-  "en": ""
+  "en": "Yabe"
  },
  {
   "id": "NAME/132",
   "jp": "涼子",
-  "en": ""
+  "en": "Ryoko"
  },
  {
   "id": "NAME/133",
   "jp": "まりの",
-  "en": ""
+  "en": "Marino"
  },
  {
   "id": "NAME/134",
   "jp": "山田",
-  "en": ""
+  "en": "Yamada"
  },
  {
   "id": "NAME/135",
   "jp": "勝男",
-  "en": ""
+  "en": "Katsuo"
  },
  {
   "id": "NAME/136",
   "jp": "木下",
-  "en": ""
+  "en": "Kinoshita"
  },
  {
   "id": "NAME/137",
   "jp": "章二",
-  "en": ""
+  "en": "Shoji"
  },
  {
   "id": "NAME/138",
   "jp": "伊藤",
-  "en": ""
+  "en": "Ito"
  },
  {
   "id": "NAME/139",
   "jp": "知子",
-  "en": ""
+  "en": "Tomoko"
  },
  {
   "id": "NAME/140",
   "jp": "亀田",
-  "en": ""
+  "en": "Kameda"
  },
  {
   "id": "NAME/141",
   "jp": "あられ",
-  "en": ""
+  "en": "Arare"
  },
  {
   "id": "NAME/142",
   "jp": "吉田",
-  "en": ""
+  "en": "Yoshida"
  },
  {
   "id": "NAME/143",
   "jp": "めぐみ",
-  "en": ""
+  "en": "Megumi"
  },
  {
   "id": "NAME/144",
   "jp": "菊池",
-  "en": ""
+  "en": "Kikuchi"
  },
  {
   "id": "NAME/145",
   "jp": "陽子",
-  "en": ""
+  "en": "Yoko"
  },
  {
   "id": "NAME/146",
   "jp": "優一",
-  "en": ""
+  "en": "Yuichi"
  },
  {
   "id": "NAME/147",
   "jp": "宮廻",
-  "en": ""
+  "en": "Miyasako"
  },
  {
   "id": "NAME/148",
   "jp": "優子",
-  "en": ""
+  "en": "Yuko"
  },
  {
   "id": "NAME/149",
   "jp": "神田",
-  "en": ""
+  "en": "Kanda"
  },
  {
   "id": "NAME/150",
   "jp": "奈津子",
-  "en": ""
+  "en": "Natsuko"
  },
  {
   "id": "NAME/151",
   "jp": "田中",
-  "en": ""
+  "en": "Tanaka"
  },
  {
   "id": "NAME/152",
   "jp": "一夫",
-  "en": ""
+  "en": "Kazuo"
  },
  {
   "id": "NAME/153",
   "jp": "松田",
-  "en": ""
+  "en": "Matsuda"
  },
  {
   "id": "NAME/154",
   "jp": "あんな",
-  "en": ""
+  "en": "Anna"
  },
  {
   "id": "NAME/155",
   "jp": "千葉",
-  "en": ""
+  "en": "Chiba"
  },
  {
   "id": "NAME/156",
   "jp": "レイ",
-  "en": ""
+  "en": "Rei"
  },
  {
   "id": "NAME/157",
   "jp": "斉藤",
-  "en": ""
+  "en": "Saito"
  },
  {
   "id": "NAME/158",
   "jp": "和美",
-  "en": ""
+  "en": "Kazumi"
  },
  {
   "id": "NAME/159",
   "jp": "美紀",
-  "en": ""
+  "en": "Miki"
  },
  {
   "id": "NAME/160",
   "jp": "かおる",
-  "en": ""
+  "en": "Kaoru"
  },
  {
   "id": "NAME/161",
   "jp": "稲葉",
-  "en": ""
+  "en": "Inaba"
  },
  {
   "id": "NAME/162",
   "jp": "静香",
-  "en": ""
+  "en": "Shizuka"
  },
  {
   "id": "NAME/163",
   "jp": "りほ",
-  "en": ""
+  "en": "Riho"
  },
  {
   "id": "NAME/164",
   "jp": "高田",
-  "en": ""
+  "en": "Takada"
  },
  {
   "id": "NAME/165",
   "jp": "さとこ",
-  "en": ""
+  "en": "Satoko"
  },
  {
   "id": "NAME/166",
   "jp": "梅本",
-  "en": ""
+  "en": "Umemoto"
  },
  {
   "id": "NAME/167",
   "jp": "高見沢",
-  "en": ""
+  "en": "",
+  "long": "Takamizawa"
  },
  {
   "id": "NAME/168",
   "jp": "かよこ",
-  "en": ""
+  "en": "Kayoko"
  },
  {
   "id": "NAME/169",
   "jp": "恭子",
-  "en": ""
+  "en": "Kyoko"
  },
  {
   "id": "NAME/170",
   "jp": "のぞみ",
-  "en": ""
+  "en": "Nozomi"
  },
  {
   "id": "NAME/171",
   "jp": "小和田",
-  "en": ""
+  "en": "Owada"
  },
  {
   "id": "NAME/172",
   "jp": "紀子",
-  "en": ""
+  "en": "Noriko"
  },
  {
   "id": "NAME/173",
   "jp": "石川",
-  "en": ""
+  "en": "Ishikawa"
  },
  {
   "id": "NAME/174",
   "jp": "このみ",
-  "en": ""
+  "en": "Konomi"
  },
  {
   "id": "NAME/175",
   "jp": "風祭",
-  "en": ""
+  "en": "",
+  "long": "Kazamatsuri"
  },
  {
   "id": "NAME/176",
   "jp": "鈴香",
-  "en": ""
+  "en": "Suzuka"
  },
  {
   "id": "NAME/177",
   "jp": "加山",
-  "en": ""
+  "en": "Kayama"
  },
  {
   "id": "NAME/178",
   "jp": "ことり",
-  "en": ""
+  "en": "Kotori"
  },
  {
   "id": "NAME/179",
   "jp": "吉野",
-  "en": ""
+  "en": "Yoshino"
  },
  {
   "id": "NAME/180",
   "jp": "菜々子",
-  "en": ""
+  "en": "Nanako"
  },
  {
   "id": "NAME/181",
   "jp": "野口",
-  "en": ""
+  "en": "Noguchi"
  },
  {
   "id": "NAME/182",
   "jp": "法子",
-  "en": ""
+  "en": "Noriko"
  },
  {
   "id": "NAME/183",
   "jp": "椎名",
-  "en": ""
+  "en": "Shiina"
  },
  {
   "id": "NAME/184",
   "jp": "春子",
-  "en": ""
+  "en": "Haruko"
  },
  {
   "id": "NAME/185",
   "jp": "山根",
-  "en": ""
+  "en": "Yamane"
  },
  {
   "id": "NAME/186",
   "jp": "康子",
-  "en": ""
+  "en": "Yasuko"
  },
  {
   "id": "NAME/187",
   "jp": "良夫",
-  "en": ""
+  "en": "Yoshio"
  },
  {
   "id": "NAME/188",
   "jp": "長嶋",
-  "en": ""
+  "en": "",
+  "long": "Nagashima"
  },
  {
   "id": "NAME/189",
   "jp": "英雄",
-  "en": ""
+  "en": "Hideo"
  },
  {
   "id": "NAME/190",
   "jp": "津田",
-  "en": ""
+  "en": "Tsuda"
  },
  {
   "id": "NAME/191",
   "jp": "広明",
-  "en": ""
+  "en": "Hiroaki"
  },
  {
   "id": "NAME/192",
   "jp": "辰巳",
-  "en": ""
+  "en": "Tatsumi"
  },
  {
   "id": "NAME/193",
   "jp": "和馬",
-  "en": ""
+  "en": "Kazuma"
  },
  {
   "id": "NAME/194",
   "jp": "市川",
-  "en": ""
+  "en": "Ichikawa"
  },
  {
   "id": "NAME/195",
   "jp": "真理",
-  "en": ""
+  "en": "Mari"
  },
  {
   "id": "NAME/196",
   "jp": "柿崎",
-  "en": ""
+  "en": "Kakizaki"
  },
  {
   "id": "NAME/197",
   "jp": "かすみ",
-  "en": ""
+  "en": "Kasumi"
  },
  {
   "id": "NAME/198",
   "jp": "南原",
-  "en": ""
+  "en": "Nanbara"
  },
  {
   "id": "NAME/199",
   "jp": "清美",
-  "en": ""
+  "en": "Kiyomi"
  },
  {
   "id": "NAME/200",
   "jp": "松本",
-  "en": ""
+  "en": "",
+  "long": "Matsumoto"
  },
  {
   "id": "NAME/201",
   "jp": "仁美",
-  "en": ""
+  "en": "Hitomi"
  },
  {
   "id": "NAME/202",
   "jp": "浜田",
-  "en": ""
+  "en": "Hamada"
  },
  {
   "id": "NAME/203",
   "jp": "雅代",
-  "en": ""
+  "en": "Masayo"
  },
  {
   "id": "NAME/204",
   "jp": "勝俣",
-  "en": ""
+  "en": "",
+  "long": "Katsumata"
  },
  {
   "id": "NAME/205",
   "jp": "絵美",
-  "en": ""
+  "en": "Emi"
  },
  {
   "id": "NAME/206",
   "jp": "相川",
-  "en": ""
+  "en": "Aikawa"
  },
  {
   "id": "NAME/207",
   "jp": "桃子",
-  "en": ""
+  "en": "Momoko"
  },
  {
   "id": "NAME/208",
   "jp": "馬場",
-  "en": ""
+  "en": "Baba"
  },
  {
   "id": "NAME/209",
   "jp": "内海",
-  "en": ""
+  "en": "Utsumi"
  },
  {
   "id": "NAME/210",
   "jp": "かれん",
-  "en": ""
+  "en": "Karen"
  },
  {
   "id": "NAME/211",
   "jp": "一美",
-  "en": ""
+  "en": "Kazumi"
  },
  {
   "id": "NAME/212",
   "jp": "川島",
-  "en": ""
+  "en": "",
+  "long": "Kawashima"
  },
  {
   "id": "NAME/213",
   "jp": "雅子",
-  "en": ""
+  "en": "Masako"
  },
  {
   "id": "NAME/214",
   "jp": "ケイ",
-  "en": ""
+  "en": "Kei"
  },
  {
   "id": "NAME/215",
   "jp": "木内",
-  "en": ""
+  "en": "Kiuchi"
  },
  {
   "id": "NAME/216",
   "jp": "ゆかり",
-  "en": ""
+  "en": "Yukari"
  },
  {
   "id": "NAME/217",
   "jp": "本田",
-  "en": ""
+  "en": "Honda"
  },
  {
   "id": "NAME/218",
   "jp": "和江",
-  "en": ""
+  "en": "Kazue"
  },
  {
   "id": "NAME/219",
   "jp": "川上",
-  "en": ""
+  "en": "",
+  "long": "Kawakami"
  },
  {
   "id": "NAME/220",
   "jp": "次郎",
-  "en": ""
+  "en": "Jiro"
  },
  {
   "id": "NAME/221",
   "jp": "美江",
-  "en": ""
+  "en": "Mie"
  },
  {
   "id": "NAME/222",
   "jp": "岡田",
-  "en": ""
+  "en": "Okada"
  },
  {
   "id": "NAME/223",
   "jp": "まゆ",
-  "en": ""
+  "en": "Mayu"
  },
  {
   "id": "NAME/224",
   "jp": "内村",
-  "en": ""
+  "en": "Uchimura"
  },
  {
   "id": "NAME/225",
   "jp": "光代",
-  "en": ""
+  "en": "Mitsuyo"
  },
  {
   "id": "NAME/226",
   "jp": "鶴岡",
-  "en": ""
+  "en": "",
+  "long": "Tsuruoka"
  },
  {
   "id": "NAME/227",
   "jp": "美智子",
-  "en": ""
+  "en": "Michiko"
  },
  {
   "id": "NAME/228",
   "jp": "酒田",
-  "en": ""
+  "en": "Sakata"
  },
  {
   "id": "NAME/229",
   "jp": "小田",
-  "en": ""
+  "en": "Oda"
  },
  {
   "id": "NAME/230",
   "jp": "渡辺",
-  "en": ""
+  "en": "",
+  "long": "Watanabe"
  },
  {
   "id": "NAME/231",
   "jp": "志穂",
-  "en": ""
+  "en": "Shiho"
  },
  {
   "id": "NAME/232",
   "jp": "小林",
-  "en": ""
+  "en": "",
+  "long": "Kobayashi"
  },
  {
   "id": "NAME/233",
   "jp": "明日香",
-  "en": ""
+  "en": "Asuka"
  },
  {
   "id": "NAME/234",
   "jp": "大貫",
-  "en": ""
+  "en": "Onuki"
  },
  {
   "id": "NAME/235",
   "jp": "中森",
-  "en": ""
+  "en": "Nakamori"
  },
  {
   "id": "NAME/236",
   "jp": "亜希",
-  "en": ""
+  "en": "Aki"
  },
  {
   "id": "NAME/237",
   "jp": "直人",
-  "en": ""
+  "en": "Naoto"
  },
  {
   "id": "NAME/238",
   "jp": "片山",
-  "en": ""
+  "en": "",
+  "long": "Katayama"
  },
  {
   "id": "NAME/239",
   "jp": "あかり",
-  "en": ""
+  "en": "Akari"
  },
  {
   "id": "NAME/240",
   "jp": "堤",
-  "en": ""
+  "en": "Tsutsumi"
  },
  {
   "id": "NAME/241",
   "jp": "琴乃",
-  "en": ""
+  "en": "Kotono"
  },
  {
   "id": "NAME/242",
   "jp": "久保田",
-  "en": ""
+  "en": "Kubota"
  },
  {
   "id": "NAME/243",
   "jp": "広美",
-  "en": ""
+  "en": "Hiromi"
  },
  {
   "id": "NAME/244",
   "jp": "中村",
-  "en": ""
+  "en": "",
+  "long": "Nakamura"
  },
  {
   "id": "NAME/245",
   "jp": "ゆりこ",
-  "en": ""
+  "en": "Yuriko"
  },
  {
   "id": "NAME/246",
   "jp": "田村",
-  "en": ""
+  "en": "Tamura"
  },
  {
   "id": "NAME/247",
   "jp": "たけし",
-  "en": ""
+  "en": "Takeshi"
  },
  {
   "id": "NAME/248",
   "jp": "豊田",
-  "en": ""
+  "en": "Toyoda"
  },
  {
   "id": "NAME/249",
   "jp": "まな",
-  "en": ""
+  "en": "Mana"
  },
  {
   "id": "NAME/250",
   "jp": "岡崎",
-  "en": ""
+  "en": "Okazaki"
  },
  {
   "id": "NAME/251",
   "jp": "知之",
-  "en": ""
+  "en": "Tomoyuki"
  },
  {
   "id": "NAME/252",
   "jp": "太田",
-  "en": ""
+  "en": "Ota"
  },
  {
   "id": "NAME/253",
   "jp": "工藤",
-  "en": ""
+  "en": "Kudo"
  },
  {
   "id": "NAME/254",
   "jp": "井沢",
-  "en": ""
+  "en": "Izawa"
  },
  {
   "id": "NAME/255",
   "jp": "奥村",
-  "en": ""
+  "en": "Okumura"
  },
  {
   "id": "NAME/256",
   "jp": "麻美",
-  "en": ""
+  "en": "Asami"
  },
  {
   "id": "NAME/257",
   "jp": "金井",
-  "en": ""
+  "en": "Kanai"
  },
  {
   "id": "NAME/258",
   "jp": "早乙女",
-  "en": ""
+  "en": "Saotome"
  },
  {
   "id": "NAME/259",
   "jp": "未来",
-  "en": ""
+  "en": "Mirai"
  },
  {
   "id": "NAME/260",
   "jp": "樋口",
-  "en": ""
+  "en": "Higuchi"
  },
  {
   "id": "NAME/261",
   "jp": "亜衣",
-  "en": ""
+  "en": "Ai"
  },
  {
   "id": "NAME/262",
   "jp": "安田",
-  "en": ""
+  "en": "Yasuda"
  },
  {
   "id": "NAME/263",
   "jp": "さつき",
-  "en": ""
+  "en": "Satsuki"
  },
  {
   "id": "NAME/264",
   "jp": "藤尾",
-  "en": ""
+  "en": "Fujio"
  },
  {
   "id": "NAME/265",
   "jp": "不二子",
-  "en": ""
+  "en": "Fujiko"
  },
  {
   "id": "NAME/266",
   "jp": "葉月",
-  "en": ""
+  "en": "Hazuki"
  },
  {
   "id": "NAME/267",
   "jp": "敬子",
-  "en": ""
+  "en": "Keiko"
  },
  {
   "id": "NAME/268",
   "jp": "ゆり",
-  "en": ""
+  "en": "Yuri"
  },
  {
   "id": "NAME/269",
   "jp": "玉田",
-  "en": ""
+  "en": "Tamada"
  },
  {
   "id": "NAME/270",
   "jp": "えり",
-  "en": ""
+  "en": "Eri"
  },
  {
   "id": "NAME/271",
   "jp": "遊子",
-  "en": ""
+  "en": "Yuko"
  },
  {
   "id": "NAME/272",
   "jp": "小沢",
-  "en": ""
+  "en": "Ozawa"
  },
  {
   "id": "NAME/273",
   "jp": "健一",
-  "en": ""
+  "en": "Kenichi"
  },
  {
   "id": "NAME/274",
   "jp": "さやか",
-  "en": ""
+  "en": "Sayaka"
  },
  {
   "id": "NAME/275",
   "jp": "川崎",
-  "en": ""
+  "en": "Kawasaki"
  },
  {
   "id": "NAME/276",
   "jp": "みさと",
-  "en": ""
+  "en": "Misato"
  },
  {
   "id": "NAME/277",
   "jp": "あたみ",
-  "en": ""
+  "en": "Atami"
  },
  {
   "id": "NAME/278",
   "jp": "羽賀",
-  "en": ""
+  "en": "Haga"
  },
  {
   "id": "NAME/279",
   "jp": "有希",
-  "en": ""
+  "en": "Yuki"
  },
  {
   "id": "NAME/280",
   "jp": "中本",
-  "en": ""
+  "en": "",
+  "long": "Nakamoto"
  },
  {
   "id": "NAME/281",
   "jp": "エミ",
-  "en": ""
+  "en": "Emi"
  },
  {
   "id": "NAME/282",
   "jp": "浦島",
-  "en": ""
+  "en": "Urashima"
  },
  {
   "id": "NAME/283",
   "jp": "桃太",
-  "en": ""
+  "en": "Momota"
  },
  {
   "id": "NAME/284",
   "jp": "大塚",
-  "en": ""
+  "en": "Otsuka"
  },
  {
   "id": "NAME/285",
   "jp": "ミミ",
-  "en": ""
+  "en": "Mimi"
  },
  {
   "id": "NAME/286",
   "jp": "永山",
-  "en": ""
+  "en": "",
+  "long": "Nagayama"
  },
  {
   "id": "NAME/287",
   "jp": "美樹",
-  "en": ""
+  "en": "Miki"
  },
  {
   "id": "NAME/288",
   "jp": "富士野",
-  "en": ""
+  "en": "Fujino"
  },
  {
   "id": "NAME/289",
   "jp": "岡島",
-  "en": ""
+  "en": "Okajima"
  },
  {
   "id": "NAME/290",
   "jp": "美奈子",
-  "en": ""
+  "en": "Minako"
  },
  {
   "id": "NAME/291",
   "jp": "尚子",
-  "en": ""
+  "en": "Naoko"
  },
  {
   "id": "NAME/292",
   "jp": "中野",
-  "en": ""
+  "en": "Nakano"
  },
  {
   "id": "NAME/293",
   "jp": "久美",
-  "en": ""
+  "en": "Kumi"
  },
  {
   "id": "NAME/294",
   "jp": "中井",
-  "en": ""
+  "en": "Nakai"
  },
  {
   "id": "NAME/295",
   "jp": "和恵",
-  "en": ""
+  "en": "Kazue"
  },
  {
   "id": "NAME/296",
   "jp": "林",
-  "en": ""
+  "en": "Hayashi"
  },
  {
   "id": "NAME/297",
   "jp": "直子",
-  "en": ""
+  "en": "Naoko"
  },
  {
   "id": "NAME/298",
   "jp": "平沢",
-  "en": ""
+  "en": "Hirasawa"
  },
  {
   "id": "NAME/299",
   "jp": "一枝",
-  "en": ""
+  "en": "Kazue"
  },
  {
   "id": "NAME/300",
   "jp": "大西",
-  "en": ""
+  "en": "Onishi"
  },
  {
   "id": "NAME/301",
   "jp": "あゆみ",
-  "en": ""
+  "en": "Ayumi"
  },
  {
   "id": "NAME/302",
   "jp": "いすず",
-  "en": ""
+  "en": "Isuzu"
  },
  {
   "id": "NAME/303",
   "jp": "細川",
-  "en": ""
+  "en": "",
+  "long": "Hosokawa"
  },
  {
   "id": "NAME/304",
   "jp": "歩美",
-  "en": ""
+  "en": "Ayumi"
  },
  {
   "id": "NAME/305",
   "jp": "かなえ",
-  "en": ""
+  "en": "Kanae"
  },
  {
   "id": "NAME/306",
   "jp": "堀",
-  "en": ""
+  "en": "Hori"
  },
  {
   "id": "NAME/307",
   "jp": "梢",
-  "en": ""
+  "en": "Kozue"
  },
  {
   "id": "NAME/308",
   "jp": "安東",
-  "en": ""
+  "en": "Ando"
  },
  {
   "id": "NAME/309",
   "jp": "彩乃",
-  "en": ""
+  "en": "Ayano"
  },
  {
   "id": "NAME/310",
   "jp": "石田",
-  "en": ""
+  "en": "Ishida"
  },
  {
   "id": "NAME/311",
   "jp": "寛子",
-  "en": ""
+  "en": "Hiroko"
  },
  {
   "id": "NAME/312",
   "jp": "越中",
-  "en": ""
+  "en": "Etchu"
  },
  {
   "id": "NAME/313",
   "jp": "路子",
-  "en": ""
+  "en": "Michiko"
  },
  {
   "id": "NAME/314",
   "jp": "千夏",
-  "en": ""
+  "en": "Chinatsu"
  },
  {
   "id": "NAME/315",
   "jp": "西城",
-  "en": ""
+  "en": "Saijo"
  },
  {
   "id": "NAME/316",
   "jp": "瑞紀",
-  "en": ""
+  "en": "Mizuki"
  },
  {
   "id": "NAME/317",
   "jp": "美恵子",
-  "en": ""
+  "en": "Mieko"
  },
  {
   "id": "NAME/318",
   "jp": "立花",
-  "en": ""
+  "en": "",
+  "long": "Tachibana"
  },
  {
   "id": "NAME/319",
   "jp": "こずえ",
-  "en": ""
+  "en": "Kozue"
  },
  {
   "id": "NAME/320",
   "jp": "武志",
-  "en": ""
+  "en": "Takeshi"
  },
  {
   "id": "NAME/321",
   "jp": "小野",
-  "en": ""
+  "en": "Ono"
  },
  {
   "id": "NAME/322",
   "jp": "景子",
-  "en": ""
+  "en": "Keiko"
  },
  {
   "id": "NAME/323",
   "jp": "武藤",
-  "en": ""
+  "en": "Muto"
  },
  {
   "id": "NAME/324",
   "jp": "裕美",
-  "en": ""
+  "en": "Hiromi"
  },
  {
   "id": "NAME/325",
   "jp": "藤沢",
-  "en": ""
+  "en": "Fujisawa"
  },
  {
   "id": "NAME/326",
   "jp": "のりこ",
-  "en": ""
+  "en": "Noriko"
  },
  {
   "id": "NAME/327",
   "jp": "秋本",
-  "en": ""
+  "en": "Akimoto"
  },
  {
   "id": "NAME/328",
   "jp": "まさこ",
-  "en": ""
+  "en": "Masako"
  },
  {
   "id": "NAME/329",
   "jp": "宮下",
-  "en": ""
+  "en": "Miyashita"
  },
  {
   "id": "NAME/330",
   "jp": "しま",
-  "en": ""
+  "en": "Shima"
  },
  {
   "id": "NAME/331",
   "jp": "上野",
-  "en": ""
+  "en": "Ueno"
  },
  {
   "id": "NAME/332",
   "jp": "公子",
-  "en": ""
+  "en": "Kimiko"
  },
  {
   "id": "NAME/333",
   "jp": "金田",
-  "en": ""
+  "en": "Kaneda"
  },
  {
   "id": "NAME/334",
   "jp": "明子",
-  "en": ""
+  "en": "Akiko"
  },
  {
   "id": "NAME/335",
   "jp": "赤川",
-  "en": ""
+  "en": "Akagawa"
  },
  {
   "id": "NAME/336",
   "jp": "桜樹",
-  "en": ""
+  "en": "Sakuragi"
  },
  {
   "id": "NAME/337",
   "jp": "久子",
-  "en": ""
+  "en": "Hisako"
  },
  {
   "id": "NAME/338",
   "jp": "赤井",
-  "en": ""
+  "en": "Akai"
  },
  {
   "id": "NAME/339",
   "jp": "理菜",
-  "en": ""
+  "en": "Rina"
  },
  {
   "id": "NAME/340",
   "jp": "加奈",
-  "en": ""
+  "en": "Kana"
  },
  {
   "id": "NAME/341",
   "jp": "藤森",
-  "en": ""
+  "en": "Fujimori"
  },
  {
   "id": "NAME/342",
   "jp": "玲奈",
-  "en": ""
+  "en": "Rena"
  },
  {
   "id": "NAME/343",
   "jp": "ゆきえ",
-  "en": ""
+  "en": "Yukie"
  },
  {
   "id": "NAME/344",
   "jp": "石崎",
-  "en": ""
+  "en": "Ishizaki"
  },
  {
   "id": "NAME/345",
   "jp": "詩織",
-  "en": ""
+  "en": "Shiori"
  },
  {
   "id": "NAME/346",
   "jp": "大竹",
-  "en": ""
+  "en": "Otake"
  },
  {
   "id": "NAME/347",
   "jp": "健太",
-  "en": ""
+  "en": "Kenta"
  },
  {
   "id": "NAME/348",
   "jp": "飯塚",
-  "en": ""
+  "en": "Iizuka"
  },
  {
   "id": "NAME/349",
   "jp": "日野",
-  "en": ""
+  "en": "Hino"
  },
  {
   "id": "NAME/350",
   "jp": "スミレ",
-  "en": ""
+  "en": "Sumire"
  },
  {
   "id": "NAME/351",
   "jp": "蝶野",
-  "en": ""
+  "en": "Chono"
  },
  {
   "id": "NAME/352",
   "jp": "舞子",
-  "en": ""
+  "en": "Maiko"
  },
  {
   "id": "NAME/353",
   "jp": "小笠原",
-  "en": ""
+  "en": "",
+  "long": "Ogasawara"
  },
  {
   "id": "NAME/354",
   "jp": "なつみ",
-  "en": ""
+  "en": "Natsumi"
  },
  {
   "id": "NAME/355",
   "jp": "北原",
-  "en": ""
+  "en": "Kitahara"
  },
  {
   "id": "NAME/356",
   "jp": "智美",
-  "en": ""
+  "en": "Tomomi"
  },
  {
   "id": "NAME/357",
   "jp": "氷室",
-  "en": ""
+  "en": "Himuro"
  },
  {
   "id": "NAME/358",
   "jp": "まこ",
-  "en": ""
+  "en": "Mako"
  },
  {
   "id": "NAME/359",
   "jp": "黒井",
-  "en": ""
+  "en": "Kuroi"
  },
  {
   "id": "NAME/360",
   "jp": "夢子",
-  "en": ""
+  "en": "Yumeko"
  },
  {
   "id": "NAME/361",
   "jp": "安室",
-  "en": ""
+  "en": "Amuro"
  },
  {
   "id": "NAME/362",
   "jp": "つかさ",
-  "en": ""
+  "en": "Tsukasa"
  },
  {
   "id": "NAME/363",
   "jp": "佐野",
-  "en": ""
+  "en": "Sano"
  },
  {
   "id": "NAME/364",
   "jp": "菜穂",
-  "en": ""
+  "en": "Naho"
  },
  {
   "id": "NAME/365",
   "jp": "まや",
-  "en": ""
+  "en": "Maya"
  },
  {
   "id": "NAME/366",
   "jp": "深野",
-  "en": ""
+  "en": "Fukano"
  },
  {
   "id": "NAME/367",
   "jp": "理絵",
-  "en": ""
+  "en": "Rie"
  },
  {
   "id": "NAME/368",
   "jp": "高野",
-  "en": ""
+  "en": "Takano"
  },
  {
   "id": "NAME/369",
   "jp": "淳子",
-  "en": ""
+  "en": "Junko"
  },
  {
   "id": "NAME/370",
   "jp": "河内",
-  "en": ""
+  "en": "Kawachi"
  },
  {
   "id": "NAME/371",
   "jp": "裕子",
-  "en": ""
+  "en": "Yuko"
  },
  {
   "id": "NAME/372",
   "jp": "園子",
-  "en": ""
+  "en": "Sonoko"
  },
  {
   "id": "NAME/373",
   "jp": "大和田",
-  "en": ""
+  "en": "Owada"
  },
  {
   "id": "NAME/374",
   "jp": "アキコ",
-  "en": ""
+  "en": "Akiko"
  },
  {
   "id": "NAME/375",
   "jp": "森",
-  "en": ""
+  "en": "Mori"
  },
  {
   "id": "NAME/376",
   "jp": "奈緒",
-  "en": ""
+  "en": "Nao"
  },
  {
   "id": "NAME/377",
   "jp": "良子",
-  "en": ""
+  "en": "Yoshiko"
  },
  {
   "id": "NAME/378",
   "jp": "福山",
-  "en": ""
+  "en": "",
+  "long": "Fukuyama"
  },
  {
   "id": "NAME/379",
   "jp": "正美",
-  "en": ""
+  "en": "Masami"
  },
  {
   "id": "NAME/380",
   "jp": "田原",
-  "en": ""
+  "en": "Tahara"
  },
  {
   "id": "NAME/381",
   "jp": "園田",
-  "en": ""
+  "en": "Sonoda"
  },
  {
   "id": "NAME/382",
   "jp": "たまえ",
-  "en": ""
+  "en": "Tamae"
  },
  {
   "id": "NAME/383",
   "jp": "黒田",
-  "en": ""
+  "en": "Kuroda"
  },
  {
   "id": "NAME/384",
   "jp": "橋本",
-  "en": ""
+  "en": "",
+  "long": "Hashimoto"
  },
  {
   "id": "NAME/385",
   "jp": "真由子",
-  "en": ""
+  "en": "Mayuko"
  },
  {
   "id": "NAME/386",
   "jp": "木戸",
-  "en": ""
+  "en": "Kido"
  },
  {
   "id": "NAME/387",
   "jp": "梨花",
-  "en": ""
+  "en": "Rika"
  },
  {
   "id": "NAME/388",
   "jp": "天野",
-  "en": ""
+  "en": "Amano"
  },
  {
   "id": "NAME/389",
   "jp": "みるく",
-  "en": ""
+  "en": "Miruku"
  },
  {
   "id": "NAME/390",
   "jp": "珠緒",
-  "en": ""
+  "en": "Tamao"
  },
  {
   "id": "NAME/391",
   "jp": "川野",
-  "en": ""
+  "en": "Kawano"
  },
  {
   "id": "NAME/392",
   "jp": "雪代",
-  "en": ""
+  "en": "Yukiyo"
  },
  {
   "id": "NAME/393",
   "jp": "杉本",
-  "en": ""
+  "en": "Sugimoto"
  },
  {
   "id": "NAME/394",
   "jp": "秋山",
-  "en": ""
+  "en": "Akiyama"
  },
  {
   "id": "NAME/395",
   "jp": "ほのか",
-  "en": ""
+  "en": "Honoka"
  },
  {
   "id": "NAME/396",
   "jp": "稲森",
-  "en": ""
+  "en": "Inamori"
  },
  {
   "id": "NAME/397",
   "jp": "あずみ",
-  "en": ""
+  "en": "Azumi"
  },
  {
   "id": "NAME/398",
   "jp": "森園",
-  "en": ""
+  "en": "Morizono"
  },
  {
   "id": "NAME/399",
   "jp": "みんと",
-  "en": ""
+  "en": "Minto"
  },
  {
   "id": "NAME/400",
   "jp": "ともさか",
-  "en": ""
+  "en": "",
+  "long": "Tomosaka"
  },
  {
   "id": "NAME/401",
   "jp": "ゆい",
-  "en": ""
+  "en": "Yui"
  },
  {
   "id": "NAME/402",
   "jp": "安部",
-  "en": ""
+  "en": "Abe"
  },
  {
   "id": "NAME/403",
   "jp": "桂",
-  "en": ""
+  "en": "Katsura"
  },
  {
   "id": "NAME/404",
   "jp": "佐々木",
-  "en": ""
+  "en": "Sasaki"
  },
  {
   "id": "NAME/405",
   "jp": "かおり",
-  "en": ""
+  "en": "Kaori"
  },
  {
   "id": "NAME/406",
   "jp": "長谷川",
-  "en": ""
+  "en": "",
+  "long": "Hasegawa"
  },
  {
   "id": "NAME/407",
   "jp": "ワカメ",
-  "en": ""
+  "en": "Wakame"
  },
  {
   "id": "NAME/408",
   "jp": "真理子",
-  "en": ""
+  "en": "Mariko"
  },
  {
   "id": "NAME/409",
   "jp": "遠藤",
-  "en": ""
+  "en": "Endo"
  },
  {
   "id": "NAME/410",
   "jp": "三浦",
-  "en": ""
+  "en": "Miura"
  },
  {
   "id": "NAME/411",
   "jp": "夏代",
-  "en": ""
+  "en": "Natsuyo"
  },
  {
   "id": "NAME/412",
   "jp": "野並",
-  "en": ""
+  "en": "Nonami"
  },
  {
   "id": "NAME/413",
   "jp": "聡子",
-  "en": ""
+  "en": "Satoko"
  },
  {
   "id": "NAME/414",
   "jp": "柿久",
-  "en": ""
+  "en": "Kakihisa"
  },
  {
   "id": "NAME/415",
   "jp": "圭子",
-  "en": ""
+  "en": "Keiko"
  },
  {
   "id": "NAME/416",
   "jp": "文恵",
-  "en": ""
+  "en": "Fumie"
  },
  {
   "id": "NAME/417",
   "jp": "坂戸",
-  "en": ""
+  "en": "Sakado"
  },
  {
   "id": "NAME/418",
   "jp": "城戸",
-  "en": ""
+  "en": "Kido"
  },
  {
   "id": "NAME/419",
   "jp": "志保",
-  "en": ""
+  "en": "Shiho"
  },
  {
   "id": "NAME/420",
   "jp": "清野",
-  "en": ""
+  "en": "Kiyono"
  },
  {
   "id": "NAME/421",
   "jp": "理奈",
-  "en": ""
+  "en": "Rina"
  },
  {
   "id": "NAME/422",
   "jp": "後藤",
-  "en": ""
+  "en": "Goto"
  },
  {
   "id": "NAME/423",
   "jp": "理華",
-  "en": ""
+  "en": "Rika"
  },
  {
   "id": "NAME/424",
   "jp": "富田",
-  "en": ""
+  "en": "Tomita"
  },
  {
   "id": "NAME/425",
   "jp": "真保",
-  "en": ""
+  "en": "Maho"
  },
  {
   "id": "NAME/426",
   "jp": "熊川",
-  "en": ""
+  "en": "",
+  "long": "Kumakawa"
  },
  {
   "id": "NAME/427",
   "jp": "小夜",
-  "en": ""
+  "en": "Sayo"
  },
  {
   "id": "NAME/428",
   "jp": "山中",
-  "en": ""
+  "en": "",
+  "long": "Yamanaka"
  },
  {
   "id": "NAME/429",
   "jp": "瑞穂",
-  "en": ""
+  "en": "Mizuho"
  },
  {
   "id": "NAME/430",
   "jp": "藤井",
-  "en": ""
+  "en": "Fujii"
  },
  {
   "id": "NAME/431",
   "jp": "萌子",
-  "en": ""
+  "en": "Moeko"
  },
  {
   "id": "NAME/432",
   "jp": "ゆき",
-  "en": ""
+  "en": "Yuki"
  },
  {
   "id": "NAME/433",
   "jp": "高水木",
-  "en": ""
+  "en": "",
+  "long": "Takamizuki"
  },
  {
   "id": "NAME/434",
   "jp": "綾",
-  "en": ""
+  "en": "Aya"
  },
  {
   "id": "NAME/435",
   "jp": "松平",
-  "en": ""
+  "en": "",
+  "long": "Matsudaira"
  },
  {
   "id": "NAME/436",
   "jp": "愛理",
-  "en": ""
+  "en": "Airi"
  },
  {
   "id": "NAME/437",
   "jp": "克美",
-  "en": ""
+  "en": "Katsumi"
  },
  {
   "id": "NAME/438",
   "jp": "由利",
-  "en": ""
+  "en": "Yuri"
  },
  {
   "id": "NAME/439",
   "jp": "奈緒子",
-  "en": ""
+  "en": "Naoko"
  },
  {
   "id": "NAME/440",
   "jp": "貴沙薇",
-  "en": ""
+  "en": "Kisara"
  },
  {
   "id": "NAME/441",
   "jp": "しのぶ",
-  "en": ""
+  "en": "Shinobu"
  },
  {
   "id": "NAME/442",
   "jp": "喜久美",
-  "en": ""
+  "en": "Kikumi"
  },
  {
   "id": "NAME/443",
   "jp": "増田",
-  "en": ""
+  "en": "Masuda"
  },
  {
   "id": "NAME/444",
   "jp": "亮子",
-  "en": ""
+  "en": "Ryoko"
  },
  {
   "id": "NAME/445",
   "jp": "山口",
-  "en": ""
+  "en": "",
+  "long": "Yamaguchi"
  },
  {
   "id": "NAME/446",
   "jp": "珠美",
-  "en": ""
+  "en": "Tamami"
  },
  {
   "id": "NAME/447",
   "jp": "由香里",
-  "en": ""
+  "en": "Yukari"
  },
  {
   "id": "NAME/448",
   "jp": "吉竹",
-  "en": ""
+  "en": "",
+  "long": "Yoshitake"
  },
  {
   "id": "NAME/449",
   "jp": "梨絵",
-  "en": ""
+  "en": "Rie"
  },
  {
   "id": "NAME/450",
   "jp": "守永",
-  "en": ""
+  "en": "Morinaga"
  },
  {
   "id": "NAME/451",
   "jp": "利子",
-  "en": ""
+  "en": "Toshiko"
  },
  {
   "id": "NAME/452",
   "jp": "梅小路",
-  "en": ""
+  "en": "Umekoji"
  },
  {
   "id": "NAME/453",
   "jp": "やよい",
-  "en": ""
+  "en": "Yayoi"
  },
  {
   "id": "NAME/454",
   "jp": "浜野",
-  "en": ""
+  "en": "Hamano"
  },
  {
   "id": "NAME/455",
   "jp": "知香",
-  "en": ""
+  "en": "Chika"
  },
  {
   "id": "NAME/456",
   "jp": "板橋",
-  "en": ""
+  "en": "Itabashi"
  },
  {
   "id": "NAME/457",
   "jp": "ヨキ",
-  "en": ""
+  "en": "Yoki"
  },
  {
   "id": "NAME/458",
   "jp": "貴子",
-  "en": ""
+  "en": "Takako"
  },
  {
   "id": "NAME/459",
   "jp": "平井",
-  "en": ""
+  "en": "Hirai"
  },
  {
   "id": "NAME/460",
   "jp": "レイ子",
-  "en": ""
+  "en": "Reiko"
  },
  {
   "id": "NAME/461",
   "jp": "中島",
-  "en": ""
+  "en": "Nakajima"
  },
  {
   "id": "NAME/462",
   "jp": "すじこ",
-  "en": ""
+  "en": "Sujiko"
  },
  {
   "id": "NAME/463",
   "jp": "福田",
-  "en": ""
+  "en": "Fukuda"
  },
  {
   "id": "NAME/464",
   "jp": "冴香",
-  "en": ""
+  "en": "Saeka"
  },
  {
   "id": "NAME/465",
   "jp": "栗山",
-  "en": ""
+  "en": "Kuriyama"
  },
  {
   "id": "NAME/466",
   "jp": "優花",
-  "en": ""
+  "en": "Yuka"
  },
  {
   "id": "NAME/467",
   "jp": "大木",
-  "en": ""
+  "en": "Oki"
  },
  {
   "id": "NAME/468",
   "jp": "沙織",
-  "en": ""
+  "en": "Saori"
  },
  {
   "id": "NAME/469",
   "jp": "森谷",
-  "en": ""
+  "en": "Moriya"
  },
  {
   "id": "NAME/470",
   "jp": "城之内",
-  "en": ""
+  "en": "Jonouchi"
  },
  {
   "id": "NAME/471",
   "jp": "前野",
-  "en": ""
+  "en": "Maeno"
  },
  {
   "id": "NAME/472",
   "jp": "朱里",
-  "en": ""
+  "en": "Akari"
  },
  {
   "id": "NAME/473",
   "jp": "村野",
-  "en": ""
+  "en": "Murano"
  },
  {
   "id": "NAME/474",
   "jp": "真咲",
-  "en": ""
+  "en": "Masaki"
  },
  {
   "id": "NAME/475",
   "jp": "坂木",
-  "en": ""
+  "en": "Sakaki"
  },
  {
   "id": "NAME/476",
   "jp": "華絵",
-  "en": ""
+  "en": "Hanae"
  },
  {
   "id": "NAME/477",
   "jp": "林田",
-  "en": ""
+  "en": "",
+  "long": "Hayashida"
  },
  {
   "id": "NAME/478",
   "jp": "春菜",
-  "en": ""
+  "en": "Haruna"
  },
  {
   "id": "NAME/479",
   "jp": "宍戸",
-  "en": ""
+  "en": "Shishido"
  },
  {
   "id": "NAME/480",
   "jp": "あかね",
-  "en": ""
+  "en": "Akane"
  },
  {
   "id": "NAME/481",
   "jp": "西尾",
-  "en": ""
+  "en": "Nishio"
  },
  {
   "id": "NAME/482",
   "jp": "佳代",
-  "en": ""
+  "en": "Kayo"
  },
  {
   "id": "NAME/483",
   "jp": "千絵",
-  "en": ""
+  "en": "Chie"
  },
  {
   "id": "NAME/484",
   "jp": "順子",
-  "en": ""
+  "en": "Junko"
  },
  {
   "id": "NAME/485",
   "jp": "高木",
-  "en": ""
+  "en": "Takagi"
  },
  {
   "id": "NAME/486",
   "jp": "朋子",
-  "en": ""
+  "en": "Tomoko"
  },
  {
   "id": "NAME/487",
   "jp": "あずさ",
-  "en": ""
+  "en": "Azusa"
  },
  {
   "id": "NAME/488",
   "jp": "京香",
-  "en": ""
+  "en": "Kyoka"
  },
  {
   "id": "NAME/489",
   "jp": "洋子",
-  "en": ""
+  "en": "Yoko"
  },
  {
   "id": "NAME/490",
   "jp": "高見",
-  "en": ""
+  "en": "Takami"
  },
  {
   "id": "NAME/491",
   "jp": "きりこ",
-  "en": ""
+  "en": "Kiriko"
  },
  {
   "id": "NAME/492",
   "jp": "由加",
-  "en": ""
+  "en": "Yuka"
  },
  {
   "id": "NAME/493",
   "jp": "サエ",
-  "en": ""
+  "en": "Sae"
  },
  {
   "id": "NAME/494",
   "jp": "林原",
-  "en": ""
+  "en": "",
+  "long": "Hayashibara"
  },
  {
   "id": "NAME/495",
   "jp": "矢崎",
-  "en": ""
+  "en": "Yazaki"
  },
  {
   "id": "NAME/496",
   "jp": "真珠",
-  "en": ""
+  "en": "Shinju"
  },
  {
   "id": "NAME/497",
   "jp": "和子",
-  "en": ""
+  "en": "Kazuko"
  },
  {
   "id": "NAME/498",
   "jp": "中田",
-  "en": ""
+  "en": "Nakata"
  },
  {
   "id": "NAME/499",
   "jp": "青木",
-  "en": ""
+  "en": "Aoki"
  },
  {
   "id": "NAME/500",
   "jp": "千奈",
-  "en": ""
+  "en": "China"
  },
  {
   "id": "NAME/501",
   "jp": "新井",
-  "en": ""
+  "en": "Arai"
  },
  {
   "id": "NAME/502",
   "jp": "矢野",
-  "en": ""
+  "en": "Yano"
  },
  {
   "id": "NAME/503",
   "jp": "村山",
-  "en": ""
+  "en": "",
+  "long": "Murayama"
  },
  {
   "id": "NAME/504",
   "jp": "佳奈",
-  "en": ""
+  "en": "Kana"
  },
  {
   "id": "NAME/505",
   "jp": "柳田",
-  "en": ""
+  "en": "Yanagida"
  },
  {
   "id": "NAME/506",
   "jp": "高沢",
-  "en": ""
+  "en": "",
+  "long": "Takazawa"
  },
  {
   "id": "NAME/507",
   "jp": "聖子",
-  "en": ""
+  "en": "Seiko"
  },
  {
   "id": "NAME/508",
   "jp": "酒井",
-  "en": ""
+  "en": "Sakai"
  },
  {
   "id": "NAME/509",
   "jp": "真紀子",
-  "en": ""
+  "en": "Makiko"
  },
  {
   "id": "NAME/510",
   "jp": "谷村",
-  "en": ""
+  "en": "Tanimura"
  },
  {
   "id": "NAME/511",
   "jp": "有美子",
-  "en": ""
+  "en": "Yumiko"
  },
  {
   "id": "NAME/512",
   "jp": "成瀬",
-  "en": ""
+  "en": "Naruse"
  },
  {
   "id": "NAME/513",
   "jp": "ひとみ",
-  "en": ""
+  "en": "Hitomi"
  },
  {
   "id": "NAME/514",
   "jp": "坂井",
-  "en": ""
+  "en": "Sakai"
  },
  {
   "id": "NAME/515",
   "jp": "雪江",
-  "en": ""
+  "en": "Yukie"
  },
  {
   "id": "NAME/516",
   "jp": "ルイ",
-  "en": ""
+  "en": "Rui"
  },
  {
   "id": "NAME/517",
   "jp": "琴美",
-  "en": ""
+  "en": "Kotomi"
  },
  {
   "id": "NAME/518",
   "jp": "美代子",
-  "en": ""
+  "en": "Miyoko"
  },
  {
   "id": "NAME/519",
   "jp": "アコ",
-  "en": ""
+  "en": "Ako"
  },
  {
   "id": "NAME/520",
   "jp": "ナナ",
-  "en": ""
+  "en": "Nana"
  },
  {
   "id": "NAME/521",
   "jp": "友子",
-  "en": ""
+  "en": "Tomoko"
  },
  {
   "id": "NAME/522",
   "jp": "みよ",
-  "en": ""
+  "en": "Miyo"
  },
  {
   "id": "NAME/523",
   "jp": "平石",
-  "en": ""
+  "en": "Hiraishi"
  },
  {
   "id": "NAME/524",
   "jp": "リサ",
-  "en": ""
+  "en": "Risa"
  },
  {
   "id": "NAME/525",
   "jp": "石黒",
-  "en": ""
+  "en": "Ishiguro"
  },
  {
   "id": "NAME/526",
   "jp": "石橋",
-  "en": ""
+  "en": "Ishibashi"
  },
  {
   "id": "NAME/527",
   "jp": "宮川",
-  "en": ""
+  "en": "Miyagawa"
  },
  {
   "id": "NAME/528",
   "jp": "冬美",
-  "en": ""
+  "en": "Fuyumi"
  },
  {
   "id": "NAME/529",
   "jp": "武田",
-  "en": ""
+  "en": "Takeda"
  },
  {
   "id": "NAME/530",
   "jp": "荻野",
-  "en": ""
+  "en": "Ogino"
  },
  {
   "id": "NAME/531",
   "jp": "夕子",
-  "en": ""
+  "en": "Yuko"
  },
  {
   "id": "NAME/532",
   "jp": "かなこ",
-  "en": ""
+  "en": "Kanako"
  },
  {
   "id": "NAME/533",
   "jp": "久本",
-  "en": ""
+  "en": "Hisamoto"
  },
  {
   "id": "NAME/534",
   "jp": "美奈",
-  "en": ""
+  "en": "Mina"
  },
  {
   "id": "NAME/535",
   "jp": "香取",
-  "en": ""
+  "en": "Katori"
  },
  {
   "id": "NAME/536",
   "jp": "本木",
-  "en": ""
+  "en": "Motoki"
  },
  {
   "id": "NAME/537",
   "jp": "雅美",
-  "en": ""
+  "en": "Masami"
  },
  {
   "id": "NAME/538",
   "jp": "黒沢",
-  "en": ""
+  "en": "",
+  "long": "Kurosawa"
  },
  {
   "id": "NAME/539",
   "jp": "亮",
-  "en": ""
+  "en": "Ryo"
  },
  {
   "id": "NAME/540",
   "jp": "ｷﾞｬﾘｯｸ",
-  "en": ""
+  "en": "Garlick"
  },
  {
   "id": "NAME/541",
   "jp": "ブースカ",
-  "en": ""
+  "en": "Oinkers"
  },
  {
   "id": "NAME/542",
   "jp": "ブービー",
-  "en": ""
+  "en": "Runty"
  },
  {
   "id": "NAME/543",
   "jp": "トンプー",
-  "en": ""
+  "en": "Porkpie"
  },
  {
   "id": "NAME/544",
   "jp": "ハネスケ",
-  "en": ""
+  "en": "Wingnut"
  },
  {
   "id": "NAME/545",
   "jp": "トントン",
-  "en": ""
+  "en": "Oink Oink"
  },
  {
   "id": "NAME/546",
   "jp": "バサオ",
-  "en": ""
+  "en": "Flapjack"
  },
  {
   "id": "NAME/547",
   "jp": "ガースケ",
-  "en": ""
+  "en": "Grunty"
  },
  {
   "id": "NAME/548",
   "jp": "ピギー",
-  "en": ""
+  "en": "Piggy"
  },
  {
   "id": "NAME/549",
   "jp": "ブギー",
-  "en": ""
+  "en": "Boogie"
  },
  {
   "id": "NAME/550",
   "jp": "ウギー",
-  "en": ""
+  "en": "Oogie"
  },
  {
   "id": "NAME/551",
   "jp": "ポギー",
-  "en": ""
+  "en": "Porgy"
  },
  {
   "id": "NAME/552",
   "jp": "ブートン",
-  "en": ""
+  "en": "Boarton"
  },
  {
   "id": "NAME/553",
   "jp": "ベイブ",
-  "en": ""
+  "en": "Babe"
  },
  {
   "id": "NAME/554",
   "jp": "バットン",
-  "en": ""
+  "en": "Batton"
  },
  {
   "id": "NAME/555",
   "jp": "ブーク",
-  "en": ""
+  "en": "Bork"
  },
  {
   "id": "NAME/556",
   "jp": "ブルッタ",
-  "en": ""
+  "en": "Shivers"
  },
  {
   "id": "NAME/557",
   "jp": "ビューラ",
-  "en": ""
+  "en": "Curler"
  },
  {
   "id": "NAME/558",
   "jp": "トンタ",
-  "en": ""
+  "en": "Tubby"
  },
  {
   "id": "NAME/559",
   "jp": "トングー",
-  "en": ""
+  "en": "Snouty"
  },
  {
   "id": "NAME/560",
   "jp": "ﾌﾞｯﾁｬｰ",
-  "en": ""
+  "en": "Butcher"
  },
  {
   "id": "NAME/561",
   "jp": "ﾄﾝﾌｧﾝ",
-  "en": ""
+  "en": "Tonfa"
  },
  {
   "id": "NAME/562",
   "jp": "ギャンゴ",
-  "en": ""
+  "en": "Gango"
  },
  {
   "id": "NAME/563",
   "jp": "ガビオ",
-  "en": ""
+  "en": "Gabby"
  },
  {
   "id": "NAME/564",
   "jp": "ﾌﾞﾀｴﾓﾝ",
-  "en": ""
+  "en": "Pigemon"
  },
  {
   "id": "NAME/565",
   "jp": "バブーン",
-  "en": ""
+  "en": "Baboon"
  },
  {
   "id": "NAME/566",
   "jp": "ビット",
-  "en": ""
+  "en": "Bitty"
  },
  {
   "id": "NAME/567",
   "jp": "ブーバー",
-  "en": ""
+  "en": "Boober"
  },
  {
   "id": "NAME/568",
   "jp": "トンヌラ",
-  "en": ""
+  "en": "Tonnura"
  },
  {
   "id": "NAME/569",
   "jp": "トンズラ",
-  "en": ""
+  "en": "Hightail"
  },
  {
   "id": "NAME/570",
   "jp": "ギャメラ",
-  "en": ""
+  "en": "Gyamera"
  },
  {
   "id": "NAME/571",
   "jp": "ｷﾞｬﾘｸｿﾝ",
-  "en": ""
+  "en": "Garlicson"
  },
  {
   "id": "NAME/572",
   "jp": "ｽﾄﾗｯﾄ",
-  "en": ""
+  "en": "Strat"
  },
  {
   "id": "NAME/573",
   "jp": "ドーガ",
-  "en": ""
+  "en": "Doga"
  },
  {
   "id": "NAME/574",
   "jp": "ﾋﾞｭﾝﾋﾞｭﾝ",
-  "en": ""
+  "en": "Whoosh"
  },
  {
   "id": "NAME/575",
   "jp": "ブリリア",
-  "en": ""
+  "en": "Brillia"
  },
  {
   "id": "NAME/576",
   "jp": "バンブー",
-  "en": ""
+  "en": "Bamboo"
  },
  {
   "id": "NAME/577",
   "jp": "ｻﾘｭｰﾄ",
-  "en": ""
+  "en": "Salute"
  },
  {
   "id": "NAME/578",
   "jp": "ｷﾞｬｰｽｶ",
-  "en": ""
+  "en": "Shrieky"
  },
  {
   "id": "NAME/579",
   "jp": "バスパー",
-  "en": ""
+  "en": "Batsper"
  },
  {
   "id": "NAME/580",
   "jp": "ウオー",
-  "en": ""
+  "en": "Whoa"
  },
  {
   "id": "NAME/581",
   "jp": "ボインゴ",
-  "en": ""
+  "en": "Boingo"
  },
  {
   "id": "NAME/582",
   "jp": "トンブリ",
-  "en": ""
+  "en": "Porkbelly"
  },
  {
   "id": "NAME/583",
   "jp": "ギャオス",
-  "en": ""
+  "en": "Gyaos"
  },
  {
   "id": "NAME/584",
   "jp": "サオー",
-  "en": ""
+  "en": "Sowie"
  },
  {
   "id": "NAME/585",
   "jp": "キスミー",
-  "en": ""
+  "en": "Kiss Me"
  },
  {
   "id": "NAME/586",
   "jp": "シマヤン",
-  "en": ""
+  "en": "Stripes"
  },
  {
   "id": "NAME/587",
   "jp": "サシミン",
-  "en": ""
+  "en": "Sashimin"
  },
  {
   "id": "NAME/588",
   "jp": "イグロン",
-  "en": ""
+  "en": "Igron"
  },
  {
   "id": "NAME/589",
   "jp": "カーラ",
-  "en": ""
+  "en": "Carla"
  },
  {
   "id": "NAME/590",
   "jp": "並木",
-  "en": ""
+  "en": "Namiki"
  },
  {
   "id": "NAME/591",
   "jp": "サクラ",
-  "en": ""
+  "en": "Sakura"
  },
  {
   "id": "NAME/592",
   "jp": "森田",
-  "en": ""
+  "en": "Morita"
  },
  {
   "id": "NAME/593",
   "jp": "由紀子",
-  "en": ""
+  "en": "Yukiko"
  },
  {
   "id": "NAME/594",
   "jp": "悠美子",
-  "en": ""
+  "en": "Yumiko"
  },
  {
   "id": "NAME/595",
   "jp": "桂木",
-  "en": ""
+  "en": "",
+  "long": "Katsuragi"
  },
  {
   "id": "NAME/596",
   "jp": "琴西",
-  "en": ""
+  "en": "Kotonishi"
  },
  {
   "id": "NAME/597",
   "jp": "ぽうら",
-  "en": ""
+  "en": "Poura"
  },
  {
   "id": "NAME/598",
   "jp": "二階堂",
-  "en": ""
+  "en": "Nikaido"
  },
  {
   "id": "NAME/599",
   "jp": "るう",
-  "en": ""
+  "en": "Ru"
  },
  {
   "id": "NAME/600",
   "jp": "大島",
-  "en": ""
+  "en": "Oshima"
  },
  {
   "id": "NAME/601",
   "jp": "なぎさ",
-  "en": ""
+  "en": "Nagisa"
  },
  {
   "id": "NAME/602",
   "jp": "高飛",
-  "en": ""
+  "en": "Takatobi"
  },
  {
   "id": "NAME/603",
   "jp": "河ノ内",
-  "en": ""
+  "en": "",
+  "long": "Kawanouchi"
  },
  {
   "id": "NAME/604",
   "jp": "凛",
-  "en": ""
+  "en": "Rin"
  },
  {
   "id": "NAME/605",
   "jp": "竜美",
-  "en": ""
+  "en": "Tatsumi"
  },
  {
   "id": "NAME/606",
   "jp": "穂方",
-  "en": ""
+  "en": "Hokata"
  },
  {
   "id": "NAME/607",
   "jp": "英美",
-  "en": ""
+  "en": "Emi"
  },
  {
   "id": "NAME/608",
   "jp": "フォン",
-  "en": ""
+  "en": "Fon"
  },
  {
   "id": "NAME/609",
   "jp": "テン",
-  "en": ""
+  "en": "Ten"
  },
  {
   "id": "NAME/610",
   "jp": "まりも",
-  "en": ""
+  "en": "Marimo"
  },
  {
   "id": "NAME/611",
   "jp": "安藤",
-  "en": ""
+  "en": "Ando"
  },
  {
   "id": "NAME/612",
   "jp": "セフィカ",
-  "en": ""
+  "en": "Sefika"
  },
  {
   "id": "NAME/613",
   "jp": "アル",
-  "en": ""
+  "en": "Al"
  },
  {
   "id": "NAME/614",
   "jp": "ビーニャ",
-  "en": ""
+  "en": "Binya"
  },
  {
   "id": "NAME/615",
   "jp": "神楽坂",
-  "en": ""
+  "en": "",
+  "long": "Kagurazaka"
  },
  {
   "id": "NAME/616",
   "jp": "成亜",
-  "en": ""
+  "en": "Seia"
  },
  {
   "id": "NAME/617",
   "jp": "高垣",
-  "en": ""
+  "en": "Takagaki"
  },
  {
   "id": "NAME/618",
   "jp": "夕奈",
-  "en": ""
+  "en": "Yuna"
  },
  {
   "id": "NAME/619",
   "jp": "姫崎",
-  "en": ""
+  "en": "Himezaki"
  },
  {
   "id": "NAME/620",
   "jp": "綾乃",
-  "en": ""
+  "en": "Ayano"
  },
  {
   "id": "NAME/621",
   "jp": "五十嵐",
-  "en": ""
+  "en": "Igarashi"
  },
  {
   "id": "NAME/622",
   "jp": "咲子",
-  "en": ""
+  "en": "Sakiko"
  },
  {
   "id": "NAME/623",
   "jp": "浦賀",
-  "en": ""
+  "en": "Uraga"
  },
  {
   "id": "NAME/624",
   "jp": "聡美",
-  "en": ""
+  "en": "Satomi"
  },
  {
   "id": "NAME/625",
   "jp": "レイ",
-  "en": ""
+  "en": "Rei"
  },
  {
   "id": "NAME/626",
   "jp": "東雲",
-  "en": ""
+  "en": "",
+  "long": "Shinonome"
  },
  {
   "id": "NAME/627",
   "jp": "いりえ",
-  "en": ""
+  "en": "Irie"
  },
  {
   "id": "NAME/628",
   "jp": "糊田",
-  "en": ""
+  "en": "Norita"
  },
  {
   "id": "NAME/629",
   "jp": "まえ",
-  "en": ""
+  "en": "Mae"
  },
  {
   "id": "NAME/630",
   "jp": "葉波",
-  "en": ""
+  "en": "Hanami"
  },
  {
   "id": "NAME/631",
   "jp": "レイシア",
-  "en": ""
+  "en": "Reishia"
  },
  {
   "id": "NAME/632",
   "jp": "最上",
-  "en": ""
+  "en": "Mogami"
  },
  {
   "id": "NAME/633",
   "jp": "青葉",
-  "en": ""
+  "en": "Aoba"
  },
  {
   "id": "NAME/634",
   "jp": "本城",
-  "en": ""
+  "en": "Honjo"
  },
  {
   "id": "NAME/635",
   "jp": "まりあ",
-  "en": ""
+  "en": "Maria"
  },
  {
   "id": "NAME/636",
   "jp": "相馬",
-  "en": ""
+  "en": "Soma"
  },
  {
   "id": "NAME/637",
   "jp": "神童",
-  "en": ""
+  "en": "Shindo"
  },
  {
   "id": "NAME/638",
   "jp": "みすず",
-  "en": ""
+  "en": "Misuzu"
  },
  {
   "id": "NAME/639",
   "jp": "薫",
-  "en": ""
+  "en": "Kaoru"
  },
  {
   "id": "NAME/640",
   "jp": "神崎",
-  "en": ""
+  "en": "Kanzaki"
  },
  {
   "id": "NAME/641",
   "jp": "ブーブー",
-  "en": ""
+  "en": "Boo-Boo"
  },
  {
   "id": "NAME/642",
   "jp": "ｷﾞｮﾝｷﾞｮﾝ",
-  "en": ""
+  "en": "Zing Zing"
  },
  {
   "id": "NAME/643",
   "jp": "アイアイ",
-  "en": ""
+  "en": "Aye-Aye"
  },
  {
   "id": "NAME/644",
   "jp": "フーフー",
-  "en": ""
+  "en": "Huffy"
  },
  {
   "id": "NAME/645",
   "jp": "ウーウー",
-  "en": ""
+  "en": "Woo-Woo"
  },
  {
   "id": "NAME/646",
   "jp": "トビ太郎",
-  "en": ""
+  "en": "Flyboy"
  },
  {
   "id": "NAME/647",
   "jp": "ボンベイ",
-  "en": ""
+  "en": "Bombay"
  },
  {
   "id": "NAME/648",
   "jp": "ブタくん",
-  "en": ""
+  "en": "Mr. Pig"
  },
  {
   "id": "NAME/649",
   "jp": "シャケル",
-  "en": ""
+  "en": "Salmo"
  },
  {
   "id": "NAME/650",
   "jp": "アナゴン",
-  "en": ""
+  "en": "Eelgon"
  },
  {
   "id": "NAME/651",
   "jp": "ｷﾞｬﾚｯﾄ",
-  "en": ""
+  "en": "Garrett"
  },
  {
   "id": "NAME/652",
   "jp": "パンチ",
-  "en": ""
+  "en": "Punch"
  },
  {
   "id": "NAME/653",
   "jp": "ｷﾞｬﾙｿﾝ",
-  "en": ""
+  "en": "Garcon"
  },
  {
   "id": "NAME/654",
   "jp": "ゴブ",
-  "en": ""
+  "en": "Gob"
  },
  {
   "id": "NAME/655",
   "jp": "ビュート",
-  "en": ""
+  "en": "Beaut"
  },
  {
   "id": "NAME/656",
   "jp": "マグマグ",
-  "en": ""
+  "en": "Mug Mug"
  },
  {
   "id": "NAME/657",
   "jp": "ピータン",
-  "en": ""
+  "en": "Pidan"
  },
  {
   "id": "NAME/658",
   "jp": "ボウ",
-  "en": ""
+  "en": "Bo"
  },
  {
   "id": "NAME/659",
   "jp": "くいしん",
-  "en": ""
+  "en": "Glutton"
  },
  {
   "id": "NAME/660",
   "jp": "ビーコン",
-  "en": ""
+  "en": "Beacon"
  },
  {
   "id": "NAME/661",
   "jp": "ゴッツ",
-  "en": ""
+  "en": "Goliath"
  },
  {
   "id": "NAME/662",
   "jp": "北島",
-  "en": ""
+  "en": "Kitajima"
  },
  {
   "id": "NAME/663",
   "jp": "東海林",
-  "en": ""
+  "en": "Shoji"
  },
  {
   "id": "NAME/664",
   "jp": "美咲",
-  "en": ""
+  "en": "Misaki"
  },
  {
   "id": "NAME/665",
   "jp": "春日野",
-  "en": ""
+  "en": "",
+  "long": "Kasugano"
  },
  {
   "id": "NAME/666",
   "jp": "つぼみ",
-  "en": ""
+  "en": "Tsubomi"
  },
  {
   "id": "NAME/667",
   "jp": "杉田",
-  "en": ""
+  "en": "Sugita"
  },
  {
   "id": "NAME/668",
   "jp": "なるみ",
-  "en": ""
+  "en": "Narumi"
  },
  {
   "id": "NAME/669",
   "jp": "御手洗",
-  "en": ""
+  "en": "Mitarai"
  },
  {
   "id": "NAME/670",
   "jp": "ウララ",
-  "en": ""
+  "en": "Urara"
  },
  {
   "id": "NAME/671",
   "jp": "ななせ",
-  "en": ""
+  "en": "Nanase"
  },
  {
   "id": "NAME/672",
   "jp": "的場",
-  "en": ""
+  "en": "Matoba"
  },
  {
   "id": "NAME/673",
   "jp": "いずみ",
-  "en": ""
+  "en": "Izumi"
  },
  {
   "id": "NAME/674",
   "jp": "十六夜",
-  "en": ""
+  "en": "Izayoi"
  },
  {
   "id": "NAME/675",
   "jp": "舞璃亜",
-  "en": ""
+  "en": "Maria"
  },
  {
   "id": "NAME/676",
   "jp": "上原",
-  "en": ""
+  "en": "Uehara"
  },
  {
   "id": "NAME/677",
   "jp": "よよぎ",
-  "en": ""
+  "en": "Yoyogi"
  },
  {
   "id": "NAME/678",
   "jp": "さし美",
-  "en": ""
+  "en": "Sashimi"
  },
  {
   "id": "NAME/679",
   "jp": "栗見",
-  "en": ""
+  "en": "Kurimi"
  },
  {
   "id": "NAME/680",
   "jp": "真美",
-  "en": ""
+  "en": "Mami"
  },
  {
   "id": "NAME/681",
   "jp": "梅島",
-  "en": ""
+  "en": "Umejima"
  },
  {
   "id": "NAME/682",
   "jp": "みのり",
-  "en": ""
+  "en": "Minori"
  },
  {
   "id": "NAME/683",
   "jp": "東",
-  "en": ""
+  "en": "Azuma"
  },
  {
   "id": "NAME/684",
   "jp": "ひばり",
-  "en": ""
+  "en": "Hibari"
  },
  {
   "id": "NAME/685",
   "jp": "立川",
-  "en": ""
+  "en": "",
+  "long": "Tachikawa"
  },
  {
   "id": "NAME/686",
   "jp": "みなみ",
-  "en": ""
+  "en": "Minami"
  },
  {
   "id": "NAME/687",
   "jp": "則夫",
-  "en": ""
+  "en": "Norio"
  },
  {
   "id": "NAME/688",
   "jp": "ニャン",
-  "en": ""
+  "en": "Meow"
  },
  {
   "id": "NAME/689",
   "jp": "トンデン",
-  "en": ""
+  "en": "Hamhock"
  },
  {
   "id": "NAME/690",
   "jp": "ﾄﾝｷｭｰ",
-  "en": ""
+  "en": "Oinkyou"
  },
  {
   "id": "NAME/691",
   "jp": "ウガンダ",
-  "en": ""
+  "en": "Uganda"
  },
  {
   "id": "NAME/692",
   "jp": "ドンベー",
-  "en": ""
+  "en": "Dumpy"
  },
  {
   "id": "NAME/693",
   "jp": "ゴリポン",
-  "en": ""
+  "en": "Gorilly"
  },
  {
   "id": "NAME/694",
   "jp": "ガリガリ",
-  "en": ""
+  "en": "Skinny"
  },
  {
   "id": "NAME/695",

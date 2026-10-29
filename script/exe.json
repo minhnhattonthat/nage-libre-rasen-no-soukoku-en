@@ -2,7 +2,7 @@
  {
   "id": "EXE/00BE8",
   "jp": "%hたいき　　",
-  "en": "",
+  "en": "Wait",
   "max": 15,
   "refs": [
    "lui:8002E8C4"
@@ -11,7 +11,7 @@
  {
   "id": "EXE/00BF8",
   "jp": "こうげき　",
-  "en": "",
+  "en": "Attack",
   "max": 11,
   "refs": [
    "lui:8002E8FC"
@@ -20,7 +20,7 @@
  {
   "id": "EXE/00C04",
   "jp": "コビーロ　",
-  "en": "",
+  "en": "Kobiro",
   "max": 11,
   "refs": [
    "lui:8002E95C"
@@ -29,7 +29,7 @@
  {
   "id": "EXE/00C10",
   "jp": "おやつ　　",
-  "en": "",
+  "en": "Snack",
   "max": 11,
   "refs": [
    "lui:8002E990"
@@ -38,7 +38,7 @@
  {
   "id": "EXE/00C1C",
   "jp": "とくしゅ　",
-  "en": "",
+  "en": "Special",
   "max": 11,
   "refs": [
    "lui:8002E9C8"
@@ -47,7 +47,7 @@
  {
   "id": "EXE/00C28",
   "jp": "アイテム　",
-  "en": "",
+  "en": "Item",
   "max": 11,
   "refs": [
    "lui:8002EA1C"
@@ -56,7 +56,7 @@
  {
   "id": "EXE/00C34",
   "jp": "そのた　　",
-  "en": "",
+  "en": "Other",
   "max": 11,
   "refs": [
    "lui:8002EA30"
@@ -65,7 +65,7 @@
  {
   "id": "EXE/00C40",
   "jp": "%hねむる　　",
-  "en": "",
+  "en": "Sleep",
   "max": 15,
   "refs": [
    "lui:8002EAE4"
@@ -74,7 +74,7 @@
  {
   "id": "EXE/00C50",
   "jp": "でんわ　　",
-  "en": "",
+  "en": "Phone",
   "max": 11,
   "refs": [
    "lui:8002EB04"
@@ -83,7 +83,7 @@
  {
   "id": "EXE/00C5C",
   "jp": "きがえ　　",
-  "en": "",
+  "en": "Dress",
   "max": 11,
   "refs": [
    "lui:8002EB40"
@@ -92,7 +92,7 @@
  {
   "id": "EXE/00C68",
   "jp": "ステータスセーブ",
-  "en": "",
+  "en": "Status\nSave",
   "max": 19,
   "refs": [
    "lui:8002EB60"
@@ -101,7 +101,7 @@
  {
   "id": "EXE/013A0",
   "jp": "%hスーパー%z生徒",
-  "en": "",
+  "en": "Super Student",
   "max": 19,
   "refs": [
    "lui:8003BB68"
@@ -110,7 +110,7 @@
  {
   "id": "EXE/013B4",
   "jp": "一般生徒",
-  "en": "",
+  "en": "Regular Student",
   "max": 11,
   "refs": [
    "lui:8003BB78"
@@ -119,7 +119,7 @@
  {
   "id": "EXE/013C0",
   "jp": "%hバレーボール%z部",
-  "en": "",
+  "en": "Volleyball Club",
   "max": 19,
   "refs": [
    "lui:8003BBB8",
@@ -129,7 +129,7 @@
  {
   "id": "EXE/013D4",
   "jp": "軽音楽部",
-  "en": "",
+  "en": "Light Music Club",
   "max": 11,
   "refs": [
    "lui:8003BBF8",
@@ -143,12 +143,13 @@
   "max": 11,
   "refs": [
    "lui:8003BC48"
-  ]
+  ],
+  "long": "Student Council President"
  },
  {
   "id": "EXE/013EC",
   "jp": "ドラゴン",
-  "en": "",
+  "en": "Dragon",
   "max": 11,
   "refs": [
    "lui:8003BC58"
@@ -161,12 +162,13 @@
   "max": 19,
   "refs": [
    "lui:8003BCAC"
-  ]
+  ],
+  "long": "Super Go-Home Club"
  },
  {
   "id": "EXE/0140C",
   "jp": "南寿高校",
-  "en": "",
+  "en": "Nanju High",
   "max": 11,
   "refs": [
    "lui:8003BD94"
@@ -175,7 +177,7 @@
  {
   "id": "EXE/01418",
   "jp": "梅林学園",
-  "en": "",
+  "en": "Bairin Academy",
   "max": 11,
   "refs": [
    "lui:8003BDA4"
@@ -184,7 +186,7 @@
  {
   "id": "EXE/01424",
   "jp": "桜花高校",
-  "en": "",
+  "en": "Oka High",
   "max": 11,
   "refs": [
    "lui:8003BDB4"
@@ -193,7 +195,7 @@
  {
   "id": "EXE/01430",
   "jp": "大堂高校",
-  "en": "",
+  "en": "Daido High",
   "max": 11,
   "refs": [
    "lui:8003BDC4"
@@ -202,7 +204,7 @@
  {
   "id": "EXE/0143C",
   "jp": "英光学園",
-  "en": "",
+  "en": "Eiko Academy",
   "max": 11,
   "refs": [
    "lui:8003BDD4"
@@ -211,7 +213,7 @@
  {
   "id": "EXE/01448",
   "jp": "モンスター",
-  "en": "",
+  "en": "Monster",
   "max": 11,
   "refs": [
    "lui:8003BDE4"
@@ -224,12 +226,13 @@
   "max": 19,
   "refs": [
    "lui:8004BA44"
-  ]
+  ],
+  "long": "'s attack + birthstone bonus!"
  },
  {
   "id": "EXE/01B80",
   "jp": "のスペシャル攻撃",
-  "en": "",
+  "en": "'s Special Attack!",
   "max": 19,
   "refs": [
    "lui:8004BA68"
@@ -238,7 +241,7 @@
  {
   "id": "EXE/01B94",
   "jp": "\"を唱えた",
-  "en": "",
+  "en": "\"!",
   "max": 11,
   "refs": [
    "lui:8004BB30"
@@ -247,7 +250,7 @@
  {
   "id": "EXE/01BA0",
   "jp": "　ランダマカード",
-  "en": "",
+  "en": "'s Randoma Card!",
   "max": 19,
   "refs": [
    "lui:8004BB5C"
@@ -260,12 +263,13 @@
   "max": 35,
   "refs": [
    "lui:8004BB70"
-  ]
+  ],
+  "long": "'s Randoma Card + birthstone bonus!"
  },
  {
   "id": "EXE/01BD8",
   "jp": "は防御した",
-  "en": "",
+  "en": " defended.",
   "max": 11,
   "refs": [
    "lui:8004BB94"
@@ -274,7 +278,7 @@
  {
   "id": "EXE/01BE4",
   "jp": "は逃げ出した・・・",
-  "en": "",
+  "en": " ran away...",
   "max": 19,
   "refs": [
    "lui:8004BBB8"
@@ -283,7 +287,7 @@
  {
   "id": "EXE/01BF8",
   "jp": "\"%zの効果",
-  "en": "",
+  "en": "\" takes effect!",
   "max": 11,
   "refs": [
    "lui:8004BC08"
@@ -292,7 +296,7 @@
  {
   "id": "EXE/01C04",
   "jp": "の特殊技",
-  "en": "",
+  "en": "'s Special Skill!",
   "max": 11,
   "refs": [
    "lui:8004BC2C"
@@ -301,7 +305,7 @@
  {
   "id": "EXE/01C10",
   "jp": "通常攻撃",
-  "en": "",
+  "en": "Normal attack",
   "max": 11,
   "refs": [
    "lui:8004BC6C"
@@ -314,12 +318,13 @@
   "max": 19,
   "refs": [
    "lui:8004BC80"
-  ]
+  ],
+  "long": "Attack + birthstone bonus!"
  },
  {
   "id": "EXE/01C30",
   "jp": "スペシャル攻撃",
-  "en": "",
+  "en": "Special Attack!",
   "max": 15,
   "refs": [
    "lui:8004BC94"
@@ -328,7 +333,7 @@
  {
   "id": "EXE/01C40",
   "jp": "ランダマカード",
-  "en": "",
+  "en": "Randoma Card!",
   "max": 15,
   "refs": [
    "lui:8004BD48"
@@ -341,12 +346,13 @@
   "max": 31,
   "refs": [
    "lui:8004BD5C"
-  ]
+  ],
+  "long": "Randoma Card + birthstone bonus!"
  },
  {
   "id": "EXE/01C70",
   "jp": "防御した",
-  "en": "",
+  "en": "Defended.",
   "max": 11,
   "refs": [
    "lui:8004BD80"
@@ -355,7 +361,7 @@
  {
   "id": "EXE/01C7C",
   "jp": "逃げ出した・・・",
-  "en": "",
+  "en": "Ran away...",
   "max": 19,
   "refs": [
    "lui:8004BD94"
@@ -364,7 +370,7 @@
  {
   "id": "EXE/01C90",
   "jp": "成功した",
-  "en": "",
+  "en": "Success!",
   "max": 11,
   "refs": [
    "lui:8004BE74"
@@ -373,7 +379,7 @@
  {
   "id": "EXE/01C9C",
   "jp": "逃げられない",
-  "en": "",
+  "en": "Can't escape!",
   "max": 15,
   "refs": [
    "lui:8004BE64"
@@ -382,7 +388,7 @@
  {
   "id": "EXE/01CAC",
   "jp": "逃げられた",
-  "en": "",
+  "en": "Got away!",
   "max": 11,
   "refs": [
    "lui:8004BE9C"
@@ -391,7 +397,7 @@
  {
   "id": "EXE/01CB8",
   "jp": "逃がさなかった",
-  "en": "",
+  "en": "Blocked the escape!",
   "max": 15,
   "refs": [
    "lui:8004BE8C"
@@ -400,7 +406,7 @@
  {
   "id": "EXE/01CC8",
   "jp": "は逃げだした",
-  "en": "",
+  "en": " fled!",
   "max": 15,
   "refs": [
    "lui:8004BF0C",
@@ -410,7 +416,7 @@
  {
   "id": "EXE/01CD8",
   "jp": "何も起こらなかった",
-  "en": "",
+  "en": "Nothing happened.",
   "max": 19,
   "refs": [
    "lui:8004BF50",
@@ -420,7 +426,7 @@
  {
   "id": "EXE/01CEC",
   "jp": "は\n　やられてしまった\n",
-  "en": "",
+  "en": " was\n knocked out...\n",
   "max": 23,
   "refs": [
    "lui:8004C190"
@@ -429,7 +435,7 @@
  {
   "id": "EXE/01D04",
   "jp": "を\n　　やっつけた！！",
-  "en": "",
+  "en": " was\n  defeated!!",
   "max": 23,
   "refs": [
    "lui:8004C228"
@@ -438,7 +444,7 @@
  {
   "id": "EXE/01D1C",
   "jp": "を\n　　手に入れた",
-  "en": "",
+  "en": "\n  obtained!",
   "max": 19,
   "refs": [
    "lui:8004C27C"
@@ -447,7 +453,7 @@
  {
   "id": "EXE/01E6C",
   "jp": "だれを起こす？",
-  "en": "",
+  "en": "Wake who up?",
   "max": 15,
   "refs": [
    "lui:8005580C"
@@ -456,7 +462,7 @@
  {
   "id": "EXE/01E7C",
   "jp": "どの部活にする？",
-  "en": "",
+  "en": "Which club?",
   "max": 19,
   "refs": [
    "lui:80055F84"
@@ -475,7 +481,7 @@
  {
   "id": "EXE/01EB0",
   "jp": "ステータス",
-  "en": "",
+  "en": "Status",
   "max": 11,
   "refs": [
    "lui:80056B5C"
@@ -484,7 +490,7 @@
  {
   "id": "EXE/01EBC",
   "jp": "移動エリア",
-  "en": "",
+  "en": "Move Area",
   "max": 11,
   "refs": [
    "lui:800571FC"
@@ -493,7 +499,7 @@
  {
   "id": "EXE/01EC8",
   "jp": "%p攻撃エリア",
-  "en": "",
+  "en": "%pAttack Area",
   "max": 15,
   "refs": [
    "lui:800572A4"
@@ -502,7 +508,7 @@
  {
   "id": "EXE/01ED8",
   "jp": "　カードチェック中　",
-  "en": "",
+  "en": "Checking card...",
   "max": 23,
   "refs": [
    "lui:80057460"
@@ -511,7 +517,7 @@
  {
   "id": "EXE/01EF0",
   "jp": "データをセーブしてもいいかな ",
-  "en": "",
+  "en": "Is it okay to save?",
   "max": 31,
   "refs": [
    "lui:80057574"
@@ -520,7 +526,7 @@
  {
   "id": "EXE/01F10",
   "jp": " カードがささっていません　メモリーカードをメモリーカード差込口１に入れてください ",
-  "en": "",
+  "en": "No card is inserted. Please insert a Memory Card into Memory Card slot 1.",
   "max": 83,
   "refs": [
    "lui:800575A4"
@@ -529,7 +535,7 @@
  {
   "id": "EXE/01F64",
   "jp": " カードに異常があります　",
-  "en": "",
+  "en": "There's a problem with the card.",
   "max": 27,
   "refs": [
    "lui:800575D4",
@@ -539,7 +545,7 @@
  {
   "id": "EXE/01F80",
   "jp": " このカードはフォーマットされていません。フォーマットしますか ？",
-  "en": "",
+  "en": "This card isn't formatted. Format it?",
   "max": 67,
   "refs": [
    "lui:80057604"
@@ -548,7 +554,7 @@
  {
   "id": "EXE/01FC4",
   "jp": " ナージュリーブルのデータがありません。\n　新たに作りますか ？",
-  "en": "",
+  "en": "There's no Nage Libre data.\nCreate new data?",
   "max": 63,
   "refs": [
    "lui:80057634"
@@ -557,7 +563,7 @@
  {
   "id": "EXE/02004",
   "jp": " カードに空きがありません　２ブロック空きのあるカードを入れてください",
-  "en": "",
+  "en": "The card is full. Please insert a card with 2 free blocks.",
   "max": 71,
   "refs": [
    "lui:80057674"
@@ -566,7 +572,7 @@
  {
   "id": "EXE/0204C",
   "jp": " カードがささっていません",
-  "en": "",
+  "en": "No card is inserted.",
   "max": 27,
   "refs": [
    "lui:80057700"
@@ -575,7 +581,7 @@
  {
   "id": "EXE/02068",
   "jp": " カードが変わっています",
-  "en": "",
+  "en": "The card has been changed.",
   "max": 23,
   "refs": [
    "lui:80057728"
@@ -584,7 +590,7 @@
  {
   "id": "EXE/02080",
   "jp": "はい　　いいえ",
-  "en": "",
+  "en": "Yes           No",
   "max": 15,
   "refs": [
    "lui:800577A0"
@@ -593,7 +599,7 @@
  {
   "id": "EXE/02090",
   "jp": "　データセーブ中　",
-  "en": "",
+  "en": "Saving data...",
   "max": 19,
   "refs": [
    "lui:800578CC"
@@ -602,7 +608,7 @@
  {
   "id": "EXE/020A4",
   "jp": "\n　　　 部活ちぇ～んじ",
-  "en": "",
+  "en": "\n   Club cha~nge!",
   "max": 23,
   "refs": [
    "lui:80057C60"
@@ -611,7 +617,7 @@
  {
   "id": "EXE/020BC",
   "jp": "は\n\n　　　",
-  "en": "",
+  "en": ":\n\n  ",
   "max": 11,
   "refs": [
    "lui:80057E60"
@@ -620,7 +626,7 @@
  {
   "id": "EXE/020C8",
   "jp": "を退部して\n　　　　",
-  "en": "",
+  "en": ": quit\n  ",
   "max": 19,
   "refs": [
    "lui:80057E8C"
@@ -629,7 +635,7 @@
  {
   "id": "EXE/020DC",
   "jp": "に入部した\n",
-  "en": "",
+  "en": ": joined!\n",
   "max": 11,
   "refs": [
    "lui:80057EB8"
@@ -638,7 +644,7 @@
  {
   "id": "EXE/020E8",
   "jp": "をなめた\n",
-  "en": "",
+  "en": " -- licked!\n",
   "max": 11,
   "refs": [
    "lui:80058FC4"
@@ -647,7 +653,7 @@
  {
   "id": "EXE/020F4",
   "jp": "をなめて\n　",
-  "en": "",
+  "en": " -- licked,\n ",
   "max": 11,
   "refs": [
    "lui:80059094"
@@ -656,7 +662,7 @@
  {
   "id": "EXE/02100",
   "jp": "回復した\n",
-  "en": "",
+  "en": " HP restored.\n",
   "max": 11,
   "refs": [
    "lui:800590C4",
@@ -666,7 +672,7 @@
  {
   "id": "EXE/0210C",
   "jp": "　もう食べられない",
-  "en": "",
+  "en": " I can't eat\n any more.",
   "max": 19,
   "refs": [
    "lui:80059144",
@@ -676,7 +682,7 @@
  {
   "id": "EXE/02120",
   "jp": "　何かものたりない",
-  "en": "",
+  "en": " Something's\n missing...",
   "max": 19,
   "refs": [
    "lui:8005918C",
@@ -686,7 +692,7 @@
  {
   "id": "EXE/02134",
   "jp": "う～ん、\n",
-  "en": "",
+  "en": "Mmm,\n",
   "max": 11,
   "refs": [
    "lui:800591A4",
@@ -696,7 +702,7 @@
  {
   "id": "EXE/02140",
   "jp": "　たしかなまんぞく",
-  "en": "",
+  "en": " so satisfying!",
   "max": 19,
   "refs": [
    "lui:800591BC",
@@ -706,7 +712,7 @@
  {
   "id": "EXE/02154",
   "jp": "を食べた\n",
-  "en": "",
+  "en": " -- eaten!\n",
   "max": 11,
   "refs": [
    "lui:800592A0"
@@ -715,7 +721,7 @@
  {
   "id": "EXE/02160",
   "jp": "をたべて\n　",
-  "en": "",
+  "en": " -- eaten,\n ",
   "max": 11,
   "refs": [
    "lui:80059370"
@@ -724,7 +730,7 @@
  {
   "id": "EXE/0216C",
   "jp": "を使った。\n",
-  "en": "",
+  "en": " -- used.\n",
   "max": 11,
   "refs": [
    "lui:8005957C"
@@ -733,7 +739,7 @@
  {
   "id": "EXE/02178",
   "jp": "を使って\n",
-  "en": "",
+  "en": " -- used,\n",
   "max": 11,
   "refs": [
    "lui:800596B8"
@@ -742,7 +748,7 @@
  {
   "id": "EXE/02184",
   "jp": "ＡＴが\n　",
-  "en": "",
+  "en": "AT rose by\n ",
   "max": 11,
   "refs": [
    "lui:800596F4"
@@ -751,7 +757,7 @@
  {
   "id": "EXE/02190",
   "jp": "ＭＴが\n　",
-  "en": "",
+  "en": "MT rose by\n ",
   "max": 11,
   "refs": [
    "lui:8005970C"
@@ -760,7 +766,7 @@
  {
   "id": "EXE/0219C",
   "jp": "ＤＦが\n　",
-  "en": "",
+  "en": "DF rose by\n ",
   "max": 11,
   "refs": [
    "lui:80059724"
@@ -769,7 +775,7 @@
  {
   "id": "EXE/021A8",
   "jp": "ＡＧが\n　",
-  "en": "",
+  "en": "AG rose by\n ",
   "max": 11,
   "refs": [
    "lui:8005973C"
@@ -778,7 +784,7 @@
  {
   "id": "EXE/021B4",
   "jp": "全てのステータスが\n　",
-  "en": "",
+  "en": "All stats rose by\n ",
   "max": 23,
   "refs": [
    "lui:80059754"
@@ -787,7 +793,7 @@
  {
   "id": "EXE/021CC",
   "jp": "ＵＰした\n",
-  "en": "",
+  "en": "!\n",
   "max": 11,
   "refs": [
    "lui:80059784"
@@ -805,7 +811,7 @@
  {
   "id": "EXE/02458",
   "jp": "は\nステータスが上がらなかった。\n　次回はがんばってね！！",
-  "en": "",
+  "en": "'s stats didn't go up.\n Better luck next time!!",
   "max": 59,
   "refs": [
    "lui:8005FE54"
@@ -814,7 +820,7 @@
  {
   "id": "EXE/02494",
   "jp": "はステータスがＵＰ！！\n",
-  "en": "",
+  "en": "'s stats went UP!!\n",
   "max": 23,
   "refs": [
    "lui:8005FE7C"
@@ -823,7 +829,7 @@
  {
   "id": "EXE/024AC",
   "jp": "はレベル",
-  "en": "",
+  "en": " reached Level ",
   "max": 11,
   "refs": [
    "lui:8005FE9C"
@@ -832,7 +838,7 @@
  {
   "id": "EXE/024B8",
   "jp": "になった！！\n",
-  "en": "",
+  "en": "!!\n",
   "max": 15,
   "refs": [
    "lui:8005FECC"
@@ -841,7 +847,7 @@
  {
   "id": "EXE/024C8",
   "jp": " 赤城  杏",
-  "en": "",
+  "en": "Ann Akagi",
   "max": 11,
   "refs": [
    "lui:80068A34"
@@ -850,7 +856,7 @@
  {
   "id": "EXE/024D4",
   "jp": " 森野  樹",
-  "en": "",
+  "en": "Itsuki Morino",
   "max": 11,
   "refs": [
    "lui:80068A48"
@@ -863,12 +869,13 @@
   "max": 11,
   "refs": [
    "lui:80068A5C"
-  ]
+  ],
+  "long": "Makoto Matsunaga"
  },
  {
   "id": "EXE/024EC",
   "jp": " 風間  忍",
-  "en": "",
+  "en": "Shinobu Kazama",
   "max": 11,
   "refs": [
    "lui:80068A70"
@@ -877,7 +884,7 @@
  {
   "id": "EXE/024F8",
   "jp": " 筑紫　澪",
-  "en": "",
+  "en": "Mio Tsukushi",
   "max": 11,
   "refs": [
    "lui:80068A84"
@@ -886,7 +893,7 @@
  {
   "id": "EXE/02510",
   "jp": "う～ん・・・",
-  "en": "",
+  "en": "Hmm...",
   "max": 15,
   "refs": [
    "lui:800694D4"
@@ -895,7 +902,7 @@
  {
   "id": "EXE/02520",
   "jp": "にあうかなぁ？",
-  "en": "",
+  "en": "Does it suit me?",
   "max": 15,
   "refs": [
    "lui:800694F0"
@@ -904,7 +911,7 @@
  {
   "id": "EXE/02530",
   "jp": "なかなかいい感じね。",
-  "en": "",
+  "en": "Pretty nice, huh.",
   "max": 23,
   "refs": [
    "lui:8006950C"
@@ -913,7 +920,7 @@
  {
   "id": "EXE/02548",
   "jp": "またこの服着るの？",
-  "en": "",
+  "en": "This outfit again?",
   "max": 19,
   "refs": [
    "lui:80069538"
@@ -922,7 +929,7 @@
  {
   "id": "EXE/0255C",
   "jp": "どう、似合うでしょ。\n",
-  "en": "",
+  "en": "Well? Looks good on me, right?\n",
   "max": 23,
   "refs": [
    "lui:8006955C"
@@ -931,7 +938,7 @@
  {
   "id": "EXE/02574",
   "jp": "　”%hすごいビタミン%z”を手に入れた",
-  "en": "",
+  "en": "Got the \"Super Vitamin\".",
   "max": 39,
   "refs": [
    "lui:800695A0"
@@ -940,7 +947,7 @@
  {
   "id": "EXE/0259C",
   "jp": "　”%hビタミンＤＦ．Ｌ%z”を手に入れた",
-  "en": "",
+  "en": "Got the \"Vitamin DF-L\".",
   "max": 39,
   "refs": [
    "lui:800695BC"
@@ -949,7 +956,7 @@
  {
   "id": "EXE/025C4",
   "jp": "　”%hビタミンＡＧ．Ｌ%z”を手に入れた",
-  "en": "",
+  "en": "Got the \"Vitamin AG-L\".",
   "max": 39,
   "refs": [
    "lui:800695D8"
@@ -958,7 +965,7 @@
  {
   "id": "EXE/025EC",
   "jp": "　”%hビタミンＭＴ．Ｌ%z”を手に入れた",
-  "en": "",
+  "en": "Got the \"Vitamin MT-L\".",
   "max": 39,
   "refs": [
    "lui:800695F4"
@@ -967,7 +974,7 @@
  {
   "id": "EXE/02614",
   "jp": "　”%hビタミンＡＴ．Ｌ%z”を手に入れた",
-  "en": "",
+  "en": "Got the \"Vitamin AT-L\".",
   "max": 39,
   "refs": [
    "lui:80069610"
@@ -976,7 +983,7 @@
  {
   "id": "EXE/0263C",
   "jp": "　”%hビタミンＡＧ．Ｓ%z”を手に入れた",
-  "en": "",
+  "en": "Got the \"Vitamin AG-S\".",
   "max": 39,
   "refs": [
    "lui:8006962C"
@@ -985,7 +992,7 @@
  {
   "id": "EXE/02664",
   "jp": "　”%hビタミンＡＴ．Ｓ%z”を手に入れた",
-  "en": "",
+  "en": "Got the \"Vitamin AT-S\".",
   "max": 39,
   "refs": [
    "lui:80069648"
@@ -994,7 +1001,7 @@
  {
   "id": "EXE/0268C",
   "jp": "　”%hＭポテチ詰め合わせ%z”\n　　　%h（Ｍポテチ×５）%zを手に入れた",
-  "en": "",
+  "en": "Got the \"M Chips Pack\"\n(M Chips x5).",
   "max": 67,
   "refs": [
    "lui:80069664"
@@ -1003,7 +1010,7 @@
  {
   "id": "EXE/026D0",
   "jp": "　”%hＭあめだま詰め合わせ%z”\n　　　%h（Ｍあめだま×５）%zを手に入れた",
-  "en": "",
+  "en": "Got the \"M Candy Pack\"\n(M Candy x5).",
   "max": 71,
   "refs": [
    "lui:800696A0"
@@ -1012,7 +1019,7 @@
  {
   "id": "EXE/02718",
   "jp": "　”%hチューボム詰め合わせ%z”\n　　　%h（チューボム×５）%zを手に入れた",
-  "en": "",
+  "en": "Got the \"Medium Bomb Pack\"\n(Medium Bomb x5).",
   "max": 71,
   "refs": [
    "lui:800696DC"
@@ -1021,7 +1028,7 @@
  {
   "id": "EXE/02760",
   "jp": "\n\n\n\n　メモリーカードチェック中",
-  "en": "",
+  "en": "\n\n\n\n Checking Memory Card...",
   "max": 31,
   "refs": [
    "lui:8006AA3C",
@@ -1032,7 +1039,7 @@
  {
   "id": "EXE/02780",
   "jp": " カードがささっていません　メモリーカードをメモリーカード差込口１に入れてください ",
-  "en": "",
+  "en": "No card is inserted. Please insert a Memory Card into Memory Card slot 1.",
   "max": 83,
   "refs": [
    "lui:8006ABB4",
@@ -1042,7 +1049,7 @@
  {
   "id": "EXE/027D4",
   "jp": " カードに異常があります　",
-  "en": "",
+  "en": "There's a problem with the card.",
   "max": 27,
   "refs": [
    "lui:8006ABDC"
@@ -1051,7 +1058,7 @@
  {
   "id": "EXE/027F0",
   "jp": " \nこのカードはフォーマットされていません。\n　　フォーマットしますか ",
-  "en": "",
+  "en": "\nThis card isn't formatted.\n Format it?",
   "max": 71,
   "refs": [
    "lui:8006AC04"
@@ -1060,7 +1067,7 @@
  {
   "id": "EXE/02838",
   "jp": "\nナージュリーブルのデータがありません。\n　　新たに作りますか ？",
-  "en": "",
+  "en": "\nThere's no Nage Libre data.\n Create new data?",
   "max": 63,
   "refs": [
    "lui:8006AC2C"
@@ -1069,7 +1076,7 @@
  {
   "id": "EXE/02878",
   "jp": " カードに空きがありません　２ブロック空きのあるカードを入れてください",
-  "en": "",
+  "en": "The card is full. Please insert a card with 2 free blocks.",
   "max": 71,
   "refs": [
    "lui:8006AC64"
@@ -1078,7 +1085,7 @@
  {
   "id": "EXE/028C0",
   "jp": "はい　　いいえ",
-  "en": "",
+  "en": "Yes           No",
   "max": 15,
   "refs": [
    "lui:8006ACAC"
@@ -1087,7 +1094,7 @@
  {
   "id": "EXE/028D0",
   "jp": "ボタンを押して下さい",
-  "en": "",
+  "en": "Please press a button.",
   "max": 23,
   "refs": [
    "lui:8006AD08"
@@ -1096,7 +1103,7 @@
  {
   "id": "EXE/028E8",
   "jp": "\n\n\n\n　カードがささっていません",
-  "en": "",
+  "en": "\n\n\n\n No card is inserted.",
   "max": 31,
   "refs": [
    "lui:8006AE44",
@@ -1106,7 +1113,7 @@
  {
   "id": "EXE/02908",
   "jp": "\n\n\n\n　　カードが変わっています",
-  "en": "",
+  "en": "\n\n\n\n The card has been changed.",
   "max": 31,
   "refs": [
    "lui:8006AE64",
@@ -1116,7 +1123,7 @@
  {
   "id": "EXE/02928",
   "jp": "\n\n\n\n　カードに異常があります　",
-  "en": "",
+  "en": "\n\n\n\n There's a problem with the card.",
   "max": 31,
   "refs": [
    "lui:8006AE84"
@@ -1125,7 +1132,7 @@
  {
   "id": "EXE/0295C",
   "jp": "ふぁいる",
-  "en": "",
+  "en": "File ",
   "max": 11,
   "refs": [
    "lui:8006B5B8",
@@ -1135,7 +1142,7 @@
  {
   "id": "EXE/02968",
   "jp": "\n\n\n　ここでセーブをすると\n　最後のステータスではじめ\n　から遊ぶことが出来ます",
-  "en": "",
+  "en": "\n\n\n If you save here, you can\n start over from the beginning\n with your final stats.",
   "max": 79,
   "refs": [
    "lui:8006B8B4"
@@ -1144,7 +1151,7 @@
  {
   "id": "EXE/029B8",
   "jp": "\n\n\n\n　　カードに異常があります　",
-  "en": "",
+  "en": "\n\n\n\n There's a problem with the card.",
   "max": 35,
   "refs": [
    "lui:8006BAB4",
@@ -1154,7 +1161,7 @@
  {
   "id": "EXE/029DC",
   "jp": "\nこのカードはフォーマットされていません。\n　　フォーマットしますか ",
-  "en": "",
+  "en": "\nThis card isn't formatted.\n Format it?",
   "max": 67,
   "refs": [
    "lui:8006BADC"
@@ -1163,7 +1170,7 @@
  {
   "id": "EXE/02A20",
   "jp": "\nナージュリーブルのデータがありません。\n　　　新たに作りますか ？",
-  "en": "",
+  "en": "\nThere's no Nage Libre data.\n Create new data?",
   "max": 67,
   "refs": [
    "lui:8006BB04"
@@ -1172,7 +1179,7 @@
  {
   "id": "EXE/02A64",
   "jp": "\nカードに空きがありません、２ブロック空きのあるカードを入れてください",
-  "en": "",
+  "en": "\nThe card is full. Please insert a card with 2 free blocks.",
   "max": 71,
   "refs": [
    "lui:8006BB3C"
@@ -1181,7 +1188,7 @@
  {
   "id": "EXE/02AAC",
   "jp": "　このデータの上に\n　　　　　書いてもいいかな？",
-  "en": "",
+  "en": " Okay to save over\n this data?",
   "max": 47,
   "refs": [
    "lui:8006BC54"
@@ -1190,7 +1197,7 @@
  {
   "id": "EXE/02ADC",
   "jp": "　このデータで\n　　　　　はじめますか？",
-  "en": "",
+  "en": " Start with\n this data?",
   "max": 39,
   "refs": [
    "lui:8006BC98"
@@ -1199,7 +1206,7 @@
  {
   "id": "EXE/02B04",
   "jp": "\n\n\n\n　　データをセーブ中です",
-  "en": "",
+  "en": "\n\n\n\n Saving data...",
   "max": 31,
   "refs": [
    "lui:8006BF44"
@@ -1208,7 +1215,7 @@
  {
   "id": "EXE/02B24",
   "jp": "　データセーブ中　",
-  "en": "",
+  "en": "Saving data...",
   "max": 19,
   "refs": [
    "lui:8006C25C"
@@ -1217,7 +1224,7 @@
  {
   "id": "EXE/02B38",
   "jp": "ＨＰ\nＡＴ\nＭＴ\nＤＦ\nＡＧ\n",
-  "en": "",
+  "en": "HP\nAT\nMT\nDF\nAG\n",
   "max": 27,
   "refs": [
    "lui:8006C8D0"
@@ -1226,7 +1233,7 @@
  {
   "id": "EXE/809FC",
   "jp": "水泳部",
-  "en": "",
+  "en": "Swim Club",
   "max": 6,
   "refs": [
    "lui:8003BB88",
@@ -1236,7 +1243,7 @@
  {
   "id": "EXE/80A04",
   "jp": "空手部",
-  "en": "",
+  "en": "Karate Club",
   "max": 6,
   "refs": [
    "lui:8003BB98",
@@ -1246,7 +1253,7 @@
  {
   "id": "EXE/80A0C",
   "jp": "弓道部",
-  "en": "",
+  "en": "Archery Club",
   "max": 6,
   "refs": [
    "lui:8003BBA8",
@@ -1256,7 +1263,7 @@
  {
   "id": "EXE/80A14",
   "jp": "陸上部",
-  "en": "",
+  "en": "Track Club",
   "max": 6,
   "refs": [
    "lui:8003BBC8",
@@ -1266,7 +1273,7 @@
  {
   "id": "EXE/80A1C",
   "jp": "調理部",
-  "en": "",
+  "en": "Cooking Club",
   "max": 6,
   "refs": [
    "lui:8003BBD8",
@@ -1276,7 +1283,7 @@
  {
   "id": "EXE/80A24",
   "jp": "手芸部",
-  "en": "",
+  "en": "Handicraft Club",
   "max": 6,
   "refs": [
    "lui:8003BBE8",
@@ -1286,7 +1293,7 @@
  {
   "id": "EXE/80A2C",
   "jp": "ブタ",
-  "en": "",
+  "en": "Pig",
   "max": 4,
   "refs": [
    "lui:8003BC08"
@@ -1295,7 +1302,7 @@
  {
   "id": "EXE/80A34",
   "jp": "ハネ",
-  "en": "",
+  "en": "Bat",
   "max": 4,
   "refs": [
    "lui:8003BC18"
@@ -1304,7 +1311,7 @@
  {
   "id": "EXE/80A3C",
   "jp": "半魚人",
-  "en": "",
+  "en": "Fishman",
   "max": 6,
   "refs": [
    "lui:8003BC28"
@@ -1313,7 +1320,7 @@
  {
   "id": "EXE/80A44",
   "jp": "生徒会",
-  "en": "",
+  "en": "Student Council",
   "max": 6,
   "refs": [
    "lui:8003BC38"
@@ -1322,7 +1329,7 @@
  {
   "id": "EXE/80A4C",
   "jp": "帰宅部",
-  "en": "",
+  "en": "Go-Home Club",
   "max": 6,
   "refs": [
    "lui:8003BCBC"
@@ -1331,7 +1338,7 @@
  {
   "id": "EXE/80A90",
   "jp": "の攻撃",
-  "en": "",
+  "en": "'s attack",
   "max": 6,
   "refs": [
    "lui:8004BA20"
@@ -1340,7 +1347,7 @@
  {
   "id": "EXE/80A98",
   "jp": "は\"",
-  "en": "",
+  "en": " cast \"",
   "max": 3,
   "refs": [
    "lui:8004BAD8"
@@ -1349,7 +1356,7 @@
  {
   "id": "EXE/80AA4",
   "jp": "特殊技",
-  "en": "",
+  "en": "Special Skill",
   "max": 6,
   "refs": [
    "lui:8004BDF8"
@@ -1368,7 +1375,7 @@
  {
   "id": "EXE/80AB4",
   "jp": "－",
-  "en": "",
+  "en": "-",
   "max": 2,
   "refs": [
    "lui:8004F17C"
@@ -1377,7 +1384,7 @@
  {
   "id": "EXE/80AB8",
   "jp": "：",
-  "en": "",
+  "en": ":",
   "max": 2,
   "refs": [
    "lui:8004FFF4"
@@ -1386,7 +1393,7 @@
  {
   "id": "EXE/80AC0",
   "jp": "LV:",
-  "en": "",
+  "en": "LV:",
   "max": 3,
   "refs": [
    "lui:80051868"
@@ -1395,7 +1402,7 @@
  {
   "id": "EXE/80AC4",
   "jp": "MLV:",
-  "en": "",
+  "en": "MLV:",
   "max": 4,
   "refs": [
    "lui:800518A8"
@@ -1404,7 +1411,7 @@
  {
   "id": "EXE/80ACC",
   "jp": "ＨＰ: ",
-  "en": "",
+  "en": "HP: ",
   "max": 6,
   "refs": [
    "lui:800518E8"
@@ -1413,7 +1420,7 @@
  {
   "id": "EXE/80ADC",
   "jp": "ＡＴ: ",
-  "en": "",
+  "en": "AT: ",
   "max": 6,
   "refs": [
    "lui:800519B8"
@@ -1422,7 +1429,7 @@
  {
   "id": "EXE/80AE4",
   "jp": "ＭＴ: ",
-  "en": "",
+  "en": "MT: ",
   "max": 6,
   "refs": [
    "lui:80051A30"
@@ -1431,7 +1438,7 @@
  {
   "id": "EXE/80AEC",
   "jp": "ＤＦ: ",
-  "en": "",
+  "en": "DF: ",
   "max": 6,
   "refs": [
    "lui:80051A98"
@@ -1440,7 +1447,7 @@
  {
   "id": "EXE/80AF4",
   "jp": "ＡＧ: ",
-  "en": "",
+  "en": "AG: ",
   "max": 6,
   "refs": [
    "lui:80051B00"
@@ -1449,7 +1456,7 @@
  {
   "id": "EXE/80B10",
   "jp": "：",
-  "en": "",
+  "en": ":",
   "max": 2,
   "refs": [
    "lui:80055680"
@@ -1458,7 +1465,7 @@
  {
   "id": "EXE/80B1C",
   "jp": "LV: ",
-  "en": "",
+  "en": "LV: ",
   "max": 4,
   "refs": [
    "lui:80056C38"
@@ -1467,7 +1474,7 @@
  {
   "id": "EXE/80B24",
   "jp": " MLV: ",
-  "en": "",
+  "en": " MLV: ",
   "max": 6,
   "refs": [
    "lui:80056C78"
@@ -1476,7 +1483,7 @@
  {
   "id": "EXE/80B2C",
   "jp": "HP:",
-  "en": "",
+  "en": "HP:",
   "max": 3,
   "refs": [
    "lui:80056D3C"
@@ -1485,7 +1492,7 @@
  {
   "id": "EXE/80B34",
   "jp": " AT",
-  "en": "",
+  "en": " AT",
   "max": 3,
   "refs": [
    "lui:80056DD0"
@@ -1494,7 +1501,7 @@
  {
   "id": "EXE/80B4C",
   "jp": " MT",
-  "en": "",
+  "en": " MT",
   "max": 3,
   "refs": [
    "lui:80056EF8"
@@ -1503,7 +1510,7 @@
  {
   "id": "EXE/80B58",
   "jp": " DF",
-  "en": "",
+  "en": " DF",
   "max": 3,
   "refs": [
    "lui:80056FDC"
@@ -1512,7 +1519,7 @@
  {
   "id": "EXE/80B64",
   "jp": "AG",
-  "en": "",
+  "en": "AG",
   "max": 2,
   "refs": [
    "lui:8005709C"
@@ -1521,7 +1528,7 @@
  {
   "id": "EXE/80B68",
   "jp": "セーブ",
-  "en": "",
+  "en": "Save",
   "max": 6,
   "refs": [
    "lui:80057440"
@@ -1530,7 +1537,7 @@
  {
   "id": "EXE/80B70",
   "jp": "は\n",
-  "en": "",
+  "en": ":\n",
   "max": 3,
   "refs": [
    "lui:80058F9C",
@@ -1541,7 +1548,7 @@
  {
   "id": "EXE/80B94",
   "jp": " HP ",
-  "en": "",
+  "en": " HP ",
   "max": 4,
   "refs": [
    "lui:8005FF70"
@@ -1550,7 +1557,7 @@
  {
   "id": "EXE/80B9C",
   "jp": "》",
-  "en": "",
+  "en": ">",
   "max": 2,
   "refs": [
    "lui:8005FFD8",
@@ -1563,7 +1570,7 @@
  {
   "id": "EXE/80BA0",
   "jp": "\n AT ",
-  "en": "",
+  "en": "\n AT ",
   "max": 5,
   "refs": [
    "lui:8006001C"
@@ -1572,7 +1579,7 @@
  {
   "id": "EXE/80BA8",
   "jp": "   MT ",
-  "en": "",
+  "en": "   MT ",
   "max": 6,
   "refs": [
    "lui:800600B8"
@@ -1581,7 +1588,7 @@
  {
   "id": "EXE/80BB0",
   "jp": "\n DF ",
-  "en": "",
+  "en": "\n DF ",
   "max": 5,
   "refs": [
    "lui:80060154"
@@ -1590,7 +1597,7 @@
  {
   "id": "EXE/80BB8",
   "jp": "   AG ",
-  "en": "",
+  "en": "   AG ",
   "max": 6,
   "refs": [
    "lui:800601F0"
@@ -1599,7 +1606,7 @@
  {
   "id": "EXE/80BCC",
   "jp": "面",
-  "en": "",
+  "en": "St",
   "max": 2,
   "refs": [
    "lui:8006B618",
@@ -1609,7 +1616,7 @@
  {
   "id": "EXE/80BD0",
   "jp": "月",
-  "en": "",
+  "en": "/",
   "max": 2,
   "refs": [
    "lui:80068B80",
@@ -1619,7 +1626,7 @@
  {
   "id": "EXE/80BD4",
   "jp": "日",
-  "en": "",
+  "en": ".",
   "max": 2,
   "refs": [
    "lui:80068BB4",
@@ -1629,7 +1636,7 @@
  {
   "id": "EXE/80BE8",
   "jp": "なし",
-  "en": "",
+  "en": "None",
   "max": 4,
   "refs": [
    "lui:8006B6E4",

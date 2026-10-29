@@ -104,7 +104,10 @@ def has_term(jp, term):
     for m in re.finditer(re.escape(term), jp):
         before, after = jp[m.start() - 1:m.start()], jp[m.end():m.end() + 1]
         kata = lambda c: c and ("゠" <= c <= "ヿ")  # noqa: E731
+        kanji = lambda c: c and ("一" <= c <= "鿿")  # noqa: E731
         if kata(term[0]) and (kata(before) or kata(after)):
+            continue
+        if kanji(term[0]) and kanji(before):  # 魔物 inside 邪魔物
             continue
         return True
     return False
@@ -163,8 +166,22 @@ def read_out(b):
     for line in (TL / f"{b}.out.tsv").read_text(encoding="utf-8").splitlines():
         if line.strip():
             rid, _, en = line.partition("\t")
-            rows.append((rid.strip(), en.replace("\\n", "\n")))
+            rows.append((rid.strip(), en.replace("\\n", "\n").replace("\\s", " ")))
     return rows
+
+
+KEEP = "=JP"  # output value: keep the original bytes (blanking rows, debug printf)
+WIDTH = re.compile(r" px in a \d+-px field| lines in a \d+-line field")
+
+
+def long_rows(errs):
+    """Field rows whose only errors are width/lines over the field: deferred to the phase-7 fit (engine) work."""
+    by = {}
+    for e in errs:
+        rid, _, msg = e.partition(": ")
+        by.setdefault(rid, []).append(msg)
+    return {rid for rid, ms in by.items() if rid.split("/")[0] in ("EXE", "NAME", "CLUB", "ITEM", "MAGIC")
+            and all(WIDTH.search(m) for m in ms)}
 
 
 def rows_by_id():
@@ -191,6 +208,8 @@ def check(b, allrows, box_of, gl):
         if rid not in allrows:
             continue
         name, r = allrows[rid]
+        if en == KEEP:
+            continue
         if not en.strip():
             errs.append(f"{rid}: empty")
             continue
@@ -207,13 +226,17 @@ def check(b, allrows, box_of, gl):
         errs += [f"{rid}: {x}" for x in e]
         jp = _bare(r["jp"])
         for j, e_, avoid in gl:
+            if j not in jp and j not in r["jp"]:
+                continue
             if has_term(r["jp"], j) and e_ and e_.lower() not in en.lower():
                 errs.append(f"{rid}: glossary {j} = {e_!r} missing")
             for a in avoid:
                 if re.search(rf"\b{re.escape(a)}\b", en):
                     errs.append(f"{rid}: {a!r} is on the glossary's Avoid list for {j}")
             for hj, he in HONORIFIC.items():
-                if e_ and re.search(re.escape(j) + r"\s*" + hj, jp) and f"{e_}{he}" not in en:
+                # the suffix may follow the full name (Kaoru Kanzaki-san); 様 may be Lord/Lady X
+                ok = he in en.lower() or (he == "-sama" and re.search(r"\b(Lord|Lady)\b", en))
+                if e_ and re.search(re.escape(j) + r"\s*" + hj, jp) and not ok:
                     errs.append(f"{rid}: {j}{hj} -> {e_}{he} (honorifics are kept)")
     new = {rid: en for rid, en in got if rid.startswith("NAME/")}
     if new:  # all names share SYSDATA's buffer (lint.NAMES_SLACK)
@@ -227,6 +250,8 @@ def check(b, allrows, box_of, gl):
 def merge(bs):
     allrows, box_of, gl = rows_by_id(), boxes.all_rows(), glossary()
     errs = [e for b in bs for e in check(b, allrows, box_of, gl)]
+    longs = long_rows(errs)
+    errs = [e for e in errs if e.partition(": ")[0] not in longs]
     if errs:
         print("\n".join(errs))
         print(f"merge refused: {len(errs)} errors")
@@ -237,14 +262,18 @@ def merge(bs):
         hit = [r for r in rows if r["id"] in new]
         if hit:
             for r in hit:
-                r["en"] = new[r["id"]]
-            (SCRIPT / name).write_text(extract.dump(rows), encoding="utf-8")
+                en = "" if new[r["id"]] == KEEP else new[r["id"]]
+                r.pop("long", None)
+                if r["id"] in longs:  # full English kept for the phase-7 fit; Japanese stays in the build
+                    r["long"], en = en, ""
+                r["en"] = en
+            (SCRIPT / name).write_text(extract.dump(rows), encoding="utf-8", newline="\n")
             print(f"{name}: {len(hit)} rows")
     return 0
 
 
 def pairs(out, bs):
-    allrows = rows_by_id()
+    allrows, spk = rows_by_id(), speakers()
     seq = {}  # file -> ordered ids
     for name in files():
         seq[name] = [r["id"] for r in load(name)]
@@ -257,7 +286,7 @@ def pairs(out, bs):
             ctx = [allrows[x][1] for x in ids[max(0, i - 2):i]]
             lines += [f"   {c['id']} | {show(c['jp'])}" + (f" / EN: {show(c['en'])}" if c.get("en") else "")
                       for c in ctx]
-            lines += [f">> {rid} | {show(r['jp'])}", f"   EN: {show(en)}", ""]
+            lines += [f">> {rid} [{spk.get(rid, 'field')}] | {show(r['jp'])}", f"   EN: {show(en)}", ""]
     Path(out).write_text("\n".join(lines), encoding="utf-8")
     print(f"{out}: {sum(1 for x in lines if x.startswith('>>'))} entries")
 
@@ -277,7 +306,12 @@ def main():
     allrows, box_of, gl, bad = rows_by_id(), boxes.all_rows(), glossary(), 0
     for b in a.args:
         errs = check(b, allrows, box_of, gl)
-        print("\n".join(errs) if errs else f"{b}: OK")
+        longs = long_rows(errs)
+        for e in errs:
+            print(("LONG  " if e.partition(": ")[0] in longs else "") + e)
+        errs = [e for e in errs if e.partition(": ")[0] not in longs]
+        print(f"{b}: OK" + (f" ({len(longs)} LONG field rows: merged as `long`, fitted in phase 7)" if longs else "")
+              if not errs else f"{b}: {len(errs)} errors")
         bad += len(errs)
     return 1 if bad else 0
 

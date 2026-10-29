@@ -2,9 +2,9 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 5 done 2026-10-30 (width gate met: dialogue boxes + every menu/label/system row has a budget in
-  `boxes.FIELDS`, lint enforces it). Next: phase 6 (translate). `build.py --markers` = marker build; plain
-  `build.py` = VWF engine + any `en` rows.
+- **Phase:** 6 done 2026-10-30 (all 22 batches check 0 errors, reviewed, Critical/Important fixed, merged into
+  `script/`; glossary updated). Next: phase 7 (insert, fit, check). `build.py --markers` = marker build; plain
+  `build.py` = VWF engine + `en` rows.
 - **Done:**
   - Step 0: dump pinned (`rom.sha1`), tools in `tools/`, headless smoke on the original, pre-commit check, guard hook.
   - Phase 1 (notes in `docs/re/`): Shift-JIS text; own font in SYSDATA.BIN (1,386 cells, 16x13, charset list);
@@ -53,17 +53,34 @@ Updated at the end of every session. Keep it to what the next session needs; his
     start x, room), `tools/debug/stateat.lua` (state at a string's first print: menu routes), warp.lua `STAY=1`.
     Verified in-game with English (`--qa`, work/qa/fq): command menu + sub-menu, birthday name/date, save/load list,
     yes/no.
-- **Next (phase 6, translate):**
-  - Translators get budgets from boxes.py: dialogue boxes (face 143 px x 4, face3 x 3, plain 223 x 4; pages beyond
-    are automatic but soft-limited) and `boxes.field(id)` for exe/records/names (hard: lint error). Plain ASCII
-    only, no `\` or bare `%`. Command-menu items: no trailing `\n` needed (insert adds it). Yes/No rows: pad so
-    "No" starts 64 px in. EXE strings are also byte-limited (`max`; phase 7 relocates longer ones: lint warns).
-  - Names: VS/status box line 1 prints surname then given name (NAME rows, 96 px for both); Western order (D1)
-    needs a code swap or the slots' text swapped: decide in phase 7, keep each name part <= 48 px.
+  - Phase 6 (translate): `tools/batches.py` (split -> work/tl/bNNN.tsv with speaker from op 16/2B face ids
+    1-5 = Ann/Itsuki/Makoto/Shinobu/Mio, check, merge, pairs for reviewers; escapes `\n`, `\s`, `=JP`), briefs
+    `docs/{translator,reviewer}-brief.md`, `docs/style-reference.md`, `docs/synopsis.md`, glossary (~130 rows,
+    check-enforced, honorifics kept). Pilot b001 (intro + MAP01) by the controller, seen in-game. 21 batches by 6
+    translator agents (opus), 7 reviewer passes (sonnet): no Critical; Important fixed per batch (puns, split
+    sentences, per-girl voices, term drift grimoire/spellbook etc.). All 3,357 dialogue rows, 177 EXE, 145
+    records, 695 names translated. Minor review notes not applied (polish pass later; reports were returned in
+    session, only Important ones kept in work/review/fixes_*.md, gitignored).
+- **Next (phase 7, insert, fit, check):**
+  - 65 field rows carry `long` (full English wider than its FIELDS budget; `en` empty so the build keeps
+    Japanese; `lint --warn` lists them): 49+9 NAME rows over 48 px (Matsunaga 56, Kurosawa 50, Monster A-I 54 ..
+    Kazamatsuri 64), EXE/013E0 Student Council President (136 px in 96), 013F8 Super Go-Home Club, 01BB4/01C50
+    Randoma Card + birthstone bonus (128 px), 024E0 Makoto Matsunaga (98 in 96). Engine first (D4): the 48-px
+    NAME budget is per part for composed lines (two names in 224 px); the VS box has 96 px for surname + given
+    name, so a measured per-use budget, a smaller font or a wider field likely fixes most. Then move `long` to `en`.
+  - EXE strings over their in-place room (`lint --warn` "bytes, room"): insert keeps Japanese (build prints the
+    count, `insert.SKIPPED`); relocate them through their `refs` (lui/addiu, $gp, words).
+  - EXE/80BCC 面 = "St" follows a number on the save list ("3St"): needs the number/label order changed or a
+    wider label ("Stage 3"). EXE/80BD0/80BD4 月/日 -> "/" and "." (birthday "3/15.") likewise.
+  - Names: VS/status box line 1 prints surname then given name (NAME rows); Western order (D1) needs a code swap
+    or the slots' text swapped.
+  - Check in game (phase 8): choice rows translators laid out by hand (MAP14/193/0026 route choice, MAP21/199,
+    MAP23/215/0002 Yes/No, MAP81/189/01BE..01E8), the composed item-use / club-change / level-up fragments
+    (b020), description tag columns (/1 /All /Front /Back /Phys /Mind), 14 dialogue lines that page (lint --warn).
   - Budgets marked "window"/"guess" (item/magic lists, item use, club change, level up, field save, memory-card
     errors) get checked in phase 8 QA; adjust FIELDS if a shot disagrees.
-  - Current build/ = QA build (markers + English in the measured fields, sha1 153a99d7…); `build.py --markers`
-    restores the marker build (sha1 102a2225…, regen 83/83 ok).
+  - Current build/ = English build from script/ (sha1 2c1610f2…, smoke ok; 44 EXE strings and the `long` rows
+    still Japanese); `build.py --markers` restores the marker build (sha1 102a2225…, regen 83/83 ok).
 - **Debug-tool limits (grow when needed):** map scenes play each map's first event with new-game story flags; the
   later events of a map (other script slots 186-216, flag-dependent branches) are not forced yet. For phase 8,
   add per-script warps: set the script base `$gp`+0x52C / PC `$gp`+0x2A2 (docs/re/text.md) or the story flags at
@@ -84,5 +101,11 @@ Updated at the end of every session. Keep it to what the next session needs; his
   `C:/Program Files/Git/`): `export MSYS_NO_PATHCONV=1` first. Menus that end items by auto-wrap (Japanese padded
   to the window width) need a `\n` per English item. PCSX-Redux exec hooks read args as
   `PCSX.getRegisters().GPR.n.a0`.
+  Phase 6 (translation.md): a portrait/face op that persists (op 16) is not the speaker: a second op (2B face,
+  expression) swaps faces mid-scene; speaker columns from op 16 alone mislabelled most lines. Translator agents
+  report that Write/Edit strip trailing spaces from TSV rows: give the output format an escape (`\s`) and a
+  keep-original value (`=JP`). Field rows wider than a guessed budget need a "deferred" state (here `long`) so the
+  check can reach 0 errors without abbreviating (D4). Glossary checks must skip a kanji term inside a longer
+  compound (魔物 in 邪魔物) and accept the honorific after the full name (Kaoru Kanzaki-san).
 - **Waiting on the user:** GUI keyboard input in `tools/pcsx/` is not proven (synthetic keystrokes did not reach the
   pad); owner asked for headless-only runs, so left; check by hand when playtesting. Non-blocking.

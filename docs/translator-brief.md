@@ -29,6 +29,9 @@ inside the English, no Japanese or fullwidth characters, no `\uXXXX`, no `\`, no
 breaks (the build wraps by pixels and pages long text). Write `\n` (backslash-n) only where a break must fall:
 Clear Condition boxes, lists, signs, and multi-line menu/label fields.
 
+Escapes: `\s` = a space (write it for a trailing space: the file tools strip trailing spaces); the whole value
+`=JP` = keep the original bytes (rows that only blank a window, debug text).
+
 ## Validate
 Run `python -X utf8 tools/batches.py check <batch>` from the repo root and fix every reported id until it prints OK.
 `python -X utf8 -c "import sys; sys.path.insert(0,'tools'); import font; print(font.advance('text'))"` gives a
@@ -38,7 +41,8 @@ string's width in px.
 - Faithful: keep the information and order of ideas; adapt idiom, not meaning. Don't add details the Japanese
   doesn't state; don't summarise or skip. Adapt wordplay so the joke still lands (no translator notes).
 - Names and terms exactly as in the glossary. Never abbreviate to fit; dialogue pages automatically. A field that
-  can't fit without losing meaning: keep the meaning and report `LONG: id`.
+  can't fit without losing meaning: keep the full meaning; the check lists it as LONG (not an error), it is
+  stored for the phase-7 engine fit, and you report `LONG: id`.
 - Honorifics kept, hyphenated: 司クン -> Tsukasa-kun, 真さん -> Makoto-san, 黒沢様 -> Lord Kurosawa or
   Kurosawa-sama (pick per tone, report it). Western name order: 神崎　薫 -> Kaoru Kanzaki.
 - Drop furigana: 樹%h（いつき）%z -> Itsuki; drop every %h and %z. Copy `%c02` (colour) and `%p`/`%d` exactly.

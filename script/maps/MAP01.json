@@ -7,7 +7,7 @@
  {
   "id": "MAP01/186/004C",
   "jp": "あっ　そうだ。\nこれあげる！\nきっと樹%h（いつき）　%zに　似合うと思うよ。",
-  "en": "Oh, I know! You can have this! I bet it'll look great on Itsuki."
+  "en": "Oh, I know! You can have this! I bet it'll look great on you, Itsuki."
  },
  {
   "id": "MAP01/186/00A6",
@@ -82,7 +82,7 @@
  {
   "id": "MAP01/190/0002",
   "jp": "ナージュ像さえ戻れば、魔物達を追い払えるんだが・・・",
-  "en": "If only the Nage Statue came back, we could drive the monsters away..."
+  "en": "If only the Nage Statue were back, we could drive the monsters away..."
  },
  {
   "id": "MAP01/191/0002",
@@ -97,7 +97,7 @@
  {
   "id": "MAP01/193/0014",
   "jp": "はぁ、化物に大根を持ってかれちまったよ。",
-  "en": "Sigh, some monster ran off with my daikon radishes."
+  "en": "Sigh, some monster ran off with my daikon."
  },
  {
   "id": "MAP01/193/004E",
@@ -342,17 +342,17 @@
  {
   "id": "MAP01/198/003C",
   "jp": "さ、早く神社に入ろう。",
-  "en": "Come on, let's get into the shrine."
+  "en": "Come on, let's hurry up and get into the shrine already."
  },
  {
   "id": "MAP01/198/0062",
   "jp": "さ、早く神社に入ろう。",
-  "en": "Come on, let's get into the shrine."
+  "en": "Come on~, Makoto wants to go into the shrine!"
  },
  {
   "id": "MAP01/198/0088",
   "jp": "さ、早く神社に入ろう。",
-  "en": "Come on, let's get into the shrine."
+  "en": "C'mon, let's get inside the shrine."
  },
  {
   "id": "MAP01/198/00AE",
@@ -372,12 +372,12 @@
  {
   "id": "MAP01/199/0070",
   "jp": "もー、邪魔しないでよ。",
-  "en": "Ugh, quit getting in our way!"
+  "en": "Ugh, would you stop getting in our way?!"
  },
  {
   "id": "MAP01/199/0094",
   "jp": "もー、邪魔しないでよ。",
-  "en": "Ugh, quit getting in our way!"
+  "en": "Mooo, don't get in Makoto's way!"
  },
  {
   "id": "MAP01/199/00B8",
@@ -387,12 +387,12 @@
  {
   "id": "MAP01/199/00F6",
   "jp": "戦わなければ先に進めないようですね。",
-  "en": "It seems we can't go on without fighting."
+  "en": "It seems we cannot go on without fighting."
  },
  {
   "id": "MAP01/200/0006",
   "jp": "ぶひぶひひ～っ　　（この、俺が～っ）",
-  "en": "Oink oink-oink~! (Why, you~!)"
+  "en": "Oink oink-oink~! (Me... of all pigs~!)"
  },
  {
   "id": "MAP01/201/0016",
@@ -487,12 +487,12 @@
  {
   "id": "MAP01/208/0068",
   "jp": "ナージュ像を取り戻したら、この公園で",
-  "en": "Once we get the Nage Statue back, in this park,"
+  "en": "Once we get the Nage Statue back,"
  },
  {
   "id": "MAP01/208/0094",
   "jp": "司%h（つかさ）　%zクンとデートするんだっ。",
-  "en": "I'm going on a date with Tsukasa-kun!"
+  "en": "I'm going on a date with Tsukasa-kun in this park!"
  },
  {
   "id": "MAP01/208/00CE",
@@ -562,7 +562,7 @@
  {
   "id": "MAP01/211/00F6",
   "jp": "どこかに宝箱でも　あるんでしょうか。",
-  "en": "Perhaps there's a treasure chest somewhere."
+  "en": "Perhaps there is a treasure chest somewhere."
  },
  {
   "id": "MAP01/212/0004",
