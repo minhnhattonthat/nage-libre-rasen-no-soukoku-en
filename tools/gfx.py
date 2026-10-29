@@ -29,7 +29,8 @@ SKIP = ("3MIN.BIN", ".STR", ".XA", "MAPDAT.BIN", "NAGE.EXE", "SYSDATA.BIN")
 WHITE, BLACK, NAVY = (248, 248, 248), (0, 0, 0), (0, 0, 64)
 BAR = dict(font="game", ink=WHITE, shadow=(16, 16, 96), bold=True)  # white on the blue header bars, dark drop shadow
 KEEP = {"gold": lambda c: c[0] - c[2] > 40 and c[1] - c[2] > 20,  # the statue on the MAP86 poster
-        "red": lambda c: c[0] > 150}  # its pink seal (clears only the blue signature ink)
+        "red": lambda c: c[0] > 150,  # its pink seal (clears only the blue signature ink)
+        "dark": lambda c: sum(c) < 500}  # portraits beside the white vertical 参上 labels
 
 
 # ---- masks -------------------------------------------------------------------------------------------------
@@ -132,11 +133,23 @@ class Img:
                     self.put(xx, yy, v)
 
     def text(self, x, y, w, h, s, font="game", ink=WHITE, shadow=None, outline=None, align="c", gap=0, bold=False,
-             scale=1):
+             scale=1, rotate=False):
+        """rotate: one line turned 90 degrees clockwise (reads top to bottom, for vertical Japanese labels), centred
+        in the rect."""
         lines = s.split("\n")
         masks = [[[b for b in row for _ in range(scale)] for row in mask(ln, font, 1 if bold else 0)
                   for _ in range(scale)] for ln in lines]
-        lh = line_height(font) * scale + gap
+        if rotate:
+            m = masks[0]
+            while m and not any(m[-1]):
+                m = m[:-1]
+            while m and not any(m[0]):
+                m = m[1:]
+            masks = [[[m[len(m) - 1 - c][r] for c in range(len(m))] for r in range(len(m[0]))]]
+            assert len(masks[0]) <= h, f"{s!r} rotated is {len(masks[0])} px long, room {h}"
+            lines, lh, gap = [s], len(masks[0]), 0
+        else:
+            lh = line_height(font) * scale + gap
         top = y + (h - (lh * len(lines) - gap)) // 2
         ink_v = self.colour(ink)
         for i, m in enumerate(masks):
@@ -187,6 +200,15 @@ element("subtitle", "OP_TMP2.BIN", 0x7034C,
 element("theend", "OPTION6.BIN", 0x329C8,
         ("clear", 150, 15, 95, 35, "lerp"),
         ("text", 150, 18, 95, 26, "The End", dict(ink=(248, 240, 72), shadow=(48, 120, 216), scale=2, bold=True)))
+# 18, 19 boss intro labels (vertical, white; shared battle/map sheets in 34 BTLTIM and 46 MAPTIM files):
+# 参上 "here!" beside the portrait, and the MAP01R boss's name レイプマン
+element("sanjo_btl", "MAP01_06/MAP01R/BTLTIM.BIN", 0x18A78,
+        ("clear", 177, 210, 15, 26, 0, "dark"),
+        ("text", 178, 210, 12, 26, "Here!", dict(font="tiny", rotate=True)))
+element("sanjo_map", "MAP01_06/MAP01R/MAPTIM.BIN", 0x33AE8,
+        ("clear", 0, 110, 23, 46, 0, "dark"),
+        ("text", 0, 110, 9, 40, "Rapeman", dict(font="tiny", rotate=True)),
+        ("text", 10, 131, 12, 24, "Here!", dict(font="tiny", rotate=True)))
 # 8 birthstone plates: 12 gold plates of 16 rows at x 128..223, white text with a dark outline
 STONES = ("Garnet", "Amethyst", "Aquamarine", "Diamond", "Emerald", "Moonstone", "Ruby", "Agate", "Sapphire", "Opal",
           "Topaz", "Lapis Lazuli")
