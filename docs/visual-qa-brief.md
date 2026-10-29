@@ -38,6 +38,7 @@ Standing non-bugs, `ok` (the controller adds the game's own below):
 - text that starts right at the left frame (VS name plates, save/load list, the save hint): those boxes have no
   margin in the original either, and the game's glyphs just carry a 1-px blank column; a 1-px bearing was tried
   and broke the stat panels, so this is accepted;
+- digits are fixed-width on purpose (numbers redraw in place), so "1" sits centred in a digit-wide cell;
 - honorifics are kept on purpose (Ann-chan, Kaoru-sama, Pig-kun); names are given name first;
 - the boss intro art reads "Rapeman" (a parody name from the original art; flagged to the owner, not a bug here).
 

@@ -22,8 +22,8 @@ L.on_frame(function(n)
   if not started then started = true; L.shot(string.format("f%06d.png", n)) end
   if not L.route_done() or n % 20 ~= 0 then return end
   local h = text_hash()
-  if n % 40 == 0 then
-    if h == h20 and h ~= last and not seen[h] then
+  if n % 40 == 0 and h == h20 then   -- press only once typing is done, or a page can be skipped unshot
+    if h ~= last and not seen[h] then
       L.shot(string.format("f%06d.png", n))
       last, seen[h] = h, true
     end

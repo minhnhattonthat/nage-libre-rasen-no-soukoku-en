@@ -93,8 +93,11 @@ Updated at the end of every session. Keep it to what the next session needs; his
 - **Next (phase 8, QA in the emulator):**
   - Visual QA: `tools/debug/tour.py` (83 scenes, ~116 sheets) + `qa_gate.py`, brief `docs/visual-qa-brief.md`
     (standing non-bugs listed there). Round 1 fixed wm19 card, clear-condition wording, ellipses; a 1-px glyph
-    bearing (for text flush at plate frames) broke club-select stats in round 2 and was reverted. Round 3 (build
-    after 6022e69) in progress: gate state in work/qa/manifest.tsv + verdicts/. Town signs seen in the map01 tour.
+    bearing (for text flush at plate frames) was reverted in round 2. Round 3 found stale digit pixels on the
+    club-select stats (numbers redraw in place; VWF moved them): digits are tabular (7 px) and the number printer
+    (0x8003B7A0, mode 2) pads with '`', a blank digit-wide glyph (font.FIGURE; lint bans '`'). Birthstone plates
+    clear their top row. Round 4 (build 109093b) in progress: gate state in work/qa/manifest.tsv + verdicts/.
+    Town signs seen in the map01 tour.
   - Memory-card title is English full-width (BIOS manager); Japanese-version saves load in the English build.
   - Release: `tools/release.py VERSION` (check, build, smoke, jp_left on NAGE.EXE/SYSDATA, qa_gate, xdelta3,
     re-apply, README from docs/README.template.txt, zip). Never `gh release create` (D9).
@@ -145,6 +148,11 @@ Updated at the end of every session. Keep it to what the next session needs; his
   window rect (VS boxes widened fine) or be fixed art (battle bar: widening put text over the cap): compare a shot
   before trusting a wider create. PS1 engines that count 8-px cells (`s3` return of a print) for layout decisions
   break under VWF: grep the callers' use of the return value.
+  Phase 8 (fonts/VWF): screens that redraw numbers in place without clearing (stat panels switching character)
+  keep stale pixels once a VWF moves digits: give digits one advance and make the number printer's pad glyph that
+  wide. A 1-px left bearing (to keep letters off a frame) did the same damage. Tours that mash one button land
+  in sub-views the game leaves only with another (card view: cross); the shot-per-new-text probe keyed on the
+  text texture's VRAM hash (tools/debug/tourshot.lua) kept 116 sheets for 83 scenes.
 - **Waiting on the user:** The MAP01R boss-intro art names the boss レイプマン (a parody of the manga title); drawn
   literally as "Rapeman" (tools/gfx.py `sanjo_map`). Say if you'd rather have another name. Non-blocking.
   The TIME GAUGE art spells Jin's name "Zin" (Latin in the original art; glossary and script say Jin). Left as
