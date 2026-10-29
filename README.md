@@ -1,7 +1,7 @@
-# <Game title> English translation
+# Nage Libre: Rasen no Soukoku English translation
 
-Unofficial English fan translation of **<Game title>** (<platform>, <publisher>, <year>): the source text and tools
-that build the patch.
+Unofficial English fan translation of **Nage Libre: Rasen no Soukoku** (PlayStation, Varie, 1996): the source text and
+tools that build the patch. Work in progress.
 
 **Just want to play?** Download the patch from [Releases](../../releases) and follow its README. This repository holds
 no game data you can play; you need your own dump of the Japanese game.
@@ -28,11 +28,11 @@ helps most.
 Needs Python 3.12+ and your own dump of the Japanese game.
 
 ```sh
-git clone https://github.com/minhnhattonthat/<repo>
-cd <repo>
-# copy your dump to: rom/<file>
-#   (<size> bytes, SHA-1 <sha1>; the build refuses any other dump, see rom.sha1)
-python -X utf8 tools/build.py                          # -> build/<game>_en.<ext>
+git clone https://github.com/minhnhattonthat/nage-libre-rasen-no-soukoku-en
+cd nage-libre-rasen-no-soukoku-en
+# copy your Redump dump to: rom/Nage Libre - Rasen no Soukoku (Japan).bin (+ its .cue)
+#   (113952048 bytes, SHA-1 7ccae6f0837c58e2d628c524baffe6a040cb8d02; the build refuses any other dump, see rom.sha1)
+python -X utf8 tools/build.py                          # -> build/nage_libre_en.bin + .cue
 python -X utf8 tools/check.py                          # tests + text lint
 ```
 
@@ -44,8 +44,9 @@ If you enjoy this translation, you can support my work on Ko-fi:
 
 ## Licence
 
-Tools and English translation: MIT. The original Japanese text in `script/` is <publisher>'s and is included only so
-the translation can be checked against it. <Game title> is (c) <publisher>; this project is not affiliated with them.
+Tools and English translation: MIT. The original Japanese text in `script/` is Varie's and is included only so
+the translation can be checked against it. Nage Libre: Rasen no Soukoku is (c) Varie; this project is not affiliated
+with them.
 Do not share patched ROMs.
 
 The translation was made with extensive AI assistance (Claude by Anthropic). Corrections are very welcome.

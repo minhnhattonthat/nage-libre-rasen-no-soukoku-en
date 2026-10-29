@@ -1,2 +1,3 @@
-# SHA-1 of the supported dump, in sha1sum format (`sha1sum -c rom.sha1` works too). One line per file for discs.
-<sha1>  rom/<file>
+# SHA-1 of the supported dump (Redump: Nage Libre - Rasen no Soukoku (Japan)), sha1sum format. One line per file.
+# The .cue is not pinned: players' cue files differ in whitespace and the patch never touches it.
+7ccae6f0837c58e2d628c524baffe6a040cb8d02  rom/Nage Libre - Rasen no Soukoku (Japan).bin
