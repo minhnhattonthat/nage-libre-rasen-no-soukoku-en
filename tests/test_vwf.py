@@ -55,7 +55,7 @@ def run():
     return draw, vram, calls, bytes(orig)
 
 
-INK = 1  # vwf.asm draws each glyph 1 px right of the pen (left bearing)
+INK = 0  # ink starts at the pen (a 1-px bearing left stale pixels where numbers redraw: vwf.asm)
 
 
 def pixel(vram, x, y):

@@ -27,9 +27,8 @@ EPILOGUE  equ (0x8003C930)
 ; half-width branch of the draw: s0 = x, s1 = y, a2 = colour, a0 = glyph (< 500); frame of 0x28 saves s0-s2, ra
 .org 0x8003C868
   j     VwfHalf
-  addiu s0, s0, 1               ; ink 1 px right of the pen: the trimmed glyphs have no left bearing, so a line's
-                                ; first letter touched the window frame (wrap leaves 1 px at the right, so lines
-                                ; still fit). EPILOGUE restores s0.
+  nop                           ; inking 1 px right of the pen (a left bearing for the trimmed glyphs) left stale
+                                ; pixels where stats redraw in place (club select): the pen stays as the game has it
 
 .org 0x8008A0F4
 VwfHalf:

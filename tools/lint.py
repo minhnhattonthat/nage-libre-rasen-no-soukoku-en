@@ -34,6 +34,9 @@ def check_row(r, box=None, fixed=False):
     if not en:
         return err, warn
     bad = sorted({c for c in font.CTRL.sub("", en) if c != "\n" and not (" " <= c <= "~") or c == "\\"})
+    if r["id"] == "MEMCARD":   # drawn by the BIOS card manager: full-width Shift-JIS, bytes checked below
+        full = all(len(c.encode("cp932")) == 2 for c in en)
+        bad = [] if full and len(en) * 2 == r["max"] else [f"want {r['max'] // 2} full-width characters"]
     if bad:
         err.append(f"no glyph for {''.join(bad)!r}")
     if re.search(r"%(?![hzpk]|[ct]\d\d)", en):
