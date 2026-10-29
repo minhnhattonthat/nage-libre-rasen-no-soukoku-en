@@ -18,6 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import boxes  # noqa: E402
 import extract  # noqa: E402
 import font  # noqa: E402
+import gfx  # noqa: E402
 import script as sc  # noqa: E402
 import text  # noqa: E402
 from sweep_packed import table  # noqa: E402
@@ -254,7 +255,8 @@ def build_files(tree, out, markers=False, qa=None):
     QA.clear()
     QA.update(qa or {})
     WRITES.clear()
-    files ={**build_maps(tree, markers), **build_exe(tree, markers), **build_names(tree, markers)}
+    files = {**build_maps(tree, markers), **build_exe(tree, markers), **build_names(tree, markers)}
+    files.update(gfx.build_gfx(tree)[0])  # image files only (gfx.SKIP keeps it off MAPDAT/EXE/SYSDATA)
     written = {}
     for rel, data in files.items():
         p = Path(out, rel)
