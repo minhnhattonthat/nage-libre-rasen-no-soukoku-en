@@ -289,6 +289,27 @@ CAST = ("Ann Akagi", "Itsuki Morino", "Makoto Matsunaga", "Mio Tsukushi", "Shino
 for _i, _s in enumerate(CAST):
     element(f"cast{_i}", "OPTION6.BIN", ("entry", 2 + _i),
             ("clear", 0, 80, 80, 16, 0), ("text", 0, 82, 80, 9, _s, dict(font="tiny", shadow=(64, 64, 64))))
+# 13 dress-up item labels, OPTION2 #1-4 (tops, bottoms, shoes, accessories), names as in the item get lines
+U = ("Ann's Uniform", "Itsuki's Uniform", "Makoto's Uniform", "Shinobu's Uniform", "Mio's Uniform")
+DRESS = (
+    ("Denim Jacket", "Baby Tee", "Turtleneck Sweater", "Linen Jacket", "Biker Jacket", "Denim Vest",
+     "Mohair Knit Sweater", "Down Vest", "Double-Breasted Jacket", "School Swimsuit", "Tank Top", "Bikini Top",
+     *U, "1st-Year Gym Uniform", "2nd-Year Gym Uniform", "3rd-Year Gym Uniform", "Baby Tee", "Denim Vest",
+     "Double-Breasted Jacket", "Denim Jacket", "Tank Top", "Down Vest", "Competition Swimsuit", "Turtleneck Sweater",
+     "Biker Jacket", "Bikini Top", "Light Blue Jacket", "Mohair Knit Sweater"),
+    ("Denim Shorts", "Miniskirt", "Jumper Skirt", "Linen Flared Pants", "Leather Pants", "Overalls", "Denim Jeans",
+     "Denim Skirt", "1st-Year Bloomers", "2nd-Year Bloomers", "3rd-Year Bloomers", "Bikini Bottoms", *U,
+     "Leather Pants", "Denim Skirt", "Bikini Bottoms", "Miniskirt", "Denim Jeans", "Denim Shorts",
+     "Light Blue Flared Pants", "Overalls", "Jumper Skirt"),
+    ("Deck Shoes", "High-Tech Sneakers", "Trekking Shoes", "Loafers", "Engineer Boots", "Long Boots", "Sandals",
+     "Canvas Sneakers", "Flippers", "Ann's Sneakers", "Itsuki's Boots", "Makoto's Boots", "Shinobu's Boots",
+     "Mio's Loafers", "Deck Shoes", "Trekking Shoes", "Long Boots", "Canvas Sneakers", "High-Tech Sneakers",
+     "Engineer Boots", "Sandals", "Loafers"),
+    ("Cap", "Cute Plushie", "Literary Novel", "Stainless Chain", "Designer Bag", "Scarf", "Locker Key",
+     "White Team Baton", "Wristband", "Wristwatch", "Cap", "Brass Chain", "Scarf", "Red Team Baton", "Wristwatch",
+     "Manga Book", "Wristband", "Cheap Bag", "Sunglasses", "Creepy Plushie", "Sunglasses"))
+for _i, _names in enumerate(DRESS):
+    element(f"dress{_i}", "OPTION2.BIN", ("entry", 1 + _i), ("labels", _names))
 # 8 birthstone plates: 12 gold plates of 16 rows at x 128..223, white text with a dark outline
 STONES = ("Garnet", "Amethyst", "Aquamarine", "Diamond", "Emerald", "Moonstone", "Ruby", "Agate", "Sapphire", "Opal",
           "Topaz", "Lapis Lazuli")
@@ -385,12 +406,34 @@ def card(y, text):
             ("text", 1, y + 2, 126, 13, text, dict(ink=(224, 224, 224), shadow=(64, 64, 64)))]
 
 
+def labels(img, names):
+    """Dress-up item labels (OPTION2 #1-4): 72x16 gradient bars, 3 per row. Each bar row k gets the commonest
+    colour of row k over all bars (the text never wins that vote); names wider than a bar take two Tiny5 lines."""
+    rows = (len(names) + 2) // 3
+    grad = []
+    for k in range(16):
+        px = [img.get(x, 16 * r + k) for r in range(rows) for x in range(216)]
+        grad.append(max(set(px), key=px.count))
+    for i, s in enumerate(names):
+        x0, y0 = 72 * (i % 3), 16 * (i // 3)
+        for k in range(16):
+            img.clear(x0 + 1, y0 + k, 70, 1, grad[k])
+        style = dict(font="tiny", shadow=(16, 8, 160))
+        if len(mask(s, "tiny")[0]) <= 68:
+            img.text(x0, y0 + 3, 72, 9, s, **style)
+        else:
+            cut = min((j for j, c in enumerate(s) if c == " "), key=lambda j: abs(j - len(s) / 2))
+            img.text(x0, y0 - 1, 72, 18, s[:cut] + "\n" + s[cut + 1:], gap=-1, **style)
+
+
 def apply(img, ops):
     for op in ops:
         if op[0] == "clear":
             img.clear(*op[1:])
         elif op[0] == "card":
             apply(img, card(*op[1:]))
+        elif op[0] == "labels":
+            labels(img, op[1])
         else:
             x, y, w, h, s = op[1:6]
             img.text(x, y, w, h, s, **(op[6] if len(op) > 6 else {}))
