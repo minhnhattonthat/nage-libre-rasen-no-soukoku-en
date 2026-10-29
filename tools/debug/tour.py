@@ -1,4 +1,4 @@
-"""Visual-QA tour: warp to every scene (regen.py), keep playing with circle mashed, sheet the frames that changed.
+"""Visual-QA tour: warp to every scene (regen.py), keep playing with circle mashed, sheet every new text screen.
 
 usage: python -X utf8 tools/debug/tour.py [--cue CUE] [--only a,b] [--jobs 3] [--frames 12000] [--out DIR]
 Writes DIR/<scene>/f*.png and DIR/<scene>_sheet.png (+ _sheet_2.png ...), the input of
@@ -36,7 +36,7 @@ def main():
         print(f"{'ok  ' if ok else 'FAIL'} {name} {why}", flush=True)
         if ok:
             subprocess.run([sys.executable, "-X", "utf8", str(Path(SKILL) / "scripts/sheet.py"), str(out / name),
-                            "--changed", "0.02", "--div", "1", "--cols", "4", "--max", "16",
+                            "--div", "1", "--cols", "4", "--max", "16",  # no --changed: a page swap is <2% of pixels
                             "--out", str(out / f"{name}_sheet.png")], check=False, capture_output=True)
     failed = [n for n, ok, _ in results if not ok]
     print(f"{len(results) - len(failed)}/{len(results)} scenes ok")

@@ -47,6 +47,7 @@ TIME GAUGE/"参上" sheet in 46 MAPTIM files). Every edit must be written to eve
 | 25 | Student council desk plate 会長 | MAP81/MAPFIRST.BIN 0x78 (x 5..24, y 43..51) | raw 8bpp | 1 | not MAP80 0x44 |
 | 26 | Classroom blackboard "今月の目標 めざせ町の平和" | MAP81/MAPFIRST.BIN 0x10298 | raw 8bpp | 1 | |
 | 27 | Shrine notice board 南寿神社のゆらい | MAP82/MAPFIRST.BIN 0xC8 | raw 8bpp | 1 | |
+| 29 | Clock tag こしょう中 (vertical, "out of order"), found in phase 8 visual QA | MAP81/MAPFIRST.BIN 0x10298 (x 67..73, y 38..60) | raw 8bpp | 1 | same texture as #26 |
 | 28 | Recruitment poster "ナージュ像捜索団員 大募集" (11 lines) | MAP86/MAPFIRST.BIN 0xF8 | raw 8bpp 128x224 | 1 | full-screen readable poster |
 
 **Phase 8:** every row above is redrawn by `tools/gfx.py` (element names in its comments) except #17, kept as art:

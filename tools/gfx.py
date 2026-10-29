@@ -395,7 +395,11 @@ element("poster", "MAP01_06/MAP86/MAPFIRST.BIN", 0xF8,
 # 26 MAP81 classroom blackboard: "This month's goal / Aim for town peace!" (x 88 = board edge, 87 = frame)
 element("blackboard", "MAP01_06/MAP81/MAPFIRST.BIN", 0x10298,
         ("clear", 94, 54, 38, 10), ("text", 92, 53, 50, 9, "Monthly goal:", dict(font="tiny", ink=CHALK)),
-        ("clear", 89, 64, 79, 12), ("text", 88, 63, 76, 13, "Town peace!", dict(ink=CHALK)))
+        ("clear", 89, 64, 79, 12), ("text", 88, 63, 76, 13, "Town peace!", dict(ink=CHALK)),
+        # 29 the paper tag こしょう中 on the wall clock (x 67..73, y 38..60), lengthened 5 px down the wall for "Broken"
+        ("clear", 67, 39, 7, 27, (248, 248, 248)), ("clear", 66, 61, 1, 5, (160, 160, 152)),
+        ("clear", 74, 61, 1, 5, (136, 136, 128)),
+        ("text", 68, 40, 5, 25, "Broken", dict(font="tiny", ink=(32, 24, 16), rotate=True)))
 # 27 MAP82 shrine notice board header 南寿神社のゆらい (the body is drawn as grey lines, not text)
 element("shrineboard", "MAP01_06/MAP82/MAPFIRST.BIN", 0xC8,
         ("clear", 107, 14, 43, 8, "mode"), ("text", 107, 13, 43, 9, "Shrine Lore", dict(font="tiny", ink=(40, 40, 40))))
