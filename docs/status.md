@@ -87,12 +87,12 @@ Updated at the end of every session. Keep it to what the next session needs; his
   byte is 'R' goes to the game's own RLE decoder (0x80031388); `gfx.rle()` encodes (tested against the routine in
   unicorn), `gfx.join()` rebuilds the offset table, files stay within the 0x86800 RAM area (`gfx.AREA`, area table
   0x80089794). Done that way: #2-5 title (press start seen in game, work/qa/p8d), #16 cast plates (Tiny5).
+  Also done: #13 dress-up labels (101), #21-24 town signs (PARK, FI|SH, Maiasa News, Grocer, Kiyoshi Drug,
+  JA Nanju, Nanju Shops arch, Kobiro Race), #25 desk plate "Pres." (seen in game, work/qa/p8f). #17 kept as art
+  (graphics.md §Phase 8). Every survey row is now handled.
 - **Next (phase 8, QA in the emulator):**
-  - Graphics text left: #13 dress-up names (OPTION2 #1-4, ~150 labels: glossary clothing names), #17 credit sign
-    (OPTION6 #15), #21-24 town signs (MAP01R/MAP03R MAPFIRST), #25 desk plate 会長 = MAP81/MAPFIRST 0x78 (x 3..22,
-    y 41..51, not MAP80 as graphics.md said; ~20x10 px: "President" in Tiny5 is 32 px). Then see each in a zoomed
-    cold-boot shot (credits, dress-up, map01r, map03r, map81). The poster's pink 南 seal is left as art. Then the
-    visual-QA tour + qa_gate (not started).
+  - Town signs are off-screen at the map01r/map03r warp spawn (checked in gfx previews only): see them when the
+    tour walks the town. Then the visual-QA tour + qa_gate (not started).
   - Not seen in game yet: save/load list "Stage <n>" (StageNum; the emulator's save screen says the card isn't
     formatted and mashing Yes returned to the menu: set up a memory card in emu.py/PCSX first), the in-battle VS
     pair (0x8004C56C; the battle-start pair 0x80059B74 was seen), field status box name order (0x80056B94,

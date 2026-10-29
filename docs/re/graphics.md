@@ -44,10 +44,14 @@ TIME GAUGE/"参上" sheet in 46 MAPTIM files). Every edit must be written to eve
 | 22 | Town sign 魚政 (fish shop) | MAP01R/MAPFIRST.BIN 0x1041C | raw 8bpp | 2 | |
 | 23 | Town shop signs 毎朝新聞社, 八百屋, くすりキヨシ, 南寿町商店街 arch, JA南寿 | MAP01R/MAPFIRST.BIN 0x2063C | raw 8bpp | 2 | several signs on one sheet |
 | 24 | Amusement park sign コビーロレース | MAP03R/MAPFIRST.BIN 0x2046C | raw 8bpp | 2 | "BEAT CATS" is English |
-| 25 | Student council desk plate 会長 | MAP80/MAPFIRST.BIN 0x44 | raw 8bpp | 1 | |
+| 25 | Student council desk plate 会長 | MAP81/MAPFIRST.BIN 0x78 (x 5..24, y 43..51) | raw 8bpp | 1 | not MAP80 0x44 |
 | 26 | Classroom blackboard "今月の目標 めざせ町の平和" | MAP81/MAPFIRST.BIN 0x10298 | raw 8bpp | 1 | |
 | 27 | Shrine notice board 南寿神社のゆらい | MAP82/MAPFIRST.BIN 0xC8 | raw 8bpp | 1 | |
 | 28 | Recruitment poster "ナージュ像捜索団員 大募集" (11 lines) | MAP86/MAPFIRST.BIN 0xF8 | raw 8bpp 128x224 | 1 | full-screen readable poster |
+
+**Phase 8:** every row above is redrawn by `tools/gfx.py` (element names in its comments) except #17, kept as art:
+the credits illustrations OPTION6 #13/#15 show only fragments (会室 of 生徒会室, the 八 of a shop awning) half hidden
+behind the characters, ~8 px glyphs in painted background. The MAP86 poster's pink 南 seal is also left as art.
 
 Checked and English already (no work): "game over", NEW GAME/LOAD/CONTINUE/SOUND menu, Ann/Ituki/Makoto/Sinobu/Mio
 name buttons, TOPS/BOTTOMS/SHOES/ACCESSORY, EXP, TIME GAUGE, "DATE SPOT", "BEAT CATS", "presented by VARIE".

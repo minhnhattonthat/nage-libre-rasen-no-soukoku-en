@@ -127,6 +127,8 @@ class Img:
             if fill == "mode":
                 row = [self.get(xx, yy) for xx in range(x, x + w)]
                 v = max(set(row), key=row.count)
+            elif isinstance(fill, tuple) and fill[0] == "at":  # the index of one background pixel
+                v = self.get(fill[1], fill[2])
             else:
                 v = self.get(x - 1, yy) if fill is None else fill if isinstance(fill, int) else self.colour(fill)
             for xx in range(x, x + w):
@@ -310,6 +312,27 @@ DRESS = (
      "Manga Book", "Wristband", "Cheap Bag", "Sunglasses", "Creepy Plushie", "Sunglasses"))
 for _i, _names in enumerate(DRESS):
     element(f"dress{_i}", "OPTION2.BIN", ("entry", 1 + _i), ("labels", _names))
+# 23 MAP01R town signs (MAPFIRST 0x2063C, 2 copies): newspaper, greengrocer, pharmacy
+_F = "MAP01_06/MAP01R/MAPFIRST.BIN"
+element("signs_town", _F, 0x2063C,
+        ("clear", 73, 8, 46, 8, ("at", 74, 17)), ("text", 73, 6, 46, 9, "Maiasa News", dict(font="tiny", ink=(56, 56, 72))),
+        ("clear", 87, 84, 26, 9, ("at", 88, 84)), ("text", 86, 82, 28, 9, "Grocer", dict(font="tiny", ink=(0, 104, 56))),
+        ("clear", 1, 122, 44, 6, ("at", 2, 121)), ("text", 0, 119, 46, 9, "Kiyoshi Drug", dict(font="tiny")),
+        ("clear", 213, 151, 30, 7, ("at", 234, 152)), ("text", 212, 149, 32, 9, "JA Nanju", dict(font="tiny")),
+        # the shopping-street arch: one straight line across the middle of the curved purple band
+        ("clear", 197, 172, 53, 16, (80, 24, 80)),
+        ("text", 200, 175, 50, 9, "Nanju Shops", dict(font="tiny", ink=(224, 200, 80))))
+# 21 parking sign 駐車場, 22 fish shop 魚政 (two plates: FI|SH), 24 MAP03R ride sign, 25 MAP81 desk plate 会長
+element("sign_parking", _F, 0x1FC,
+        ("clear", 93, 226, 20, 6, (176, 176, 176)), ("text", 92, 224, 22, 9, "PARK", dict(font="tiny", ink=(72, 72, 72))))
+element("sign_fish", _F, 0x1041C,
+        ("clear", 50, 211, 11, 10, (200, 200, 200)), ("text", 50, 211, 11, 9, "FI", dict(font="tiny", ink=(48, 112, 168))),
+        ("clear", 74, 211, 11, 10, (200, 200, 200)), ("text", 74, 211, 11, 9, "SH", dict(font="tiny", ink=(48, 112, 168))))
+element("sign_kobiro", "MAP01_06/MAP03R/MAPFIRST.BIN", 0x2046C,
+        ("clear", 1, 237, 61, 11, (80, 32, 136), "gold"),
+        ("text", 3, 236, 58, 9, "Kobiro Race", dict(font="tiny", ink=(208, 200, 232))))
+element("desk_plate", "MAP01_06/MAP81/MAPFIRST.BIN", 0x78,
+        ("clear", 5, 43, 20, 9, "lerp"), ("text", 4, 42, 22, 9, "Pres.", dict(font="tiny", ink=(32, 32, 32))))
 # 8 birthstone plates: 12 gold plates of 16 rows at x 128..223, white text with a dark outline
 STONES = ("Garnet", "Amethyst", "Aquamarine", "Diamond", "Emerald", "Moonstone", "Ruby", "Agate", "Sapphire", "Opal",
           "Topaz", "Lapis Lazuli")
