@@ -83,12 +83,16 @@ Updated at the end of every session. Keep it to what the next session needs; his
   80 copies), 26 blackboard, 27 shrine board. Seen in game (work/qa/p8b): title, birthday, load, poster, battle.
   `python -X utf8 tools/gfx.py [--only NAME]` writes original|English previews to work/qa/gfx/out/; clear modes
   None (row copy from x-1), "mode", "lerp" (horizontal blend), int index, RGB; `keep` classes in gfx.KEEP.
+  Packed entries: the loaders always call decomp, so `tools/asm/rle.asm` hooks decomp's entry: a block whose 2nd
+  byte is 'R' goes to the game's own RLE decoder (0x80031388); `gfx.rle()` encodes (tested against the routine in
+  unicorn), `gfx.join()` rebuilds the offset table, files stay within the 0x86800 RAM area (`gfx.AREA`, area table
+  0x80089794). Done that way: #2-5 title (press start seen in game, work/qa/p8d), #16 cast plates (Tiny5).
 - **Next (phase 8, QA in the emulator):**
-  - Graphics text left: #21-24 town signs (MAP01R/MAP03R MAPFIRST), #25 desk plate 会長 = MAP81/MAPFIRST 0x78
-    (x 3..22, y 41..51, not MAP80 as graphics.md said; ~20x10 px: "President" in Tiny5 is 32 px, needs a wider
-    plate or two rows); packed #2-5 (OP_TMP2 #11-14), #13 dress-up names (OPTION2 #1-4), #16 cast plates, #17 credit
-    sign: try a raw TIM in the same table slot first (files.md), else a compressor. Then see each in a zoomed
-    cold-boot shot. The poster's pink 南 seal is left as art. Then the visual-QA tour + qa_gate (not started).
+  - Graphics text left: #13 dress-up names (OPTION2 #1-4, ~150 labels: glossary clothing names), #17 credit sign
+    (OPTION6 #15), #21-24 town signs (MAP01R/MAP03R MAPFIRST), #25 desk plate 会長 = MAP81/MAPFIRST 0x78 (x 3..22,
+    y 41..51, not MAP80 as graphics.md said; ~20x10 px: "President" in Tiny5 is 32 px). Then see each in a zoomed
+    cold-boot shot (credits, dress-up, map01r, map03r, map81). The poster's pink 南 seal is left as art. Then the
+    visual-QA tour + qa_gate (not started).
   - Not seen in game yet: save/load list "Stage <n>" (StageNum; the emulator's save screen says the card isn't
     formatted and mashing Yes returned to the menu: set up a memory card in emu.py/PCSX first), the in-battle VS
     pair (0x8004C56C; the battle-start pair 0x80059B74 was seen), field status box name order (0x80056B94,

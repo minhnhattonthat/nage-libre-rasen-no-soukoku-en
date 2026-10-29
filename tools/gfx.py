@@ -282,6 +282,13 @@ element("nocard", "OP_TMP2.BIN", ("entry", 14),
         ("clear", 74, 137, 124, 69, (40, 32, 248)),
         ("text", 74, 137, 124, 69, "No memory card is\ninserted. Saving needs\na memory card with at\nleast 2 free blocks.",
          dict(ink=(240, 232, 248))))
+# 16 credits cast plates (OPTION6 #2-#11, 80x96 portrait + name rows 81..92 on transparent); Tiny5 since the
+# longest full name in the game font (Makoto Matsunaga, 97 px) is wider than the 80-px plate
+CAST = ("Ann Akagi", "Itsuki Morino", "Makoto Matsunaga", "Mio Tsukushi", "Shinobu Kazama", "Kaoru Kanzaki",
+        "Jin Kiryu", "Dai Wajima", "Tsukasa Aida", "Ryo Kurosawa")
+for _i, _s in enumerate(CAST):
+    element(f"cast{_i}", "OPTION6.BIN", ("entry", 2 + _i),
+            ("clear", 0, 80, 80, 16, 0), ("text", 0, 82, 80, 9, _s, dict(font="tiny", shadow=(64, 64, 64))))
 # 8 birthstone plates: 12 gold plates of 16 rows at x 128..223, white text with a dark outline
 STONES = ("Garnet", "Amethyst", "Aquamarine", "Diamond", "Emerald", "Moonstone", "Ruby", "Agate", "Sapphire", "Opal",
           "Topaz", "Lapis Lazuli")
