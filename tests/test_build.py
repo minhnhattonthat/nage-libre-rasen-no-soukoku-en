@@ -33,6 +33,8 @@ def asm_sites():
             a = int(m.group(1), 16)
             if a < CODE_AREA[0]:
                 ok.update(range(a - insert.RAM, a - insert.RAM + 8))
+            elif a >= insert.STRPOOL[1]:  # rle.asm's hook after the string pool, up to the data at 0x8008A97C
+                ok.update(range(a - insert.RAM, 0x8008A97C - insert.RAM))
     return ok
 
 

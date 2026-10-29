@@ -26,10 +26,10 @@ from sweep_packed import table  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "script"
 ARMIPS = ROOT / "tools/armips/armips.exe"
-ASM = [ROOT / "tools/asm/vwf.asm", ROOT / "tools/asm/names.asm"]
+ASM = [ROOT / "tools/asm/vwf.asm", ROOT / "tools/asm/names.asm", ROOT / "tools/asm/rle.asm"]
 # Unused half-width kana glyph rows after the asm code (names.asm stops before it), up to the data at 0x8008A97C:
 # home for $gp-area strings over their room (same lui half 0x8009 as the $gp area)
-STRPOOL = (0x8008A500, 0x8008A97C)
+STRPOOL = (0x8008A500, 0x8008A950)  # rle.asm's hook sits after it
 RAM = 0x80010000 - 0x800  # NAGE.EXE file offset = RAM - this
 WRITES = []  # (file, offset, original bytes, new bytes, writer) for every text write: romdiff --writes
 RELOCATED = {}  # EXE row id -> new RAM address (place_strings)

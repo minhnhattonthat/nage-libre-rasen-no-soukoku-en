@@ -18,6 +18,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import decomp  # noqa: E402
 import extract  # noqa: E402
 import font  # noqa: E402
 import tim  # noqa: E402
@@ -179,6 +180,64 @@ class Img:
         return tim.to_image(t)
 
 
+# ---- packed entries: re-encoded as the game's RLE behind tools/asm/rle.asm's marker ---------------------------
+# Memory-area table at 0x80089794 ({addr, size} words): the only area at 0x80170000 big enough for OP_TMP2 (494,029
+# bytes), OPTION2 and OPTION6 (~300 KB) is 0x86800 bytes (the others there are 0x41000, 0x3C000, 0x20000).
+AREA = 0x86800
+RLE_MARK = b"RR"  # second byte 'R': rle.asm sends the block to the RLE decoder (packed blocks have 00 there)
+
+
+def rle(data):
+    """Encode for NAGE.EXE 0x80031388: n < 0x80 = n literal bytes; n >= 0x80 = repeat the last byte (n & 0x7F) + 1
+    times (the last literal; 0xFF before any); 0 ends."""
+    out, prev, i, lit = bytearray(RLE_MARK), 0xFF, 0, bytearray()
+
+    def flush():
+        nonlocal lit
+        for k in range(0, len(lit), 127):
+            out.append(len(lit[k:k + 127]))
+            out.extend(lit[k:k + 127])
+        lit = bytearray()
+
+    while i < len(data):
+        b = data[i]
+        n = 1
+        while i + n < len(data) and data[i + n] == b and n < 128:
+            n += 1
+        if b == (lit[-1] if lit else prev) and n >= 2:  # repeat of the byte before
+            flush()
+            out.append(0x80 | (n - 1))
+            prev = b
+            i += n
+        elif n >= 3:  # one literal, then repeats
+            lit.append(b)
+            flush()
+            prev = b
+            out.append(0x80 | (n - 2))
+            i += n
+        else:
+            lit.append(b)
+            i += 1
+    flush()
+    out.append(0)
+    return bytes(out)
+
+
+def entries(d):
+    n = struct.unpack_from("<I", d, 0)[0] // 4
+    offs = list(struct.unpack_from(f"<{n}I", d, 0)) + [len(d)]
+    return [d[offs[i]:offs[i + 1]] for i in range(n)]
+
+
+def join(blocks):
+    """Offset-table container (docs/re/files.md) from its entries, each start kept 4-aligned."""
+    head, body, offs = 4 * len(blocks), bytearray(), []
+    for i, b in enumerate(blocks):
+        offs.append(head + len(body))
+        body += b + (bytes(-len(b) % 4) if i < len(blocks) - 1 else b"")  # the last keeps its stray tail byte
+    return struct.pack(f"<{len(offs)}I", *offs) + bytes(body)
+
+
 # ---- elements ----------------------------------------------------------------------------------------------
 # (name, file, TIM offset, [ops]); ops: ("clear", x, y, w, h[, rgb]) / ("text", x, y, w, h, str, {style})
 ELEMENTS = []
@@ -209,6 +268,20 @@ element("sanjo_map", "MAP01_06/MAP01R/MAPTIM.BIN", 0x33AE8,
         ("clear", 0, 110, 23, 46, 0, "dark"),
         ("text", 0, 110, 9, 40, "Rapeman", dict(font="tiny", rotate=True)),
         ("text", 10, 131, 12, 24, "Here!", dict(font="tiny", rotate=True)))
+# 2-5 title screen, packed entries of OP_TMP2.BIN (written back as RLE, tools/asm/rle.asm)
+element("pressstart", "OP_TMP2.BIN", ("entry", 11),
+        ("clear", 40, 120, 176, 15, 0),
+        ("text", 40, 121, 176, 13, "Press START to begin!", dict(outline=(32, 40, 176), bold=True)))
+element("pleasewait", "OP_TMP2.BIN", ("entry", 12),
+        ("clear", 56, 121, 148, 16, 0),
+        ("text", 56, 122, 148, 13, "Wait just a moment!", dict(outline=(16, 24, 128), bold=True)))
+element("cardcheck", "OP_TMP2.BIN", ("entry", 13),
+        ("clear", 2, 84, 124, 10, (40, 32, 248)),
+        ("text", 1, 82, 126, 13, "Checking memory card", dict(shadow=(88, 88, 248))))
+element("nocard", "OP_TMP2.BIN", ("entry", 14),
+        ("clear", 74, 137, 124, 69, (40, 32, 248)),
+        ("text", 74, 137, 124, 69, "No memory card is\ninserted. Saving needs\na memory card with at\nleast 2 free blocks.",
+         dict(ink=(240, 232, 248))))
 # 8 birthstone plates: 12 gold plates of 16 rows at x 128..223, white text with a dark outline
 STONES = ("Garnet", "Amethyst", "Aquamarine", "Diamond", "Emerald", "Moonstone", "Ruby", "Agate", "Sapphire", "Opal",
           "Topaz", "Lapis Lazuli")
@@ -330,6 +403,17 @@ def build_gfx(tree, only=None):
     out, previews = {}, []
     for name, rel, off, ops in ELEMENTS:
         if only and name != only:
+            continue
+        if isinstance(off, tuple):  # ("entry", n): packed TIM in an offset-table file, written back as RLE
+            blocks = entries(out.get(rel, data[rel]))
+            t = decomp.decompress(blocks[off[1]])
+            img = Img(t, 0)
+            before = img.image()
+            apply(img, ops)
+            blocks[off[1]] = rle(img.bytes(t))
+            out[rel] = join(blocks)
+            assert len(out[rel]) <= AREA, f"{rel}: {len(out[rel])} bytes, its RAM area holds {AREA}"
+            previews.append((name, before, img.image()))
             continue
         src = data[rel]
         img = Img(src, off)

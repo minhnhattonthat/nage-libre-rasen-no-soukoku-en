@@ -41,7 +41,8 @@ def P(addr):
     return addr & 0x1FFFFFFF
 
 
-def decompress(data):
+def decompress(data, entry=DECOMP):
+    """entry=0x80031388 runs the game's simple RLE decoder instead (same src/dst state)."""
     uc = machine()
     uc.mem_write(P(SRC), bytes(data[:0x40000]))
     uc.reg_write(UC_MIPS_REG_4, SRC)
@@ -49,7 +50,7 @@ def decompress(data):
     uc.reg_write(UC_MIPS_REG_GP, GP)
     uc.reg_write(UC_MIPS_REG_29, 0x801FFF00)
     uc.reg_write(UC_MIPS_REG_RA, RET)
-    uc.emu_start(DECOMP, RET, count=200_000_000)
+    uc.emu_start(entry, RET, count=200_000_000)
     end = struct.unpack("<I", uc.mem_read(P(OUTPTR), 4))[0]
     return bytes(uc.mem_read(P(DST), end - DST))
 
