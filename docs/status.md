@@ -91,12 +91,17 @@ Updated at the end of every session. Keep it to what the next session needs; his
   JA Nanju, Nanju Shops arch, Kobiro Race), #25 desk plate "Pres." (seen in game, work/qa/p8f). #17 kept as art
   (graphics.md §Phase 8). Every survey row is now handled.
 - **Next (phase 8, QA in the emulator):**
-  - Town signs are off-screen at the map01r/map03r warp spawn (checked in gfx previews only): see them when the
-    tour walks the town. Then the visual-QA tour + qa_gate (not started).
+  - Visual QA: `tools/debug/tour.py` (83 scenes, ~116 sheets) + `qa_gate.py`, brief `docs/visual-qa-brief.md`
+    (standing non-bugs listed there). Round 1 fixed wm19 card, clear-condition wording, ellipses; a 1-px glyph
+    bearing (for text flush at plate frames) broke club-select stats in round 2 and was reverted. Round 3 (build
+    after 6022e69) in progress: gate state in work/qa/manifest.tsv + verdicts/. Town signs seen in the map01 tour.
+  - Memory-card title is English full-width (BIOS manager); Japanese-version saves load in the English build.
+  - Release: `tools/release.py VERSION` (check, build, smoke, jp_left on NAGE.EXE/SYSDATA, qa_gate, xdelta3,
+    re-apply, README from docs/README.template.txt, zip). Never `gh release create` (D9).
   - Seen: save to a blank formatted card and the load list "File 1 Stage 2 000:00" (work/qa/card; card images
     `work/saves/blank.mcd` = formatted empty (`python tools/debug/mkcard.py OUT.mcd`), `saved1.mcd` = one save; with a save on the card the title boots to
     LOAD, so warp.lua's New Game path doesn't fire: use them with plain routes, not warps).
-  - Not seen in game yet: the in-battle VS pair (0x8004C56C; the battle-start pair 0x80059B74 was seen), field status box name order (0x80056B94,
+  - VS plates seen (tour map02: "Flapper / Ann Akagi"). Not seen in game yet: field status box name order (0x80056B94,
     0x80057DFC), battle status box (0x80051804).
   - Check in game: choice rows translators laid out by hand (MAP14/193/0026 route choice, MAP21/199,
     MAP23/215/0002 Yes/No, MAP81/189/01BE..01E8), the composed item-use / club-change / level-up fragments
@@ -142,5 +147,7 @@ Updated at the end of every session. Keep it to what the next session needs; his
   break under VWF: grep the callers' use of the return value.
 - **Waiting on the user:** The MAP01R boss-intro art names the boss レイプマン (a parody of the manga title); drawn
   literally as "Rapeman" (tools/gfx.py `sanjo_map`). Say if you'd rather have another name. Non-blocking.
+  The TIME GAUGE art spells Jin's name "Zin" (Latin in the original art; glossary and script say Jin). Left as
+  drawn; say if the art should be redrawn as "Jin" or the script should follow the art. Non-blocking.
   GUI keyboard input in `tools/pcsx/` is not proven (synthetic keystrokes did not reach the
   pad); owner asked for headless-only runs, so left; check by hand when playtesting. Non-blocking.
