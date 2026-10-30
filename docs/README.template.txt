@@ -31,7 +31,7 @@ Notes
 -----
 - Honorifics are kept (-san, -kun, -sama); names are in Western order (given name first).
 - A few details in painted artwork stay as drawn (a seal on the poster, background signs half hidden in two
-  ending illustrations).
+  ending illustrations). The TIME GAUGE art spells Jin's name "Zin": the original's own English, kept.
 - Translation and tooling were produced with AI assistance (Claude) and checked in the emulator.
 - English text uses the game's own letters; picture text adds Tiny5 (SIL Open Font License 1.1).
 - Nage Libre: Rasen no Soukoku (c) Varie. This is a non-commercial fan work, not affiliated with Varie.

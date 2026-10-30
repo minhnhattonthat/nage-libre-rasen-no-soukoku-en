@@ -268,7 +268,7 @@ element("sanjo_btl", "MAP01_06/MAP01R/BTLTIM.BIN", 0x18A78,
         ("text", 178, 210, 12, 26, "Here!", dict(font="tiny", rotate=True)))
 element("sanjo_map", "MAP01_06/MAP01R/MAPTIM.BIN", 0x33AE8,
         ("clear", 0, 110, 23, 46, 0, "dark"),
-        ("text", 0, 110, 9, 40, "Rapeman", dict(font="tiny", rotate=True)),
+        ("text", 0, 110, 9, 40, "Reipuman", dict(font="tiny", rotate=True)),  # D12
         ("text", 10, 131, 12, 24, "Here!", dict(font="tiny", rotate=True)))
 # 2-5 title screen, packed entries of OP_TMP2.BIN (written back as RLE, tools/asm/rle.asm)
 element("pressstart", "OP_TMP2.BIN", ("entry", 11),

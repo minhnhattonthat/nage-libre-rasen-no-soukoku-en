@@ -1,13 +1,27 @@
 # Nage Libre: Rasen no Soukoku English translation
 
-Unofficial English fan translation of **Nage Libre: Rasen no Soukoku** (PlayStation, Varie, 1996): the source text and
-tools that build the patch. Work in progress.
+Unofficial English fan translation of **Nage Libre: Rasen no Soukoku** (PlayStation, Varie, 1997): the source text and
+tools that build the patch.
 
 **Just want to play?** Download the patch from [Releases](../../releases) and follow its README. This repository holds
 no game data you can play; you need your own dump of the Japanese game.
 
 **Found a bug?** [Report it](../../issues/new/choose): untranslated text, typos, overflow, crashes. Attaching a savestate
 helps most.
+
+## Translation status
+
+| Part | Status |
+|---|---|
+| Dialogue / story (all 46 maps) | Translated |
+| Menus, items, magic, battle and system messages | Translated |
+| Title screen, area cards, signs, posters, other graphics with text | Translated (a seal on the recruitment poster and background signs half hidden in two credits illustrations stay as drawn) |
+| Names, birthday entry, save/load screens, memory card title | Translated |
+| Credits roll | Cast plates translated |
+
+The TIME GAUGE art spells Jin's name "Zin": that is the original's own English, kept as drawn.
+
+Known issues: none known; see [Issues](../../issues).
 
 ## What's here
 

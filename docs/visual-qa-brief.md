@@ -40,7 +40,7 @@ Standing non-bugs, `ok` (the controller adds the game's own below):
   and broke the stat panels, so this is accepted;
 - digits are fixed-width on purpose (numbers redraw in place), so "1" sits centred in a digit-wide cell;
 - honorifics are kept on purpose (Ann-chan, Kaoru-sama, Pig-kun); names are given name first;
-- the boss intro art reads "Rapeman" (a parody name from the original art; flagged to the owner, not a bug here).
+- the MAP01R boss intro art reads "Reipuman" (owner's choice, D12); the TIME GAUGE art reads "Zin" (original art, kept: D13).
 
 ## Verdicts
 Write your verdict file once you have read every sheet, one line per id in the chunk:
