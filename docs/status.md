@@ -2,9 +2,11 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 9 done 2026-10-30: `release/NageLibre_EN_v1.0.zip` (xdelta + README, patch sha1 ef861cea…) built by
-  `tools/release.py 1.0` and verified (zipped patch on the rom.sha1 dump gives the build, sha1 c3f269e4…). Not
-  published: publishing (`gh release create`) is the user's call (D9). Phase 8 done the same day (below).
+- **Phase:** 9 done 2026-10-30, published (D14): repo public, GitHub release v1.0 =
+  `release/NageLibre_EN_v1.0.zip` (xdelta + README, patch sha1 e3d890df…), built by `tools/release.py 1.0` and
+  verified (zipped patch on the rom.sha1 dump gives the build, sha1 d7be1abe…). Boss name Reipuman (D12), TIME
+  GAUGE "Zin" kept (D13). The MAP01R boss intro (where Reipuman shows) is not reached by any tour scene: art checked
+  in the gfx preview only. Phase 8 done the same day (below).
   `build.py --markers` = marker build; plain `build.py` = VWF engine + names.asm + `en` rows.
 - **Done:**
   - Step 0: dump pinned (`rom.sha1`), tools in `tools/`, headless smoke on the original, pre-commit check, guard hook.
@@ -123,7 +125,7 @@ Updated at the end of every session. Keep it to what the next session needs; his
     errors) get checked in phase 8 QA; adjust FIELDS if a shot disagrees.
   - Birthday screen: the full name now starts 8 px left of the portrait frame (cosmetic; needed for "Makoto
     Matsunaga" 98 px).
-  - Current build/ = English v1.0 build (sha1 c3f269e4…, bbe8cc6; release smoke ok; regen 83/83 ok on cc16e4a); `build.py --markers` restores the marker
+  - Current build/ = English v1.0 build (sha1 d7be1abe…, 7ffce02; release smoke ok; regen 83/83 ok on cc16e4a); `build.py --markers` restores the marker
     build.
 - **Debug-tool limits (grow when needed):** map scenes play each map's first event with new-game story flags; the
   later events of a map (other script slots 186-216, flag-dependent branches) are not forced yet. For phase 8,
@@ -166,9 +168,5 @@ Updated at the end of every session. Keep it to what the next session needs; his
   from reviewers: pressing confirm on a fixed beat (a page typed past before its shot: press only once the text
   hash is stable) and a contact-sheet "changed > 2%" filter (a page swap in the same box is under 2%: sheet every
   probe shot). Revisit-map dedupe (`same`) misses scenes replayed in non-R maps: diff repeated JP across maps.
-- **Waiting on the user:** The MAP01R boss-intro art names the boss レイプマン (a parody of the manga title); drawn
-  literally as "Rapeman" (tools/gfx.py `sanjo_map`). Say if you'd rather have another name. Non-blocking.
-  The TIME GAUGE art spells Jin's name "Zin" (Latin in the original art; glossary and script say Jin). Left as
-  drawn; say if the art should be redrawn as "Jin" or the script should follow the art. Non-blocking.
-  GUI keyboard input in `tools/pcsx/` is not proven (synthetic keystrokes did not reach the
+- **Waiting on the user:** GUI keyboard input in `tools/pcsx/` is not proven (synthetic keystrokes did not reach the
   pad); owner asked for headless-only runs, so left; check by hand when playtesting. Non-blocking.
