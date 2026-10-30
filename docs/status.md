@@ -2,8 +2,9 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 7 done 2026-10-30 (lint 0 errors, no `long` rows, every row English or in `script/keep_jp.txt`,
-  romdiff + write log clean, no Japanese left in EXE text/records). Next: phase 8 (QA in the emulator).
+- **Phase:** 9 done 2026-10-30: `release/NageLibre_EN_v1.0.zip` (xdelta + README, patch sha1 ef861cea…) built by
+  `tools/release.py 1.0` and verified (zipped patch on the rom.sha1 dump gives the build, sha1 c3f269e4…). Not
+  published: publishing (`gh release create`) is the user's call (D9). Phase 8 done the same day (below).
   `build.py --markers` = marker build; plain `build.py` = VWF engine + names.asm + `en` rows.
 - **Done:**
   - Step 0: dump pinned (`rom.sha1`), tools in `tools/`, headless smoke on the original, pre-commit check, guard hook.
@@ -73,7 +74,7 @@ Updated at the end of every session. Keep it to what the next session needs; his
     record names zero the old string's tail). D11: "Council President", "'s Randoma Card, birthstone bonus!".
     Seen in game: VS boxes "Ann Akagi" (work/qa/vs), 105-px QA pair (work/qa/vs2), battle bar messages
     (work/qa/go2), birthday "Ann Akagi" + "3/15" (work/qa/p7/bz.png).
-- **Phase 8 in progress (2026-10-30):** codex phase-6 review fixed (honorifics on nouns Pig-kun/Pig-san/Snowman-san,
+- **Phase 8 done (2026-10-30):** codex phase-6 review fixed (honorifics on nouns Pig-kun/Pig-san/Snowman-san,
   conquest/uniform gag, Great Tree route, glossary voice; `tests/test_terms.py` runs the term/honorific checks over all
   of script/). `tools/gfx.py` redraws TIM text (ops: clear by row-copy / row mode / colour with `keep` classes, text in
   the game font (`game`, bold/outline/shadow/scale) or Tiny5 (`tiny`)); `insert.build_files` writes every
@@ -90,8 +91,8 @@ Updated at the end of every session. Keep it to what the next session needs; his
   Also done: #13 dress-up labels (101), #21-24 town signs (PARK, FI|SH, Maiasa News, Grocer, Kiyoshi Drug,
   JA Nanju, Nanju Shops arch, Kobiro Race), #25 desk plate "Pres." (seen in game, work/qa/p8f). #17 kept as art
   (graphics.md §Phase 8). Every survey row is now handled.
-- **Next (phase 8, QA in the emulator):**
-  - Visual QA: `tools/debug/tour.py` (83 scenes, ~116 sheets) + `qa_gate.py`, brief `docs/visual-qa-brief.md`
+- **Phase 8 QA record:**
+  - Visual QA: `tools/debug/tour.py` (83 scenes, 139 sheets) + `qa_gate.py`, brief `docs/visual-qa-brief.md`
     (standing non-bugs listed there). Round 1 fixed wm19 card, clear-condition wording, ellipses; a 1-px glyph
     bearing (for text flush at plate frames) was reverted in round 2. Round 3 found stale digit pixels on the
     club-select stats (numbers redraw in place; VWF moved them): digits are tabular (7 px) and the number printer
@@ -102,11 +103,11 @@ Updated at the end of every session. Keep it to what the next session needs; his
     scenes (docs/style-reference.md). Round 5 (126 sheets): clock tag こしょう中 in the MAP81 classroom art (survey
     #29, now "Broken"), MAP81/186/09A4 page split, two final periods, MAP42 wording; reviewers found tour.py's
     `sheet.py --changed 0.02` hid page swaps (<2% of pixels), so sheets now hold every shot. Round 6 = full EN
-    re-tour on e22433f + review; JP sheets re-sheeted from round-5 frames (150). The first round-6 EN tour was
-    stopped by the host for low memory (partial work/qa/tour/): rerun `rm -rf work/qa/tour && python -X utf8
-    tools/debug/tour.py --jobs 4`, then `qa_gate.py init` on a fresh manifest, `todo --size 32`, one visual-qa
-    agent per chunk. Gate state in work/qa/manifest.tsv +
-    verdicts/ (earlier rounds in work/qa/round4/, round5/).
+    re-tour + review (139 sheets, 5 agents): one issue, MAP24/186/0184 Ann's line read as Makoto's continuation
+    ("But to us, ..."), fixed bbe8cc6 with MAP14 "Quit slacking off"; 7 re-toured sheets ok. `qa_gate.py check`:
+    139/139 ok on build c3f269e4. Tours use `--jobs 2` when other projects run (the host killed a 4-job tour
+    for low memory). Gate state in work/qa/manifest.tsv + verdicts/ (earlier rounds in work/qa/round4/, round5/).
+  - Next for a v1.1 (none blocking): the "not seen in game yet" items below, per-script warps for later events.
   - Memory-card title is English full-width (BIOS manager); Japanese-version saves load in the English build.
   - Release: `tools/release.py VERSION` (check, build, smoke, jp_left on NAGE.EXE/SYSDATA, qa_gate, xdelta3,
     re-apply, README from docs/README.template.txt, zip). Never `gh release create` (D9).
@@ -122,7 +123,7 @@ Updated at the end of every session. Keep it to what the next session needs; his
     errors) get checked in phase 8 QA; adjust FIELDS if a shot disagrees.
   - Birthday screen: the full name now starts 8 px left of the portrait frame (cosmetic; needed for "Makoto
     Matsunaga" 98 px).
-  - Current build/ = English build (sha1 c7c88f58…, e22433f; regen 83/83 ok on cc16e4a); `build.py --markers` restores the marker
+  - Current build/ = English v1.0 build (sha1 c3f269e4…, bbe8cc6; release smoke ok; regen 83/83 ok on cc16e4a); `build.py --markers` restores the marker
     build.
 - **Debug-tool limits (grow when needed):** map scenes play each map's first event with new-game story flags; the
   later events of a map (other script slots 186-216, flag-dependent branches) are not forced yet. For phase 8,
@@ -161,7 +162,10 @@ Updated at the end of every session. Keep it to what the next session needs; his
   keep stale pixels once a VWF moves digits: give digits one advance and make the number printer's pad glyph that
   wide. A 1-px left bearing (to keep letters off a frame) did the same damage. Tours that mash one button land
   in sub-views the game leaves only with another (card view: cross); the shot-per-new-text probe keyed on the
-  text texture's VRAM hash (tools/debug/tourshot.lua) kept 116 sheets for 83 scenes.
+  text texture's VRAM hash (tools/debug/tourshot.lua) kept 116 sheets for 83 scenes. Two tour traps hid pages
+  from reviewers: pressing confirm on a fixed beat (a page typed past before its shot: press only once the text
+  hash is stable) and a contact-sheet "changed > 2%" filter (a page swap in the same box is under 2%: sheet every
+  probe shot). Revisit-map dedupe (`same`) misses scenes replayed in non-R maps: diff repeated JP across maps.
 - **Waiting on the user:** The MAP01R boss-intro art names the boss レイプマン (a parody of the manga title); drawn
   literally as "Rapeman" (tools/gfx.py `sanjo_map`). Say if you'd rather have another name. Non-blocking.
   The TIME GAUGE art spells Jin's name "Zin" (Latin in the original art; glossary and script say Jin). Left as

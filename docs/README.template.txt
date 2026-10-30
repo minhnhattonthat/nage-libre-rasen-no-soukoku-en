@@ -1,7 +1,7 @@
 Nage Libre: Rasen no Soukoku - English translation v{VERSION}
 =============================================================
 
-Unofficial English fan translation of Nage Libre: Rasen no Soukoku (PlayStation, Varie, 1996).
+Unofficial English fan translation of Nage Libre: Rasen no Soukoku (PlayStation, Varie, 1997).
 This package holds a patch only. You need your own dump of the Japanese disc; no game data is included, and
 pre-patched images are not provided.
 
