@@ -132,6 +132,11 @@ Updated at the end of every session. Keep it to what the next session needs; his
   add per-script warps: set the script base `$gp`+0x52C / PC `$gp`+0x2A2 (docs/re/text.md) or the story flags at
   0x80105B54.. (docs/re/state.md, guessed). The battle scene is the first MAP02 fight (defend turn); battles on
   other maps need the same `mash_until` on their map.
+- **Issue #1 (blue bar, fix awaiting review, no release yet):** 8-px blue bar on top of the poster and classroom after
+  New Game; same in the Japanese original. OPTION1.BIN's backdrop (TIM 0x78, full-screen quad) draws its pure-blue top
+  band on rows 0-7 of both frame buffers; those screens draw art on rows 8-231 only and the 240-line display shows the
+  stale rows. `gfx.py` element `backdrop_top` paints the band black. Seen: map81, birthday (rows 0-7 all black); regen
+  83/83 ok. Not checked: top rows of those small screens when reached after another map or after Load (no warp path).
 - **Open bugs:** none.
 - **Gotchas found (for the skill):** PCSX-Redux nightly 29942 `PCSX.GPU.getVRAM()` returns 2 MB, not 1 MB (first 1 MB
   is VRAM; pcsx_lib.lua comment says 1 MB). Unicorn MIPS translates kseg0 0x80000000 to physical for fetch and data:

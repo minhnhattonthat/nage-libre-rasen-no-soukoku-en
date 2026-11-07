@@ -30,6 +30,13 @@ def test_areas_cover_every_card():
     assert len(gfx.AREAS) == 25  # OPTION7.BIN cards 0x3D6A0 + n * 0x1620
 
 
+def test_backdrop_top_band_is_black():  # issue #1: it stayed on screen as a blue bar over the field maps
+    new = gfx.Img(gfx.build_gfx(extract.TREE, "backdrop_top")[0]["OPTION1.BIN"], 0x78)
+    old = gfx.Img((extract.TREE / "OPTION1.BIN").read_bytes(), 0x78)
+    assert all(new.rgb(x, y) == (0, 0, 0) for y in range(8) for x in range(256))
+    assert new.pix[8 * 256:] == old.pix[8 * 256:]
+
+
 def test_build_changes_every_element():
     files, previews = gfx.build_gfx(extract.TREE)
     assert len(previews) == len(gfx.ELEMENTS)

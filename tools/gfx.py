@@ -249,6 +249,9 @@ def element(name, rel, off, *ops):
     ELEMENTS.append((name, rel, off, list(ops)))
 
 
+# Issue #1, also in the Japanese game: this backdrop's top band (pure blue) lands on frame-buffer rows 0-7, which the
+# next screens (poster, classroom) never redraw (art on rows 8-231) but the display shows: a blue bar. Paint it black.
+element("backdrop_top", "OPTION1.BIN", 0x78, ("clear", 0, 0, 256, 8, (0, 0, 0)))
 # 7 birthday entry headers
 element("birthday", "OPTION1.BIN", 0x10298,
         ("clear", 24, 84, 208, 16), ("text", 24, 85, 208, 13, "Choose your birthday!", BAR),
